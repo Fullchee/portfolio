@@ -1,4 +1,26 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# portfolio
+
+## TODOs
+
+- favicon that's not blurry
+- tailwind css
+  - Postcss, autoprefixer, normalize.css?
+  - dark & light mode
+  - 6px colored border on the top of the page
+- Home page
+  - https://portfolio-starter-template.webflow.io/
+  - wesbos.com
+  - Find tutorials on how to animate
+    - https://www.cassie.codes/
+  - Hero Patterns?
+    - https://craig-roush-portfolio-template.webflow.io/
+    - Wes bos css grid
+- Project pages
+  - Update resume links to each project folder
+- mdx blog
+- Pages
+- reread refactor UI
+- https://storage.googleapis.com/joshwcomeau/building-an-effective-dev-portfolio.pdf
 
 This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
 
