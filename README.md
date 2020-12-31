@@ -2,7 +2,6 @@
 
 ## TODOs
 
-- favicon that's not blurry
 - tailwind css
   - Postcss, autoprefixer, normalize.css?
   - dark & light mode
@@ -10,6 +9,7 @@
 - Home page
   - https://portfolio-starter-template.webflow.io/
   - wesbos.com
+  - juliacodes.com
   - Find tutorials on how to animate
     - https://www.cassie.codes/
   - Hero Patterns?
