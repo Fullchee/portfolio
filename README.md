@@ -3,8 +3,6 @@
 ## TODOs
 
 - tailwind css
-  - Postcss, autoprefixer, normalize.css?
-  - dark & light mode
   - 6px colored border on the top of the page
 - Home page
   - https://portfolio-starter-template.webflow.io/
