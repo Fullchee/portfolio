@@ -1,6 +1,6 @@
-import Container from "./container";
+import Container from "../container";
 import cn from "classnames";
-import { GITHUB_URL } from "../lib/constants";
+import { GITHUB_URL } from "../../lib/constants";
 
 type Props = {
   preview?: boolean;
