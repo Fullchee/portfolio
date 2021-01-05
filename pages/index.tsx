@@ -1,40 +1,24 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/home-page/intro";
-import Layout from "../components/layout";
-import { getAllPosts } from "../lib/api";
 import Head from "next/head";
-import Post from "../types/post";
-import Header from "../components/header";
+import Layout from "../components/layout";
 
-type Props = {
-  allPosts: Post[];
-};
+import AboutMe from "../components/homePage/aboutMe";
+import Intro from "../components/homePage/intro";
+import Projects from "../components/homePage/projects";
+import Skills from "../components/homePage/skills";
 
-const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+const Index = () => {
   return (
     <>
       <Layout>
         <Head>
           <title>Fullchee Zhang - Front end developer</title>
         </Head>
-        <Header />
         <Container>
           <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <AboutMe />
+          <Projects />
+          <Skills />
         </Container>
       </Layout>
     </>
@@ -42,18 +26,3 @@ const Index = ({ allPosts }: Props) => {
 };
 
 export default Index;
-
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "author",
-    "coverImage",
-    "excerpt",
-  ]);
-
-  return {
-    props: { allPosts },
-  };
-};

@@ -2,6 +2,8 @@
 
 ## TODOs
 
+- Homepage -> Skills
+  - icon with circle
 - tailwind css
   - 6px colored border on the top of the page
 - Home page
