@@ -41,23 +41,12 @@ const Header = () => {
                   </p>
                 </Link>
               </li>
-              <li>
-                <button>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <title>Night mode</title>
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                  </svg>
-                </button>
-              </li>
             </ul>
           </nav>
         </div>
       </div>
-      <div className=" h-20 bg-gradient-to-b from-gray-100 to-transparent"></div>
+      <div className="fixed z-10 h-28 w-screen bg-gradient-to-b from-white to-transparent"></div>
+      <div className="fixed z-10 h-28 w-screen bg-gradient-to-b from-transparent to-white bottom-0"></div>
     </>
   );
 };
