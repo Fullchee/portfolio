@@ -21,7 +21,7 @@ const Blog = ({ allPosts }: Props) => {
           <title>Blog - Fullchee Zhang</title>
         </Head>
         <Container>
-          <Intro />
+          <h1 className="py-16 text-6xl pb-4 font-display">My blog</h1>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
