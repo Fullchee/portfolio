@@ -4,7 +4,7 @@ import Image from "next/image";
 const Header = () => {
   return (
     <>
-      <div className="sticky bg-white dark:border-blue-700 border-t-4 top-0 border-blue-500">
+      <div className="sticky bg-white dark:border-blue-700 border-t-4 top-0 border-blue-500 z-10">
         <div className="max-w-5xl mx-auto px-6">
           <nav>
             <ul className="flex max-w-7xl">
@@ -45,8 +45,8 @@ const Header = () => {
           </nav>
         </div>
       </div>
-      <div className="fixed z-10 h-28 w-screen bg-gradient-to-b from-white to-transparent"></div>
-      <div className="fixed z-10 h-28 w-screen bg-gradient-to-b from-transparent to-white bottom-0"></div>
+      <div className="fixed z-10 h-16 w-screen bg-gradient-to-b from-white to-transparent"></div>
+      <div className="fixed z-10 h-16 w-screen bg-gradient-to-b from-transparent to-white bottom-0"></div>
     </>
   );
 };
