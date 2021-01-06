@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <div className="sticky bg-white dark:border-blue-700 border-t-4 top-0 border-blue-500">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-6">
           <nav>
             <ul className="flex max-w-7xl">
               <li className="mr-auto pt-4">
