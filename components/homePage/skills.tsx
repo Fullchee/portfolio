@@ -24,7 +24,7 @@ const Skills = () => {
   return (
     <section className="flex-col flex flex-wrap mt-16 mb-16">
       <h3 id="skills" className="font-mono text-3xl pb-4">
-        My skills
+        skills
       </h3>
       <p>
         Through my studies at U of T, I've gathered a solid foundation of

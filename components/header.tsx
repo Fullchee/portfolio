@@ -27,7 +27,7 @@ const Header = () => {
                     tabIndex={0}
                     className="cursor-pointer transition-colors hover:text-blue-500 hover:underline font-mono"
                   >
-                    Blog
+                    blog
                   </p>
                 </Link>
               </li>
@@ -37,7 +37,7 @@ const Header = () => {
                     tabIndex={0}
                     className="cursor-pointer transition-colors hover:text-blue-500 hover:underline font-mono"
                   >
-                    Uses
+                    uses
                   </p>
                 </Link>
               </li>
