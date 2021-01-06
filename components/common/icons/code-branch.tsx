@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function SvgCodeBranch(props: object) {
+function SvgCodeBranch(props: any) {
   return (
     <svg
       aria-hidden="true"

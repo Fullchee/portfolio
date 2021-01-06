@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function SvgReact(props: object) {
+function SvgReact(props: any) {
   return (
     <svg
       aria-hidden="true"

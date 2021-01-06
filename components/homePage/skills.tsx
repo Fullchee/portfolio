@@ -1,14 +1,22 @@
 import Image from "next/image";
+import { Icon } from "../common/icons";
 
-const SkillIcon = ({ name }: { name: string }) => {
+const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
   return (
-    <Image
-      src={`/static/${name}.svg`}
-      className="pr-4"
-      alt=""
-      width={16}
-      height={16}
-    ></Image>
+    <li className="py-2">
+      <SkillIcon>
+        <Icon className="fill-current text-blue-400" name={icon} />
+      </SkillIcon>
+      {label}
+    </li>
+  );
+};
+
+const SkillIcon = ({ children }: { children: any }) => {
+  return (
+    <div className="w-8 h-8 mr-4 rounded-full bg-blue-50 inline-flex justify-center items-center">
+      {children}
+    </div>
   );
 };
 
@@ -36,36 +44,14 @@ const Skills = () => {
         </a>{" "}
         and working on side projects.
       </p>
-      <ul className="flex flex-col">
-        <li className="py-2">
-          <SkillIcon name="js" />
-          JavaScript ES6
-        </li>
-        <li className="py-2">
-          <SkillIcon name="html5" />
-          HTML &amp; CSS
-        </li>
-        <li className="py-2">
-          <SkillIcon name="react" />
-          React
-        </li>
-        <li className="py-2">
-          <SkillIcon name="sass" />
-          LESS and SASS
-        </li>
-        <li className="py-2">
-          <SkillIcon name="code-branch" />
-          Git
-        </li>
-        <li className="py-2">
-          <SkillIcon name="database" />
-          SQL
-        </li>
-        <li className="py-2">
-          <SkillIcon name="node-js" />
-          Node.js
-        </li>
-        <li className="py-2"></li>
+      <ul className="grid sm:grid-cols-3">
+        <SkillItem icon="js" label="JavaScript ES6+" />
+        <SkillItem icon="html5" label="HTML &amp; CSS" />
+        <SkillItem icon="react" label="React" />
+        <SkillItem icon="sass" label="LESS and SASS" />
+        <SkillItem icon="code-branch" label="Git" />
+        <SkillItem icon="database" label="SQL" />
+        <SkillItem icon="node-js" label="Node.js" />
       </ul>
     </section>
   );

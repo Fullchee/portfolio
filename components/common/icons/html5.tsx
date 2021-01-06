@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function SvgHtml5(props: object) {
+function SvgHtml5(props: any) {
   return (
     <svg
       aria-hidden="true"
