@@ -44,7 +44,7 @@ const Skills = () => {
         </a>{" "}
         and working on side projects.
       </p>
-      <ul className="grid sm:grid-cols-3 xl:grid-cols-4">
+      <ul className="grid xs:grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
         <SkillItem icon="js" label="JavaScript ES6+" />
         <SkillItem icon="html5" label="HTML &amp; CSS" />
         <SkillItem icon="react" label="React" />
