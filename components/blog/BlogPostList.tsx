@@ -11,7 +11,7 @@ interface BlogListProps {
 
 const BlogList: React.FC<BlogListProps> = ({ posts, more = false }) => {
   return (
-    <Container>
+    <>
       <h2 className="text-4xl md:text-5xl pt-12 font-medium font-display">
         Blog
       </h2>
@@ -29,7 +29,7 @@ const BlogList: React.FC<BlogListProps> = ({ posts, more = false }) => {
           </div>
         )}
       </div>
-    </Container>
+    </>
   );
 };
 

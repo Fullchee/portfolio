@@ -8,10 +8,9 @@ export default function BlogPage({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <>
-      <NextSeo title="Blog - Fullchee Zhang" />
+    <Layout title="Blog - Fullchee Zhang" description="Fullchee's blog posts">
       <BlogList posts={posts} />
-    </>
+    </Layout>
   );
 }
 
