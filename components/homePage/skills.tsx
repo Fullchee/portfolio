@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Icon } from "../common/icons";
 
 const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
@@ -23,7 +22,7 @@ const SkillIcon = ({ children }: { children: any }) => {
 const Skills = () => {
   return (
     <section className="flex-col flex flex-wrap mt-16 mb-16">
-      <h3 id="skills" className="font-mono text-3xl pb-4">
+      <h3 id="skills" className="font-monoDisplay text-3xl pb-4">
         skills
       </h3>
       <p>

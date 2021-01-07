@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ["Major Mono Display", ...defaultTheme.fontFamily.mono],
         display: ["Comfortaa"],
+        monoDisplay: ["Major Mono Display"],
       },
     },
   },

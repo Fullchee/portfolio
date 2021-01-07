@@ -7,7 +7,7 @@ const Project = ({}) => {
 export const Projects = () => {
   return (
     <section className="flex-col flex flex-wrap mt-16 mb-16">
-      <h2 id="projects" className="font-mono text-3xl">
+      <h2 id="projects" className="font-monoDisplay text-3xl">
         projects
       </h2>
     </section>
