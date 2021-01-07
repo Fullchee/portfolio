@@ -2,6 +2,7 @@ import Link from "next/link";
 import BlogPostCard from "./BlogPostCard";
 import { IPostFrontMatter } from "../../lib/mdx";
 import routes from "../../routes";
+import Container from "../container";
 
 interface BlogListProps {
   posts: IPostFrontMatter[];
@@ -10,8 +11,10 @@ interface BlogListProps {
 
 const BlogList: React.FC<BlogListProps> = ({ posts, more = false }) => {
   return (
-    <>
-      <h2 className="text-4xl md:text-5xl font-medium font-display">Blog</h2>
+    <Container>
+      <h2 className="text-4xl md:text-5xl pt-12 font-medium font-display">
+        Blog
+      </h2>
 
       <div className="mt-10 flex flex-col space-y-10">
         {posts.map((p) => (
@@ -21,14 +24,12 @@ const BlogList: React.FC<BlogListProps> = ({ posts, more = false }) => {
         {more && (
           <div>
             <Link href={routes.BLOG}>
-              <a className="font-medium text-glongas-green-dark hover:text-gray-600">
-                View all posts
-              </a>
+              <a className="font-medium hover:text-gray-600">View all posts</a>
             </Link>
           </div>
         )}
       </div>
-    </>
+    </Container>
   );
 };
 

@@ -12,7 +12,6 @@ const Header = () => {
                 <Link href="/">
                   <a href="/">
                     <Image
-                      className="cursor-pointer"
                       src="/fullchee.svg"
                       alt="home page"
                       width={50}
