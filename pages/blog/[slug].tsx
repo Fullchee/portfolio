@@ -1,7 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import hydrate from "next-mdx-remote/hydrate";
 import Layout from "../../components/layout";
-import Container from "../../components/container";
 import { getPostBySlug, getPosts, IPost } from "../../lib/mdx";
 
 export default function BlogPost({
@@ -18,26 +17,7 @@ export default function BlogPost({
         read
       </p>
 
-      <article className="mt-6 prose max-w-none">{content}</article>
-
-      <div className="mt-14 p-6 bg-blue-100 border border-blue-200 rounded-md">
-        <p className="text-2xl font-bold text-gray-800">Hey there 🙋‍♂️</p>
-
-        <p className="mt-2 text-gray-800">
-          If you liked the article or found it useful; you can follow me on
-          Twitter to know what I'm up to, comment on anything about this post,
-          or to say hi!
-        </p>
-
-        <a
-          className="inline-block mt-4 px-3 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded"
-          href="https://twitter.com/fullchee"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @fullchee
-        </a>
-      </div>
+      <article className="mt-6 prose max-w-none pb-16">{content}</article>
     </Layout>
   );
 }
