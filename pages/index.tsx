@@ -1,5 +1,3 @@
-import Container from "../components/container";
-import Head from "next/head";
 import Layout from "../components/layout";
 
 import AboutMe from "../components/homePage/aboutMe";
@@ -9,19 +7,15 @@ import Skills from "../components/homePage/skills";
 
 const Index = () => {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Fullchee Zhang - Front end developer</title>
-        </Head>
-        <Container>
-          <Intro />
-          <AboutMe />
-          <Projects />
-          <Skills />
-        </Container>
-      </Layout>
-    </>
+    <Layout
+      title="Fullchee Zhang - Front end developer"
+      description="Portfolio and blog"
+    >
+      <Intro />
+      <AboutMe />
+      <Projects />
+      <Skills />
+    </Layout>
   );
 };
 

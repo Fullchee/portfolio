@@ -1,19 +1,10 @@
-import Container from "../components/container";
 import Layout from "../components/layout";
-import Head from "next/head";
 
 const Uses = () => {
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>Uses - Fullchee Zhang</title>
-        </Head>
-        <Container>
-          <h1 className="h-12">Uses</h1>
-        </Container>
-      </Layout>
-    </>
+    <Layout title="Uses - Fullchee Zhang" description="What I use">
+      <h1 className="h-12">Uses</h1>
+    </Layout>
   );
 };
 

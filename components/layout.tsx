@@ -1,24 +1,32 @@
-import Alert from "./common/alert";
 import Footer from "./footer";
-import Meta from "./meta";
 import Header from "./header";
+import Container from "./container";
+import { NextSeo } from "next-seo";
 
 type Props = {
-  preview?: boolean;
+  title: string;
+  description?: string;
   children: React.ReactNode;
 };
 
-const Layout = ({ preview, children }: Props) => {
+const Layout = ({ title, description, children }: Props) => {
   return (
-    <>
-      <Meta />
+    <div>
+      <NextSeo
+        title={`${title} - Fullchee Zhang`}
+        description={description}
+        openGraph={{
+          title: `${title} - Fullchee Zhang`,
+          description: description,
+        }}
+      />
       <Header />
       <div className="min-h-screen max-w-5xl mx-auto pt-8 px-6 md:px-24">
         {/* <Alert preview={preview} /> */}
-        <main>{children}</main>
+        <Container>{children}</Container>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
