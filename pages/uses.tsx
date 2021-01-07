@@ -7,10 +7,10 @@ const Uses = () => {
     <>
       <Layout>
         <Head>
-          <title>Users - Fullchee Zhang</title>
+          <title>Uses - Fullchee Zhang</title>
         </Head>
         <Container>
-          <p>Uses page</p>
+          <h1 className="h-12">Uses</h1>
         </Container>
       </Layout>
     </>

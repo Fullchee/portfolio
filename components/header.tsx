@@ -22,22 +22,22 @@ const Header = () => {
               </li>
               <li className="p-8 text-xl">
                 <Link href="/blog">
-                  <p
-                    tabIndex={0}
+                  <a
+                    href="/blog"
                     className="cursor-pointer transition-colors hover:text-blue-500 hover:underline font-mono"
                   >
                     blog
-                  </p>
+                  </a>
                 </Link>
               </li>
               <li className=" p-8 text-xl hover:bg-blue-100 focus:bg-blue-100">
                 <Link href="/uses">
-                  <p
-                    tabIndex={0}
+                  <a
+                    href="/uses"
                     className="cursor-pointer transition-colors hover:text-blue-500 hover:underline font-mono"
                   >
                     uses
-                  </p>
+                  </a>
                 </Link>
               </li>
             </ul>
