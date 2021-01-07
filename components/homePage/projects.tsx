@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Project = ({}) => {
-  <div></div>;
+  <div className=""></div>;
 };
 
 export const Projects = () => {

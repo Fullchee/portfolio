@@ -16,6 +16,14 @@ const Footer = () => {
           >
             LinkedIn
           </a>
+          <Link href="/assets/Fullchee-Resume.pdf">
+            <a
+              href="https://www.linkedin.com/in/fullchee-zhang"
+              className="mx-3 font-bold hover:underline"
+            >
+              Resume
+            </a>
+          </Link>
         </div>
         <Link href="/attributions">
           <a href="/attributions" className="underline hover:text-blue-500">
