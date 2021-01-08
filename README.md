@@ -2,10 +2,6 @@
 
 ## TODOs
 
-- Homepage -> Skills
-  - icon with circle
-- tailwind css
-  - 6px colored border on the top of the page
 - Home page
   - https://portfolio-starter-template.webflow.io/
   - wesbos.com
@@ -15,9 +11,10 @@
   - Hero Patterns?
     - https://craig-roush-portfolio-template.webflow.io/
     - Wes bos css grid
+- Dark mode with animation of the sun setting and the moon rising
 - Project pages
   - Update resume links to each project folder
-- mdx blog
+  - resume: have multiple resumes, for each type of role
 - Pages
 - reread refactor UI
 - https://storage.googleapis.com/joshwcomeau/building-an-effective-dev-portfolio.pdf

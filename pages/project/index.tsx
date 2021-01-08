@@ -1,4 +1,5 @@
 import Layout from "../../components/layout";
+import { ProjectCard } from "../../components/project/ProjectList";
 
 const ProjectPage = () => {
   return (

@@ -22,9 +22,9 @@ const SkillIcon = ({ children }: { children: any }) => {
 const Skills = () => {
   return (
     <section className="flex-col flex flex-wrap mt-16 mb-16">
-      <h3 id="skills" className="font-monoDisplay text-3xl pb-4">
+      <h2 id="skills" className="font-monoDisplay text-3xl pb-4">
         skills
-      </h3>
+      </h2>
       <p>
         Through my studies at U of T, I've gathered a solid foundation of
         computer science concepts.{" "}

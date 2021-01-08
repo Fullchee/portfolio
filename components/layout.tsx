@@ -21,7 +21,7 @@ const Layout = ({ title, description, children }: Props) => {
         }}
       />
       <Header />
-      <div className="min-h-screen max-w-5xl mx-auto pt-8 px-6 md:px-24">
+      <div className="min-h-screen max-w-6xl mx-auto pt-8 px-6 md:px-24">
         {/* <Alert preview={preview} /> */}
         <Container>{children}</Container>
       </div>
