@@ -43,14 +43,14 @@ export const HighlightedProjects = () => {
       url: "/project/reminders",
     },
     {
-      title: "Create batch calendar events",
+      title: "Batch calendar events",
       description: `Create batch calendar events to Google Calendar in seconds`,
       image: {
-        alt: "screenshot of the Create batch calendar events project",
-        path: "/assets/projects/create-batch-calendar-events.png",
+        alt: "screenshot of the Batch calendar events project",
+        path: "/assets/projects/batch-calendar-events.png",
       },
       linkLabel: "View project",
-      url: "/project/create-batch-calendar-events",
+      url: "/project/batch-calendar-events",
     },
   ];
 
