@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <>
       <div className="sticky bg-white dark:border-blue-700 border-t-4 top-0 border-blue-500 z-10">
-        <div className="max-w-6xl mx-auto pl-12 md:pl-32">
+        <div className="max-w-6xl mx-auto pl-6 md:pl-24">
           <nav>
             <ul className="flex max-w-7xl">
               <li className="mr-auto pt-4">
