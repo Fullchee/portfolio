@@ -26,7 +26,10 @@ const Footer = () => {
           </Link>
         </div>
         <Link href="/attributions">
-          <a href="/attributions" className="underline hover:text-blue-500">
+          <a
+            href="/attributions"
+            className="underline hover:text-blue-500 p-4 text-center"
+          >
             This page is powered by Creative Commons Resources
           </a>
         </Link>
