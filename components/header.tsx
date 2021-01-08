@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeaderItem = ({ href, label }: { href: string; label: string }) => {
   return (
-    <li className="p-8 text-xl">
+    <li className="px-4 py-8 sm:p-8 text-xl">
       <Link href={href}>
         <a
           href={href}
@@ -35,8 +35,8 @@ export const Header = () => {
                   </a>
                 </Link>
               </li>
+              <HeaderItem href="/project" label="projects" />
               <HeaderItem href="/blog" label="blog" />
-              <HeaderItem href="/uses" label="uses" />
             </ul>
           </nav>
         </div>
