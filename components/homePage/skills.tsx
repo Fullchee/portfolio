@@ -31,14 +31,8 @@ const Skills = () => {
       </p>
       <p className="py-4">
         I stay up to date by listening to the{" "}
-        <a className=" underline hover:text-blue-500" href="https://syntax.fm/">
-          Syntax podcast
-        </a>
-        ,{" "}
-        <a
-          className="underline hover:text-blue-500"
-          href="https://zerotomastery.io/blog/web-developer-monthly-dec-2020/"
-        >
+        <a href="https://syntax.fm/">Syntax podcast</a>,{" "}
+        <a href="https://zerotomastery.io/blog/web-developer-monthly-dec-2020/">
           ZTM web dev monthly newsletter
         </a>{" "}
         and working on side projects.

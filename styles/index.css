@@ -7,6 +7,27 @@
 /* Stop purging. */
 
 /* Write you own custom component styles here */
+@layer base {
+  a {
+    @apply underline;
+  }
+
+  a:focus {
+    @apply text-blue-500;
+  }
+
+  a:hover {
+    @apply text-blue-500;
+  }
+
+  h1 {
+    @apply text-4xl pb-4 pt-6 font-display;
+  }
+
+  h2 {
+    @apply text-2xl pb-4 pt-6 font-bold;
+  }
+}
 
 /* Start purging... */
 @tailwind utilities;

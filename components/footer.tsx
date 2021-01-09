@@ -6,30 +6,27 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
           <a
             href={`https://github.com/fullchee`}
-            className="mx-3 font-bold hover:underline"
+            className="no-underline mx-3 font-bold"
           >
             GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/fullchee-zhang"
-            className="mx-3 font-bold hover:underline"
+            className="no-underline mx-3 font-bold"
           >
             LinkedIn
           </a>
           <Link href="/assets/Fullchee-Resume.pdf">
             <a
               href="https://www.linkedin.com/in/fullchee-zhang"
-              className="mx-3 font-bold hover:underline"
+              className="no-underline mx-3 font-bold"
             >
               Resume
             </a>
           </Link>
         </div>
         <Link href="/attributions">
-          <a
-            href="/attributions"
-            className="underline hover:text-blue-500 p-4 text-center"
-          >
+          <a href="/attributions" className="p-4 text-center">
             This page is powered by Creative Commons Resources
           </a>
         </Link>

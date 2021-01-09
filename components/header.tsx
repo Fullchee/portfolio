@@ -7,7 +7,7 @@ const HeaderItem = ({ href, label }: { href: string; label: string }) => {
       <Link href={href}>
         <a
           href={href}
-          className="cursor-pointer transition-colors hover:text-blue-500 hover:underline font-monoDisplay"
+          className="no-underline cursor-pointer transition-colors font-monoDisplay"
         >
           {label}
         </a>

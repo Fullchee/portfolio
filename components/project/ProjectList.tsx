@@ -28,7 +28,7 @@ const ProjectCard = ({
   return (
     <a
       href={url}
-      className="group transform duration-500 shadow-md hover:shadow-xl hover:scale-105 focus:shadow-xl focus:scale-105"
+      className="group transform duration-500 shadow-md hover:shadow-xl hover:scale-105 focus:shadow-xl focus:scale-105 no-underline"
     >
       <Image
         className="object-cover"
@@ -41,9 +41,7 @@ const ProjectCard = ({
         <h3 className="text-xl pt-4">{title}</h3>
         <p className="py-4">{description}</p>
         <Link href={url}>
-          <a className="underline group-hover:text-blue-500" href={url}>
-            {linkLabel}
-          </a>
+          <p className="underline">{linkLabel}</p>
         </Link>
       </div>
     </a>
