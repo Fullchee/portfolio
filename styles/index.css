@@ -27,6 +27,14 @@
   h2 {
     @apply text-2xl pb-4 pt-6 font-bold;
   }
+
+  p {
+    @apply py-2;
+  }
+
+  ul {
+    @apply list-disc list-inside;
+  }
 }
 
 /* Start purging... */
