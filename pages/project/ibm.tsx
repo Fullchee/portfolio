@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 
 import Layout from "../../components/layout";
 import Image from "next/image";
@@ -39,27 +40,39 @@ const IBMPage = () => {
       description="My experience working as a front-end developer at IBM Canada"
     >
       <h1>Working at IBM</h1>
-      <p>I've been doing front-end work at IBM since June 2019.</p>
+      <p>
+        I've been doing front-end work (a lot of JavaScript and CSS) at IBM
+        since June 2019 (1.5+ years).
+      </p>
+
       <h2>Contributions</h2>
       <p>
-        I work hard to build great user experiences for users. I communicated
-        with designers and the documentation team to ensure that the product was
-        accessible, responsive and consistent with the IBM Carbon design system.
+        I work hard to build great user experiences for users. I worked with
+        designers and the documentation team to ensure that the site is
       </p>
-      <p>I was very productive and have completed 200+ work items so far.</p>
-      <p>Right now, I'm on the IBM Workplace team</p>
-      <p>I've developed my front-end fundamentals.</p>
-
-      <h2>Background on Business Automation software</h2>
+      <ul className="list-inside list-disc pl-4">
+        <li>accessible (a11y)</li>
+        <li>localized (i18n)</li>
+        <li>responsive and mobile friendly</li>
+        <li>
+          Consistent with the{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.carbondesignsystem.com/"
+          >
+            IBM Carbon Design system
+          </a>
+        </li>
+      </ul>
       <p>
-        I working on{" "}
-        <a href="https://www.ibm.com/support/knowledgecenter/SSYHZ8_19.0.x/com.ibm.dba.workstream/topics/con_rwf_overview.html">
-          workstreams
-        </a>
-        , where
-        <a href="https://www.youtube.com/playlist?list=PL_4RxtD-BL5uzRHELwZz1-3YiczQV9UXU">
-          https://www.youtube.com/playlist?list=PL_4RxtD-BL5uzRHELwZz1-3YiczQV9UXU
-        </a>
+        If you're curious, you can{" "}
+        <Link href="/project/ibm#baw-background">
+          <a>
+            scroll down to read background info on what kind of Business
+            Automation work our team does
+          </a>
+        </Link>
       </p>
 
       <h2>Making the developer experience better</h2>
@@ -97,7 +110,12 @@ const IBMPage = () => {
         <h4>Solution</h4>
         <p>
           Our software builds and redeploys more than twice as fast on Linux
-          than on Windows.
+          than on Windows. This means less time waiting and higher productivity.
+        </p>
+        <p>
+          The challenge was not only making it possible but also making the
+          switch easy and obvious. This involved writing easy to follow
+          documentation and automating the setup in dot files.
         </p>
       </ProjectDescription>
 
@@ -115,7 +133,11 @@ const IBMPage = () => {
         <h4>Problem</h4>
         <p>
           We use{" "}
-          <a href="https://www.youtube.com/watch?v=j5bCvffQZbY">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/watch?v=j5bCvffQZbY"
+          >
             IBM Web Process Designer
           </a>
           {". "}To develop a custom solution, the fastest way to do things
@@ -142,9 +164,11 @@ const IBMPage = () => {
         </p>
         <p>
           One tricky thing when using oclif was being able to install directly
-          from a GitHub URL. Oclif makes it really easy to deploy to the public
-          NPM repository. However, since these repos might leak how it was I
-          wanted to have more real looking test data.{" "}
+          from a GitHub URL. Our software is proprietary so I want to ensure
+          that the tools don't leak into the public. To ensure that it worked on
+          both Linux and Windows, I just added the JS to the repository because
+          installing directly from GitHub seemed to have issues installing
+          dependencies.
         </p>
       </ProjectDescription>
 
@@ -168,9 +192,17 @@ const IBMPage = () => {
         <h4>Solution</h4>
         <p>
           I created a Node.js and TypeScript CLI (with{" "}
-          <a href="https://oclif.io/">oclif</a>) that integrated with our
-          version control system (we use{" "}
-          <a href="https://jazz.net/products/workflow-management/">RTC</a>{" "}
+          <a target="_blank" rel="noopener noreferrer" href="https://oclif.io/">
+            oclif
+          </a>
+          ) that integrated with our version control system (we use{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://jazz.net/products/workflow-management/"
+          >
+            RTC
+          </a>{" "}
           instead of Git) to
         </p>
         <ol className="list-inside list-decimal pl-4">
@@ -204,8 +236,7 @@ const IBMPage = () => {
         <p>
           I prepared a presentation to help win over my team to use ESLint, a
           linting tool and added the .eslintrc to the code repository to make
-          our code more consistent. This overall lead to slightly more
-          productivity.
+          our code more consistent. This lead to increased productivity.
         </p>
       </ProjectDescription>
 
@@ -219,6 +250,7 @@ const IBMPage = () => {
           onRight: false,
         }}
       >
+        <h3>Documentation</h3>
         <p>
           I've written thousands of words of documentation as I've understood
           the product better. Our team has a consistent rotation of interns and
@@ -229,12 +261,33 @@ const IBMPage = () => {
         </p>
       </ProjectDescription>
 
-      <h2 id="why-workstreams">Why workstreams</h2>
+      <h2 id="baw-background">Business Automation</h2>
+      <p>
+        Tl;dr:{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.youtube.com/playlist?list=PL_4RxtD-BL5uzRHELwZz1-3YiczQV9UXU"
+        >
+          watch a video our team made explaining workstreams and Workplace
+        </a>
+      </p>
+      <p>
+        I am working on the{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.ibm.com/support/knowledgecenter/SSYHZ8_19.0.x/com.ibm.dba.workstream/topics/con_rwf_overview.html"
+        >
+          workstreams
+        </a>
+        , and Workplace team.
+      </p>
       <p>
         As an example of a process (also called workflow), we have a mortgage
         approval. These are some oversimplified steps.
       </p>
-      <ol>
+      <ol className="list-inside list-decimal pl-4">
         <li>Hiring manager submits a form with all the hiring details</li>
         <li>HR employee updates job description</li>
         <li>HR employee posts an opening on job boards</li>
@@ -250,7 +303,8 @@ const IBMPage = () => {
       <p>
         Before computers, we would have the process written on paper. Computers
         allowed us to not only document those processes but run them as well.
-        You can imagine a web page with a form to.
+        Imagine you're the HR employee and you get a notification as soon as the
+        hiring manager completes step 1 so that you can now do step 2.
       </p>
 
       <p>
@@ -266,6 +320,10 @@ const IBMPage = () => {
       <p>
         The challenge was to enable this functionality with the existing legacy
         IBM BAW processes.
+      </p>
+      <p>
+        IBM Workplace is an app with a modern UI where business users can do
+        their process, case and workstreams work.
       </p>
     </Layout>
   );
