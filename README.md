@@ -11,7 +11,7 @@
   - Hero Patterns?
     - https://craig-roush-portfolio-template.webflow.io/
     - Wes bos css grid
-- Dark mode with animation of the sun setting and the moon rising
+- delete lib/markdownToHtml.ts?
 - Project pages
   - Update resume links to each project folder
   - resume: have multiple resumes, for each type of role
@@ -20,6 +20,7 @@
 - https://storage.googleapis.com/joshwcomeau/building-an-effective-dev-portfolio.pdf
 - ensure that each project page has it's own preview image (og)
 - Figure out how to use the font from the website if /fonts/MajorMonoDisplay-Regular.ttf
+- Dark mode with animation of the sun setting and the moon rising
 
 This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
 

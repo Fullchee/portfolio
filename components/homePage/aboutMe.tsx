@@ -18,17 +18,9 @@ const AboutMe = () => {
         problems <em>(click the projects to see a summary and reflection)</em>
       </p>
       <p>
-        After a family member got a high water bill from a leaky toilet so I
-        built a{" "}
-        <Link href="/projects/toronto-water-monitor">
-          <a href="/projects/toronto-water-monitor">
-            web app that detects high water usage.
-          </a>
-        </Link>
+        It's amazing how the skills I learn from the projects and at work
+        compound.
       </p>
-      When my sister worked at a supermarket and only got her schedule once
-      every week, I built an app to create batch Google Calendar events under 30
-      seconds.
     </section>
   );
 };

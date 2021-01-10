@@ -15,10 +15,10 @@ this?  */}
         prevent that from happening again. I also hope to share it with others
         so that they don't get high water bills.
       </p>
+
       <h2>Features</h2>
-      {/* What are the major features that make it unique? How does it compare to existing
-products like it?  */}
-      - screenshot of main page, completed page, emails
+      <p>screenshot of main page, completed page, emails</p>
+
       <h2>Tech stack</h2>
       {/* What did you start with? Was this built from scratch? Did you have a team? If so,
 which parts did you do? Where did the design come from? Was there any
@@ -35,6 +35,7 @@ collaboration?  */}
         because once minified, the tooltip would be too small to be interacted
         with on a touch device.
       </p>
+
       <h2>Thought process</h2>
       {/* What was the hardest part of building this product? Where did you get stuck along the
 way?  */}
@@ -67,6 +68,7 @@ you faced?  */}
         <li>I didn't like the daily 100 email limit</li>
         <li>I don't need additional features like the click through rate</li>
       </ul>
+
       <h3>Unsubscribe link</h3>
       <p>
         Another challenge was the unsubscribe link in the email. I don't fully
@@ -84,6 +86,7 @@ you faced?  */}
         their email
       </p>
       {/* image */}
+
       <h3>Testing</h3>
       <p>I have unit tests for the validation of incoming data.</p>
       <p>
@@ -95,10 +98,12 @@ you faced?  */}
         Heroku doesn't have a cron job so I used the Heroku daily scheduler to
         check make the Toronto API calls.
       </p>
-      <h2>Summary of lessons learned</h2>
+
+      <h2>Lessons learned</h2>
       {/* What did you learn from doing this project? How has it affected the work you’ve done
 since then? */}
       <p>I learned that email HTML is different.</p>
+
       <h2>Next steps</h2>
       <p>
         I am preparing to talk to people from{" "}

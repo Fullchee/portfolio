@@ -49,6 +49,19 @@ const IBMPage = () => {
       <p>I was very productive and have completed 200+ work items so far.</p>
       <p>Right now, I'm on the IBM Workplace team</p>
       <p>I've developed my front-end fundamentals.</p>
+
+      <h2>Background on Business Automation software</h2>
+      <p>
+        I working on{" "}
+        <a href="https://www.ibm.com/support/knowledgecenter/SSYHZ8_19.0.x/com.ibm.dba.workstream/topics/con_rwf_overview.html">
+          workstreams
+        </a>
+        , where
+        <a href="https://www.youtube.com/playlist?list=PL_4RxtD-BL5uzRHELwZz1-3YiczQV9UXU">
+          https://www.youtube.com/playlist?list=PL_4RxtD-BL5uzRHELwZz1-3YiczQV9UXU
+        </a>
+      </p>
+
       <h2>Making the developer experience better</h2>
       <p>
         In addition to the work that was expected of me, I also worked hard to
@@ -145,7 +158,7 @@ const IBMPage = () => {
           onRight: false,
         }}
       >
-        <h3>Improve layout diffs</h3>
+        <h3>Human readable diffs</h3>
         <h4>Problem</h4>
         <p>
           Our layouts are stored as minified XML files. When we make a change to
@@ -177,7 +190,7 @@ const IBMPage = () => {
           width: 240,
           height: 120,
           alt: "diff of two XML files",
-          onRight: false,
+          onRight: true,
         }}
       >
         <h3>ESLint</h3>
@@ -203,7 +216,7 @@ const IBMPage = () => {
           width: 200,
           height: 200,
           alt: "diff of two XML files",
-          onRight: true,
+          onRight: false,
         }}
       >
         <p>
@@ -211,13 +224,48 @@ const IBMPage = () => {
           the product better. Our team has a consistent rotation of interns and
           the documentation will improve the on-boarding experience and time.
         </p>
+        <p>
+          Many of the projects above were inspired to simplify the docs as well.
+        </p>
       </ProjectDescription>
 
-      <h2>Background on Business Automation software</h2>
+      <h2 id="why-workstreams">Why workstreams</h2>
       <p>
-        <a href="https://www.ibm.com/support/knowledgecenter/SSYHZ8_19.0.x/com.ibm.dba.workstream/topics/con_rwf_overview.html">
-          workstreams
-        </a>
+        As an example of a process (also called workflow), we have a mortgage
+        approval. These are some oversimplified steps.
+      </p>
+      <ol>
+        <li>Hiring manager submits a form with all the hiring details</li>
+        <li>HR employee updates job description</li>
+        <li>HR employee posts an opening on job boards</li>
+        <li>
+          HR employee approves or rejects the candidate after the first round
+          interview.
+        </li>
+        <li>
+          Hiring manager automatically gets a calendar invite for the second
+          round interview
+        </li>
+      </ol>
+      <p>
+        Before computers, we would have the process written on paper. Computers
+        allowed us to not only document those processes but run them as well.
+        You can imagine a web page with a form to.
+      </p>
+
+      <p>
+        Normally with IBM BAW, you hire IT pros specialized with IBM BAW who
+        create the processes. So they usually create the biggest bang for the
+        buck complex processes. What sells BAW is how it can handle all of
+        life's complexities. The problem is that it has a high learning curve.
+      </p>
+      <p className="">
+        What workstreams enables is any regular business user to create their
+        own workstream in five minutes or less.
+      </p>
+      <p>
+        The challenge was to enable this functionality with the existing legacy
+        IBM BAW processes.
       </p>
     </Layout>
   );
