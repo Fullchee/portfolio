@@ -7,7 +7,7 @@ export const HighlightedProjects = () => {
       description: `Read about my experience working as a front-end developer at IBM Canada`,
       image: {
         alt: "screenshot of IBM's original eight stripe logo",
-        path: "/assets/images/projects/IBM_logo.svg",
+        path: "/assets/images/projects/ibm/IBM_logo.svg",
       },
       linkLabel: "Read story",
       url: "/project/ibm",
