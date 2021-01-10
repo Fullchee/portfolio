@@ -18,6 +18,7 @@
 - Pages
 - reread refactor UI
 - https://storage.googleapis.com/joshwcomeau/building-an-effective-dev-portfolio.pdf
+- ensure that each project page has it's own preview image (og)
 - Figure out how to use the font from the website if /fonts/MajorMonoDisplay-Regular.ttf
 
 This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.

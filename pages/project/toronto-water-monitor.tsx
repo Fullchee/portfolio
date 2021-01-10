@@ -3,8 +3,8 @@ import Layout from "../../components/layout";
 const TorontoWaterMonitorPage = () => {
   return (
     <Layout
-      title="Projects - Fullchee Zhang"
-      description="Projects I've been working on"
+      title="Toronto water monitor - Fullchee Zhang"
+      description="Project that checks your Toronto water usage and sends you an email if usage spikes"
     >
       <h1>Toronto water monitor</h1>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
@@ -57,9 +57,9 @@ you faced?  */}
         nice docs. However, I eventually implemented everything with Nodemailer,
         a Node.js package that sends emails for these reasons.
       </p>
-      <ul>
+      <ul className="list-disc list-inside">
         <li>I would have to keep track of two email lists</li>
-        <ul>
+        <ul className="list-disc list-inside ml-8">
           <li>in my database</li>
           <li>with the external service</li>
         </ul>

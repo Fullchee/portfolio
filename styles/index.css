@@ -25,7 +25,19 @@
   }
 
   h2 {
-    @apply text-2xl pb-4 pt-6 font-bold;
+    @apply text-2xl pb-4 pt-6;
+  }
+
+  h3 {
+    @apply text-xl pb-4 pt-6;
+  }
+
+  h4 {
+    @apply pb-0 pt-4 font-bold;
+  }
+
+  ol {
+    @apply py-2;
   }
 
   p {
@@ -33,7 +45,7 @@
   }
 
   ul {
-    @apply list-disc list-inside;
+    @apply py-2;
   }
 }
 

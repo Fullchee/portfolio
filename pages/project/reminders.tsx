@@ -1,14 +1,14 @@
 import Layout from "../../components/layout";
 
-const ProjectPage = () => {
+const RemindersPage = () => {
   return (
     <Layout
       title="Projects - Fullchee Zhang"
       description="Projects I've been working on"
     >
-      <h1>Projects</h1>
+      <h1>Reminders</h1>
     </Layout>
   );
 };
 
-export default ProjectPage;
+export default RemindersPage;
