@@ -41,7 +41,7 @@
   }
 
   p {
-    @apply py-2;
+    @apply py-2 max-w-3xl;
   }
 
   ul {

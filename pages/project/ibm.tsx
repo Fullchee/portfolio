@@ -40,6 +40,7 @@ const IBMPage = () => {
     >
       <h1>Working at IBM</h1>
       <p>I've been doing front-end work at IBM since June 2019.</p>
+      <h2>Contributions</h2>
       <p>
         I work hard to build great user experiences for users. I communicated
         with designers and the documentation team to ensure that the product was
@@ -47,8 +48,7 @@ const IBMPage = () => {
       </p>
       <p>I was very productive and have completed 200+ work items so far.</p>
       <p>Right now, I'm on the IBM Workplace team</p>
-      <h2>Contributions</h2>
-      <p>I've really learned about the fundamentals of front-end.</p>
+      <p>I've developed my front-end fundamentals.</p>
       <h2>Making the developer experience better</h2>
       <p>
         In addition to the work that was expected of me, I also worked hard to
@@ -203,7 +203,7 @@ const IBMPage = () => {
           width: 200,
           height: 200,
           alt: "diff of two XML files",
-          onRight: false,
+          onRight: true,
         }}
       >
         <p>
