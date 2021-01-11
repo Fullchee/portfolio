@@ -38,6 +38,7 @@ The design is heavily inspired by
 Too complex but nice to have
 
 - Dark mode with animation of the sun setting and the moon rising
+- Dark mode has celeste tentacles destroying the page
 
 ## Deploy your own
 
