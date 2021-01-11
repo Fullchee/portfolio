@@ -16,7 +16,7 @@ const TorontoWaterMonitorPage = () => {
     >
       <h1>Toronto water monitor</h1>
       <ProjectOverview
-        githubUrl="github.com/Fullchee/toronto-water-monitor-frontend"
+        githubProject="toronto-water-monitor-backend"
         demoUrl="https://toronto-water-monitor.netlify.app/"
         skills={skills}
       />

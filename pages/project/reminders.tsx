@@ -17,7 +17,7 @@ const RemindersPage = () => {
       <h1>Reminders</h1>
 
       <ProjectOverview
-        githubUrl="github.com/Fullchee/reminders-frontend"
+        githubProject="reminders-frontend"
         demoUrl="https://fullchee-reminders.netlify.app/"
         skills={skills}
       />

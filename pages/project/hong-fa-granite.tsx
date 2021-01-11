@@ -15,7 +15,10 @@ const HongFaGranitePage = () => {
       description="Projects I've been working on"
     >
       <h1>Hong Fa Granite</h1>
-      <ProjectOverview demoUrl="hongfagranite.com" skills={skills} />
+      <ProjectOverview
+        demoUrl="https://www.hongfagranite.com"
+        skills={skills}
+      />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
@@ -80,9 +83,7 @@ you faced?  */}
         npm packages and because I had already some experience with Google APIs
         from my{" "}
         <Link href="/project/batch-calendar-events">
-          <a href="/project/batch-calendar-events">
-            Batch calendar events project.
-          </a>
+          <a>Batch calendar events project.</a>
         </Link>
       </p>
       <p>

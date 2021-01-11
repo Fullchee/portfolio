@@ -17,16 +17,11 @@ const Footer = () => {
             LinkedIn
           </a>
           <Link href="/assets/Fullchee-Resume.pdf">
-            <a
-              href="https://www.linkedin.com/in/fullchee-zhang"
-              className="no-underline mx-3 font-bold"
-            >
-              Resume
-            </a>
+            <a className="no-underline mx-3 font-bold">Resume</a>
           </Link>
         </div>
         <Link href="/attributions">
-          <a href="/attributions" className="p-4 text-center">
+          <a className="p-4 text-center">
             This page is powered by Creative Commons Resources
           </a>
         </Link>

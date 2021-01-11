@@ -25,7 +25,7 @@ export const Header = () => {
             <ul className="list-none flex max-w-7xl">
               <li className="mr-auto pt-4">
                 <Link href="/">
-                  <a href="/">
+                  <a>
                     <Image
                       src="/fullchee.svg"
                       alt="home page"

@@ -12,7 +12,7 @@ const BatchCalendarEventsPage = () => {
       <h1>Batch calendar events</h1>
       <ProjectOverview
         demoUrl="https://calendar-shifts.netlify.app/"
-        githubUrl="github.com/Fullchee/calendar-shifts"
+        githubProject="calendar-shifts"
         skills={skills}
       />
       {/* Why is this project important to you? What inspired it? Why did you choose to build

@@ -5,7 +5,7 @@ import Link from "next/link";
 interface Props {
   demoUrl: string;
   skills: Skill[];
-  githubUrl?: string;
+  githubProject?: string;
 }
 
 const Button = ({
@@ -18,25 +18,34 @@ const Button = ({
   text: string;
 }) => {
   return (
-    <Link href={href}>
-      <Icon icon={icon} className="h-8 w-8" />
-      <a className="">{text}</a>
-    </Link>
+    <a
+      href={href}
+      className="pl-1 no-underline transform duration-300 hover:scale-105 focus:scale-105"
+    >
+      <div className="flex bg-indigo-500 p-4 m-4 rounded-md text-white">
+        <Icon icon={icon} className="h-6 w-6 fill-current text-white" />
+        <p className="m-0 p-0 pl-1">{text}</p>
+      </div>
+    </a>
   );
 };
 
-export const ProjectOverview = ({ skills, githubUrl, demoUrl }: Props) => {
+export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
   return (
     <div className="grid grid-cols-2">
-      <div className="flex flex-row">
-        {githubUrl ? (
-          <Button href="github.com/Fullchee/" icon="github" text="GitHub" />
+      <div className="flex flex-row justify-center items-center">
+        {githubProject ? (
+          <Button
+            href={`https://www.github.com/Fullchee/${githubProject}`}
+            icon="github"
+            text="GitHub"
+          />
         ) : null}
-        <Button href="hongfagranite.com" icon="launch" text="Launch" />
+        <Button href={demoUrl} icon="launch" text="Launch" />
       </div>
       <div>
         <h2>Made with</h2>
-        <ul className=" list-none grid sm:grid-cols-2 xl:grid-cols-3">
+        <ul className=" list-none grid sm:grid-cols-2 xl:grid-cols-3 pl-0">
           <SkillList skills={skills} />
         </ul>
       </div>
