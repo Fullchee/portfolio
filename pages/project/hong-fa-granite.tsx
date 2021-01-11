@@ -11,12 +11,22 @@ const HongFaGranitePage = () => {
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <h2>Why</h2>
+      <p>
+        A family friend has a stone fabricator business. They had a slow
+        Wordpress website that was costing them $50+ a month with Bell Hosting.
+      </p>
       <h2>Features</h2>
       <p>screenshots</p>
+      <p></p>
       <h2>Tech stack</h2>
       {/* What did you start with? Was this built from scratch? Did you have a team? If so,
 which parts did you do? Where did the design come from? Was there any
 collaboration?  */}
+      <p>There isn't a lot of dynamic content so I decided to use Gatsby. </p>
+      <p>
+        I built this site from a Gatsby template. I decided to use Bulma because
+        it is responsive and I had heard good things about it.
+      </p>
       <h2>Thought process</h2>
       {/* What was the hardest part of building this product? Where did you get stuck along the
 way?  */}

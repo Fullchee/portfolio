@@ -1,25 +1,16 @@
-import { Icon } from "../common/icons";
-
-const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
-  return (
-    <li className="py-2">
-      <SkillIcon>
-        <Icon className="fill-current text-blue-400" name={icon} />
-      </SkillIcon>
-      {label}
-    </li>
-  );
-};
-
-const SkillIcon = ({ children }: { children: any }) => {
-  return (
-    <div className="w-8 h-8 mr-4 rounded-full bg-blue-50 inline-flex justify-center items-center">
-      {children}
-    </div>
-  );
-};
+import { SkillList } from "../common/SkillList";
 
 const Skills = () => {
+  const skills = [
+    { icon: "js", label: "JavaScript ES6+" },
+    { icon: "html5", label: "HTML &amp; CSS" },
+    { icon: "react", label: "React" },
+    { icon: "sass", label: "LESS and SASS" },
+    { icon: "code-branch", label: "Git" },
+    { icon: "database", label: "SQL" },
+    { icon: "node-js", label: "Node.js" },
+    { icon: "typescript-icon.svg", label: "TypeScript" },
+  ];
   return (
     <section className="flex-col flex flex-wrap mt-16 mb-16">
       <h2 id="skills" className="font-monoDisplay text-3xl pb-4">
@@ -38,13 +29,7 @@ const Skills = () => {
         and working on side projects.
       </p>
       <ul className="grid sm:grid-cols-3 xl:grid-cols-4">
-        <SkillItem icon="js" label="JavaScript ES6+" />
-        <SkillItem icon="html5" label="HTML &amp; CSS" />
-        <SkillItem icon="react" label="React" />
-        <SkillItem icon="sass" label="LESS and SASS" />
-        <SkillItem icon="code-branch" label="Git" />
-        <SkillItem icon="database" label="SQL" />
-        <SkillItem icon="node-js" label="Node.js" />
+        <SkillList skills={skills} />
       </ul>
     </section>
   );

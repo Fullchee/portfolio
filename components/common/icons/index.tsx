@@ -6,26 +6,40 @@ import SvgJs from "./js";
 import SvgNodeJs from "./node-js";
 import SvgReact from "./react";
 import SvgSass from "./sass";
+import Image from "next/image";
 
-export const Icon = ({ name, className }: { name: string, className: string }) => {
-  switch (name) {
+export const Icon = ({
+  icon,
+  className,
+}: {
+  icon: string;
+  className: string;
+}) => {
+  switch (icon) {
     case "code-branch":
-      return <SvgCodeBranch className={className}/>;
+      return <SvgCodeBranch className={className} />;
     case "database":
-      return <SvgDatabase className={className}/>;
+      return <SvgDatabase className={className} />;
     case "github":
-      return <SvgGitHub className={className}/>;
+      return <SvgGitHub className={className} />;
     case "html5":
-      return <SvgHtml5 className={className}/>;
+      return <SvgHtml5 className={className} />;
     case "js":
-      return <SvgJs className={className}/>;
+      return <SvgJs className={className} />;
     case "node-js":
-      return <SvgNodeJs className={className}/>;
+      return <SvgNodeJs className={className} />;
     case "react":
-      return <SvgReact className={className}/>;
+      return <SvgReact className={className} />;
     case "sass":
-      return <SvgSass className={className}/>;
+      return <SvgSass className={className} />;
     default:
-      return <div className={className}/>;
+      return (
+        <Image
+          src={`/assets/images/icons/${icon}`}
+          className={className}
+          width={16}
+          height={16}
+        />
+      );
   }
 };
