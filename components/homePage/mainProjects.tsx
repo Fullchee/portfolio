@@ -27,7 +27,7 @@ export const HighlightedProjects = () => {
       description: `Static site for a local business in English and Chinese`,
       image: {
         alt: "screenshot of hong fa granite.com",
-        path: "/assets/images/projects/hong-fa-granite.png",
+        path: "/assets/images/projects/hong-fa-granite/hong-fa-granite.png",
       },
       linkLabel: "View project tour",
       url: "/project/hong-fa-granite",

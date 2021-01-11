@@ -1,12 +1,26 @@
 import Layout from "../../components/layout";
+import { ProjectOverview } from "../../components/project/ProjectOverview";
 
 const RemindersPage = () => {
+  const skills = [
+    { icon: "react", label: "React" },
+    { icon: "js", label: "JavaScript" },
+    { icon: "sass", label: "SASS" },
+    { icon: "node-js", label: "Node.js" },
+    { icon: "database", label: "SQL" },
+  ];
   return (
     <Layout
       title="Projects - Fullchee Zhang"
       description="Projects I've been working on"
     >
       <h1>Reminders</h1>
+
+      <ProjectOverview
+        githubUrl="github.com/Fullchee/reminders-frontend"
+        demoUrl="https://fullchee-reminders.netlify.app/"
+        skills={skills}
+      />
 
       <h2>Why</h2>
       <h2>Features</h2>

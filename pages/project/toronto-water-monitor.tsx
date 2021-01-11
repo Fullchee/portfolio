@@ -1,12 +1,26 @@
 import Layout from "../../components/layout";
+import { ProjectOverview } from "../../components/project/ProjectOverview";
 
 const TorontoWaterMonitorPage = () => {
+  const skills = [
+    { icon: "react", label: "React" },
+    { icon: "typescript-icon.svg", label: "TypeScript" },
+    { icon: "sass", label: "SASS" },
+    { icon: "node-js", label: "Node.js" },
+    { icon: "database", label: "SQL" },
+  ];
   return (
     <Layout
       title="Toronto water monitor - Fullchee Zhang"
       description="Project that checks your Toronto water usage and sends you an email if usage spikes"
     >
       <h1>Toronto water monitor</h1>
+      <ProjectOverview
+        githubUrl="github.com/Fullchee/toronto-water-monitor-frontend"
+        demoUrl="https://toronto-water-monitor.netlify.app/"
+        skills={skills}
+      />
+
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <h2>Why</h2>
@@ -58,9 +72,9 @@ you faced?  */}
         nice docs. However, I eventually implemented everything with Nodemailer,
         a Node.js package that sends emails for these reasons.
       </p>
-      <ul className="list-disc list-inside">
+      <ul>
         <li>I would have to keep track of two email lists</li>
-        <ul className="list-disc list-inside ml-8">
+        <ul className="pt-0">
           <li>in my database</li>
           <li>with the external service</li>
         </ul>

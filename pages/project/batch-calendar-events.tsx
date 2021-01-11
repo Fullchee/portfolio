@@ -1,9 +1,20 @@
 import Layout from "../../components/layout";
+import { ProjectOverview } from "../../components/project/ProjectOverview";
 
 const BatchCalendarEventsPage = () => {
+  const skills = [
+    { icon: "react", label: "React" },
+    { icon: "js", label: "JavaScript" },
+    { icon: "css", label: "CSS" },
+  ];
   return (
     <Layout title="Batch calendar events - Fullchee Zhang" description="">
       <h1>Batch calendar events</h1>
+      <ProjectOverview
+        demoUrl="https://calendar-shifts.netlify.app/"
+        githubUrl="github.com/Fullchee/calendar-shifts"
+        skills={skills}
+      />
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <h2>Why</h2>

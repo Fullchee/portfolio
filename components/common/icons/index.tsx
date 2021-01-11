@@ -3,6 +3,7 @@ import SvgDatabase from "./database";
 import SvgGitHub from "./github";
 import SvgHtml5 from "./html5";
 import SvgJs from "./js";
+import SvgLaunch from "./github copy";
 import SvgNodeJs from "./node-js";
 import SvgReact from "./react";
 import SvgSass from "./sass";
@@ -32,6 +33,8 @@ export const Icon = ({
       return <SvgReact className={className} />;
     case "sass":
       return <SvgSass className={className} />;
+    case "launch":
+      return <SvgLaunch className={className} />;
     default:
       return (
         <Image

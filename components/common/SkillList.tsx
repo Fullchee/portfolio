@@ -19,10 +19,11 @@ const SkillIcon = ({ children }: { children: any }) => {
   );
 };
 
-type Skill = {
+export type Skill = {
   icon: string;
   label: string;
 };
+
 export const SkillList = ({ skills }: { skills: Skill[] }) => {
   return (
     <>

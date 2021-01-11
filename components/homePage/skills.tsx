@@ -3,7 +3,7 @@ import { SkillList } from "../common/SkillList";
 const Skills = () => {
   const skills = [
     { icon: "js", label: "JavaScript ES6+" },
-    { icon: "html5", label: "HTML &amp; CSS" },
+    { icon: "html5", label: "HTML & CSS" },
     { icon: "react", label: "React" },
     { icon: "sass", label: "LESS and SASS" },
     { icon: "code-branch", label: "Git" },
@@ -26,9 +26,10 @@ const Skills = () => {
         <a href="https://zerotomastery.io/blog/web-developer-monthly-dec-2020/">
           ZTM web dev monthly newsletter
         </a>{" "}
-        and working on side projects.
+        and working on side projects. I retain and remember what I learn with{" "}
+        <a href="https://apps.ankiweb.net/">Anki</a> and spaced repetition.
       </p>
-      <ul className="grid sm:grid-cols-3 xl:grid-cols-4">
+      <ul className=" list-none grid sm:grid-cols-3 xl:grid-cols-4">
         <SkillList skills={skills} />
       </ul>
     </section>

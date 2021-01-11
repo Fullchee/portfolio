@@ -37,15 +37,15 @@
   }
 
   ol {
-    @apply py-2;
+    @apply list-inside list-decimal pl-4 py-2;
   }
 
   p {
-    @apply py-2 max-w-3xl;
+    @apply max-w-3xl py-2;
   }
 
   ul {
-    @apply py-2;
+    @apply list-inside list-disc pl-4 py-2;
   }
 }
 

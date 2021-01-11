@@ -50,7 +50,7 @@ const IBMPage = () => {
         I work hard to build great user experiences for users. I worked with
         designers and the documentation team to ensure that the site is
       </p>
-      <ul className="list-inside list-disc pl-4">
+      <ul>
         <li>accessible (a11y)</li>
         <li>localized (i18n)</li>
         <li>responsive and mobile friendly</li>
@@ -94,7 +94,7 @@ const IBMPage = () => {
         <h3>Changing the dev environment to Linux</h3>
         <h4>Problem</h4>
         <p>A lot of time would be spent waiting for</p>
-        <ul className="list-inside list-disc pl-4">
+        <ul>
           <li>your server to rebuild (5+ hours)</li>
           <li>Your server to restart (~10 minutes)</li>
           <li>Waiting for your Windows VM to unfreeze</li>
@@ -144,7 +144,7 @@ const IBMPage = () => {
           involves manual steps. For example, to update your CSS file, you would
           typically have to
         </p>
-        <ol className="list-inside list-decimal pl-4">
+        <ol>
           <li>Download a zip folder with a specific file structure</li>
           <li>Update that zip folder with your LESS file</li>
           <li>Upload the zip folder</li>
@@ -205,7 +205,7 @@ const IBMPage = () => {
           </a>{" "}
           instead of Git) to
         </p>
-        <ol className="list-inside list-decimal pl-4">
+        <ol>
           <li>un-minify the XML file</li>
           <li>Open a tool (VSCode or Meld) to view the diff</li>
         </ol>
@@ -287,7 +287,7 @@ const IBMPage = () => {
         As an example of a process (also called workflow), we have a mortgage
         approval. These are some oversimplified steps.
       </p>
-      <ol className="list-inside list-decimal pl-4">
+      <ol>
         <li>Hiring manager submits a form with all the hiring details</li>
         <li>HR employee updates job description</li>
         <li>HR employee posts an opening on job boards</li>

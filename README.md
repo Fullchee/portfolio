@@ -14,7 +14,17 @@ The design is heavily inspired by
 
 ## TODOs
 
+- Project pages
+  - Update resume links to each project folder
+  - resume: have multiple resumes, for each type of role
+- ensure that each project page has it's own preview image (og)
+- Blog: remove duplicate enumeration (for ordered lists)
+
+- reread Refactoring UI
+- https://storage.googleapis.com/joshwcomeau/building-an-effective-dev-portfolio.pdf
+
 - Home page
+
   - https://portfolio-starter-template.webflow.io/
   - wesbos.com
   - juliacodes.com
@@ -23,15 +33,10 @@ The design is heavily inspired by
   - Hero Patterns?
     - https://craig-roush-portfolio-template.webflow.io/
     - Wes bos css grid
-- delete lib/markdownToHtml.ts?
-- Project pages
-  - Update resume links to each project folder
-  - resume: have multiple resumes, for each type of role
-- Pages
-- reread refactor UI
-- https://storage.googleapis.com/joshwcomeau/building-an-effective-dev-portfolio.pdf
-- ensure that each project page has it's own preview image (og)
-- footer with geo shapes https://portfolio.smakosh.com/
+    - footer with geo shapes https://portfolio.smakosh.com/
+
+Too complex but nice to have
+
 - Dark mode with animation of the sun setting and the moon rising
 
 ## Deploy your own
