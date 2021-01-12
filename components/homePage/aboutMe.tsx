@@ -7,7 +7,7 @@ const AboutMe = () => {
         I'm grateful to be able to scratch my own itch and solve problems. 🙏
       </p>
       <p className="py-4 pr-4 sm:w-1/2">
-        Pre-quarantine, I was an avid dragon boat paddler.
+        Pre-quarantine, I was an avid dragon boat paddler. 🛶
       </p>
       <p className="py-4 pr-4 sm:w-1/2">
         During quarantine, I've been leveling up my web dev skills and learning

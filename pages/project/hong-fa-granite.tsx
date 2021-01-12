@@ -87,7 +87,7 @@ you faced?  */}
         width={300}
         height={84}
       />
-      <p>Logo design plan</p>
+      <h4>Logo design plan</h4>
       <ol>
         <li>Decide on a serif font for the logo</li>
         <li>Update the logo to be favicon friendly</li>
@@ -97,22 +97,45 @@ you faced?  */}
       <Image
         src="/assets/images/projects/hong-fa-granite/new-logo.png"
         alt="New Hong Fa Granite logo"
-        width={313}
-        height={107}
+        width={300}
+        height={100}
       />
 
       <p>
         I went through serif fonts on Google Fonts to find a font that the
         client liked. I limited it to serif fonts to convey a classic style to
         reflect the classic nature of stone counter tops. Similarly, I went
-        through logos of stone related companies and I decided on a geometric
-        design with an H in the middle. I kept the brown color scheme of the old
-        logo
+        through logos of stone related companies and I decided on a symmetric
+        geometric design with an H in the middle. I kept the brown color scheme
+        of the old logo.
       </p>
       <h3>Site design</h3>
       <p>
         The Gatsby theme I started with came with the Bulma CSS framework so I
-        used Bulma components.
+        used Bulma components. The home page had a hero button
+      </p>
+
+      <h3>Internationalization (i18n)</h3>
+      <p>
+        An important demographic for the company was chinese speaking so I had
+        to enable language support for Chinese and English. The Workplace and
+        Workstreams products at IBM support multiple locales so I knew some
+        tricks. I decided on using react-intl. There are a lot of ways to
+        implement i18n. The way that worked for me was adding a /zh/ prefix to
+        every path. I'm only dealing with two languages so I created a{" "}
+        <code>&lt;LocalizedLink&gt;</code> wrapper on top of the Gatsby Link
+        component and I placed my strings in JSON files.
+      </p>
+      <h3>Products page</h3>
+      <p>
+        I added a filter feature (which just uses an ES6 Array filter) to filter
+        the types of stone products
+      </p>
+      <h3>Contact us page</h3>
+      <p>
+        I used Netlify Forms to handle the contact us page. I used Yup to
+        validate the form. The contact info uses the same component as in the
+        footer with CSS Flexbox.
       </p>
       <p>
         Google Maps integration was fairly straightforward because of existing
@@ -125,17 +148,11 @@ you faced?  */}
       <h3>Deploying</h3>
       <p>
         I deployed to a free Netlify site to get feedback from the client. Once
-        the site was ready for deployment.
+        the site was ready for deployment, I had to switch from Bell to Netlify.
+        Switching was predictably the hardest and least fun part of this
+        project. Eventually, I switched to another domain provider and connected
+        it with Netlify so that HongFaGranite.com was live!
       </p>
-      <p>
-        Switching from Bell Hosting to Netlify was predictably the hardest and
-        least fun part of this project. Eventually, I switched to another domain
-        provider and connected it with Netlify so that HongFaGranite.com was
-        live!
-      </p>
-      <h2>Lessons learned</h2>
-      {/* What did you learn from doing this project? How has it affected the work you’ve done
-since then? */}
     </Layout>
   );
 };

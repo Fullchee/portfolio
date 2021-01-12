@@ -22,7 +22,7 @@ const Button = ({
       href={href}
       className="pl-1 no-underline transform duration-300 hover:scale-105 focus:scale-105"
     >
-      <div className="flex bg-indigo-500 p-4 m-4 rounded-md text-white">
+      <div className="flex bg-blue-500 p-4 rounded-md text-white ">
         <Icon icon={icon} className="h-6 w-6 fill-current text-white" />
         <p className="m-0 p-0 pl-1">{text}</p>
       </div>
@@ -32,8 +32,14 @@ const Button = ({
 
 export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
   return (
-    <div className="grid grid-cols-2">
-      <div className="flex flex-row justify-center items-center">
+    <div className="grid max-w-lg">
+      <div>
+        <h2>Made with</h2>
+        <ul className=" list-none grid sm:grid-cols-2 xl:grid-cols-3 pl-0">
+          <SkillList skills={skills} />
+        </ul>
+      </div>
+      <div className="flex flex-row items-center pt-4 space-x-4">
         {githubProject ? (
           <Button
             href={`https://www.github.com/Fullchee/${githubProject}`}
@@ -42,12 +48,6 @@ export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
           />
         ) : null}
         <Button href={demoUrl} icon="launch" text="Launch" />
-      </div>
-      <div>
-        <h2>Made with</h2>
-        <ul className=" list-none grid sm:grid-cols-2 xl:grid-cols-3 pl-0">
-          <SkillList skills={skills} />
-        </ul>
       </div>
     </div>
   );
