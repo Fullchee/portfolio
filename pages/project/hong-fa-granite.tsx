@@ -20,6 +20,12 @@ const HongFaGranitePage = () => {
         demoUrl="https://www.hongfagranite.com"
         skills={skills}
       />
+      <Image
+        src="/assets/images/projects/hong-fa-granite/hong-fa-granite.png"
+        alt="Hong fa granite.com home page"
+        width={500}
+        height={313.25}
+      />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
@@ -67,7 +73,12 @@ you faced?  */}
         . Wix isn't that much cheaper at $10 USD/month for their cheapest plan.
         None of these plans come with email long-term which can get pricey.
       </p>
-
+      <Image
+        src="/assets/images/projects/hong-fa-granite/why-us.jpg"
+        alt="home page scrolled down"
+        height={300}
+        width={450}
+      />
       <p>
         Now that I was convinced that building a Gatsby site was the way to go,
         I had to design it. I asked my client a lot of questions to get a sense
@@ -116,6 +127,12 @@ you faced?  */}
       </p>
 
       <h3>Internationalization (i18n)</h3>
+      <Image
+        src="/assets/images/projects/hong-fa-granite/i18n.jpg"
+        alt="chinese home page of hong fa granite.com"
+        height={300}
+        width={450}
+      />
       <p>
         An important demographic for the company was chinese speaking so I had
         to enable language support for Chinese and English. The Workplace and
@@ -126,12 +143,26 @@ you faced?  */}
         <code>&lt;LocalizedLink&gt;</code> wrapper on top of the Gatsby Link
         component and I placed my strings in JSON files.
       </p>
+
       <h3>Products page</h3>
+      <Image
+        src="/assets/images/projects/hong-fa-granite/products-page.jpg"
+        alt="Products page of Hong fa granite.com"
+        height={300}
+        width={450}
+      />
       <p>
         I added a filter feature (which just uses an ES6 Array filter) to filter
         the types of stone products
       </p>
+
       <h3>Contact us page</h3>
+      <Image
+        src="/assets/images/projects/hong-fa-granite/contact-us.jpg"
+        alt="Contact us page of Hong Fa Granite.com"
+        height={300}
+        width={450}
+      />
       <p>
         I used Netlify Forms to handle the contact us page. I used Yup to
         validate the form. The contact info uses the same component as in the
