@@ -52,7 +52,7 @@ export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
       </div>
       <div>
         <h2>Made with</h2>
-        <ul className=" list-none grid sm:grid-cols-2 xl:grid-cols-3 pl-0">
+        <ul className=" list-none grid sm:grid-cols-2 xl:grid-cols-3 pl-0 no-list-item">
           <SkillList skills={skills} />
         </ul>
       </div>
