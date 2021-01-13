@@ -9,7 +9,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Layout = ({ title, description, children }: Props) => {
+export const Layout = ({ title, description, children }: Props) => {
   return (
     <div>
       <NextSeo

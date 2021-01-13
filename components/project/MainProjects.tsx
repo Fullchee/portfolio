@@ -1,6 +1,6 @@
-import { ProjectList, ProjectInfo } from "../project/ProjectList";
+import { ProjectList, ProjectInfo } from "./ProjectList";
 
-export const HighlightedProjects = () => {
+export const MainProjects = ({ skip }: { skip?: string }) => {
   const projects: ProjectInfo[] = [
     {
       title: "Working at IBM",
@@ -54,12 +54,7 @@ export const HighlightedProjects = () => {
     },
   ];
 
-  return (
-    <>
-      <h2 className="font-monoDisplay text-3xl pb-8">projects</h2>
-      <ProjectList projects={projects} />
-    </>
-  );
+  return <ProjectList projects={projects} skip={skip} />;
 };
 
-export default HighlightedProjects;
+export default MainProjects;

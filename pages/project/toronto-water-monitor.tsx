@@ -112,12 +112,6 @@ you faced?  */}
         Heroku doesn't have a cron job so I used the Heroku daily scheduler to
         check make the Toronto API calls.
       </p>
-
-      <h2>Lessons learned</h2>
-      {/* What did you learn from doing this project? How has it affected the work you’ve done
-since then? */}
-      <p>I learned that email HTML is different.</p>
-
       <h2>Next steps</h2>
       <p>
         I am preparing to talk to people from{" "}

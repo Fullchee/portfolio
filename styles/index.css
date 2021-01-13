@@ -44,6 +44,10 @@
     @apply max-w-3xl py-2;
   }
 
+  strong {
+    @apply font-bold;
+  }
+
   ul {
     @apply list-inside list-disc pl-4 py-2;
   }

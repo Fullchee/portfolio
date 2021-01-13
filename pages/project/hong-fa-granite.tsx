@@ -141,7 +141,9 @@ you faced?  */}
         implement i18n. The way that worked for me was adding a /zh/ prefix to
         every path. I'm only dealing with two languages so I created a{" "}
         <code>&lt;LocalizedLink&gt;</code> wrapper on top of the Gatsby Link
-        component and I placed my strings in JSON files.
+        component and I placed my strings in JSON files. Finally, I have a
+        useEffect hook that redirects to the Chinese site if after checking the
+        browser's navigator language.
       </p>
 
       <h3>Products page</h3>

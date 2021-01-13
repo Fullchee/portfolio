@@ -39,13 +39,17 @@ collaboration?  */}
 way?  */}
       {/* When you did get stuck, how did you resolve it? How did you overcome the obstacles
 you faced?  */}
+      <ol>
+        <li>Login with google</li>
+        <li>Create a calendar event</li>
+        <li>
+          Create a UI to generalize the logic of setting the event details
+        </li>
+      </ol>
       <p>
         The biggest challenge was integrating with Google Calendar and getting
         the appropriate connections
       </p>
-      <h2>Lessons learned</h2>
-      {/* What did you learn from doing this project? How has it affected the work you’ve done
-since then? */}
       <h2>Next steps</h2>I could polish up the design. My font sizes are v units
       which isn't ideal
       <p>because their containers are in rems.</p>

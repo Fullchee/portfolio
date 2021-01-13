@@ -2,7 +2,7 @@ import Layout from "../components/layout";
 
 import AboutMe from "../components/homePage/aboutMe";
 import Intro from "../components/homePage/intro";
-import Projects from "../components/homePage/mainProjects";
+import { MainProjects } from "../components/project/MainProjects";
 import Skills from "../components/homePage/skills";
 
 const Index = () => {
@@ -13,7 +13,7 @@ const Index = () => {
     >
       <Intro />
       <AboutMe />
-      <Projects />
+      <MainProjects />
       <Skills />
     </Layout>
   );
