@@ -26,25 +26,24 @@ const ProjectCard = ({
   project: ProjectInfo;
 }) => {
   return (
-    <a
-      href={url}
-      className="group transform duration-300 shadow-md hover:shadow-xl hover:scale-105 focus:shadow-xl focus:scale-105 no-underline hover:text-current focus:text-current"
-    >
-      <Image
-        className="object-cover"
-        src={path}
-        alt={alt}
-        width={width || 500}
-        height={height || 300}
-      />
-      <div className="px-8 lg:px-12 pb-8">
-        <h3 className="text-xl pt-4 font-bold">{title}</h3>
-        <p className="py-4">{description}</p>
-        <Link href={url}>
-          <a className="underline group-hover:text-blue-500">{linkLabel}</a>
-        </Link>
-      </div>
-    </a>
+    <Link href={url}>
+      <a className="group transform duration-300 shadow-md hover:shadow-xl hover:scale-105 focus:shadow-xl focus:scale-105 no-underline hover:text-current focus:text-current">
+        <Image
+          className="object-cover"
+          src={path}
+          alt={alt}
+          width={width || 500}
+          height={height || 300}
+        />
+        <div className="px-8 lg:px-12 pb-8">
+          <h3 className="text-xl pt-4 font-bold">{title}</h3>
+          <p className="py-4">{description}</p>
+          <Link href={url}>
+            <a className="underline group-hover:text-blue-500">{linkLabel}</a>
+          </Link>
+        </div>
+      </a>
+    </Link>
   );
 };
 
