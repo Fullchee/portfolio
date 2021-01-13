@@ -40,6 +40,15 @@
     @apply list-inside list-decimal pl-4 py-2;
   }
 
+  ol li {
+    @apply pr-4;
+  }
+
+  ol li::marker {
+    color: #6b7280;
+    padding-right: 4px;
+  }
+
   p {
     @apply max-w-3xl py-2 text-lg;
   }
@@ -56,7 +65,7 @@
     @apply pl-8;
   }
 
-  li::before {
+  ul li::before {
     content: "";
     display: inline-block;
     height: 0.75em;
