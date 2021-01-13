@@ -3,7 +3,7 @@ import Link from "next/link";
 const AboutMe = () => {
   return (
     <section className="">
-      <h2 className="font-monoDisplay">about me</h2>
+      <h2 className="font-monoDisplay text-2xl">about me</h2>
       <div className="grid grid-cols-2 space-x-16">
         <div>
           <p>
@@ -37,7 +37,7 @@ const AboutMe = () => {
               <li>learning French and Chinese with Anki (spaced repetition)</li>
               <li>meditating 🧘</li>
               <li>doing yoga</li>
-              <li>losing muscle mass 💪</li>
+              <li>losing muscle mass (trade-offs) 💪</li>
             </ul>
           </p>
           <p className="py-4"></p>

@@ -13,9 +13,9 @@ const Index = () => {
     >
       <Intro />
       <AboutMe />
-      <h2 className="font-monoDisplay pb-8">projects</h2>
-      <MainProjects />
       <Skills />
+      <h2 className="font-monoDisplay pb-8 text-2xl">projects</h2>
+      <MainProjects />
     </Layout>
   );
 };
