@@ -19,6 +19,7 @@ const Attributions = () => {
       <Attribution name="node-js" />
       <Attribution name="sass" />
       <Attribution name="react" />
+      <Attribution name="css3-alt" />
     </ul>
   );
 };

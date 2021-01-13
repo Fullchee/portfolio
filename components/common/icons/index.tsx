@@ -7,6 +7,7 @@ import SvgLaunch from "./github copy";
 import SvgNodeJs from "./node-js";
 import SvgReact from "./react";
 import SvgSass from "./sass";
+import { SvgCss } from "./css";
 import Image from "next/image";
 
 export const Icon = ({
@@ -19,6 +20,8 @@ export const Icon = ({
   switch (icon) {
     case "code-branch":
       return <SvgCodeBranch className={className} />;
+    case "css":
+      return <SvgCss className={className} />;
     case "database":
       return <SvgDatabase className={className} />;
     case "github":

@@ -1,4 +1,3 @@
-import Layout from "../../components/layout";
 import { ProjectLayout } from "../../components/project/ProjectLayout";
 
 const BatchCalendarEventsPage = () => {
