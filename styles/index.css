@@ -51,6 +51,14 @@
   ul {
     @apply list-inside list-disc pl-4 py-2;
   }
+
+  .primary-button {
+    @apply bg-blue-500 px-6 py-3 rounded-md text-white text-center;
+  }
+
+  .secondary-button {
+    @apply border-blue-500 border text-blue-500 px-6 py-3 rounded-md text-center;
+  }
 }
 
 /* Start purging... */

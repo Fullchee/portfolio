@@ -36,7 +36,7 @@ export const Header = () => {
                 </Link>
               </li>
               <HeaderItem href="/project" label="projects" />
-              <HeaderItem href="/blog" label="blog" />
+              {/* <HeaderItem href="/blog" label="blog" /> */}
             </ul>
           </nav>
         </div>
