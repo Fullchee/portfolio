@@ -2,25 +2,47 @@ import Link from "next/link";
 
 const AboutMe = () => {
   return (
-    <section className="flex flex-wrap flex-col sm:flex-row my-16">
-      <p className="py-4 pr-4 sm:w-1/2 ">
-        I'm grateful to be able to scratch my own itch and solve problems. 🙏
-      </p>
-      <p className="py-4 pr-4 sm:w-1/2">
-        Pre-quarantine, I was an avid dragon boat paddler. 🛶
-      </p>
-      <p className="py-4 pr-4 sm:w-1/2">
-        During quarantine, I've been leveling up my web dev skills and learning
-        French and Chinese with Anki.
-      </p>
-      <p className="py-4 sm:w-1/2">
-        A lot of my side projects were started because they solve personal
-        problems <em>(click the projects to see a summary and reflection)</em>
-      </p>
-      <p>
-        It's amazing how the skills I learn from the projects and at work
-        compound.
-      </p>
+    <section className="">
+      <h2 className="font-monoDisplay">about me</h2>
+      <div className="grid grid-cols-2 space-x-16">
+        <div>
+          <p>
+            I'm super grateful to be able to scratch my own itch and solve
+            problems with web development 🙏.
+            <ul>
+              <li>Got a high water bill from a leaky toilet?</li>
+              <ul>
+                <li>I can build a web app for that!</li>
+              </ul>
+              <li>A family friend wants a new site for their business?</li>
+              <ul>
+                <li>I can design and implement it!</li>
+              </ul>
+              <li>Want to create google calendar events even faster?</li>
+              <ul>
+                <li>I can design and build a web app for that!</li>
+              </ul>
+            </ul>
+            I'm excited to see what problems I can solve as my skills grows!
+          </p>
+        </div>
+        <div>
+          <p className="">
+            Pre-quarantine, I was an avid dragon boat paddler 🛶.
+          </p>
+          <p className="">
+            During quarantine, I've been busy in my bubble
+            <ul>
+              <li>leveling up my web dev skills</li>
+              <li>learning French and Chinese with Anki (spaced repetition)</li>
+              <li>meditating 🧘</li>
+              <li>doing yoga</li>
+              <li>losing muscle mass 💪</li>
+            </ul>
+          </p>
+          <p className="py-4"></p>
+        </div>
+      </div>
     </section>
   );
 };

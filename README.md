@@ -37,6 +37,15 @@ The design is heavily inspired by
     - Wes bos css grid
     - footer with geo shapes https://portfolio.smakosh.com/
 
+- Competence
+  - Has this person built professional-looking projects before?
+- Enthusiasm
+  - Does this person seem eager to learn
+  - excited for the kinds of work they would do on the job?
+- Fit
+  - Does this person have the right kind of personality for the company?
+  - Have they worked with the languages and frameworks we use here?
+
 Too complex but nice to have
 
 - Dark mode with animation of the sun setting and the moon rising

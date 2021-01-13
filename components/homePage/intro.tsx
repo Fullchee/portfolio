@@ -1,6 +1,6 @@
 const Intro = () => {
   return (
-    <section className="flex-col flex flex-wrap mt-16 mb-16">
+    <section className="flex-col flex flex-wrap pb-8">
       <h1 id="hi" className="text-6xl pb-4 font-display">
         Hi! I'm Fullchee
       </h1>

@@ -29,7 +29,7 @@ const Skills = () => {
         and working on side projects. I retain and remember what I learn with{" "}
         <a href="https://apps.ankiweb.net/">Anki</a> and spaced repetition.
       </p>
-      <ul className=" list-none grid sm:grid-cols-3 xl:grid-cols-4">
+      <ul className=" list-none grid sm:grid-cols-3 xl:grid-cols-4 no-list-item">
         <SkillList skills={skills} />
       </ul>
     </section>

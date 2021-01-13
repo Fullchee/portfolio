@@ -38,7 +38,7 @@ const ProjectCard = ({
         height={height || 300}
       />
       <div className="px-8 lg:px-12 pb-8">
-        <h3 className="text-xl pt-4">{title}</h3>
+        <h3 className="text-xl pt-4 font-bold">{title}</h3>
         <p className="py-4">{description}</p>
         <Link href={url}>
           <a className="underline group-hover:text-blue-500">{linkLabel}</a>
