@@ -1,6 +1,5 @@
-import Layout from "../../components/layout";
 import Link from "next/link";
-import { ProjectOverview } from "../../components/project/ProjectOverview";
+import { ProjectLayout } from "../../components/project/ProjectLayout";
 import Image from "next/image";
 
 const HongFaGranitePage = () => {
@@ -11,15 +10,12 @@ const HongFaGranitePage = () => {
     { icon: "sass", label: "SASS and Bulma" },
   ];
   return (
-    <Layout
-      title="Projects - Fullchee Zhang"
+    <ProjectLayout
+      title="Hong Fa Granite"
       description="Projects I've been working on"
+      demoUrl="https://www.hongfagranite.com"
+      skills={skills}
     >
-      <h1>Hong Fa Granite</h1>
-      <ProjectOverview
-        demoUrl="https://www.hongfagranite.com"
-        skills={skills}
-      />
       <Image
         src="/assets/images/projects/hong-fa-granite/hong-fa-granite.png"
         alt="Hong fa granite.com home page"
@@ -186,7 +182,7 @@ you faced?  */}
         project. Eventually, I switched to another domain provider and connected
         it with Netlify so that HongFaGranite.com was live!
       </p>
-    </Layout>
+    </ProjectLayout>
   );
 };
 

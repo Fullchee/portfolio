@@ -1,5 +1,4 @@
-import Layout from "../../components/layout";
-import { ProjectOverview } from "../../components/project/ProjectOverview";
+import { ProjectLayout } from "../../components/project/ProjectLayout";
 
 const TorontoWaterMonitorPage = () => {
   const skills = [
@@ -10,17 +9,13 @@ const TorontoWaterMonitorPage = () => {
     { icon: "database", label: "SQL" },
   ];
   return (
-    <Layout
-      title="Toronto water monitor - Fullchee Zhang"
+    <ProjectLayout
+      title="Toronto water monitor"
       description="Project that checks your Toronto water usage and sends you an email if usage spikes"
+      skills={skills}
+      githubProject="toronto-water-monitor-backend"
+      demoUrl="https://toronto-water-monitor.netlify.app/"
     >
-      <h1>Toronto water monitor</h1>
-      <ProjectOverview
-        githubProject="toronto-water-monitor-backend"
-        demoUrl="https://toronto-water-monitor.netlify.app/"
-        skills={skills}
-      />
-
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <h2>Why</h2>
@@ -122,7 +117,7 @@ you faced?  */}
         I'm also going to make a post on the{" "}
         <a href="https://www.reddit.com/r/toronto/">r/Toronto subreddit</a>.
       </p>
-    </Layout>
+    </ProjectLayout>
   );
 };
 

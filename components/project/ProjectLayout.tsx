@@ -8,6 +8,8 @@ interface Props {
   title: string;
   description: string;
   skills: Skill[];
+  demoUrl: string;
+  githubProject?: string;
 }
 
 export const ProjectLayout = ({
@@ -15,15 +17,20 @@ export const ProjectLayout = ({
   title,
   description,
   skills,
+  demoUrl,
+  githubProject,
 }: Props) => {
-  <Layout title={`${title} - Fullchee Zhang`} description={description}>
-    <h1>{title}</h1>
-    <ProjectOverview
-      demoUrl="https://calendar-shifts.netlify.app/"
-      githubProject="calendar-shifts"
-      skills={skills}
-    />
-    {children}
-    <MainProjects skip={title} />
-  </Layout>;
+  return (
+    <Layout title={`${title} - Fullchee Zhang`} description={description}>
+      <h1>{title}</h1>
+      <ProjectOverview
+        demoUrl={demoUrl}
+        githubProject={githubProject}
+        skills={skills}
+      />
+      {children}
+      <h2 className="pt-12 pb-6">Other projects</h2>
+      <MainProjects skip={title} />
+    </Layout>
+  );
 };

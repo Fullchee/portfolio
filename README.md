@@ -20,6 +20,8 @@ The design is heavily inspired by
 - ensure that each project page has it's own preview image (og)
 - Blog: remove duplicate enumeration (for ordered lists)
 
+  - blog posts
+
 - reread Refactoring UI
 - https://storage.googleapis.com/joshwcomeau/building-an-effective-dev-portfolio.pdf
 

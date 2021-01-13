@@ -1,5 +1,5 @@
 import Layout from "../../components/layout";
-import { ProjectOverview } from "../../components/project/ProjectOverview";
+import { ProjectLayout } from "../../components/project/ProjectLayout";
 
 const BatchCalendarEventsPage = () => {
   const skills = [
@@ -8,13 +8,13 @@ const BatchCalendarEventsPage = () => {
     { icon: "css", label: "CSS" },
   ];
   return (
-    <Layout title="Batch calendar events - Fullchee Zhang" description="">
-      <h1>Batch calendar events</h1>
-      <ProjectOverview
-        demoUrl="https://calendar-shifts.netlify.app/"
-        githubProject="calendar-shifts"
-        skills={skills}
-      />
+    <ProjectLayout
+      title="Batch calendar events"
+      description="Project to create batch calendar events in less than 30 seconds"
+      demoUrl="https://calendar-shifts.netlify.app/"
+      githubProject="calendar-shifts"
+      skills={skills}
+    >
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <h2>Why</h2>
@@ -61,7 +61,7 @@ you faced?  */}
         Once it's more polished up, I can post it on a few subreddits and see
         how the reception is. It would be nice to help people.
       </p>
-    </Layout>
+    </ProjectLayout>
   );
 };
 

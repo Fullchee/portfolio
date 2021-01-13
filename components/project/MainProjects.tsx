@@ -23,7 +23,7 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
       url: "/project/toronto-water-monitor",
     },
     {
-      title: "HongFaGranite.com",
+      title: "Hong Fa Granite",
       description: `Static site for a local business in English and Chinese`,
       image: {
         alt: "screenshot of hong fa granite.com",
@@ -37,7 +37,7 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
       description: `Save and play videos and podcasts with personal notes`,
       image: {
         alt: "screenshot of my Reminders project",
-        path: "/assets/images/projects/reminders.png",
+        path: "/assets/images/projects/reminders/reminders.png",
       },
       linkLabel: "View project tour",
       url: "/project/reminders",
@@ -47,7 +47,8 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
       description: `Create batch calendar events to Google Calendar in seconds`,
       image: {
         alt: "screenshot of my Batch calendar events project",
-        path: "/assets/images/projects/batch-calendar-events.png",
+        path:
+          "/assets/images/projects/batch-calendar-events/batch-calendar-events.png",
       },
       linkLabel: "View project tour",
       url: "/project/batch-calendar-events",

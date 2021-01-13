@@ -1,5 +1,4 @@
-import Layout from "../../components/layout";
-import { ProjectOverview } from "../../components/project/ProjectOverview";
+import { ProjectLayout } from "../../components/project/ProjectLayout";
 
 const RemindersPage = () => {
   const skills = [
@@ -10,16 +9,14 @@ const RemindersPage = () => {
     { icon: "database", label: "SQL" },
   ];
   return (
-    <Layout
-      title="Projects - Fullchee Zhang"
-      description="Projects I've been working on"
+    <ProjectLayout
+      title="Reminders"
+      description="Project to remind myself of meaningful podcasts and YouTube videos"
+      githubProject="reminders-frontend"
+      demoUrl="https://fullchee-reminders.netlify.app/"
+      skills={skills}
     >
       <h1>Reminders</h1>
-      <ProjectOverview
-        githubProject="reminders-frontend"
-        demoUrl="https://fullchee-reminders.netlify.app/"
-        skills={skills}
-      />
       <h2>Why</h2>
       I'm using spaced repetition to learn Chinese, French and web dev with
       Anki. I wanted to apply the same concept to podcasts and YouTube videos
@@ -82,7 +79,7 @@ const RemindersPage = () => {
       {/* When you did get stuck, how did you resolve it? How did you overcome the obstacles
 you faced?  */}
       <p>I stuck with the tried and true PostgreSQL, Node.js and Express.</p>
-    </Layout>
+    </ProjectLayout>
   );
 };
 
