@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         display: ["Comfortaa"],
         monoDisplay: ["Major Mono Display"],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
     },
   },
