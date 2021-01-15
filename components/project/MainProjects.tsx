@@ -24,7 +24,7 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
       url: "/project/toronto-water-monitor",
     },
     {
-      title: "Hong Fa Granite",
+      title: "Hong Fa Granite website",
       description: `Static site for a local business in English and Chinese`,
       image: {
         alt: "screenshot of hong fa granite.com",

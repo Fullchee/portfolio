@@ -41,7 +41,7 @@
   }
 
   ol {
-    @apply list-inside list-decimal pl-4 py-2;
+    @apply list-decimal pl-4 py-2;
   }
 
   ol li {
@@ -90,6 +90,12 @@
 
   .secondary-button {
     @apply border-blue-500 border text-blue-500 px-6 py-3 rounded-md text-center;
+  }
+
+  .responsive-skills {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
 }
 

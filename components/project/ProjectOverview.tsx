@@ -33,7 +33,7 @@ const Button = ({
 
 export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
   return (
-    <div className="grid max-w-lg mb-8">
+    <div className="grid max-w-2xl mb-8">
       <div className="flex flex-row items-center pt-4 space-x-4">
         <Button
           href={demoUrl}
@@ -52,7 +52,7 @@ export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
       </div>
       <div>
         <h2>Made with</h2>
-        <ul className=" list-none grid sm:grid-cols-2 xl:grid-cols-3 pl-0 no-list-item">
+        <ul className=" list-none responsive-skills pl-0 no-list-item">
           <SkillList skills={skills} />
         </ul>
       </div>

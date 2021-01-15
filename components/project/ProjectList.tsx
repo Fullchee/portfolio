@@ -39,7 +39,7 @@ const ProjectCard = ({
           <h3 className="text-xl pt-4 font-bold">{title}</h3>
           <p className="py-4">{description}</p>
           <Link href={url}>
-            <a className="underline group-hover:text-blue-500">{linkLabel}</a>
+            <p className="underline group-hover:text-blue-500">{linkLabel}</p>
           </Link>
         </div>
       </a>

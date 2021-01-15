@@ -11,7 +11,7 @@ const HongFaGranitePage = () => {
   ];
   return (
     <ProjectLayout
-      title="Hong Fa Granite"
+      title="Hong Fa Granite website"
       description="Projects I've been working on"
       demoUrl="https://www.hongfagranite.com"
       skills={skills}
@@ -19,8 +19,8 @@ const HongFaGranitePage = () => {
       <Image
         src="/assets/images/projects/hong-fa-granite/hong-fa-granite.png"
         alt="Hong fa granite.com home page"
-        width={500}
-        height={313.25}
+        width={4000}
+        height={2506}
       />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build
@@ -70,29 +70,29 @@ you faced?  */}
         None of these plans come with email long-term which can get pricey.
       </p>
       <Image
-        src="/assets/images/projects/hong-fa-granite/why-us.jpg"
+        src="/assets/images/projects/hong-fa-granite/why-us.png"
         alt="home page scrolled down"
-        height={300}
-        width={450}
+        width={1637}
+        height={1063}
       />
       <p>
         Now that I was convinced that building a Gatsby site was the way to go,
         I had to design it. I asked my client a lot of questions to get a sense
         of what kind of brand Hong Fa Granite was.
-        <ul>
-          <li>What the company does</li>
-          <li>the company's selling point</li>
-          <li>how we want the customers to perceive the company</li>
-          <li>the target audience (user personas)</li>
-        </ul>
       </p>
+      <ul>
+        <li>What the company does</li>
+        <li>the company's selling point</li>
+        <li>how we want the customers to perceive the company</li>
+        <li>the target audience (user personas)</li>
+      </ul>
       <h3>Logo design</h3>
       <h4>Old logo</h4>
       <Image
         src="/assets/images/projects/hong-fa-granite/old-logo.png"
         alt="Old Hong Fa Granite logo"
-        width={300}
-        height={84}
+        width={340}
+        height={124}
       />
       <h4>Logo design plan</h4>
       <ol>
@@ -104,8 +104,8 @@ you faced?  */}
       <Image
         src="/assets/images/projects/hong-fa-granite/new-logo.png"
         alt="New Hong Fa Granite logo"
-        width={300}
-        height={100}
+        width={340}
+        height={125.37}
       />
 
       <p>
@@ -124,10 +124,10 @@ you faced?  */}
 
       <h3>Internationalization (i18n)</h3>
       <Image
-        src="/assets/images/projects/hong-fa-granite/i18n.jpg"
+        src="/assets/images/projects/hong-fa-granite/i18n.png"
         alt="chinese home page of hong fa granite.com"
-        height={300}
-        width={450}
+        width={1410}
+        height={915}
       />
       <p>
         An important demographic for the company was chinese speaking so I had
@@ -144,10 +144,10 @@ you faced?  */}
 
       <h3>Products page</h3>
       <Image
-        src="/assets/images/projects/hong-fa-granite/products-page.jpg"
+        src="/assets/images/projects/hong-fa-granite/products-page.png"
         alt="Products page of Hong fa granite.com"
-        height={300}
-        width={450}
+        width={1639}
+        height={1069}
       />
       <p>
         I added a filter feature (which just uses an ES6 Array filter) to filter
@@ -156,10 +156,10 @@ you faced?  */}
 
       <h3>Contact us page</h3>
       <Image
-        src="/assets/images/projects/hong-fa-granite/contact-us.jpg"
+        src="/assets/images/projects/hong-fa-granite/contact-us.png"
         alt="Contact us page of Hong Fa Granite.com"
-        height={300}
-        width={450}
+        width={1637}
+        height={1069}
       />
       <p>
         I used Netlify Forms to handle the contact us page. I used Yup to

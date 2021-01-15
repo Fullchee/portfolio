@@ -28,7 +28,6 @@ const RemindersPage = () => {
         </li>
         <li>get even more meaning out of the video/podcast with perspective</li>
       </ol>
-      <h2>Tech stack</h2>
       <h2>Thought process</h2>
       <h3>Design</h3>
       <p>
