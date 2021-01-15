@@ -33,7 +33,7 @@ const Button = ({
 
 export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
   return (
-    <div className="grid max-w-lg">
+    <div className="grid max-w-lg mb-8">
       <div className="flex flex-row items-center pt-4 space-x-4">
         <Button
           href={demoUrl}

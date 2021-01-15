@@ -12,7 +12,7 @@ const Skills = () => {
     { icon: "typescript-icon.svg", label: "TypeScript" },
   ];
   return (
-    <section className="flex-col flex flex-wrap mt-16 mb-16">
+    <section className="flex-col flex flex-wrap mt-8 mb-8">
       <h2 id="skills" className="font-monoDisplay text-2xl pb-4">
         skills
       </h2>

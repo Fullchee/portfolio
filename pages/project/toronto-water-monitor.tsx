@@ -1,4 +1,5 @@
 import { ProjectLayout } from "../../components/project/ProjectLayout";
+import Image from "next/image";
 
 const TorontoWaterMonitorPage = () => {
   const skills = [
@@ -18,15 +19,18 @@ const TorontoWaterMonitorPage = () => {
     >
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
+      <Image
+        src="/assets/images/projects/toronto-water-monitor/desktop.jpg"
+        width={3190}
+        height={2061}
+        alt="Screenshot of toronto water monitor project on the Safari browser"
+      />
       <h2>Why</h2>
       <p>
         My family got a high water bill from a leaking toilet. This project will
         prevent that from happening again. I also hope to share it with others
         so that they don't get high water bills.
       </p>
-
-      <h2>Features</h2>
-      <p>screenshot of main page, completed page, emails</p>
 
       <h2>Tech stack</h2>
       {/* What did you start with? Was this built from scratch? Did you have a team? If so,
@@ -62,6 +66,14 @@ you faced?  */}
         Postman, it was really easy. I didn't have to login and didn't need to
         use Puppeteer to automate any UI steps!
       </p>
+
+      <h3>Emailing</h3>
+      <Image
+        src="/assets/images/projects/toronto-water-monitor/emails.jpg"
+        width={564}
+        height={73}
+        alt="Screenshot emails sent by the app"
+      />
       <p>
         Emailing is really expensive. I looked at Twilio's SendGrid and they had
         nice docs. However, I eventually implemented everything with Nodemailer,
@@ -79,6 +91,12 @@ you faced?  */}
       </ul>
 
       <h3>Unsubscribe link</h3>
+      <Image
+        src="/assets/images/projects/toronto-water-monitor/welcome-email.jpg"
+        width={583}
+        height={283}
+        alt="Screenshot of the welcome email"
+      />
       <p>
         Another challenge was the unsubscribe link in the email. I don't fully
         understand how MailChimp and other mail clients do single click
@@ -94,7 +112,6 @@ you faced?  */}
         link direct the user to a page with a form where they have to enter
         their email
       </p>
-      {/* image */}
 
       <h3>Testing</h3>
       <p>I have unit tests for the validation of incoming data.</p>

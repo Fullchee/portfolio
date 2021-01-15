@@ -17,7 +17,8 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
       description: `Check your Toronto water usage and send an email if usage spikes`,
       image: {
         alt: "screenshot of my Toronto water monitor project",
-        path: "/assets/images/projects/toronto-water-monitor.png",
+        path:
+          "/assets/images/projects/toronto-water-monitor/toronto-water-monitor.png",
       },
       linkLabel: "View project tour",
       url: "/project/toronto-water-monitor",

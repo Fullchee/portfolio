@@ -27,11 +27,13 @@ The design is heavily inspired by
 
 - Home page
 
+  - neon text effect: https://www.youtube.com/watch?v=YiSzx0Cb8_8
   - https://portfolio-starter-template.webflow.io/
   - wesbos.com
   - juliacodes.com
   - Find tutorials on how to animate
     - https://www.cassie.codes/
+    - svg animations: https://www.youtube.com/watch?v=gWai7fYp9PY
   - Hero Patterns?
     - https://craig-roush-portfolio-template.webflow.io/
     - Wes bos css grid
