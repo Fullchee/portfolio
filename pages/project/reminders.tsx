@@ -1,4 +1,5 @@
 import { ProjectLayout } from "../../components/project/ProjectLayout";
+import Image from "next/image";
 
 const RemindersPage = () => {
   const skills = [
@@ -17,11 +18,31 @@ const RemindersPage = () => {
       skills={skills}
     >
       <h1>Reminders</h1>
+      <Image
+        src="/assets/images/projects/reminders/reminders.png"
+        alt="screenshot of the reminders project"
+        width={4000}
+        height={2483}
+      />
       <h2>Why</h2>
-      I'm using spaced repetition to learn Chinese, French and web dev with
-      Anki. I wanted to apply the same concept to podcasts and YouTube videos
-      where I periodically re-watch and re-listen to podcasts and videos I found
-      meaningful to
+      <Image
+        src="/assets/images/projects/reminders/forgetting-curve.svg"
+        alt="screenshot of the reminders project"
+        width={277}
+        height={237}
+      />
+      <Image
+        src="/assets/images/projects/reminders/anki-icon.svg"
+        alt="screenshot of the reminders project"
+        width={128}
+        height={128}
+      />
+      <p>
+        I'm using spaced repetition to learn Chinese, French and web dev with
+        Anki. I wanted to apply the same concept to podcasts and YouTube videos
+        where I periodically re-watch and re-listen to podcasts and videos I
+        found meaningful to
+      </p>
       <ol>
         <li>
           <strong>remind</strong> myself of what kind of person I want to be
@@ -29,7 +50,7 @@ const RemindersPage = () => {
         <li>get even more meaning out of the video/podcast with perspective</li>
       </ol>
       <h2>Thought process</h2>
-      <h3>Design</h3>
+      <h3 className="pt-2">Design</h3>
       <p>
         I wanted to have a relatively small width to increase readability. So I
         added some padding to the form. In the leftover horizontal space, I

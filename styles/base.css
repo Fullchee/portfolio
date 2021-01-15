@@ -1,12 +1,10 @@
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
 @tailwind base;
 
 /* Write your own custom base styles here */
-
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-/* Write you own custom component styles here */
 @layer base {
   a {
     @apply underline;
@@ -41,14 +39,15 @@
   }
 
   ol {
-    @apply list-decimal pl-4 py-2;
+    @apply list-decimal pl-4 py-2 ml-4;
   }
 
   ol li {
-    @apply pr-4;
+    @apply pl-4;
   }
 
   ol li::marker {
+    /* grey-500 */
     color: #6b7280;
     padding-right: 4px;
   }
@@ -79,28 +78,4 @@
     background-repeat: no-repeat;
     margin-right: 0.5em;
   }
-
-  .no-list-item li::before {
-    content: none;
-  }
-
-  .primary-button {
-    @apply bg-blue-500 px-6 py-3 rounded-md text-white text-center;
-  }
-
-  .secondary-button {
-    @apply border-blue-500 border text-blue-500 px-6 py-3 rounded-md text-center;
-  }
-
-  .responsive-skills {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  }
 }
-
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */

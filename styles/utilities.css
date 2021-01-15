@@ -1,0 +1,9 @@
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
