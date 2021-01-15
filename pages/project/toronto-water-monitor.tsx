@@ -20,9 +20,9 @@ const TorontoWaterMonitorPage = () => {
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <Image
-        src="/assets/images/projects/toronto-water-monitor/desktop.jpg"
-        width={3190}
-        height={2061}
+        src="/assets/images/projects/toronto-water-monitor/desktop_shadow.png"
+        width={3230}
+        height={2101}
         alt="Screenshot of toronto water monitor project on the Safari browser"
       />
       <h2>Why</h2>
@@ -69,9 +69,9 @@ you faced?  */}
 
       <h3>Emailing</h3>
       <Image
-        src="/assets/images/projects/toronto-water-monitor/emails.jpg"
-        width={564}
-        height={73}
+        src="/assets/images/projects/toronto-water-monitor/emails-shadow.png"
+        width={604}
+        height={113}
         alt="Screenshot emails sent by the app"
       />
       <p>
@@ -92,9 +92,9 @@ you faced?  */}
 
       <h3>Unsubscribe link</h3>
       <Image
-        src="/assets/images/projects/toronto-water-monitor/welcome-email.jpg"
-        width={583}
-        height={283}
+        src="/assets/images/projects/toronto-water-monitor/welcome-email-shadow.png"
+        width={623}
+        height={323}
         alt="Screenshot of the welcome email"
       />
       <p>

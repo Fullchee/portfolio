@@ -41,8 +41,8 @@ export const Header = () => {
           </nav>
         </div>
       </div>
-      <div className="fixed z-10 h-16 w-screen bg-gradient-to-b from-white to-transparent"></div>
-      <div className="fixed z-10 h-16 w-screen bg-gradient-to-b from-transparent to-white bottom-0"></div>
+      <div className="fixed z-10 h-8 w-screen bg-gradient-to-b from-white to-transparent"></div>
+      <div className="fixed z-10 h-8 w-screen bg-gradient-to-b from-transparent to-white bottom-0"></div>
     </>
   );
 };
