@@ -20,26 +20,24 @@ export const Header = () => {
   return (
     <>
       <div className="sticky bg-white dark:border-blue-700 border-t-4 top-0 border-blue-500 z-10">
-        <div className="max-w-6xl mx-auto pl-6 md:pl-24">
-          <nav>
-            <ul className="list-none flex max-w-7xl no-list-item">
-              <li className="mr-auto pt-4">
-                <Link href="/">
-                  <a>
-                    <Image
-                      src="/fullchee.svg"
-                      alt="home page"
-                      width={50}
-                      height={50}
-                    />
-                  </a>
-                </Link>
-              </li>
-              <HeaderItem href="/project" label="projects" />
-              {/* <HeaderItem href="/blog" label="blog" /> */}
-            </ul>
-          </nav>
-        </div>
+        <nav className="max-w-6xl mx-auto pl-6 md:px-20">
+          <ul className="list-none flex max-w-7xl no-list-item">
+            <li className="mr-auto pt-4">
+              <Link href="/">
+                <a>
+                  <Image
+                    src="/fullchee.svg"
+                    alt="home page"
+                    width={50}
+                    height={50}
+                  />
+                </a>
+              </Link>
+            </li>
+            <HeaderItem href="/project" label="projects" />
+            {/* <HeaderItem href="/blog" label="blog" /> */}
+          </ul>
+        </nav>
       </div>
       <div className="fixed z-10 h-8 w-screen bg-gradient-to-b from-white to-transparent"></div>
       <div className="fixed z-10 h-8 w-screen bg-gradient-to-b from-transparent to-white bottom-0"></div>

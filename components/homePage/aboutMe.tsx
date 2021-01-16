@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const AboutMe = () => {
   return (
-    <section className="">
+    <section className="ease-in">
       <h2 className="font-monoDisplay text-2xl">about me</h2>
       <div className="grid sm:grid-cols-2 sm:space-x-16">
         <div>
