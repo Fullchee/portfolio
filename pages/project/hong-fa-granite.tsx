@@ -19,8 +19,8 @@ const HongFaGranitePage = () => {
       <Image
         src="/assets/images/projects/hong-fa-granite/hong-fa-granite.png"
         alt="Hong fa granite.com home page"
-        width={4000}
-        height={2506}
+        width={960}
+        height={601.44}
       />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build
@@ -30,9 +30,6 @@ this?  */}
         A family friend has a stone fabricator business. They had a slow
         Wordpress website that was costing them $20+ a month with Bell Hosting.
       </p>
-      <h2>Features</h2>
-      <p>screenshots</p>
-      <p></p>
       <h2>Tech stack</h2>
       {/* What did you start with? Was this built from scratch? Did you have a team? If so,
 which parts did you do? Where did the design come from? Was there any
@@ -113,8 +110,8 @@ you faced?  */}
         client liked. I limited it to serif fonts to convey a classic style to
         reflect the classic nature of stone counter tops. Similarly, I went
         through logos of stone related companies and I decided on a symmetric
-        geometric design with an H in the middle. I kept the brown color scheme
-        of the old logo.
+        geometric design with an "H" in the middle. I kept the brown color
+        scheme of the old logo.
       </p>
       <h3>Site design</h3>
       <p>

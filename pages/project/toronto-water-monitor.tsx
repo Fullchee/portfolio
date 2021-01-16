@@ -21,8 +21,8 @@ const TorontoWaterMonitorPage = () => {
 this?  */}
       <Image
         src="/assets/images/projects/toronto-water-monitor/desktop_shadow.png"
-        width={3230}
-        height={2101}
+        width={960}
+        height={624.4}
         alt="Screenshot of toronto water monitor project on the Safari browser"
       />
       <h2>Why</h2>

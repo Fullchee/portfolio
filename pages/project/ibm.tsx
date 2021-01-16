@@ -82,7 +82,6 @@ const IBMPage = () => {
       </p>
 
       <ProjectDescription
-        key={0}
         image={{
           src: "/assets/images/projects/ibm/ubuntu-logo.svg",
           width: 256,
@@ -120,7 +119,6 @@ const IBMPage = () => {
       </ProjectDescription>
 
       <ProjectDescription
-        key={1}
         image={{
           src: "/assets/images/projects/ibm/puppeteer.png",
           width: 290,
@@ -173,7 +171,6 @@ const IBMPage = () => {
       </ProjectDescription>
 
       <ProjectDescription
-        key={1}
         image={{
           src: "/assets/images/projects/ibm/diff.jpg",
           width: 358,
@@ -216,7 +213,6 @@ const IBMPage = () => {
       </ProjectDescription>
 
       <ProjectDescription
-        key={1}
         image={{
           src: "/assets/images/projects/ibm/eslint.svg",
           width: 240,
@@ -241,7 +237,6 @@ const IBMPage = () => {
       </ProjectDescription>
 
       <ProjectDescription
-        key={1}
         image={{
           src: "/assets/images/projects/ibm/write-the-docs.png",
           width: 200,
