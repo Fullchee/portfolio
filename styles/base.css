@@ -64,10 +64,6 @@
     @apply pl-4 py-2;
   }
 
-  ul ul {
-    @apply pl-8;
-  }
-
   ul li::before {
     content: "";
     display: inline-block;

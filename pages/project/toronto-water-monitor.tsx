@@ -81,10 +81,8 @@ you faced?  */}
       </p>
       <ul>
         <li>I would have to keep track of two email lists</li>
-        <ul className="pt-0">
-          <li>in my database</li>
-          <li>with the external service</li>
-        </ul>
+        <li className="nested-li">in my database</li>
+        <li className="nested-li">with the external service</li>
         <li>I wanted to keep things simple</li>
         <li>I didn't like the daily 100 email limit</li>
         <li>I don't need additional features like the click through rate</li>

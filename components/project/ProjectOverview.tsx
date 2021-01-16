@@ -46,7 +46,7 @@ export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
             href={`https://www.github.com/Fullchee/${githubProject}`}
             icon="github"
             text="GitHub"
-            className="secondary-button "
+            className="secondary-button"
           />
         ) : null}
       </div>

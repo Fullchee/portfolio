@@ -12,14 +12,13 @@ const Skills = () => {
     { icon: "typescript-icon.svg", label: "TypeScript" },
   ];
   return (
-    <section className="flex-col flex flex-wrap mt-8 mb-8">
+    <section className="flex-col flex flex-wrap mb-8">
       <h2 id="skills" className="font-monoDisplay text-2xl pb-4">
         skills
       </h2>
-      <p>
-        Through my studies at U of T, I've gathered a solid foundation of
-        computer science concepts.{" "}
-      </p>
+      <ul className="responsive-skills no-list-item">
+        <SkillList skills={skills} />
+      </ul>
       <p className="py-4">
         I stay up to date by listening to the{" "}
         <a href="https://syntax.fm/">Syntax podcast</a>,{" "}
@@ -29,9 +28,6 @@ const Skills = () => {
         and working on side projects. I retain and remember what I learn with{" "}
         <a href="https://apps.ankiweb.net/">Anki</a> and spaced repetition.
       </p>
-      <ul className=" list-none grid sm:grid-cols-3 xl:grid-cols-4 no-list-item">
-        <SkillList skills={skills} />
-      </ul>
     </section>
   );
 };
