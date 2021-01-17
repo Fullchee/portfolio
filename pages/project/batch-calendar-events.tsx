@@ -1,6 +1,15 @@
 import { ProjectLayout } from "../../components/project/ProjectLayout";
 import Image from "next/image";
 
+const mainImageProps = {
+  src:
+    "/assets/images/projects/batch-calendar-events/batch-calendar-events.png",
+  alt:
+    "Screenshot of the batch calendar events project on a mobile and desktop",
+  width: 960,
+  height: 595.9,
+};
+
 const BatchCalendarEventsPage = () => {
   const skills = [
     { icon: "react", label: "React" },
@@ -14,15 +23,11 @@ const BatchCalendarEventsPage = () => {
       demoUrl="https://calendar-shifts.netlify.app/"
       githubProject="calendar-shifts"
       skills={skills}
+      imageProps={mainImageProps}
     >
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image
-        src="/assets/images/projects/batch-calendar-events/batch-calendar-events.png"
-        alt=""
-        width={960}
-        height={595.92}
-      />
+      <Image {...mainImageProps} />
       <h2>Why</h2>
       <p>
         This project was inspired when my sister was working part-time at a

@@ -10,7 +10,16 @@ export default function BlogPost({
   const content = hydrate(mdxSource);
 
   return (
-    <Layout title={frontMatter.title} description={frontMatter.summary}>
+    <Layout
+      title={frontMatter.title}
+      description={frontMatter.summary}
+      imageProps={{
+        url: frontMatter.imageUrl,
+        width: frontMatter.imageWidth,
+        height: frontMatter.imageHeight,
+        alt: frontMatter.imageAlt,
+      }}
+    >
       <h1 className="text-4xl font-bold">{frontMatter.title}</h1>
       <p className="mt-2 text-sm text-gray-600">
         {frontMatter.date} • {Math.ceil(frontMatter.readingTime.minutes)} min

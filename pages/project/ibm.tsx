@@ -38,6 +38,12 @@ const IBMPage = () => {
     <Layout
       title="Working at IBM - Fullchee Zhang"
       description="My experience working as a front-end developer at IBM Canada"
+      imageProps={{
+        url: "/assets/images/projects/ibm/IBM_logo.svg",
+        width: 1000,
+        height: 400,
+        alt: "old 8 stripe IBM logo",
+      }}
     >
       <h1>Working at IBM</h1>
       <p>

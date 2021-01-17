@@ -1,6 +1,13 @@
 import { ProjectLayout } from "../../components/project/ProjectLayout";
 import Image from "next/image";
 
+const mainImageProps = {
+  src: "/assets/images/projects/reminders/reminders.png",
+  alt: "screenshot of the reminders project",
+  width: 960,
+  height: 595.92,
+};
+
 const RemindersPage = () => {
   const skills = [
     { icon: "react", label: "React" },
@@ -16,14 +23,10 @@ const RemindersPage = () => {
       githubProject="reminders-frontend"
       demoUrl="https://fullchee-reminders.netlify.app/"
       skills={skills}
+      imageProps={mainImageProps}
     >
       <h1>Reminders</h1>
-      <Image
-        src="/assets/images/projects/reminders/reminders.png"
-        alt="screenshot of the reminders project"
-        width={960}
-        height={595.92}
-      />
+      <Image {...mainImageProps} />
       <h2>Why</h2>
       <Image
         src="/assets/images/projects/reminders/forgetting-curve.svg"

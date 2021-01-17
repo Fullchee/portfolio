@@ -1,6 +1,13 @@
 import { ProjectLayout } from "../../components/project/ProjectLayout";
 import Image from "next/image";
 
+const mainImageProps = {
+  src: "/assets/images/projects/toronto-water-monitor/desktop_shadow.png",
+  width: 960,
+  height: 624.4,
+  alt: "Screenshot of toronto water monitor project on the Safari browser",
+};
+
 const TorontoWaterMonitorPage = () => {
   const skills = [
     { icon: "react", label: "React" },
@@ -16,15 +23,11 @@ const TorontoWaterMonitorPage = () => {
       skills={skills}
       githubProject="toronto-water-monitor-backend"
       demoUrl="https://toronto-water-monitor.netlify.app/"
+      imageProps={mainImageProps}
     >
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image
-        src="/assets/images/projects/toronto-water-monitor/desktop_shadow.png"
-        width={960}
-        height={624.4}
-        alt="Screenshot of toronto water monitor project on the Safari browser"
-      />
+      <Image {...mainImageProps} />
       <h2>Why</h2>
       <p>
         My family got a high water bill from a leaking toilet. This project will

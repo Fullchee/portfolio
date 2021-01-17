@@ -9,6 +9,10 @@ interface IPostFrontMatterBase {
   title: string;
   date: string;
   summary: string;
+  imageUrl: string;
+  imageWidth: number;
+  imageHeight: number;
+  imageAlt: string;
 }
 
 export interface IPostFrontMatter extends IPostFrontMatterBase {

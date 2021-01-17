@@ -3,13 +3,28 @@ import Header from "./header";
 import Container from "./container";
 import { NextSeo } from "next-seo";
 
+export type ImageProps = {
+  url: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
 type Props = {
   title: string;
   description?: string;
+  imageProps?: ImageProps;
   children: React.ReactNode;
 };
 
-export const Layout = ({ title, description, children }: Props) => {
+const defaultImage = {
+  url: "https://fullchee.com/fullchee.svg",
+  alt: "Fullchee favicon, full at the top, chee at the bottom",
+  width: 1155,
+  height: 915,
+};
+
+export const Layout = ({ title, description, imageProps, children }: Props) => {
   return (
     <div>
       <NextSeo
@@ -18,6 +33,7 @@ export const Layout = ({ title, description, children }: Props) => {
         openGraph={{
           title: `${title} - Fullchee Zhang`,
           description: description,
+          images: imageProps ? [imageProps] : [defaultImage],
         }}
       />
       <Header />

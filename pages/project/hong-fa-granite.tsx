@@ -2,6 +2,13 @@ import Link from "next/link";
 import { ProjectLayout } from "../../components/project/ProjectLayout";
 import Image from "next/image";
 
+const mainImageProps = {
+  src: "/assets/images/projects/hong-fa-granite/,hong-fa-granite.png",
+  alt: "Hong fa granite.com home page",
+  width: 960,
+  height: 601.44,
+};
+
 const HongFaGranitePage = () => {
   const skills = [
     { icon: "gatsby.svg", label: "Gatsby" },
@@ -15,13 +22,9 @@ const HongFaGranitePage = () => {
       description="Projects I've been working on"
       demoUrl="https://www.hongfagranite.com"
       skills={skills}
+      imageProps={mainImageProps}
     >
-      <Image
-        src="/assets/images/projects/hong-fa-granite/hong-fa-granite.png"
-        alt="Hong fa granite.com home page"
-        width={960}
-        height={601.44}
-      />
+      <Image {...mainImageProps} />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
