@@ -5,10 +5,6 @@
 /* Write you own custom component styles here */
 
 @layer components {
-  .no-list-item li::before {
-    content: none;
-  }
-
   .primary-button {
     @apply bg-blue-600 px-6 py-3 rounded-md text-white text-center;
   }
@@ -17,19 +13,27 @@
     @apply border-blue-600 border text-blue-600 px-6 py-3 rounded-md text-center;
   }
 
-  .responsive-skills {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  .ease-in > * {
+    transition: opacity 1s ease-in;
+    animation: 0.5s ease-in 0s 1 forwards loading-down;
+  }
+
+  .inset-box-shadow {
+    box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.2);
   }
 
   .nested-li {
     padding-left: 2rem;
   }
 
-  .ease-in > * {
-    transition: opacity 1s ease-in;
-    animation: 0.5s ease-in 0s 1 forwards loading-down;
+  .no-list-item li::before {
+    content: none;
+  }
+
+  .responsive-skills {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
 }
 

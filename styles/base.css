@@ -8,10 +8,26 @@
 @layer base {
   a {
     @apply underline;
+
+    position: relative;
   }
 
-  a:focus {
-    @apply text-blue-500;
+  a::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+    background-color: #60a5fa;
+  }
+
+  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
   a:hover {

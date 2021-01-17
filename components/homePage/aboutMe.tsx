@@ -11,10 +11,18 @@ const AboutMe = () => {
             problems with web development 🙏.
           </p>
           <ul>
-            <li>Got a high water bill from a leaky toilet?</li>
-            <li className="nested-li">I can build a web app for that!</li>
             <li>A family friend wants a new site for their business?</li>
-            <li className="nested-li">I can design and implement it!</li>
+            <li className="nested-li">
+              <Link href="/project/hong-fa-granite">
+                <a className="animated-link">I can design and implement it!</a>
+              </Link>
+            </li>
+            <li>I want to track my home water usage?</li>
+            <li className="nested-li">
+              <Link href="/project/toronto-water-monitor">
+                <a>I can build a web app for that!</a>
+              </Link>
+            </li>
           </ul>
           <p>I'm excited to see what problems I can solve as my skills grow!</p>
         </div>
@@ -25,10 +33,12 @@ const AboutMe = () => {
           <p className="">During quarantine-times, I've been busy</p>
           <ul>
             <li>leveling up my web dev skills</li>
-            <li>learning French and Chinese with Anki (spaced repetition)</li>
-            <li>meditating 🧘</li>
+            <li>
+              learning French and Chinese with{" "}
+              <a href="https://apps.ankiweb.net/">Anki</a>
+            </li>
+            <li>meditating</li>
             <li>doing yoga</li>
-            <li>losing muscle (trade-offs) 💪</li>
           </ul>
           <p className="py-4"></p>
         </div>
