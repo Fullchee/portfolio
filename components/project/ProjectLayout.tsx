@@ -31,7 +31,7 @@ export const ProjectLayout = ({
 }: Props) => {
   return (
     <Layout
-      title={`${title} - Fullchee Zhang`}
+      title={title}
       description={description}
       imageProps={{
         url: imageProps.src,

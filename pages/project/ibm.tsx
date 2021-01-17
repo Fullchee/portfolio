@@ -36,7 +36,7 @@ const ProjectDescription = ({ children, image }: DescriptionProps) => {
 const IBMPage = () => {
   return (
     <Layout
-      title="Working at IBM - Fullchee Zhang"
+      title="Working at IBM"
       description="My experience working as a front-end developer at IBM Canada"
       imageProps={{
         url: "/assets/images/projects/ibm/IBM_logo.svg",

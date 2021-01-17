@@ -43,6 +43,8 @@ The design is heavily inspired by
     - Wes bos css grid
     - footer with geo shapes https://portfolio.smakosh.com/
 
+- uses page
+
 - Competence
   - Has this person built professional-looking projects before?
 - Enthusiasm

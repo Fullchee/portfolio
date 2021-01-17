@@ -8,7 +8,7 @@ export default function BlogPage({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <Layout title="Blog - Fullchee Zhang" description="Fullchee's blog posts">
+    <Layout title="Blog" description="Fullchee's blog posts">
       <BlogList posts={posts} />
     </Layout>
   );
