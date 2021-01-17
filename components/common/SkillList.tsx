@@ -3,19 +3,11 @@ import { Icon } from "./icons";
 const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
   return (
     <li className="py-2">
-      <SkillIcon>
+      <div className="w-8 h-8 mr-4 rounded-full bg-blue-50 inline-flex justify-center items-center">
         <Icon className="fill-current text-blue-400" icon={icon} />
-      </SkillIcon>
+      </div>
       {label}
     </li>
-  );
-};
-
-const SkillIcon = ({ children }: { children: any }) => {
-  return (
-    <div className="w-8 h-8 mr-4 rounded-full bg-blue-50 inline-flex justify-center items-center">
-      {children}
-    </div>
   );
 };
 

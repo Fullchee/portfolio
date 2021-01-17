@@ -16,7 +16,7 @@ const Skills = () => {
       <h2 id="skills" className="font-monoDisplay text-2xl pb-4">
         skills
       </h2>
-      <ul className="responsive-skills no-list-item">
+      <ul className="list-none grid sm:grid-cols-3 xl:grid-cols-4 no-list-item">
         <SkillList skills={skills} />
       </ul>
       <p className="py-4">
