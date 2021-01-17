@@ -5,7 +5,9 @@ const Intro = () => {
     <section className="flex justify-between">
       <div className="flex-col flex flex-wrap pb-8 ease-in">
         <h1 id="hi" className="text-6xl pb-4 font-display ">
-          Hi! I'm Fullchee
+          Hi! I'm Full
+          <wbr />
+          chee
         </h1>
         <h2 id="job-title" className="pt-2 text-4xl max-w-lg font-display">
           Front end developer at IBM

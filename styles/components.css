@@ -35,6 +35,12 @@
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
+
+  .responsive-footer {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
 }
 
 @keyframes loading-down {

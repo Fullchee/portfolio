@@ -72,13 +72,12 @@ const IBMPage = () => {
         </li>
       </ul>
       <p>
-        If you're curious, you can{" "}
+        If you're curious, you can scroll down to read background info on what
+        kind of{" "}
         <Link href="/project/ibm#baw-background">
-          <a>
-            scroll down to read background info on what kind of Business
-            Automation work our team does
-          </a>
-        </Link>
+          <a>Business Automation</a>
+        </Link>{" "}
+        work our team does
       </p>
 
       <h2>Making the developer experience better</h2>

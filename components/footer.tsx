@@ -1,9 +1,9 @@
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2 mt-16">
-      <div className="py-12 flex flex-col lg:flex-row items-center">
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
+    <footer className="py-12 bg-accent-1 border-t border-accent-2 mt-16">
+      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-center items-center md:pl-4 md:w-1/2 space-y-4 md:space-y-0">
           <a
             href={`https://github.com/fullchee`}
             className="no-underline mx-3 font-bold"
@@ -21,7 +21,7 @@ const Footer = () => {
           </Link>
         </div>
         <Link href="/attributions">
-          <a className="p-4 text-center">
+          <a className="no-underline text-center">
             This page is powered by Creative Commons Resources
           </a>
         </Link>
