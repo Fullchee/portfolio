@@ -14,6 +14,10 @@ The design is heavily inspired by
 
 ## TODOs
 
+- SEO: get og images
+- home page: add my profile pic in a circle
+- link hover effect
+  - https://css-tricks.com/having-fun-with-link-hover-effects/
 - Project pages
   - Update resume links to each project folder
   - resume: have multiple resumes, for each type of role
