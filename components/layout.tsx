@@ -2,6 +2,7 @@ import Footer from "./footer";
 import Header from "./header";
 import Container from "./container";
 import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
 
 export type ImageProps = {
   url: string;
@@ -18,13 +19,15 @@ type Props = {
 };
 
 const defaultImage = {
-  url: "https://fullchee.com/fullchee.svg",
+  url: "https://fullchee.com/fullchee.png",
   alt: "Fullchee favicon, full at the top, chee at the bottom",
   width: 1155,
   height: 915,
 };
 
 export const Layout = ({ title, description, imageProps, children }: Props) => {
+  const router = useRouter();
+
   return (
     <div>
       <NextSeo
@@ -35,6 +38,7 @@ export const Layout = ({ title, description, imageProps, children }: Props) => {
           description: description,
           images: imageProps ? [imageProps] : [defaultImage],
           type: "website",
+          url: `https://fullchee.com/${router.pathname}`,
         }}
       />
       <Header />
