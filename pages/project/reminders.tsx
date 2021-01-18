@@ -45,7 +45,7 @@ const RemindersPage = () => {
       <p>
         I wanted to have a relatively small width to increase readability. So I
         added some padding to the form. In the remaining horizontal space, I
-        added a linear gradient. Finally, I added a subtle SVG pattern from
+        added a linear gradient. Finally, I added a subtle SVG pattern from{" "}
         <a href="https://www.heropatterns.com/">heropatterns.com</a>
       </p>
       <h3>Data</h3>

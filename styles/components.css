@@ -30,6 +30,10 @@
     content: none;
   }
 
+  .no-link-underline::after {
+    content: none;
+  }
+
   .responsive-skills {
     display: grid;
     grid-gap: 20px;
