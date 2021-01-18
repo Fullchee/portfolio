@@ -5,7 +5,7 @@ const mainImageProps = {
   src: "/assets/images/projects/reminders/reminders.png",
   alt: "screenshot of the reminders project",
   width: 960,
-  height: 595.92,
+  height: 596,
 };
 
 const RemindersPage = () => {

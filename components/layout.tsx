@@ -38,7 +38,7 @@ export const Layout = ({ title, description, imageProps, children }: Props) => {
           description: description,
           images: imageProps ? [imageProps] : [defaultImage],
           type: "website",
-          url: `https://fullchee.com/${router.pathname}`,
+          url: `https://fullchee.com${router.pathname}`,
         }}
       />
       <Header />

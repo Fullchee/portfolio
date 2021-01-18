@@ -6,7 +6,7 @@ const mainImageProps = {
   src: "/assets/images/projects/hong-fa-granite/,hong-fa-granite.png",
   alt: "Hong fa granite.com home page",
   width: 960,
-  height: 601.44,
+  height: 601,
 };
 
 const HongFaGranitePage = () => {

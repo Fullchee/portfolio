@@ -7,7 +7,7 @@ const mainImageProps = {
   alt:
     "Screenshot of the batch calendar events project on a mobile and desktop",
   width: 960,
-  height: 595.9,
+  height: 596,
 };
 
 const BatchCalendarEventsPage = () => {

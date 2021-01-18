@@ -4,7 +4,7 @@ import Image from "next/image";
 const mainImageProps = {
   src: "/assets/images/projects/toronto-water-monitor/desktop_shadow.png",
   width: 960,
-  height: 624.4,
+  height: 624,
   alt: "Screenshot of toronto water monitor project on the Safari browser",
 };
 
