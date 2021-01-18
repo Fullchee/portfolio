@@ -3,7 +3,7 @@ import { ProjectLayout } from "../../components/project/ProjectLayout";
 import Image from "next/image";
 
 const mainImageProps = {
-  src: "/assets/images/projects/hong-fa-granite/,hong-fa-granite.png",
+  src: "/assets/images/projects/hong-fa-granite/hong-fa-granite.png",
   alt: "Hong fa granite.com home page",
   width: 960,
   height: 601,

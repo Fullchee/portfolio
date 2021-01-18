@@ -13,16 +13,14 @@ const Intro = () => {
           Front end developer at IBM
         </h2>
       </div>
-      <div>
-        <div className="rounded-full  z-10">
-          <Image
-            className="rounded-full relative"
-            src="/professional-face.jpg"
-            width={150}
-            height={150}
-            alt="picture of Fullchee in a fancy shirt and suit"
-          ></Image>
-        </div>
+      <div className="rounded-full ease-in">
+        <Image
+          className="rounded-full relative"
+          src="/professional-face.jpg"
+          width={150}
+          height={150}
+          alt="picture of Fullchee in a fancy shirt and suit"
+        ></Image>
       </div>
     </section>
   );
