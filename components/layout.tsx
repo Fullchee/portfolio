@@ -34,6 +34,7 @@ export const Layout = ({ title, description, imageProps, children }: Props) => {
           title: `${title} - Fullchee Zhang`,
           description: description,
           images: imageProps ? [imageProps] : [defaultImage],
+          type: "website",
         }}
       />
       <Header />
