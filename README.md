@@ -14,15 +14,6 @@ The design is heavily inspired by
 
 ## TODOs
 
-- skills on safari aren't working right
-- Project pages
-  - Update resume links to each project folder
-  - resume: have multiple resumes, for each type of role
-- ensure that each project page has it's own preview image (og)
-- Blog: remove duplicate enumeration (for ordered lists)
-
-  - blog posts
-
 - reread Refactoring UI
 
 - Home page
@@ -39,7 +30,14 @@ The design is heavily inspired by
     - Wes bos css grid
     - footer with geo shapes https://portfolio.smakosh.com/
 
-- uses page
+- Uses page
+
+  - add myself to Wes Bos' repo
+
+- Blog
+
+  - remove duplicate enumeration (for ordered lists)
+  - blog posts
 
 - Competence
   - Has this person built professional-looking projects before?
