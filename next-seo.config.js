@@ -7,15 +7,15 @@ const SEO = {
   canonical: "https://fullchee.com/",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_CA",
     url: "https://fullchee.com/",
     title,
     description,
     images: [
       {
-        url: "https://fullchee.com/fullchee.png",
+        url: "https://fullchee.com/fullchee-og.png",
         alt: title,
-        width: 1155,
+        width: 1743,
         height: 915,
       },
     ],

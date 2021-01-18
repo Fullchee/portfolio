@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <Layout
       title="Fullchee Zhang - Front end developer"
-      description="Portfolio made with love by Fullchee Zhang"
+      description="Portfolio made with Next.js, Tailwind.css and love by Fullchee Zhang"
     >
       <Intro />
       <AboutMe />

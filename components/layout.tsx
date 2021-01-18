@@ -19,9 +19,9 @@ type Props = {
 };
 
 const defaultImage = {
-  url: "https://fullchee.com/fullchee.png",
+  url: "https://fullchee.com/fullchee-og.png",
   alt: "Fullchee favicon, full at the top, chee at the bottom",
-  width: 1155,
+  width: 1743,
   height: 915,
 };
 
