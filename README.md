@@ -14,7 +14,7 @@ The design is heavily inspired by
 
 ## TODOs
 
-- SEO: get og images
+- skills on safari aren't working right
 - Project pages
   - Update resume links to each project folder
   - resume: have multiple resumes, for each type of role
@@ -33,6 +33,8 @@ The design is heavily inspired by
     - https://www.cassie.codes/
     - svg animations: https://www.youtube.com/watch?v=gWai7fYp9PY
   - Hero Patterns?
+    - refactor ui: p 200 (subtle pattern on the bottom of the footer or the header or the side of each section)
+    - refactor ui: p199 gradients in each section
     - https://craig-roush-portfolio-template.webflow.io/
     - Wes bos css grid
     - footer with geo shapes https://portfolio.smakosh.com/
