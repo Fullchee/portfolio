@@ -13,7 +13,7 @@ const SEO = {
     description,
     images: [
       {
-        url: "https://fullchee.com/fullchee.svg",
+        url: "https://fullchee.com/fullchee.png",
         alt: title,
         width: 1155,
         height: 915,

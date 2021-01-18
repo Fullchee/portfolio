@@ -39,7 +39,7 @@ const IBMPage = () => {
       title="Working at IBM"
       description="My experience working as a front-end developer at IBM Canada"
       imageProps={{
-        url: "/assets/images/projects/ibm/IBM_logo.svg",
+        url: "/assets/images/projects/ibm/ibm-logo.png",
         width: 1000,
         height: 400,
         alt: "old 8 stripe IBM logo",
