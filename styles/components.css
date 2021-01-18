@@ -61,6 +61,10 @@
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
+
+  .skills > * {
+    flex-basis: 220px;
+  }
 }
 
 @keyframes loading-down {
