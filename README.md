@@ -12,6 +12,15 @@ The design is heavily inspired by
 - Josh Comeau's [Building an Effective Dev Portfolio](https://www.joshwcomeau.com/effective-portfolio/)
 - juliacodes.com
 
+## Install
+
+1. Install next
+   1. `npm i -g next`
+2. Install yarn v1
+   1. `brew install yarn`
+3. `yarn build`
+4. `yarn dev`
+
 ## TODOs
 
 - reread Refactoring UI

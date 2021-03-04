@@ -20,11 +20,17 @@ const Footer = () => {
             <a className="no-underline mx-3 font-bold">Resume</a>
           </Link>
         </div>
-        <Link href="/attributions">
-          <a className="no-underline text-center">
-            This page is powered by Creative Commons Resources
-          </a>
-        </Link>
+
+        <p className="text-xs">
+          Made with{" "}
+          <Link href="/attributions">
+            <a className="no-underline text-center">
+              Creative Commons Resources
+            </a>
+          </Link>
+          , <a href="https://nextjs.org/">Next.js</a>,{" "}
+          <a href="https://tailwindcss.com/">Tailwind.css</a> and love ❤️
+        </p>
       </div>
     </footer>
   );

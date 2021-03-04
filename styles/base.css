@@ -51,7 +51,7 @@
   }
 
   li {
-    @apply text-lg;
+    @apply text-lg leading-9;
   }
 
   ol {

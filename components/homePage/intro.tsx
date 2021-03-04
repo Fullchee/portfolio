@@ -9,8 +9,11 @@ const Intro = () => {
           <wbr />
           chee
         </h1>
-        <h2 id="job-title" className="pt-2 text-4xl max-w-lg font-display">
-          Front end developer at IBM
+        <h2 id="job-title" className="pt-2 text-2xl max-w-lg font-display">
+          Full stack JS and Python developer at{" "}
+          <a className="no-underline" href="http://www.forma.ai">
+            Forma.ai
+          </a>
         </h2>
       </div>
       <div className="rounded-full ease-in">

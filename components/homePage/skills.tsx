@@ -19,14 +19,23 @@ const Skills = () => {
       <ul className="flex flex-wrap skills no-list-item">
         <SkillList skills={skills} />
       </ul>
-      <p className="py-4">
-        I stay up to date by listening to the{" "}
-        <a href="https://syntax.fm/">Syntax podcast</a>,{" "}
-        <a href="https://zerotomastery.io/blog/web-developer-monthly-dec-2020/">
-          ZTM web dev monthly newsletter
-        </a>{" "}
-        and working on side projects. I retain and remember what I learn with{" "}
-        <a href="https://apps.ankiweb.net/">Anki</a> and spaced repetition.
+      <p className="pt-10">
+        I learn and stay up to date by
+        <ul>
+          <li>
+            listening to the <a href="https://syntax.fm/">Syntax podcast</a>
+          </li>
+          <li>
+            <a href="https://zerotomastery.io/blog/web-developer-monthly-dec-2020/">
+              ZTM web dev monthly newsletter
+            </a>
+          </li>
+          <li>working on open source side projects</li>
+          <li>
+            I remember what I learn with{" "}
+            <a href="https://apps.ankiweb.net/">Anki</a>
+          </li>
+        </ul>
       </p>
     </section>
   );
