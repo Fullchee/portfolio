@@ -21,6 +21,10 @@ The design is heavily inspired by
 3. `yarn build`
 4. `yarn dev`
 
+## Deploy
+
+`git push origin main`
+
 ## TODOs
 
 - reread Refactoring UI
