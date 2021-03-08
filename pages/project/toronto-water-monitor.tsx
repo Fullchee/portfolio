@@ -89,6 +89,10 @@ you faced?  */}
         <li>I wanted to keep things simple</li>
         <li>I didn't like the daily 100 email limit</li>
         <li>I don't need additional features like the click through rate</li>
+        <li>
+          Twilio SendGrid's aim appears to be catered towards sending batch
+          emails which this app does not do
+        </li>
       </ul>
 
       <h3>Unsubscribe link</h3>
