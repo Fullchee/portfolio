@@ -32,7 +32,7 @@ const Skills = () => {
           </li>
           <li>working on open source side projects</li>
           <li>
-            I remember what I learn with{" "}
+            retaining what I learn with{" "}
             <a href="https://apps.ankiweb.net/">Anki</a>
           </li>
         </ul>

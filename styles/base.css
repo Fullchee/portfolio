@@ -90,4 +90,16 @@
     background-repeat: no-repeat;
     margin-right: 0.5em;
   }
+
+  ul li {
+    @apply pl-4 py-1;
+  }
+
+  ul ul {
+    padding: 0;
+  }
+
+  ul ul li {
+    margin-left: 2rem
+  }
 }

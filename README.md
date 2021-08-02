@@ -7,19 +7,17 @@ This portfolio was made with
 - TypeScript
 - MDX
 
-The design is heavily inspired by
+The design is inspired by
 
 - Josh Comeau's [Building an Effective Dev Portfolio](https://www.joshwcomeau.com/effective-portfolio/)
 - juliacodes.com
 
 ## Install
 
-1. Install next
-   1. `npm i -g next`
-2. Install yarn v1
+1. Install yarn v1
    1. `brew install yarn`
-3. `yarn build`
-4. `yarn dev`
+2. `yarn build`
+3. `yarn dev`
 
 ## Deploy
 
@@ -32,7 +30,6 @@ The design is heavily inspired by
 - Home page
 
   - neon text effect: https://www.youtube.com/watch?v=YiSzx0Cb8_8
-  - https://portfolio-starter-template.webflow.io/
   - Find tutorials on how to animate
     - https://www.cassie.codes/
     - svg animations: https://www.youtube.com/watch?v=gWai7fYp9PY
