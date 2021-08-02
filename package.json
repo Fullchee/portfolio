@@ -2,10 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "typecheck": "tsc"
+    "dev": "./node_modules/.bin/next",
+    "build": "./node_modules/.bin/next build",
+    "start": "./node_modules/.bin/next start",
+    "typecheck": "./node_modules/.bin/tsc"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.3.1",

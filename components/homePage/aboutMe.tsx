@@ -22,7 +22,7 @@ const AboutMe = () => {
             learning French, Chinese and web dev with{" "}
             <a href="https://apps.ankiweb.net/">Anki</a>
           </li>
-          <li>meditating and doing yoga</li>
+          <li>running, biking and meditating</li>
         </ul>
         <p className="py-4"></p>
       </div>
