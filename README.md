@@ -23,9 +23,13 @@ The design is inspired by
 `git push origin main`
 
 ## TODOs
+- project list: get a blur image
+  - and a smaller image for the cards
+- Improve ProjectDescription so that it's more readable
+- my face looks a bit small and awkward on mobile
+
 
 - reread Refactoring UI
-
 - Home page
 
   - neon text effect: https://www.youtube.com/watch?v=YiSzx0Cb8_8
