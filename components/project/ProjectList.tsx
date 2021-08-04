@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export interface ProjectInfo {
   description: string;
@@ -11,6 +11,7 @@ export interface ProjectInfo {
     path: string;
     width?: string;
     height?: string;
+    placeholder?: string;
   };
 }
 
@@ -20,7 +21,7 @@ const ProjectCard = ({
     linkLabel,
     title,
     url,
-    image: { alt, path, width, height },
+    image: { alt, path, width, height, placeholder },
   },
 }: {
   project: ProjectInfo;
@@ -34,6 +35,11 @@ const ProjectCard = ({
           alt={alt}
           width={width || 500}
           height={height || 300}
+          placeholder="blur"
+          blurDataURL={
+            placeholder ||
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89vz3fwAJDAO5snBJQwAAAABJRU5ErkJggg=='
+          }
         />
         <div className="px-8 lg:px-12 pb-8">
           <h3 className="text-xl pt-4 font-bold">{title}</h3>
@@ -47,13 +53,7 @@ const ProjectCard = ({
   );
 };
 
-export const ProjectList = ({
-  projects,
-  skip,
-}: {
-  projects: ProjectInfo[];
-  skip?: string;
-}) => {
+export const ProjectList = ({ projects, skip }: { projects: ProjectInfo[]; skip?: string }) => {
   const displayedProjects = projects.filter(({ title }) => title !== skip);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
