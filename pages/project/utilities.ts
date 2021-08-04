@@ -1,8 +1,9 @@
-export const calculateSejour = (date: Date) => {
+export const calculateSejour = (date: string) => {
   const interval = new Date().getTime() - new Date(date).getTime();
   const days = Math.floor(interval / (1000 * 60 * 60 * 24));
-  const months = Math.round((days % 365) / 30);
-  const monthsString = `${months} month` + months ? 's' : '';
+  console.log(days);
+  const months = Math.round((156 % 365) / 30);
+  const monthsString = `${months} month${months ? 's' : ''}`;
   const years = Math.floor(days / 365);
   switch (years) {
     case 0:

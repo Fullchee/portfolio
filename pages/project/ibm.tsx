@@ -176,7 +176,7 @@ const IBMPage = () => {
           src: '/assets/images/projects/ibm/eslint.svg',
           width: 240,
           height: 120,
-          alt: 'diff of two XML files',
+          alt: 'ESLint logo',
           onRight: true,
         }}
       >
