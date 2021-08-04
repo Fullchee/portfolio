@@ -3,13 +3,23 @@ import { ProjectList, ProjectInfo } from "./ProjectList";
 export const MainProjects = ({ skip }: { skip?: string }) => {
   const projects: ProjectInfo[] = [
     {
-      title: "Working at IBM",
-      description: `Read about my experience working as a front-end developer at IBM Canada`,
+      title: "Working at Forma",
+      description: `Read about my time as a full-stack developer at Forma.ai`,
       image: {
-        alt: "screenshot of IBM's original eight stripe logo",
+        alt: "Forma logo",
+        path: "/assets/images/projects/forma/f-logo.png",
+      },
+      linkLabel: "Read my Forma.ai story",
+      url: "/project/forma",
+    },
+    {
+      title: "Working at IBM",
+      description: `Read about my time as a front-end developer at IBM Canada`,
+      image: {
+        alt: "IBM's original eight stripe logo",
         path: "/assets/images/projects/ibm/IBM_logo.svg",
       },
-      linkLabel: "Read story",
+      linkLabel: "Read my IBM story",
       url: "/project/ibm",
     },
     {
