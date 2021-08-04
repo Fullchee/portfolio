@@ -1,20 +1,23 @@
-import Link from "next/link";
-import { ProjectLayout } from "../../components/project/ProjectLayout";
-import Image from "next/image";
+import Link from 'next/link';
+import { ProjectLayout } from '../../components/project/ProjectLayout';
+import Image from 'next/image';
 
 const mainImageProps = {
-  src: "/assets/images/projects/hong-fa-granite/hong-fa-granite.png",
-  alt: "Hong fa granite.com home page",
+  src: '/assets/images/projects/hong-fa-granite/hong-fa-granite.png',
+  alt: 'Hong fa granite.com home page',
   width: 960,
   height: 601,
+  placeholder: 'blur',
+  blurDataURL:
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88eX9fwAJowPcYNPZ7gAAAABJRU5ErkJggg==',
 };
 
 const HongFaGranitePage = () => {
   const skills = [
-    { icon: "gatsby.svg", label: "Gatsby" },
-    { icon: "react", label: "React" },
-    { icon: "js", label: "JavaScript" },
-    { icon: "sass", label: "SASS and Bulma" },
+    { icon: 'gatsby.svg', label: 'Gatsby' },
+    { icon: 'react', label: 'React' },
+    { icon: 'js', label: 'JavaScript' },
+    { icon: 'sass', label: 'SASS and Bulma' },
   ];
   return (
     <ProjectLayout
@@ -30,24 +33,23 @@ const HongFaGranitePage = () => {
 this?  */}
       <h2>Why</h2>
       <p>
-        A family friend has a stone fabricator business. They had a slow
-        Wordpress website that was costing them $20+ a month with Bell Hosting.
+        A family friend has a stone fabricator business. They had a slow Wordpress website that was
+        costing them $20+ a month with Bell Hosting.
       </p>
       <h2>Tech stack</h2>
       {/* What did you start with? Was this built from scratch? Did you have a team? If so,
 which parts did you do? Where did the design come from? Was there any
 collaboration?  */}
       <p>
-        There isn't a lot of dynamic content so I decided to use a static site
-        generator. Gatsby creates "blazing fast websites" and React. I really
-        liked using Gatsby when making my 2020 portfolio so I went with Gatsby
-        (Next.js came out with static site generation after I already started
-        the project)
+        There isn't a lot of dynamic content so I decided to use a static site generator. Gatsby
+        creates "blazing fast websites" and React. I really liked using Gatsby when making my 2020
+        portfolio so I went with Gatsby (Next.js came out with static site generation after I
+        already started the project)
       </p>
       <p>
-        I built this site from the Gatsby template. I decided to use Bulma
-        because it is responsive and I want to try different CSS frameworks to
-        learn from their design systems for inspiration.
+        I built this site from the Gatsby template. I decided to use Bulma because it is responsive
+        and I want to try different CSS frameworks to learn from their design systems for
+        inspiration.
       </p>
       <h2>Thought process</h2>
       {/* What was the hardest part of building this product? Where did you get stuck along the
@@ -56,18 +58,15 @@ way?  */}
 you faced?  */}
       <h3>What kind of site is best for the client</h3>
       <p>
-        The first thing to do was determining if building a Gatsby site was the
-        right thing to do for the client. Or if a website builder meets their
-        needs better.
+        The first thing to do was determining if building a Gatsby site was the right thing to do
+        for the client. Or if a website builder meets their needs better.
       </p>
       <p>
-        It turns out that website builders really expensive (compared to my free
-        labour). As of January 2021, Squarespace's cheapest plan is{" "}
-        <a href="https://www.squarespace.com/pricing">
-          $12 USD/month = $200+ CAD/year
-        </a>
-        . Wix isn't that much cheaper at $10 USD/month for their cheapest plan.
-        None of these plans come with email long-term which can get pricey.
+        It turns out that website builders really expensive (compared to my free labour). As of
+        January 2021, Squarespace's cheapest plan is{' '}
+        <a href="https://www.squarespace.com/pricing">$12 USD/month = $200+ CAD/year</a>. Wix isn't
+        that much cheaper at $10 USD/month for their cheapest plan. None of these plans come with
+        email long-term which can get pricey.
       </p>
       <Image
         src="/assets/images/projects/hong-fa-granite/why-us.png"
@@ -76,9 +75,9 @@ you faced?  */}
         height={1063}
       />
       <p>
-        Now that I was convinced that building a Gatsby site was the way to go,
-        I had to design it. I asked my client a lot of questions to get a sense
-        of what kind of brand Hong Fa Granite was.
+        Now that I was convinced that building a Gatsby site was the way to go, I had to design it.
+        I asked my client a lot of questions to get a sense of what kind of brand Hong Fa Granite
+        was.
       </p>
       <ul>
         <li>What the company does</li>
@@ -109,17 +108,16 @@ you faced?  */}
       />
 
       <p>
-        I went through serif fonts on Google Fonts to find a font that the
-        client liked. I limited it to serif fonts to convey a classic style to
-        reflect the classic nature of stone counter tops. Similarly, I went
-        through logos of stone related companies and I decided on a symmetric
-        geometric design with an "H" in the middle. I kept the brown color
-        scheme of the old logo.
+        I went through serif fonts on Google Fonts to find a font that the client liked. I limited
+        it to serif fonts to convey a classic style to reflect the classic nature of stone counter
+        tops. Similarly, I went through logos of stone related companies and I decided on a
+        symmetric geometric design with an "H" in the middle. I kept the brown color scheme of the
+        old logo.
       </p>
       <h3>Site design</h3>
       <p>
-        The Gatsby theme I started with came with the Bulma CSS framework so I
-        used Bulma components. The home page had a hero button
+        The Gatsby theme I started with came with the Bulma CSS framework so I used Bulma
+        components. The home page had a hero button
       </p>
 
       <h3>Internationalization (i18n)</h3>
@@ -130,16 +128,14 @@ you faced?  */}
         height={915}
       />
       <p>
-        An important demographic for the company was chinese speaking so I had
-        to enable language support for Chinese and English. The Workplace and
-        Workstreams products at IBM support multiple locales so I knew some
-        tricks. I decided on using react-intl. There are a lot of ways to
-        implement i18n. The way that worked for me was adding a /zh/ prefix to
-        every path. I'm only dealing with two languages so I created a{" "}
-        <code>&lt;LocalizedLink&gt;</code> wrapper on top of the Gatsby Link
-        component and I placed my strings in JSON files. Finally, I have a
-        useEffect hook that redirects to the Chinese site if after checking the
-        browser's navigator language.
+        An important demographic for the company was chinese speaking so I had to enable language
+        support for Chinese and English. The Workplace and Workstreams products at IBM support
+        multiple locales so I knew some tricks. I decided on using react-intl. There are a lot of
+        ways to implement i18n. The way that worked for me was adding a /zh/ prefix to every path.
+        I'm only dealing with two languages so I created a <code>&lt;LocalizedLink&gt;</code>{' '}
+        wrapper on top of the Gatsby Link component and I placed my strings in JSON files. Finally,
+        I have a useEffect hook that redirects to the Chinese site if after checking the browser's
+        navigator language.
       </p>
 
       <h3>Products page</h3>
@@ -150,8 +146,8 @@ you faced?  */}
         height={1069}
       />
       <p>
-        I added a filter feature (which just uses an ES6 Array filter) to filter
-        the types of stone products
+        I added a filter feature (which just uses an ES6 Array filter) to filter the types of stone
+        products
       </p>
 
       <h3>Contact us page</h3>
@@ -162,25 +158,22 @@ you faced?  */}
         height={1069}
       />
       <p>
-        I used Netlify Forms to handle the contact us page. I used Yup to
-        validate the form. The contact info uses the same component as in the
-        footer with CSS Flexbox.
+        I used Netlify Forms to handle the contact us page. I used Yup to validate the form. The
+        contact info uses the same component as in the footer with CSS Flexbox.
       </p>
       <p>
-        Google Maps integration was fairly straightforward because of existing
-        npm packages and because I had already some experience with Google APIs
-        from my{" "}
+        Google Maps integration was fairly straightforward because of existing npm packages and
+        because I had already some experience with Google APIs from my{' '}
         <Link href="/project/batch-calendar-events">
           <a>Batch calendar events project.</a>
         </Link>
       </p>
       <h3>Deploying</h3>
       <p>
-        I deployed to a free Netlify site to get feedback from the client. Once
-        the site was ready for deployment, I had to switch from Bell to Netlify.
-        Switching was predictably the hardest and least fun part of this
-        project. Eventually, I switched to another domain provider and connected
-        it with Netlify so that HongFaGranite.com was live!
+        I deployed to a free Netlify site to get feedback from the client. Once the site was ready
+        for deployment, I had to switch from Bell to Netlify. Switching was predictably the hardest
+        and least fun part of this project. Eventually, I switched to another domain provider and
+        connected it with Netlify so that HongFaGranite.com was live!
       </p>
     </ProjectLayout>
   );
