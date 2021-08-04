@@ -6,7 +6,7 @@ const mainImageProps = {
   width: 960,
   height: 624,
   alt: 'Screenshot of toronto water monitor project on the Safari browser',
-  placeHolder: 'blur',
+  placeholder: 'blur',
   blurDataURL:
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89vz3fwAJDAO5snBJQwAAAABJRU5ErkJggg==',
 };
