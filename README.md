@@ -2,10 +2,9 @@
 
 This portfolio was made with
 
-- the Next.js [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) template
+- Next.js
 - Tailwind CSS 2
 - TypeScript
-- MDX
 
 The design is inspired by
 
@@ -40,6 +39,9 @@ The design is inspired by
 
   - remove duplicate enumeration (for ordered lists)
   - blog posts
+    - https://github.com/yetanother-blog/indiepen
+
+#### What I'm trying to convey
 
 - Competence
   - Has this person built professional-looking projects before?
@@ -50,7 +52,7 @@ The design is inspired by
   - Does this person have the right kind of personality for the company?
   - Have they worked with the languages and frameworks we use here?
 
-Too complex but nice to have
+#### Too complex but nice to have
 
 - Dark mode with animation of the sun setting and the moon rising
   - https://www.cassie.codes/

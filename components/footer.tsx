@@ -21,10 +21,10 @@ const Footer = () => {
           </Link>
         </div>
 
-        <p className="text-xs">
+        <p className="text-xs text-center">
           Made with{" "}
           <Link href="/attributions">
-            <a className="no-underline text-center">
+            <a className="text-center">
               Creative Commons Resources
             </a>
           </Link>
