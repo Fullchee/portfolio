@@ -1,4 +1,4 @@
-import { SkillList } from '../common/SkillList';
+import { SkillList } from './SkillList';
 
 const Skills = () => {
   const skills = [

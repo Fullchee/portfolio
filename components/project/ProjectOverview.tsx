@@ -1,4 +1,4 @@
-import { SkillList, Skill } from "../common/SkillList";
+import { SkillList, Skill } from "../homePage/SkillList";
 import { Icon } from "../common/icons";
 
 interface Props {

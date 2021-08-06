@@ -1,6 +1,6 @@
 import { Layout } from "../layout";
 import { ProjectOverview } from "./ProjectOverview";
-import { Skill } from "../common/SkillList";
+import { Skill } from "../homePage/SkillList";
 import { MainProjects } from "./MainProjects";
 
 interface Props {

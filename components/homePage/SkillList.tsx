@@ -1,4 +1,4 @@
-import { Icon } from "./icons";
+import { Icon } from "../common/icons";
 
 const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
   return (

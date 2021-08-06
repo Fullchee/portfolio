@@ -1,6 +1,6 @@
 import Layout from '../../components/layout';
-import { ProjectDescription } from './ProjectDescription';
-import { calculateSejour } from './utilities';
+import { ProjectDescription } from '../../components/project/ProjectDescription';
+import { calculateSejour } from '../../components/common/utilities';
 
 const FormaPage = () => {
   return (
