@@ -30,7 +30,7 @@ const TorontoWaterMonitorPage = () => {
     >
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image {...mainImageProps} />
+      <Image {...mainImageProps} placeholder="blur" />
       <h2>Why</h2>
       <p>
         My family got a high water bill from a leaking toilet. This project will prevent that from

@@ -29,7 +29,7 @@ const RemindersPage = () => {
       imageProps={mainImageProps}
     >
       <h1>Reminders</h1>
-      <Image {...mainImageProps} />
+      <Image {...mainImageProps} placeholder="blur" />
       <h2>Why</h2>
       <Image
         src="/assets/images/projects/reminders/forgetting-curve.svg"

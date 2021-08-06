@@ -27,7 +27,7 @@ const HongFaGranitePage = () => {
       skills={skills}
       imageProps={mainImageProps}
     >
-      <Image {...mainImageProps} />
+      <Image {...mainImageProps} placeholder="blur" />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}

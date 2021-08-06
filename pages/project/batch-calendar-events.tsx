@@ -28,7 +28,7 @@ const BatchCalendarEventsPage = () => {
     >
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image {...mainImageProps} />
+      <Image {...mainImageProps} placeholder="blur" />
       <h2>Why</h2>
       <p>
         This project was inspired when my sister was working part-time at a supermarket and at a
