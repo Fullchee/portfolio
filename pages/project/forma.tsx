@@ -29,7 +29,9 @@ const FormaPage = () => {
           onRight: false,
         }}
       >
-        <h3>Building Dashboards</h3>
+        <p>
+          <strong>Building Dashboards</strong>
+        </p>
         <p>
           I build modern incentive compensation dashboards and core components to help sales people
           understand how they're getting paid.
@@ -45,7 +47,9 @@ const FormaPage = () => {
           onRight: false,
         }}
       >
-        <h3>Taking ownership of our Storybook instance</h3>
+        <p>
+          <strong>Taking ownership of our Storybook instance</strong>
+        </p>
         <p>
           Our team was growing really quickly and we needed a way to communicate and document our
           components. I took initiative to update Storybook and add our components.
@@ -65,7 +69,9 @@ const FormaPage = () => {
           onRight: false,
         }}
       >
-        <h3>ESLint</h3>
+        <p>
+          <strong>ESLint</strong>
+        </p>
         <p>
           Spearheaded the push to update ESLint to support more modern features to make the
           developer experience nicer (eg: support for optional chaining)
