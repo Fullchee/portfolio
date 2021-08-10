@@ -3,7 +3,7 @@ import Link from "next/link";
 const AboutMe = () => {
   return (
     <section className="ease-in">
-      <h2 className="font-monoDisplay text-2xl">about me</h2>
+      <h2 className="font-monoDisplay tracking-wider text-2xl">about me</h2>
       <div>
         <p>
           I'm super grateful to be able to scratch my own itch and{" "}

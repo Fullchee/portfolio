@@ -1,11 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 const HeaderItem = ({ href, label }: { href: string; label: string }) => {
   return (
     <li className="px-4 py-8 text-xl">
       <Link href={href}>
-        <a href={href} className="no-underline font-monoDisplay pb-1">
+        <a href={href} className="no-underline font-monoDisplay tracking-wider pb-1">
           {label}
         </a>
       </Link>
@@ -22,12 +22,7 @@ export const Header = () => {
             <li className="mr-auto pt-4">
               <Link href="/">
                 <a>
-                  <Image
-                    src="/fullchee.svg"
-                    alt="home page"
-                    width={50}
-                    height={50}
-                  />
+                  <Image src="/fullchee.svg" alt="home page" width={50} height={50} />
                 </a>
               </Link>
             </li>

@@ -13,7 +13,7 @@ const Skills = () => {
   ];
   return (
     <section className="flex-col flex flex-wrap mb-8">
-      <h2 id="skills" className="font-monoDisplay text-2xl pb-4">
+      <h2 id="skills" className="font-monoDisplay tracking-wider text-2xl pb-4">
         skills
       </h2>
       <ul className="flex flex-wrap skills no-list-item">
