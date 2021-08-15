@@ -68,6 +68,10 @@
     padding-right: 4px;
   }
 
+  ol li::before {
+    display: none;
+  }
+
   p {
     @apply max-w-3xl py-2 text-lg;
   }

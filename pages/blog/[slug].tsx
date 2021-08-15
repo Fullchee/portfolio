@@ -26,7 +26,7 @@ export default function BlogPost({
         read
       </p>
 
-      <article className="mt-6 prose max-w-none pb-16">{content}</article>
+      <article className="mt-6 max-w-none pb-16">{content}</article>
     </Layout>
   );
 }
