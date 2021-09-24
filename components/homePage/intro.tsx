@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const Intro = () => {
   return (
@@ -10,10 +10,11 @@ const Intro = () => {
           chee
         </h1>
         <h2 id="job-title" className="pt-2 text-2xl max-w-lg font-display">
-          Full stack JS and Python developer at{" "}
+          Full stack JS and Python developer at{' '}
           <a className="no-underline" href="http://www.forma.ai">
             Forma.ai
-          </a>
+          </a>{' '}
+          in Toronto
         </h2>
       </div>
       <div className="rounded-full ease-in">
