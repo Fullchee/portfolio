@@ -10,19 +10,29 @@ const AboutMe = () => {
           <Link href="/project">
             <a>solve problems with web development</a>
           </Link>{" "}
-          🙏.
+          🙏
         </p>
         <p className="">
-          Pre-quarantine, I was an avid dragon boat paddler 🛶.
+          I get dopamine hits from writing scan-able documentation so I take
+          notes in the open, whether that's how I use React components in
+          Storybook or how to a feature works in Bookstack
         </p>
-        <p className="">During these quarantine-times, I've been busy</p>
+        <p className="">
+          During these quarantine-times, I've been busy in Toronto
+        </p>
         <ul>
-          <li>leveling up my web dev skills</li>
+          <li>
+            leveling up my web dev skills (learning{" "}
+            <a href="https://epicreact.dev/">Epic React</a> atm)
+          </li>
           <li>
             learning French, Chinese and web dev with{" "}
             <a href="https://apps.ankiweb.net/">Anki</a>
           </li>
-          <li>running, biking and meditating</li>
+          <li>
+            meditating, lifting, running and biking in preparation for the next
+            dragon boat season 🛶
+          </li>
         </ul>
         <p className="py-4"></p>
       </div>
