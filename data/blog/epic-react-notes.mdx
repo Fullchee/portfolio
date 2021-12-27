@@ -1,0 +1,119 @@
+---
+title: "Epic React Insights"
+date: "2021-12-25"
+summary: "Notes and Insights from Epic React"
+---
+
+## Exercises to redo
+
+- advanced-react-hooks
+   - useCallback custom hooks (02.0.js)
+-
+
+## React Fundamentals
+
+1. `React.createElement` is like `document.createElement()`
+2. `document.append(element)` is like `ReactDOM.render(reactComponent, document.body)`
+   1. ReactDOM because react can be rendered in many environments (example: React Native)
+
+If you only want the second value in an array, you can just use an array
+```js
+[count, setCount]
+```
+```js
+[, setCount]
+```
+
+
+### PropTypes
+
+I got a bit confused when I got to creating custom components extra credit where I'm not sure how React is calling the `propTypes` that we defined (not from the library).
+
+- [Course video link](https://epicreact.dev/modules/react-fundamentals/creating-custom-components-extra-credit-solution-03)
+- [Link to code](https://github.com/kentcdodds/react-fundamentals/blob/main/src/final/04.extra-3.html)
+
+I broke it down in this StackOverflow question where I even tried looking at the `React` source code but I didn't explain my question clearly enough because the one response gave a link to the `propTypes`.
+
+(which is super cool but not exactly what I'm looking for 😅)
+
+https://stackoverflow.com/questions/70477035/when-are-the-props-propname-and-componentname-passed-to-the-proptypes-func
+
+I'm also posted on KCD's discord and I'm likely going to go to his office hours
+
+## React Hooks
+
+### useState
+
+can accept a function which is a lazy initializer!
+
+- if you just want to calculate the initial state once (digits of pi)
+
+### useEffect
+
+- `fetch`: forgot to return early if pokemonName is null
+- I forgot about having a status variable
+  - helps with determining what to display
+  - https://kentcdodds.com/blog/stop-using-isloading-booleans
+- the way that Kent does a sort of manual TDD where he always gets something to display
+  - eg: create a variable with a stub error message to make sure that the error shows up
+
+### Error Boundaries
+
+- can take in a `FallbackComponent` arg
+- Problem with using the `key` prop for the error boundary
+   - it'll mount and unmount every time the `key` is updated
+   - flashing
+- we can pass `resetErrorBoundary` prop that gets triggered in the `FallbackComponent`
+- `resetKeys` prop works as well
+
+## Advanced React Hooks
+
+Custom hooks are just regular functions that happen to have side effects!
+
+They can return anything
+
+### useReducer
+
+```js
+const [state, dispatch] = useReducer(state, action);
+```
+
+- it doesn't have to follow the Redux style of having actions with a `type` prop
+- first prop: the old state
+- second prop: whatever you pass to `dispatch`
+
+### useCallback and useMemo
+
+Use cases (https://kentcdodds.com/blog/usememo-and-usecallback)
+
+1. not have a function re-render every time so that it can be used in a useEffect dep array
+2. avoiding unnecessary re-renders when re-rendering is super expensive (Graphs, Charts, Animations)
+3. `useMemo` can be passed a function (just like `useState`) and lazily calculate computationally expensive items
+
+#### 02.js: useCallback: custom hooks
+- I had trouble with the middle param of what the initial state should be
+- I autofilled the dependencies and got into an infinite render loop
+
+#### 02.3.js: safeDispatch
+- Memory leak when unmounting before the `fetch` finishes
+- it's not a class component so we can't just have a `componentWillMount` and abort the `fetch`
+- I have to cancel subscriptions and async tasks in the useEffect cleanup function
+
+#### How do you know if a component has been unmounted?
+1. create a `useEffect`
+2. Set the dependencies to be `[]` (so it only gets called once)
+3. callback: sets a `ref` to be true
+4. cleanup function sets the `ref` to be false
+
+- https://github.com/helderburato/use-is-mounted-ref/blob/main/src/use-is-mounted-ref.ts
+
+### `useContext`
+- creating a `CountProvider` component wrapper
+   - so that it can have its own state and hooks to manage the state
+- you can pass `count` and `setCount` as the value of the Provider
+- `ContextProvider`: I was setting {...props} as the child of the ContextProvider
+   - instead of as props
+
+#### Why is it bad to set the default value for context?
+- will make it hard to debug if the component used within the provider
+- we can create a `useCount` and manually throw a more useful error
