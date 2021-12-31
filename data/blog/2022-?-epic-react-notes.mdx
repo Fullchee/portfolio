@@ -4,6 +4,39 @@ date: "2021-12-25"
 summary: "Notes and Insights from Epic React"
 ---
 
+
+- [Exercises to redo](#exercises-to-redo)
+- [React Fundamentals](#react-fundamentals)
+  - [PropTypes](#proptypes)
+- [React Hooks](#react-hooks)
+  - [useState](#usestate)
+  - [useEffect](#useeffect)
+  - [Error Boundaries](#error-boundaries)
+- [Advanced React Hooks](#advanced-react-hooks)
+  - [useReducer](#usereducer)
+  - [useCallback and useMemo](#usecallback-and-usememo)
+    - [useCallback: custom hooks](#usecallback-custom-hooks)
+    - [safeDispatch (safe fetch) and useEffect cleanup](#safedispatch-safe-fetch-and-useeffect-cleanup)
+      - [How do you know if a component has been unmounted?](#how-do-you-know-if-a-component-has-been-unmounted)
+  - [`useContext`](#usecontext)
+    - [`useCount` wrapper for better errors](#usecount-wrapper-for-better-errors)
+  - [`useEffect` vs `useLayoutEffect`](#useeffect-vs-uselayouteffect)
+  - [`useImperativeHandle` ???????](#useimperativehandle-)
+    - [`React.forwardRef`](#reactforwardref)
+    - [Do you need to always use `useImperativeHandle` when using `React.forwardRef`?](#do-you-need-to-always-use-useimperativehandle-when-using-reactforwardref)
+  - [`useDebugValue`](#usedebugvalue)
+- [Advanced React Patterns](#advanced-react-patterns)
+  - [Context Module Pattern](#context-module-pattern)
+    - [Why can't we just put the function in the `useCount` accessor?](#why-cant-we-just-put-the-function-in-the-usecount-accessor)
+  - [Compound components](#compound-components)
+    - [Why do we need to `cloneElement`?](#why-do-we-need-to-cloneelement)
+    - [How do you know if a component is React or a vanilla DOM element?](#how-do-you-know-if-a-component-is-react-or-a-vanilla-dom-element)
+  - [Prop Collections & Getters](#prop-collections--getters)
+  - [State Reducer](#state-reducer)
+    - [Why is it called State reducer?](#why-is-it-called-state-reducer)
+    - [What does the `={}` do?](#what-does-the--do)
+  - [Control Props](#control-props)
+
 ## Exercises to redo
 
 - advanced-react-hooks
@@ -35,18 +68,17 @@ I got a bit confused when I got to creating custom components extra credit where
 
 I broke it down in this StackOverflow question where I even tried looking at the `React` source code but I didn't explain my question clearly enough because the one response gave a link to the `propTypes`.
 
-(which is super cool but not exactly what I'm looking for 😅)
+(which is interesting but not exactly what I'm looking for 😅)
 
 https://stackoverflow.com/questions/70477035/when-are-the-props-propname-and-componentname-passed-to-the-proptypes-func
 
-I'm also posted on KCD's discord and I'm likely going to go to his office hours
+I'm also posted on KCD's discord and I'm likely going to go to his office hours next Monday
 
 ## React Hooks
 
 ### useState
 
-can accept a function which is a lazy initializer!
-
+- can accept a function which is a lazy initializer!
 - if you just want to calculate the initial state once (digits of pi)
 
 ### useEffect
@@ -91,18 +123,18 @@ Use cases (https://kentcdodds.com/blog/usememo-and-usecallback)
 2. avoiding unnecessary re-renders when re-rendering is super expensive (Graphs, Charts, Animations)
 3. `useMemo` can be passed a function (just like `useState`) and lazily calculate computationally expensive items
 
-#### 02.js: useCallback: custom hooks
+#### useCallback: custom hooks
 
 - I had trouble with the middle param of what the initial state should be
 - I autofilled the dependencies and got into an infinite render loop
 
-#### 02.3.js: safeDispatch
+#### safeDispatch (safe fetch) and useEffect cleanup
 
 - Memory leak when unmounting before the `fetch` finishes
 - it's not a class component so we can't just have a `componentWillMount` and abort the `fetch`
 - I have to cancel subscriptions and async tasks in the useEffect cleanup function
 
-#### How do you know if a component has been unmounted?
+##### How do you know if a component has been unmounted?
 
 1. create a `useEffect`
 2. Set the dependencies to be `[]` (so it only gets called once)
@@ -114,24 +146,21 @@ Use cases (https://kentcdodds.com/blog/usememo-and-usecallback)
 ### `useContext`
 
 - Always give your contexts a `display name`
-   - `ToggleContext.displayName = 'ToggleContext'`
+  - `ToggleContext.displayName = 'ToggleContext'`
+  - shows up in the browser dev tools
 - creating a `CountProvider` component wrapper
   - so that it can have its own state and hooks to manage the state
+  - instead of directly using `<ToggleContext.Provider value={{count, setCount}}>...</...>`
 - you can pass `count` and `setCount` as the value of the Provider
-- `ContextProvider`: I was setting {...props} as the child of the ContextProvider
-  - instead of as props
 
-#### Why is it bad to set the default value for context?
-
-- will make it hard to debug if the component used within the provider
-- we can create a `useCount` and manually throw a more useful error
+#### `useCount` wrapper for better errors
 
 ```js
-const value = React.useContext(CountContext)
-  if (!value) {
-    throw new Error('useState must be within the CountContext')
-  }
-  return value
+const value = React.useContext(CountContext);
+if (!value) {
+  throw new Error("useState must be within the CountContext");
+}
+return value;
 ```
 
 ### `useEffect` vs `useLayoutEffect`
@@ -141,41 +170,86 @@ const value = React.useContext(CountContext)
 - useLayoutEffect is run before so it will delay painting
   - can update the DOM before it paints
 
-### `useImperativeHandle`
+### `useImperativeHandle` ???????
 
-#### Do you need to `useImperativeHandle` when using `React.forwardRef`?
+#### `React.forwardRef`
 
+- can pass a `ref` as a second param
+  - instead of the first param with all the other regular props
 
+**Could you put `ref` as a prop? in the first param of the component?**
+
+- yeah but that would cause a re-render
+- you might not want to always re-render when the ref that's passed down to the component changes
+
+#### Do you need to always use `useImperativeHandle` when using `React.forwardRef`?
 
 ### `useDebugValue`
-- feels like `__repr__` in Python for custom hooks
 
+- feels like `__repr__` in Python for custom hooks
 
 ## Advanced React Patterns
 
 ### Context Module Pattern
+
 - when creating a `Context` + `useReducer`
 - if you have common dispatches you want to share, you can just export it from the `counter.js` alongside the `CountProvider` and `useCount`
 
 #### Why can't we just put the function in the `useCount` accessor?
+
 - we'd have to add `useCallback` to each function because we'd be putting it in the Provider's `value`
 - won't be able to tree shake (only get the functions we use)
-   - every function would have a `useCallback` because they'd need to be in the dependency array
+  - every function would have a `useCallback` because they'd need to be in the dependency array
 - can't lazy load
 
-
 ### Compound components
+
 - like `Table` and `Column`
 - where `Column` expects a bunch of props from `Table`
-   - but we don't set it explicitly
+  - but we don't set it explicitly
 
 #### Why do we need to `cloneElement`?
+
 - state is handled by the parent component
 - we need to clone because we can't modify props directly
-   - like creating a new copy of array
+  - like creating a new copy of array
 - we only want to use `cloneElement` on react components
+- Flexible Compound Components uses `Context` so that it can pass to any descendant
+  - so we don't need `cloneElement`
 
 #### How do you know if a component is React or a vanilla DOM element?
 
 ```
 typeof child.type === 'string' // DOM
+```
+
+### Prop Collections & Getters
+
+Why
+
+- get the shared props
+- less duplication
+- example of props to be returned `{'aria-pressed': on, onClick: toggle}`
+- we also want more control over what can get passed???
+
+### State Reducer
+
+- let the user of the hook determine **\_\_\_**
+
+#### Why is it called State reducer?
+
+#### What does the `={}` do?
+
+```js
+function useToggle({initialOn = false} = {}) {
+```
+
+vs
+
+```js
+function useToggle({initialOn = false}) {
+```
+
+### Control Props
+
+-
