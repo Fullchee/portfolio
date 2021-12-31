@@ -29,7 +29,8 @@ export const Layout = ({ title, description, imageProps, children }: Props) => {
   const router = useRouter();
 
   return (
-    <div>
+    // firefox default background isn't white
+    <div className="bg-white">
       <NextSeo
         title={`${title} - Fullchee Zhang`}
         description={description}
