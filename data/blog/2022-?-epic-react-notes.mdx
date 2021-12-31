@@ -4,7 +4,6 @@ date: "2021-12-25"
 summary: "Notes and Insights from Epic React"
 ---
 
-
 - [Exercises to redo](#exercises-to-redo)
 - [React Fundamentals](#react-fundamentals)
   - [PropTypes](#proptypes)
@@ -193,7 +192,12 @@ return value;
 ### Context Module Pattern
 
 - when creating a `Context` + `useReducer`
-- if you have common dispatches you want to share, you can just export it from the `counter.js` alongside the `CountProvider` and `useCount`
+- if you have common dispatches you want to share
+  - just export it from the `counter.js` alongside the `CountProvider` and `useCount`
+
+```js
+export { UserProvider, useUser, updateUser };
+```
 
 #### Why can't we just put the function in the `useCount` accessor?
 
@@ -207,6 +211,15 @@ return value;
 - like `Table` and `Column`
 - where `Column` expects a bunch of props from `Table`
   - but we don't set it explicitly
+
+```js
+<Table>
+  {/* `Table` gives `Column` some props behind the scenes */}
+  <Column />
+  <Column />
+  <Column />
+</Table>
+```
 
 #### Why do we need to `cloneElement`?
 
@@ -223,33 +236,89 @@ return value;
 typeof child.type === 'string' // DOM
 ```
 
+#### Flexible Compound Components
+
+- instead of passing props via `cloneElement`
+- we pass down data via `Context` and `useContext`
+
 ### Prop Collections & Getters
 
 Why
 
-- get the shared props
 - less duplication
+  - get the shared props
 - example of props to be returned `{'aria-pressed': on, onClick: toggle}`
-- we also want more control over what can get passed???
+
+```js
+function useToggle() {
+  const [on, setOn] = React.useState(false);
+  const toggle = () => setOn(!on);
+
+  function getTogglerProps({ onClick, ...props } = {}) {
+    return {
+      "aria-pressed": on,
+      onClick: callAll(onClick, toggle),
+      ...props,
+    };
+  }
+
+  return {
+    on,
+    toggle,
+    getTogglerProps,
+  };
+}
+```
+
+**Usage**
+
+```js
+<Switch {...getTogglerProps({on})} />
+<button
+  {...getTogglerProps({
+    'aria-label': 'custom-button',
+    onClick: () => console.info('onButtonClick'),
+    id: 'custom-button-id',
+  })}
+>
+```
 
 ### State Reducer
 
-- let the user of the hook determine **\_\_\_**
+- let the user of the hook pass in their own reducer
+  - inversion of control!
+- to avoid duplication, we can do this to just update one case
+
+```js
+function toggleStateReducer(state, action) {
+  if (action.type === "toggle" && clickedTooMuch) {
+    return { on: state.on };
+  }
+  return toggleReducer(state, action); // default hook reducer
+}
+```
 
 #### Why is it called State reducer?
+
+- you pass in a reducer that modifies the state
 
 #### What does the `={}` do?
 
 ```js
-function useToggle({initialOn = false} = {}) {
+// useToggle() will work
+function useToggle({initialOn = false} = {}) {...}
 ```
 
 vs
 
 ```js
+// useToggle() will result in an error
 function useToggle({initialOn = false}) {
 ```
 
 ### Control Props
-
--
+- ![Control Props](/assets/images/blog/sources-tab.png)
+- replicating what React does to forms (controlled vs uncontrolled)
+   - is there a value that tha sh
+- error when going from uncontrolled to controlled (or vice versa)
+   - example: giving React a value and then later assigning it
