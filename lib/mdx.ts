@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
-import renderToString from "next-mdx-remote/render-to-string";
-import { MdxRemote } from "next-mdx-remote/types";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import path from "path";
 import readingTime from "reading-time";
 
@@ -21,7 +21,7 @@ export interface IPostFrontMatter extends IPostFrontMatterBase {
 }
 
 export interface IPost {
-  mdxSource: MdxRemote.Source;
+  mdxSource: MDXRemoteSerializeResult;
   frontMatter: IPostFrontMatter;
 }
 
@@ -37,7 +37,7 @@ export async function getPostBySlug(slug: string): Promise<IPost> {
 
   const { data, content } = matter(source);
 
-  const mdxSource = await renderToString(content, {
+  const mdxSource = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [require("remark-code-titles")],
       rehypePlugins: [require("mdx-prism")],

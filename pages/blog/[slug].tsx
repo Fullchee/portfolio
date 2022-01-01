@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
-import hydrate from "next-mdx-remote/hydrate";
+import { MDXRemote } from "next-mdx-remote";
 import Layout from "../../components/layout";
 import { getPostBySlug, getPosts, IPost } from "../../lib/mdx";
 
@@ -7,8 +7,6 @@ export default function BlogPost({
   mdxSource,
   frontMatter,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const content = hydrate(mdxSource);
-
   return (
     <Layout
       title={frontMatter.title}
@@ -26,7 +24,9 @@ export default function BlogPost({
         read
       </p>
 
-      <article className="mt-6 max-w-none pb-16">{content}</article>
+      <article className="mt-6 max-w-none pb-16">
+        <MDXRemote {...mdxSource} />
+      </article>
     </Layout>
   );
 }
