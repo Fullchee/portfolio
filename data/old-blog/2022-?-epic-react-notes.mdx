@@ -36,156 +36,6 @@ summary: "Notes and Insights from Epic React"
     - [What does the `={}` do?](#what-does-the--do)
   - [Control Props](#control-props)
 
-## Exercises to redo
-
-- advanced-react-hooks
-  - useCallback custom hooks (02.0.js)
--
-
-## React Fundamentals
-
-1. `React.createElement` is like `document.createElement()`
-2. `document.append(element)` is like `ReactDOM.render(reactComponent, document.body)`
-   1. ReactDOM because react can be rendered in many environments (example: React Native)
-
-If you only want the second value in an array, you can just use an array
-
-```js
-[count, setCount];
-```
-
-```js
-[, setCount];
-```
-
-### PropTypes
-
-I got a bit confused when I got to creating custom components extra credit where I'm not sure how React is calling the `propTypes` that we defined (not from the library).
-
-- [Course video link](https://epicreact.dev/modules/react-fundamentals/creating-custom-components-extra-credit-solution-03)
-- [Link to code](https://github.com/kentcdodds/react-fundamentals/blob/main/src/final/04.extra-3.html)
-
-I broke it down in this StackOverflow question where I even tried looking at the `React` source code but I didn't explain my question clearly enough because the one response gave a link to the `propTypes`.
-
-(which is interesting but not exactly what I'm looking for 😅)
-
-https://stackoverflow.com/questions/70477035/when-are-the-props-propname-and-componentname-passed-to-the-proptypes-func
-
-I'm also posted on KCD's discord and I'm likely going to go to his office hours next Monday
-
-## React Hooks
-
-### useState
-
-- can accept a function which is a lazy initializer!
-- if you just want to calculate the initial state once (digits of pi)
-
-### useEffect
-
-- `fetch`: forgot to return early if pokemonName is null
-- I forgot about having a status variable
-  - helps with determining what to display
-  - https://kentcdodds.com/blog/stop-using-isloading-booleans
-- the way that Kent does a sort of manual TDD where he always gets something to display
-  - eg: create a variable with a stub error message to make sure that the error shows up
-
-### Error Boundaries
-
-- can take in a `FallbackComponent` arg
-- Problem with using the `key` prop for the error boundary
-  - it'll mount and unmount every time the `key` is updated
-  - flashing
-- we can pass `resetErrorBoundary` prop that gets triggered in the `FallbackComponent`
-- `resetKeys` prop works as well
-
-## Advanced React Hooks
-
-Custom hooks are just regular functions that happen to have side effects!
-
-They can return anything
-
-### useReducer
-
-```js
-const [state, dispatch] = useReducer(state, action);
-```
-
-- it doesn't have to follow the Redux style of having actions with a `type` prop
-- first prop: the old state
-- second prop: whatever you pass to `dispatch`
-
-### useCallback and useMemo
-
-Use cases (https://kentcdodds.com/blog/usememo-and-usecallback)
-
-1. not have a function re-render every time so that it can be used in a useEffect dep array
-2. avoiding unnecessary re-renders when re-rendering is super expensive (Graphs, Charts, Animations)
-3. `useMemo` can be passed a function (just like `useState`) and lazily calculate computationally expensive items
-
-#### useCallback: custom hooks
-
-- I had trouble with the middle param of what the initial state should be
-- I autofilled the dependencies and got into an infinite render loop
-
-#### safeDispatch (safe fetch) and useEffect cleanup
-
-- Memory leak when unmounting before the `fetch` finishes
-- it's not a class component so we can't just have a `componentWillMount` and abort the `fetch`
-- I have to cancel subscriptions and async tasks in the useEffect cleanup function
-
-##### How do you know if a component has been unmounted?
-
-1. create a `useEffect`
-2. Set the dependencies to be `[]` (so it only gets called once)
-3. callback: sets a `ref` to be true
-4. cleanup function sets the `ref` to be false
-
-- https://github.com/helderburato/use-is-mounted-ref/blob/main/src/use-is-mounted-ref.ts
-
-### `useContext`
-
-- Always give your contexts a `display name`
-  - `ToggleContext.displayName = 'ToggleContext'`
-  - shows up in the browser dev tools
-- creating a `CountProvider` component wrapper
-  - so that it can have its own state and hooks to manage the state
-  - instead of directly using `<ToggleContext.Provider value={{count, setCount}}>...</...>`
-- you can pass `count` and `setCount` as the value of the Provider
-
-#### `useCount` wrapper for better errors
-
-```js
-const value = React.useContext(CountContext);
-if (!value) {
-  throw new Error("useState must be within the CountContext");
-}
-return value;
-```
-
-### `useEffect` vs `useLayoutEffect`
-
-- same API
-- useEffect is run after pixels are painted
-- useLayoutEffect is run before so it will delay painting
-  - can update the DOM before it paints
-
-### `useImperativeHandle` ???????
-
-#### `React.forwardRef`
-
-- can pass a `ref` as a second param
-  - instead of the first param with all the other regular props
-
-**Could you put `ref` as a prop? in the first param of the component?**
-
-- yeah but that would cause a re-render
-- you might not want to always re-render when the ref that's passed down to the component changes
-
-#### Do you need to always use `useImperativeHandle` when using `React.forwardRef`?
-
-### `useDebugValue`
-
-- feels like `__repr__` in Python for custom hooks
 
 ## Advanced React Patterns
 
@@ -324,5 +174,34 @@ function useToggle({initialOn = false}) {
 - error when going from uncontrolled to controlled (or vice versa)
   - example: giving React a value and then later assigning it
 
+```js
+const on = isControlled ? controlledOn : state.on;
 
-#### Why is it controlled if `controlledOn` != null?
+function dispatchWithOnChange(action) {
+  if (!isControlled) {
+    dispatch(action); // update the redux's state
+  }
+  const newState = reducer({ ...state, on }, action);
+  onChange?.(newState, action);
+}
+```
+
+#### When to warn?
+
+1. Passing `on` without `onChange`
+2. Passing a value for `on` and later passing `undefined` or `null`
+3. Passing `undefined` or `null` for `on` and later passing a value
+
+console.logs always need to be in a `useEffect`
+
+side effect to check if value is undefined or null
+
+- `readOnly` prop
+- setting the initial value of `isChange`
+- you can put hooks in the if statement because process.env.NODE_ENV never changes
+
+```js
+if (process.env.NODE_ENV !== "production") {
+  useWarning();
+}
+```
