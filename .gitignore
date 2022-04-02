@@ -35,3 +35,6 @@ yarn-error.log*
 
 public/assets/Fullchee_Resume.pdf
 public/assets/fullchee_resume-full-stack.pdf
+
+# Sentry
+.sentryclirc
