@@ -15,14 +15,6 @@ const IBMPage = () => {
         alt: "old 8 stripe IBM logo",
       }}
     >
-      <button
-        type="button"
-        onClick={() => {
-          throw new Error("Sentry Frontend Error");
-        }}
-      >
-        Throw error
-      </button>
       <h1>Working at IBM</h1>
       <p>
         I was a frontend developer (JavaScript and CSS) at IBM from 2019 to
