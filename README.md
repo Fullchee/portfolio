@@ -1,12 +1,12 @@
 # portfolio
 
-This portfolio was made with
+Made with
 
 - Next.js
 - Tailwind CSS 2
 - TypeScript
 
-The design is inspired by
+Inspired by
 
 - Josh Comeau's [Building an Effective Dev Portfolio](https://www.joshwcomeau.com/effective-portfolio/)
 - juliacodes.com
@@ -17,10 +17,13 @@ The design is inspired by
    1. `brew install yarn`
 2. `yarn build`
 3. `yarn dev`
+4. Setup Sentry
+   1. `sentry-cli login`
 
 ## Deploy
 
 `git push origin main`
 
-### Asana
-https://app.asana.com/0/1200788804993782/1200788804993782
+### Trello
+
+https://trello.com/b/4QT3eZgJ/portfolio
