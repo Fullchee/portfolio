@@ -17,7 +17,7 @@ const Intro = () => {
       <div className="rounded-full ease-in">
         <Image
           className="rounded-full relative"
-          src="/professional-face.jpg"
+          src="https://res.cloudinary.com/dnboci3v7/image/upload/v1650223610/portfolio/professional-face_lf1ic1.jpg"
           width={150}
           height={150}
           alt="picture of Fullchee in a fancy shirt and suit"
