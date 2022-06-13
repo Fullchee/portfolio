@@ -30,10 +30,6 @@ const Skills = () => {
           </a>
         </li>
         <li>working on open source side projects</li>
-        <li>
-          retaining what I learn with{" "}
-          <a href="https://apps.ankiweb.net/">Anki</a>
-        </li>
       </ul>
     </section>
   );

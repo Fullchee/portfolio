@@ -38,8 +38,8 @@ const RemindersPage = () => {
         height={237}
       />
       <p>
-        I'm using spaced repetition to learn Chinese, French and web dev with
-        Anki. I want to apply the same concept to podcasts and YouTube videos
+        I used to use spaced repetition to learn Chinese, French and web dev
+        with Anki. I applied the same concept to podcasts and YouTube videos
         where I periodically re-watch and re-listen to podcasts and videos I
         found meaningful.
       </p>
