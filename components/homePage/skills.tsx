@@ -1,20 +1,20 @@
-import { SkillList } from './SkillList';
+import { SkillList } from "./SkillList";
 
 const Skills = () => {
   const skills = [
-    { icon: 'js', label: 'JavaScript ES6+' },
-    { icon: 'html5', label: 'HTML & CSS' },
-    { icon: 'react', label: 'React' },
-    { icon: 'sass', label: 'LESS and SASS' },
-    { icon: 'code-branch', label: 'Git' },
-    { icon: 'database', label: 'SQL' },
-    { icon: 'node-js', label: 'Node.js' },
-    { icon: 'typescript-icon.svg', label: 'TypeScript' },
+    { icon: "js", label: "JavaScript ES6+" },
+    { icon: "html5", label: "HTML & CSS" },
+    { icon: "react", label: "React" },
+    { icon: "sass", label: "LESS and SASS" },
+    { icon: "code-branch", label: "Git" },
+    { icon: "database", label: "SQL" },
+    { icon: "node-js", label: "Node.js" },
+    { icon: "typescript-icon.svg", label: "TypeScript" },
   ];
   return (
     <section className="flex-col flex flex-wrap mb-8">
       <h2 id="skills" className="font-monoDisplay tracking-wider text-2xl pb-4">
-        skills
+        Skills
       </h2>
       <ul className="flex flex-wrap skills no-list-item">
         <SkillList skills={skills} />
@@ -31,7 +31,8 @@ const Skills = () => {
         </li>
         <li>working on open source side projects</li>
         <li>
-          retaining what I learn with <a href="https://apps.ankiweb.net/">Anki</a>
+          retaining what I learn with{" "}
+          <a href="https://apps.ankiweb.net/">Anki</a>
         </li>
       </ul>
     </section>

@@ -1,9 +1,9 @@
-import Layout from '../components/layout';
+import Layout from "../components/layout";
 
-import AboutMe from '../components/homePage/aboutMe';
-import Intro from '../components/homePage/intro';
-import { MainProjects } from '../components/project/MainProjects';
-import Skills from '../components/homePage/skills';
+import AboutMe from "../components/homePage/aboutMe";
+import Intro from "../components/homePage/intro";
+import { MainProjects } from "../components/project/MainProjects";
+import Skills from "../components/homePage/skills";
 
 const Index = () => {
   return (
@@ -14,7 +14,9 @@ const Index = () => {
       <Intro />
       <AboutMe />
       <Skills />
-      <h2 className="font-monoDisplay tracking-wider pb-8 text-2xl">projects</h2>
+      <h2 className="font-monoDisplay tracking-wider pb-8 text-2xl">
+        Projects
+      </h2>
       <MainProjects />
     </Layout>
   );
