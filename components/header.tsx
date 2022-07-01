@@ -34,8 +34,8 @@ export const Header = () => {
                 </a>
               </Link>
             </li>
-            <HeaderItem href="/project" label="Projects" />
-            <HeaderItem href="https://Fullchee.github.io/notes" label="Notes" />
+            <HeaderItem href="/project" label="projects" />
+            <HeaderItem href="https://Fullchee.github.io/notes" label="notes" />
           </ul>
         </nav>
       </div>
