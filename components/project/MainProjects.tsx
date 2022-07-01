@@ -4,26 +4,26 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
   const projects: ProjectInfo[] = [
     {
       title: "Working at Forma",
-      description: `Read about my time as a full-stack developer at Forma.ai`,
+      description: `My time as a full-stack developer at Forma.ai`,
       image: {
         alt: "Forma logo",
         path: "/assets/images/projects/forma/f-logo.png",
         placeholder:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mMMUz74HwAETAI7zNe8cAAAAABJRU5ErkJggg==",
       },
-      linkLabel: "Read my Forma.ai story",
+      linkLabel: "My Forma.ai story",
       url: "/project/forma",
     },
     {
       title: "Working at IBM",
-      description: `Read about my time as a front-end developer at IBM Canada`,
+      description: `My time as a front-end developer at IBM Canada`,
       image: {
         alt: "IBM's original eight stripe logo",
         path: "/assets/images/projects/ibm/IBM_logo.svg",
         placeholder:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOUitz8HwAD4gInyYWRnAAAAABJRU5ErkJggg==",
       },
-      linkLabel: "Read my IBM story",
+      linkLabel: "My IBM story",
       url: "/project/ibm",
     },
     {
