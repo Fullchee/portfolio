@@ -104,6 +104,11 @@
   }
 
   ul ul li {
-    margin-left: 2rem
+    margin-left: 2rem;
+  }
+
+  .font-monoDisplay {
+    /* monospace font looks weird in uppercase */
+    text-transform: lowercase;
   }
 }
