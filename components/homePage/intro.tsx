@@ -10,14 +10,14 @@ const Intro = () => {
           chee
         </h1>
         <h2 id="job-title" className="pt-2 text-2xl max-w-lg font-display">
-          Full-stack (React, Django and SQL) dev at{" "}
+          Full-stack (React &amp; Django) dev at{" "}
           <a href="http://www.forma.ai">Forma.ai</a>
         </h2>
       </div>
       <div className="rounded-full ease-in">
         <Image
           className="rounded-full relative"
-          src="https://res.cloudinary.com/dnboci3v7/image/upload/v1650223610/portfolio/professional-face_lf1ic1.jpg"
+          src="/professional-face.jpg"
           width={150}
           height={150}
           alt="picture of Fullchee in a fancy shirt and suit"
