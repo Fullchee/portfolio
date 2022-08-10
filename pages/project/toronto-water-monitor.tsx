@@ -1,3 +1,4 @@
+import React from "react";
 import { ProjectLayout } from "../../components/project/ProjectLayout";
 import Image from "next/image";
 

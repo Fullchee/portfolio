@@ -5,7 +5,8 @@
     "dev": "./node_modules/.bin/next",
     "build": "./node_modules/.bin/next build",
     "start": "./node_modules/.bin/next start",
-    "typecheck": "./node_modules/.bin/tsc"
+    "typecheck": "./node_modules/.bin/tsc",
+    "lint": "./node_modules/.bin/eslint pages"
   },
   "dependencies": {
     "@sentry/nextjs": "^6.19.3",

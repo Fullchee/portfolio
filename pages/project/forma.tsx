@@ -1,3 +1,4 @@
+import React from "react";
 import Layout from "../../components/layout";
 import { ProjectDescription } from "../../components/project/ProjectDescription";
 import { calculateSejour } from "../../components/common/utilities";
