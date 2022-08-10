@@ -6,18 +6,10 @@ const AboutMe = () => {
       <h2 className="font-monoDisplay tracking-wider text-2xl">About me</h2>
       <article>
         <h3>Learner 💡</h3>
-        <p>
-          <Link href="#up-to-date">
-            <a>How do I stay up to date?</a>
-          </Link>
-        </p>
         <ul>
+          <li>Leading a monthly Dev Article Club at Forma</li>
           <li>
-            Created multiple monthly article clubs (backend, frontend, SQL)
-          </li>
-          <li>
-            created or greatly contributed to slack channels like{" "}
-            {/* TODO: look like GitHub backticks */}
+            biggest contributer to slack channels like{" "}
             <code>#dev-til</code>, <code>#til-sql</code>, <code>#life-sql</code>
             , <code>#development</code>
           </li>

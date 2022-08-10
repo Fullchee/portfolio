@@ -34,6 +34,14 @@
     @apply text-blue-500;
   }
 
+  code {
+    padding: 2px 4px;
+    font-size: 0.9em;
+    line-height: 1;
+    background-color: var(--color-neutral-muted, rgba(175, 184, 193, 0.2));
+    border-radius: 6px;
+  }
+
   h1 {
     @apply text-4xl pb-4 pt-6 font-display;
   }
