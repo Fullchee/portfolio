@@ -22,7 +22,6 @@ module.exports = {
     require: "readonly",
     process: "readonly",
     __dirname: "readonly",
-    join: "readonly",
   },
   rules: {
     "react/no-unescaped-entities": "off",
