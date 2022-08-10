@@ -21,11 +21,13 @@ const AboutMe = () => {
           <li>
             Singlehandedly created our internal Docs as Code solution with
             MKDocs
-          </li>
-          <li>20k+ words of documentation</li>
-          <li>
-            See my <a href="fullchee.github.io/notes">Notes website</a> where I
-            learn in public.
+            <ul>
+              <li>
+                See <a href="fullchee.github.io/notes">my Notes website</a> to
+                get a sense of what it looks like
+              </li>
+              <li>20k+ words of documentation</li>
+            </ul>
           </li>
         </ul>
       </article>
