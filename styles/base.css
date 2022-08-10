@@ -4,6 +4,33 @@
  */
 @tailwind base;
 
+/* TODO: get this working instead of using Google Fonts */
+
+/* @font-face {
+  font-family: Comfortaa;
+  src: url("/font/Comfortaa-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Montserrat Alternates;
+  src: url("/fonts/MontserratAlternates-Light.tff");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+@font-face {
+  font-family: Major Mono Display;
+  src: url("/fonts/MajorMonoDisplay-Regular.ttf");
+} */
+
 /* Write your own custom base styles here */
 @layer base {
   a {
