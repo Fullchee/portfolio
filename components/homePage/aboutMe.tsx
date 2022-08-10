@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const AboutMe = () => {
   return (
     <section className="ease-in">
