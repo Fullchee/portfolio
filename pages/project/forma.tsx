@@ -56,7 +56,9 @@ const FormaPage = () => {
 
         <p>For styling, we use SASS</p>
 
-        <p>I also started an article club and heavily contributed to TIL channels</p>
+        <p>
+          I also started an article club and heavily contributed to TIL channels
+        </p>
       </ProjectDescription>
 
       <ProjectDescription

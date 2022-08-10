@@ -24,9 +24,7 @@ const Footer = () => {
         <p className="text-xs text-center">
           Made with{" "}
           <Link href="/attributions">
-            <a className="text-center">
-              Creative Commons Resources
-            </a>
+            <a className="text-center">Creative Commons Resources</a>
           </Link>
           , <a href="https://nextjs.org/">Next.js</a>,{" "}
           <a href="https://tailwindcss.com/">Tailwind.css</a> and love ❤️

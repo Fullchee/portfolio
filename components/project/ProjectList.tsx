@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 export interface ProjectInfo {
   description: string;
@@ -38,7 +38,7 @@ const ProjectCard = ({
           placeholder="blur"
           blurDataURL={
             placeholder ||
-            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89vz3fwAJDAO5snBJQwAAAABJRU5ErkJggg=='
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89vz3fwAJDAO5snBJQwAAAABJRU5ErkJggg=="
           }
         />
         <div className="px-8 lg:px-12 pb-8">
@@ -53,7 +53,13 @@ const ProjectCard = ({
   );
 };
 
-export const ProjectList = ({ projects, skip }: { projects: ProjectInfo[]; skip?: string }) => {
+export const ProjectList = ({
+  projects,
+  skip,
+}: {
+  projects: ProjectInfo[];
+  skip?: string;
+}) => {
   const displayedProjects = projects.filter(({ title }) => title !== skip);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">

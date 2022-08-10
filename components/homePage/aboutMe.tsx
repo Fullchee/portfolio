@@ -9,9 +9,9 @@ const AboutMe = () => {
         <ul>
           <li>Leading a monthly Dev Article Club at Forma</li>
           <li>
-            biggest contributer to slack channels like{" "}
-            <code>#dev-til</code>, <code>#til-sql</code>, <code>#life-sql</code>
-            , <code>#development</code>
+            biggest contributer to slack channels like <code>#dev-til</code>,{" "}
+            <code>#til-sql</code>, <code>#life-sql</code>,{" "}
+            <code>#development</code>
           </li>
         </ul>
       </article>

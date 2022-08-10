@@ -1,6 +1,5 @@
 const title = "Fullchee Zhang";
-const description =
-  "Made with Next.js, Tailwind.css and ❤️ by Fullchee Zhang";
+const description = "Made with Next.js, Tailwind.css and ❤️ by Fullchee Zhang";
 
 const SEO = {
   title,
