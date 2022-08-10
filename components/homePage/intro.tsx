@@ -10,7 +10,7 @@ const Intro = () => {
           chee
         </h1>
         <h2 id="job-title" className="pt-2 text-2xl max-w-lg font-display">
-          Full-stack (React, Django and SQL) developer at{" "}
+          Full-stack (React, Django and SQL) dev at{" "}
           <a href="http://www.forma.ai">Forma.ai</a>
         </h2>
       </div>
