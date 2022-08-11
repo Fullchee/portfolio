@@ -1,25 +1,32 @@
 import { SkillList } from "./SkillList";
 
+// TODO: clicking on the skill will filter the projects with that skill
+
+const frontendSkills = [
+  { icon: "react", label: "React" },
+  { icon: "typescript-icon.svg", label: "TypeScript" },
+  { icon: "js", label: "JavaScript" },
+  { icon: "html5", label: "HTML & CSS" },
+  { icon: "sass", label: "LESS and SASS" },
+];
+
+const backendSkills = [
+  { icon: "django.svg", label: "Django" },
+  { icon: "python.svg", label: "Python" },
+  { icon: "database", label: "SQL" },
+  { icon: "postgresql.svg", label: "Postgres" },
+  { icon: "node-js", label: "Node.js" },
+];
+
 const Skills = () => {
-  const skills = [
-    { icon: "js", label: "JavaScript ES6+" },
-    { icon: "html5", label: "HTML & CSS" },
-    { icon: "react", label: "React" },
-    { icon: "sass", label: "LESS and SASS" },
-    { icon: "code-branch", label: "Git" },
-    { icon: "database", label: "SQL" },
-    { icon: "django.svg", label: "Django" },
-    { icon: "typescript-icon.svg", label: "TypeScript" },
-  ];
   return (
     <section className="flex-col flex flex-wrap mb-8">
       <h2 id="skills" className="font-monoDisplay tracking-wider text-2xl pb-4">
         Skills
       </h2>
-      <ul className="flex flex-wrap skills no-list-item">
-        <SkillList skills={skills} />
-      </ul>
-      <p className="pt-10">I learn and stay up to date by</p>
+      <SkillList title="Frontend" skills={frontendSkills} />
+      <SkillList title="Backend" skills={backendSkills} />
+      <p className="pt-10">I stay up to date by</p>
       <ul>
         <li>
           listening to the <a href="https://syntax.fm/">Syntax podcast</a>

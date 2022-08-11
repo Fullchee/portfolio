@@ -52,9 +52,7 @@ export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
       </div>
       <div>
         <h2>Made with</h2>
-        <ul className=" list-none responsive-skills pl-0 no-list-item">
-          <SkillList skills={skills} />
-        </ul>
+        <SkillList skills={skills} />
       </div>
     </div>
   );

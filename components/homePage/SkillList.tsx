@@ -16,13 +16,21 @@ export type Skill = {
   label: string;
 };
 
-export const SkillList = ({ skills }: { skills: Skill[] }) => {
+interface SkillListProps {
+  title?: string;
+  skills: Skill[];
+}
+
+export const SkillList = ({ title, skills }: SkillListProps) => {
   return (
-    <>
-      {skills.map(({ icon, label }) => (
-        <SkillItem key={icon} icon={icon} label={label} />
-      ))}
-    </>
+    <section>
+      {title && <h3>{title}</h3>}
+      <ul className="flex flex-wrap skills no-list-item">
+        {skills.map(({ icon, label }) => (
+          <SkillItem key={icon} icon={icon} label={label} />
+        ))}
+      </ul>
+    </section>
   );
 };
 

@@ -64,6 +64,10 @@
     @apply text-2xl pb-4 pt-6;
   }
 
+  .font-monoDisplay {
+    @apply -ml-0.5;
+  }
+
   h3 {
     @apply text-xl pb-4 pt-6 font-bold;
   }
