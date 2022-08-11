@@ -8,7 +8,7 @@ const Skills = () => {
     { icon: "sass", label: "LESS and SASS" },
     { icon: "code-branch", label: "Git" },
     { icon: "database", label: "SQL" },
-    { icon: "node-js", label: "Node.js" },
+    { icon: "django.svg", label: "Django" },
     { icon: "typescript-icon.svg", label: "TypeScript" },
   ];
   return (
@@ -29,7 +29,9 @@ const Skills = () => {
             ZTM web dev monthly newsletter
           </a>
         </li>
-        <li>working on open source side projects</li>
+        <li>
+          working on <a href="https://github.com/Fullchee">side projects</a>
+        </li>
       </ul>
     </section>
   );
