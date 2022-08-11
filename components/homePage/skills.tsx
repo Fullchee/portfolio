@@ -7,6 +7,7 @@ const frontendSkills = [
   { icon: "typescript-icon.svg", label: "TypeScript" },
   { icon: "js", label: "JavaScript" },
   { icon: "html5", label: "HTML & CSS" },
+  { icon: "storybook.svg", label: "Storybook" },
   { icon: "sass", label: "LESS and SASS" },
 ];
 
