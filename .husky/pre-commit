@@ -1,5 +1,5 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
 npx pretty-quick --staged
 npx eslint --fix $(git diff --name-only --diff-filter=ACMRTUXB main | grep -E "(.js$|.jsx$|.ts$|.tsx$)" | xargs)

@@ -6,7 +6,8 @@
     "build": "./node_modules/.bin/next build",
     "start": "./node_modules/.bin/next start",
     "typecheck": "./node_modules/.bin/tsc",
-    "lint": "./node_modules/.bin/eslint ."
+    "lint": "./node_modules/.bin/eslint .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@sentry/nextjs": "^7.10.0",
@@ -28,7 +29,7 @@
     "cssnano": "^5.1.12",
     "eslint": "^8.21.0",
     "eslint-plugin-react": "^7.30.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "postcss": "^8.4.16",
     "postcss-preset-env": "^6.7.0",
     "prettier": "2.7.1",
