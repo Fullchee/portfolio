@@ -155,7 +155,8 @@ const IBMPage = () => {
           onRight: false,
         }}
       >
-        <h3>Human readable diffs</h3><h4>Problem</h4>
+        <h3>Human readable diffs</h3>
+        <h4>Problem</h4>
         <p>
           Our layouts are stored as minified XML files. When we make a change to
           the layout, we could accidentally override someone else's changes
