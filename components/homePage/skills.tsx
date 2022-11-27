@@ -30,11 +30,11 @@ const Skills = () => {
       <p className="pt-10">I stay up to date by</p>
       <ul>
         <li>
-          listening to the <a href="https://syntax.fm/">Syntax podcast</a>
+          listening to the <a href="https://syntax.fm/">Syntax.FM podcast</a>
         </li>
         <li>
-          <a href="https://zerotomastery.io/blog/web-developer-monthly-dec-2020/">
-            ZTM web dev monthly newsletter
+          <a href="https://zerotomastery.io/blog/?tag=WDM#monthly">
+            reading newsletters
           </a>
         </li>
         <li>

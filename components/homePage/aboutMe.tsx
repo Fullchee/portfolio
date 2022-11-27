@@ -15,7 +15,6 @@ const AboutMe = () => {
       </article>
       <article>
         <h3>Docs writer 📄 ✍️</h3>
-        <p>Ensure code is maintainable and others can quickly contribute.</p>
         <ul>
           <li>Develop and document with Storybook</li>
           <li>
@@ -26,7 +25,7 @@ const AboutMe = () => {
                 See <a href="fullchee.github.io/notes">my Notes website</a> to
                 get a sense of what it looks like
               </li>
-              <li>20k+ words of documentation</li>
+              <li>30k+ words of docs</li>
             </ul>
           </li>
         </ul>
