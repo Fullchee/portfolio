@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sentry/nextjs": "^7.10.0",
+    "@sentry/nextjs": "^7.34.0",
     "next": "^12.2.4",
     "next-seo": "^4.17.0",
     "react": "^18.2.0",
