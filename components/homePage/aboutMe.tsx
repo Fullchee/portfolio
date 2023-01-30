@@ -22,7 +22,7 @@ const AboutMe = () => {
             MKDocs
             <ul>
               <li>
-                See <a href="fullchee.github.io/notes">my Notes website</a> to
+                See <a href="https://fullcheezhang.com">my Notes website</a> to
                 get a sense of what it looks like
               </li>
               <li>30k+ words of docs</li>
