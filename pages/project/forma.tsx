@@ -17,8 +17,8 @@ const FormaPage = () => {
     >
       <h1>Working at Forma.ai</h1>
       <p>
-        I've been a full-stack React and Django developer at Forma.ai since
-        March 2021 ({calculateSejour("2021-03-01")}).
+        Full-stack React, Django and SQL developer at Forma.ai for{" "}
+        {calculateSejour(new Date("2021-03-01"))} years (since March 2021).
       </p>
 
       <ProjectDescription
