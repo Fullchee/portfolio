@@ -30,7 +30,7 @@ https://trello.com/b/4QT3eZgJ/portfolio
 
 - Gatsby
 - filter by tech
-- ![6bff054463ccd67bf3dac0024ed23aea.png](images/6bff054463ccd67bf3dac0024ed23aea.png)
+- ![2020-portfolio-screenshot.png](images/2020-portfolio-screenshot.png)
 
 ### [2019 Portfolio](https://github.com/Fullchee/2019-portfolio)
 
