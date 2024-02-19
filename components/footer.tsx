@@ -16,15 +16,18 @@ const Footer = () => {
           >
             LinkedIn
           </a>
-          <Link href="/assets/Fullchee-Resume.pdf">
-            <a className="no-underline mx-3 font-bold">Resume</a>
+          <Link
+            href="/assets/Fullchee-Resume.pdf"
+            className="no-underline mx-3 font-bold"
+          >
+            Resume
           </Link>
         </div>
 
         <p className="text-xs text-center">
           Made with{" "}
-          <Link href="/attributions">
-            <a className="text-center">Creative Commons Resources</a>
+          <Link href="/attributions" className="text-center">
+            Creative Commons Resources
           </Link>
           , <a href="https://nextjs.org/">Next.js</a>,{" "}
           <a href="https://tailwindcss.com/">Tailwind.css</a> and love ❤️

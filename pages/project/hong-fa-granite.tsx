@@ -175,7 +175,7 @@ you faced?  */}
         npm packages and because I had already some experience with Google APIs
         from my{" "}
         <Link href="/project/batch-calendar-events">
-          <a>Batch calendar events project.</a>
+          Batch calendar events project.
         </Link>
       </p>
       <h3>Deploying</h3>

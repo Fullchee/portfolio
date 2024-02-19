@@ -45,10 +45,8 @@ const IBMPage = () => {
       <p>
         If you're curious, you can scroll down to read background info on what
         kind of{" "}
-        <Link href="/project/ibm#baw-background">
-          <a>Business Automation</a>
-        </Link>{" "}
-        work our team does
+        <Link href="/project/ibm#baw-background">Business Automation</Link> work
+        our team does
       </p>
 
       <h2>Making the developer experience better</h2>
