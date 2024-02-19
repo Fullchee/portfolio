@@ -20,7 +20,7 @@ Inspired by
 
 `git push origin main`
 
-### Trello
+## Trello
 
 https://trello.com/b/4QT3eZgJ/portfolio
 
@@ -36,3 +36,15 @@ https://trello.com/b/4QT3eZgJ/portfolio
 
 - Vanilla HTML, CSS
 - [Based on this template](https://ryanfitzgerald.github.io/devportfolio/)
+
+## Dependencies
+
+- next
+  - [the react docs](https://react.dev/learn/start-a-new-react-project) recommend a framework and Next can do all the things (but I just need a static site)
+
+### Dev dependencies
+
+- sharp
+  - convert large images to smaller web friendly images of varying dimensions
+  - I guess this means we don't need Cloudinary?
+  - [Used for production builds](https://nextjs.org/docs/messages/sharp-missing-in-production)
