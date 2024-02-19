@@ -3,7 +3,7 @@
 Made with
 
 - Next.js
-- Tailwind CSS 2
+- Tailwind
 - TypeScript
 
 Inspired by
@@ -13,12 +13,8 @@ Inspired by
 
 ## Install
 
-1. Install yarn v1
-   1. `brew install yarn`
-2. `yarn build`
-3. `yarn dev`
-4. Setup Sentry
-   1. `sentry-cli login`
+1. `npm i`
+2. `npm run dev`
 
 ## Deploy
 
