@@ -1,6 +1,8 @@
 import Image from "next/legacy/image";
 import Link from "next/link";
 
+type SafeNumber = number | `${number}`;
+
 export interface ProjectInfo {
   description: string;
   linkLabel: string;
@@ -9,8 +11,8 @@ export interface ProjectInfo {
   image: {
     alt: string;
     path: string;
-    width?: string;
-    height?: string;
+    width?: SafeNumber;
+    height?: SafeNumber;
     placeholder?: string;
   };
 }
