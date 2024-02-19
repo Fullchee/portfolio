@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectLayout } from "../../components/project/ProjectLayout";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const mainImageProps = {
   src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224525/portfolio/reminders/reminders_ayjw5d.png",

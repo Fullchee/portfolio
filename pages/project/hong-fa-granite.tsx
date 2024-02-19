@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ProjectLayout } from "../../components/project/ProjectLayout";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const mainImageProps = {
   src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650223661/portfolio/hong-fa-granite/hong-fa-granite_zgtsd1.png",

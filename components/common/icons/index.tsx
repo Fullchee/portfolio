@@ -8,7 +8,7 @@ import SvgNodeJs from "./node-js";
 import SvgReact from "./react";
 import SvgSass from "./sass";
 import { SvgCss } from "./css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const Icon = ({
   icon,
