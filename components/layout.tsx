@@ -3,6 +3,7 @@ import Header from "./header";
 import Container from "./container";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export type ImageProps = {
   url: string;
@@ -47,6 +48,7 @@ export const Layout = ({ title, description, imageProps, children }: Props) => {
         <Container>{children}</Container>
       </div>
       <Footer />
+      <SpeedInsights />
     </div>
   );
 };
