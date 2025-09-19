@@ -1,7 +1,5 @@
-@reference;
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-
 
 @font-face {
   font-family: Comfortaa;

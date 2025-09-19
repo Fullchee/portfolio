@@ -35,7 +35,7 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
         placeholder:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89vz3fwAJDAO5snBJQwAAAABJRU5ErkJggg==",
       },
-      linkLabel: "View project tour",
+      linkLabel: "View project",
       url: "/project/toronto-water-monitor",
     },
     {
@@ -47,7 +47,7 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
         placeholder:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88eX9fwAJowPcYNPZ7gAAAABJRU5ErkJggg==",
       },
-      linkLabel: "View project tour",
+      linkLabel: "View project",
       url: "/project/hong-fa-granite",
     },
     {
@@ -59,7 +59,7 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
         placeholder:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+uz7fwAJfQPTibFsiQAAAABJRU5ErkJggg==",
       },
-      linkLabel: "View project tour",
+      linkLabel: "View project",
       url: "/project/reminders",
     },
     {
@@ -71,7 +71,7 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
         placeholder:
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8+fznfwAJFAO6gSu5LgAAAABJRU5ErkJggg==",
       },
-      linkLabel: "View project tour",
+      linkLabel: "View project",
       url: "/project/batch-calendar-events",
     },
   ];
