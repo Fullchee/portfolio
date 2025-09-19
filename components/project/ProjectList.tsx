@@ -48,9 +48,7 @@ const ProjectCard = ({
       <div className="px-8 lg:px-12 pb-8">
         <h3 className="text-xl pt-4 font-bold">{title}</h3>
         <p className="py-4">{description}</p>
-        <Link href={url} legacyBehavior>
-          <p className="underline group-hover:text-blue-500">{linkLabel}</p>
-        </Link>
+        <p className="underline group-hover:text-blue-500">{linkLabel}</p>
       </div>
     </Link>
   );
