@@ -1,5 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -9,10 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         display: ["Comfortaa"],
-        monoDisplay: ["Major Mono Display"],
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        mono: ["Major Mono Display"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
-};
+}

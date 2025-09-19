@@ -1,9 +1,7 @@
 import React from "react";
 import { AppProps } from "next/app";
 import Script from "next/script";
-import "../styles/base.css";
-import "../styles/components.css";
-import "../styles/utilities.css";
+import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
