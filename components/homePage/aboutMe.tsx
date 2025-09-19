@@ -1,7 +1,7 @@
 const AboutMe = () => {
   return (
     <section className="ease-in">
-      <h2 className="font-monoDisplay tracking-wider text-2xl">About me</h2>
+      <h2 className="font-mono-display tracking-wider text-2xl">About me</h2>
       <article>
         <h3>Learner 💡</h3>
         <ul>

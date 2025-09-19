@@ -6,7 +6,7 @@ const HeaderItem = ({ href, label }: { href: string; label: string }) => {
     <li className="px-4 py-8 text-xl">
       <Link
         href={href}
-        className="no-underline font-monoDisplay tracking-wider pb-1"
+        className="no-underline font-mono-display tracking-wider pb-1"
       >
         {label}
       </Link>

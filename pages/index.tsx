@@ -15,7 +15,7 @@ const Index = () => {
       <Intro />
       <AboutMe />
       <Skills />
-      <h2 className="font-monoDisplay tracking-wider pb-8 text-2xl">
+      <h2 className="font-mono-display tracking-wider pb-8 text-2xl">
         Projects
       </h2>
       <MainProjects />

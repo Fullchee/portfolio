@@ -22,7 +22,7 @@ const backendSkills = [
 const Skills = () => {
   return (
     <section className="flex-col flex flex-wrap mb-8">
-      <h2 id="skills" className="font-monoDisplay tracking-wider text-2xl pb-4">
+      <h2 id="skills" className="font-mono-display tracking-wider text-2xl pb-4">
         Skills
       </h2>
       <SkillList title="Frontend" skills={frontendSkills} />
