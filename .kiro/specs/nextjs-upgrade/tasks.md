@@ -21,7 +21,7 @@
   - Update TypeScript to latest version compatible with Next.js 15
   - _Requirements: 2.1, 2.3_
 
-- [ ] 4. Fix Next.js configuration breaking changes
+- [-] 4. Fix Next.js configuration breaking changes
 
   - Update next.config.js to replace deprecated images.domains with images.remotePatterns
   - Add any required Next.js 15 specific configuration options
