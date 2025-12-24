@@ -6,7 +6,8 @@
 		"build": "./node_modules/.bin/next build",
 		"start": "./node_modules/.bin/next start",
 		"typecheck": "./node_modules/.bin/tsc",
-		"lint": "./node_modules/.bin/biome ."
+		"lint": "./node_modules/.bin/biome .",
+		"prepare": "./node_modules/.bin/lefthook install"
 	},
 	"dependencies": {
 		"@vercel/analytics": "^1.5.0",
@@ -24,6 +25,7 @@
 		"@types/node": "^24.10.4",
 		"@types/react": "19.2.7",
 		"@types/react-dom": "19.2.3",
+		"lefthook": "^2.0.12",
 		"sharp": "^0.33.2",
 		"tailwindcss": "^4.1.18",
 		"typescript": "^5.9.2"
