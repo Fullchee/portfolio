@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "../../components/layout";
 import { MainProjects } from "../../components/project/MainProjects";
 

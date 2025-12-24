@@ -1,4 +1,6 @@
+import Image from "next/legacy/image";
 import SvgCodeBranch from "./code-branch";
+import { SvgCss } from "./css";
 import SvgDatabase from "./database";
 import SvgGitHub from "./github";
 import SvgHtml5 from "./html5";
@@ -7,8 +9,6 @@ import SvgLaunch from "./launch";
 import SvgNodeJs from "./node-js";
 import SvgReact from "./react";
 import SvgSass from "./sass";
-import { SvgCss } from "./css";
-import Image from "next/legacy/image";
 
 export const Icon = ({
   icon,

@@ -1,6 +1,4 @@
-import * as React from "react";
-
-function SvgHtml5(props: any) {
+function SvgHtml5(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       aria-hidden="true"

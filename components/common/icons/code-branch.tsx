@@ -1,6 +1,4 @@
-import * as React from "react";
-
-function SvgCodeBranch(props: any) {
+function SvgCodeBranch(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       aria-hidden="true"

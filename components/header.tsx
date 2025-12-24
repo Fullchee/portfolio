@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/legacy/image";
+import Link from "next/link";
 
 const HeaderItem = ({ href, label }: { href: string; label: string }) => {
   return (

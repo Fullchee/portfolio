@@ -1,7 +1,6 @@
-import React from "react";
+import { calculateSejour } from "../../components/common/utilities";
 import Layout from "../../components/layout";
 import { ProjectDescription } from "../../components/project/ProjectDescription";
-import { calculateSejour } from "../../components/common/utilities";
 
 const FormaPage = () => {
   return (

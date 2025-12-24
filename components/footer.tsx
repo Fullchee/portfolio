@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="py-12 bg-accent-1 border-t border-accent-2 mt-16">

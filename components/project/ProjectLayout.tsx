@@ -1,7 +1,7 @@
+import type { Skill } from "../homePage/SkillList";
 import { Layout } from "../layout";
-import { ProjectOverview } from "./ProjectOverview";
-import { Skill } from "../homePage/SkillList";
 import { MainProjects } from "./MainProjects";
+import { ProjectOverview } from "./ProjectOverview";
 
 interface Props {
   children: React.ReactNode;

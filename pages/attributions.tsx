@@ -1,5 +1,3 @@
-import React from "react";
-
 const Attribution = ({ name }: { name: string }) => {
   return (
     <li>

@@ -1,0 +1,38 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+	"files": { "ignoreUnknown": false },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		},
+		"includes": [
+			"!./.next/",
+			"!./.pnp",
+			"!./build",
+			"!./coverage",
+			"!./node_modules",
+			"!./out/",
+			"!**/.DS_Store",
+			"!**/.env.development.local",
+			"!**/.env.local",
+			"!**/.env.production.local",
+			"!**/.env.test.local",
+			"!**/.pnp.js",
+			"!**/.sentryclirc",
+			"!**/.vercel",
+			"!**/*.pem",
+			"!**/npm-debug.log*",
+			"**"
+		]
+	},
+	"javascript": {
+		"globals": ["require", "module", "process", "__dirname"]
+	}
+}

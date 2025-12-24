@@ -1,10 +1,8 @@
-import React from "react";
-import Layout from "../components/layout";
-
 import AboutMe from "../components/homePage/aboutMe";
 import Intro from "../components/homePage/intro";
-import { MainProjects } from "../components/project/MainProjects";
 import Skills from "../components/homePage/skills";
+import Layout from "../components/layout";
+import { MainProjects } from "../components/project/MainProjects";
 
 const Index = () => {
   return (

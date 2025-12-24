@@ -1,5 +1,5 @@
-import { SkillList, Skill } from "../homePage/SkillList";
 import { Icon } from "../common/icons";
+import { type Skill, SkillList } from "../homePage/SkillList";
 
 interface Props {
   demoUrl: string;

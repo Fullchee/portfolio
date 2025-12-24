@@ -1,8 +1,6 @@
-import React from "react";
 import Link from "next/link";
-
-import { ProjectDescription } from "../../components/project/ProjectDescription";
 import Layout from "../../components/layout";
+import { ProjectDescription } from "../../components/project/ProjectDescription";
 
 const IBMPage = () => {
   return (

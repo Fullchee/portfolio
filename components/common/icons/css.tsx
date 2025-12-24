@@ -1,4 +1,4 @@
-export function SvgCss(props: any) {
+export function SvgCss(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       aria-hidden="true"
