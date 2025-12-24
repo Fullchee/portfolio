@@ -1,0 +1,9 @@
+{
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#5D0E11",
+		"titleBar.activeBackground": "#821417",
+		"titleBar.activeForeground": "#FEFBFB"
+	},
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false
+}
