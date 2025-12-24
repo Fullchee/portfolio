@@ -2,216 +2,216 @@
 @plugin "@tailwindcss/typography";
 
 @font-face {
-  font-family: Comfortaa;
-  src: url("/fonts/Comfortaa-VariableFont_wght.ttf");
+	font-family: Comfortaa;
+	src: url("/fonts/Comfortaa-VariableFont_wght.ttf");
 }
 
 @font-face {
-  font-family: Inter;
-  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
+	font-family: Inter;
+	src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
 }
 
 @font-face {
-  font-family: Major Mono Display;
-  src: url("/fonts/MajorMonoDisplay-Regular.ttf");
+	font-family: Major Mono Display;
+	src: url("/fonts/MajorMonoDisplay-Regular.ttf");
 }
 
 @theme {
-  --font-display: Comfortaa;
-  --font-mono-display: "Major Mono Display";
-  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+	--font-display: Comfortaa;
+	--font-mono-display: "Major Mono Display";
+	--font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Write your own custom base styles here */
 @layer base {
-  a {
-    @apply underline;
-    position: relative;
-  }
+	a {
+		@apply underline;
+		position: relative;
+	}
 
-  a::after {
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    position: absolute;
-    height: 2px;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 250ms ease-in;
-    background-color: #60a5fa;
-  }
+	a::after {
+		content: "";
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		position: absolute;
+		height: 2px;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 250ms ease-in;
+		background-color: #60a5fa;
+	}
 
-  a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
+	a:hover::after {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
 
-  a:hover {
-    @apply text-blue-500;
-  }
+	a:hover {
+		@apply text-blue-500;
+	}
 
-  code {
-    padding: 2px 4px;
-    font-size: 0.9em;
-    line-height: 1;
-    background-color: var(--color-neutral-muted, rgba(175, 184, 193, 0.2));
-    border-radius: 6px;
-  }
+	code {
+		padding: 2px 4px;
+		font-size: 0.9em;
+		line-height: 1;
+		background-color: var(--color-neutral-muted, rgba(175, 184, 193, 0.2));
+		border-radius: 6px;
+	}
 
-  h1 {
-    @apply text-4xl pb-4 pt-6 font-display;
-  }
+	h1 {
+		@apply text-4xl pb-4 pt-6 font-display;
+	}
 
-  h2 {
-    @apply text-2xl pb-4 pt-6;
-  }
+	h2 {
+		@apply text-2xl pb-4 pt-6;
+	}
 
-  .font-mono-display {
-    @apply -ml-0.5;
-  }
+	.font-mono-display {
+		@apply -ml-0.5;
+	}
 
-  h3 {
-    @apply text-xl pb-4 pt-6 font-bold;
-  }
+	h3 {
+		@apply text-xl pb-4 pt-6 font-bold;
+	}
 
-  h4 {
-    @apply pb-0 pt-4 font-bold;
-  }
+	h4 {
+		@apply pb-0 pt-4 font-bold;
+	}
 
-  li {
-    @apply text-lg leading-9;
-  }
+	li {
+		@apply text-lg leading-9;
+	}
 
-  ol {
-    @apply list-decimal pl-4 py-2 ml-4;
-  }
+	ol {
+		@apply list-decimal pl-4 py-2 ml-4;
+	}
 
-  ol li {
-    @apply pl-4;
-  }
+	ol li {
+		@apply pl-4;
+	}
 
-  ol li::marker {
-    /* grey-500 */
-    color: #6b7280;
-    padding-right: 4px;
-  }
+	ol li::marker {
+		/* grey-500 */
+		color: #6b7280;
+		padding-right: 4px;
+	}
 
-  ol li::before {
-    display: none;
-  }
+	ol li::before {
+		display: none;
+	}
 
-  p {
-    @apply max-w-3xl py-2 text-lg;
-  }
+	p {
+		@apply max-w-3xl py-2 text-lg;
+	}
 
-  strong {
-    @apply font-bold;
-  }
+	strong {
+		@apply font-bold;
+	}
 
-  ul {
-    @apply pl-4 py-2;
-  }
+	ul {
+		@apply pl-4 py-2;
+	}
 
-  ul li::before {
-    content: "";
-    display: inline-block;
-    height: 0.75em;
-    width: 0.75em;
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctitle%3E radio-button %3C/title%3E%3Cpath fill='%233B82F6' d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z' /%3E%3Crect fill='none' width='32' height='32' /%3E%3C/svg%3E%0A");
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5em;
-  }
+	ul li::before {
+		content: "";
+		display: inline-block;
+		height: 0.75em;
+		width: 0.75em;
+		background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctitle%3E radio-button %3C/title%3E%3Cpath fill='%233B82F6' d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z' /%3E%3Crect fill='none' width='32' height='32' /%3E%3C/svg%3E%0A");
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-right: 0.5em;
+	}
 
-  ul li {
-    @apply pl-4 py-1;
-  }
+	ul li {
+		@apply pl-4 py-1;
+	}
 
-  ul ul {
-    padding: 0;
-  }
+	ul ul {
+		padding: 0;
+	}
 
-  ul ul li {
-    margin-left: 2rem;
-  }
+	ul ul li {
+		margin-left: 2rem;
+	}
 
-  .font-mono-display {
-    /* monospace font looks weird in uppercase */
-    text-transform: lowercase;
-  }
+	.font-mono-display {
+		/* monospace font looks weird in uppercase */
+		text-transform: lowercase;
+	}
 }
 
 @layer components {
-  .primary-button {
-    @apply bg-blue-600 px-6 py-3 rounded-md text-white text-center;
-  }
+	.primary-button {
+		@apply bg-blue-600 px-6 py-3 rounded-md text-white text-center;
+	}
 
-  .secondary-button {
-    @apply border-blue-600 border text-blue-600 px-6 py-3 rounded-md text-center;
-  }
+	.secondary-button {
+		@apply border-blue-600 border text-blue-600 px-6 py-3 rounded-md text-center;
+	}
 
-  .ease-in > * {
-    transition: opacity 1s ease-in;
-    animation: 0.5s ease-in 0s 1 forwards loading-down;
-  }
+	.ease-in > * {
+		transition: opacity 1s ease-in;
+		animation: 0.5s ease-in 0s 1 forwards loading-down;
+	}
 
-  .inset-box-shadow {
-    box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.2);
-  }
+	.inset-box-shadow {
+		box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.2);
+	}
 
-  .nested-li {
-    padding-left: 2rem;
-  }
+	.nested-li {
+		padding-left: 2rem;
+	}
 
-  .no-list-item li::before {
-    content: none;
-  }
+	.no-list-item li::before {
+		content: none;
+	}
 
-  .no-link-underline::after {
-    content: none;
-  }
+	.no-link-underline::after {
+		content: none;
+	}
 
-  .white-to-transparent {
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  }
+	.white-to-transparent {
+		background: linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 255, 255, 0) 100%
+		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	}
 
-  .transparent-to-white {
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  }
+	.transparent-to-white {
+		background: linear-gradient(
+			to top,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 255, 255, 0) 100%
+		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	}
 
-  .responsive-skills {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  }
+	.responsive-skills {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+	}
 
-  .responsive-footer {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  }
+	.responsive-footer {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+	}
 
-  .skills > * {
-    flex-basis: 220px;
-  }
+	.skills > * {
+		flex-basis: 220px;
+	}
 }
 
 @keyframes loading-down {
-  100% {
-    transform: translateY(-15px);
-    opacity: 1;
-  }
+	100% {
+		transform: translateY(-15px);
+		opacity: 1;
+	}
 
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 }
