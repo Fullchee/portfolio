@@ -1,14 +1,4 @@
 {
-	"name": "portfolio",
-	"version": "1.0.0",
-	"scripts": {
-		"dev": "./node_modules/.bin/next",
-		"build": "./node_modules/.bin/next build",
-		"start": "./node_modules/.bin/next start",
-		"typecheck": "./node_modules/.bin/tsc",
-		"lint": "./node_modules/.bin/biome .",
-		"install-precommit": "./node_modules/.bin/lefthook install"
-	},
 	"dependencies": {
 		"@vercel/analytics": "^1.6.1",
 		"@vercel/speed-insights": "^1.2.0",
@@ -29,8 +19,19 @@
 		"tailwindcss": "^4.1.18",
 		"typescript": "^5.9.3"
 	},
+	"name": "portfolio",
 	"overrides": {
 		"@types/react": "19.2.7",
 		"@types/react-dom": "19.2.3"
-	}
+	},
+	"packageManager": "npm@11.6.2",
+	"scripts": {
+		"build": "./node_modules/.bin/next build",
+		"dev": "./node_modules/.bin/next",
+		"install-precommit": "./node_modules/.bin/lefthook install",
+		"lint": "./node_modules/.bin/biome .",
+		"start": "./node_modules/.bin/next start",
+		"typecheck": "./node_modules/.bin/tsc"
+	},
+	"version": "1.0.0"
 }
