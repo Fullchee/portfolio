@@ -28,7 +28,7 @@
 		"lefthook": "^2.0.12",
 		"sharp": "^0.33.2",
 		"tailwindcss": "^4.1.18",
-		"typescript": "^5.9.2"
+		"typescript": "^5.9.3"
 	},
 	"overrides": {
 		"@types/react": "19.2.7",
