@@ -1,5 +1,17 @@
 import "../styles/globals.css";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { siteBaseUrl } from "../lib/metadata";
+
+export const metadata: Metadata = {
+	title: {
+		template: "%s | Fullchee Zhang",
+		default: "Fullstack Developer | Fullchee Zhang",
+	},
+	description:
+		"Portfolio made with Next.js, Tailwind.css and love by Fullchee Zhang",
+	metadataBase: new URL(siteBaseUrl),
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (

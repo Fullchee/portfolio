@@ -1,19 +1,25 @@
 import Link from "next/link";
 import Layout from "../../../components/layout";
 import { ProjectDescription } from "../../../components/project/ProjectDescription";
+import { buildMetadata, siteBaseUrl } from "../../../lib/metadata";
+
+export const metadata = buildMetadata({
+	title: "Working at IBM",
+	description: "My experience working as a front-end developer at IBM Canada",
+	path: "/project/ibm",
+	images: [
+		{
+			url: `${siteBaseUrl}/assets/images/projects/ibm/ibm-logo.png`,
+			width: 1000,
+			height: 400,
+			alt: "old 8 stripe IBM logo",
+		},
+	],
+});
 
 export default function IBMPage() {
 	return (
-		<Layout
-			title="Working at IBM"
-			description="My experience working as a front-end developer at IBM Canada"
-			imageProps={{
-				url: "/assets/images/projects/ibm/ibm-logo.png",
-				width: 1000,
-				height: 400,
-				alt: "old 8 stripe IBM logo",
-			}}
-		>
+		<Layout>
 			<h1>Working at IBM</h1>
 			<p>
 				I was a frontend developer (JavaScript and CSS) at IBM from 2019 to

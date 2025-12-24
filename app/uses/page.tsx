@@ -1,8 +1,15 @@
 import Layout from "../../components/layout";
+import { buildMetadata } from "../../lib/metadata";
+
+export const metadata = buildMetadata({
+	title: "Uses",
+	description: "What I use",
+	path: "/uses",
+});
 
 export default function UsesPage() {
 	return (
-		<Layout title="Uses" description="What I use">
+		<Layout>
 			<h1 className="h-12 mb-4">Uses</h1>
 			<p>
 				Check out <a href="https://uses.tech">uses.tech</a> for a list of

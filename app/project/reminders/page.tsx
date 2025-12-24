@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ProjectLayout } from "../../../components/project/ProjectLayout";
+import { buildMetadata } from "../../../lib/metadata";
 
 const mainImageProps = {
 	src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224525/portfolio/reminders/reminders_ayjw5d.png",
@@ -10,6 +11,21 @@ const mainImageProps = {
 	blurDataURL:
 		"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+uz7fwAJfQPTibFsiQAAAABJRU5ErkJggg==",
 };
+
+export const metadata = buildMetadata({
+	title: "Reminders",
+	description:
+		"Project to remind myself of meaningful podcasts and YouTube videos",
+	path: "/project/reminders",
+	images: [
+		{
+			url: mainImageProps.src,
+			width: mainImageProps.width,
+			height: mainImageProps.height,
+			alt: mainImageProps.alt,
+		},
+	],
+});
 
 export default function RemindersPage() {
 	const skills = [
@@ -22,11 +38,9 @@ export default function RemindersPage() {
 	return (
 		<ProjectLayout
 			title="Reminders"
-			description="Project to remind myself of meaningful podcasts and YouTube videos"
 			githubProject="reminders-frontend"
 			demoUrl="https://fullchee-reminders.netlify.app/"
 			skills={skills}
-			imageProps={mainImageProps}
 		>
 			<h1>Reminders</h1>
 			<Image {...mainImageProps} placeholder="blur" />

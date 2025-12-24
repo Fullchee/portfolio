@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ProjectLayout } from "../../../components/project/ProjectLayout";
+import { buildMetadata } from "../../../lib/metadata";
 
 const mainImageProps = {
 	src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224576/portfolio/batch-calendar-events/batch-calendar-events_x1fjcv.png",
@@ -11,6 +12,21 @@ const mainImageProps = {
 		"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8+fznfwAJFAO6gSu5LgAAAABJRU5ErkJggg==",
 };
 
+export const metadata = buildMetadata({
+	title: "Batch calendar events",
+	description:
+		"Project to create batch calendar events in less than 30 seconds",
+	path: "/project/batch-calendar-events",
+	images: [
+		{
+			url: mainImageProps.src,
+			width: mainImageProps.width,
+			height: mainImageProps.height,
+			alt: mainImageProps.alt,
+		},
+	],
+});
+
 export default function BatchCalendarEventsPage() {
 	const skills = [
 		{ icon: "react", label: "React" },
@@ -20,11 +36,9 @@ export default function BatchCalendarEventsPage() {
 	return (
 		<ProjectLayout
 			title="Batch calendar events"
-			description="Project to create batch calendar events in less than 30 seconds"
 			demoUrl="https://calendar-shifts.netlify.app/"
 			githubProject="calendar-shifts"
 			skills={skills}
-			imageProps={mainImageProps}
 		>
 			{/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}

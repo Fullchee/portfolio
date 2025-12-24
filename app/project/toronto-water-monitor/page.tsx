@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ProjectLayout } from "../../../components/project/ProjectLayout";
+import { buildMetadata } from "../../../lib/metadata";
 
 const mainImageProps = {
 	src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224467/portfolio/toronto-water-monitor/desktop_shadow_kn9zco.png",
@@ -10,6 +11,21 @@ const mainImageProps = {
 	blurDataURL:
 		"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89vz3fwAJDAO5snBJQwAAAABJRU5ErkJggg==",
 };
+
+export const metadata = buildMetadata({
+	title: "Toronto water monitor",
+	description:
+		"Project that checks your Toronto water usage and sends you an email if usage spikes",
+	path: "/project/toronto-water-monitor",
+	images: [
+		{
+			url: mainImageProps.src,
+			width: mainImageProps.width,
+			height: mainImageProps.height,
+			alt: mainImageProps.alt,
+		},
+	],
+});
 
 export default function TorontoWaterMonitorPage() {
 	const skills = [
@@ -22,11 +38,9 @@ export default function TorontoWaterMonitorPage() {
 	return (
 		<ProjectLayout
 			title="Toronto water monitor"
-			description="Project that checks your Toronto water usage and sends you an email if usage spikes"
 			skills={skills}
 			githubProject="toronto-water-monitor-backend"
 			demoUrl="https://toronto-water-monitor.netlify.app/"
-			imageProps={mainImageProps}
 		>
 			{/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}

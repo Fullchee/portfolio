@@ -1,3 +1,11 @@
+import { buildMetadata } from "../../lib/metadata";
+
+export const metadata = buildMetadata({
+	title: "Attributions",
+	description: "Font Awesome icon attributions used on fullchee.com",
+	path: "/attributions",
+});
+
 const Attribution = ({ name }: { name: string }) => {
 	return (
 		<li>

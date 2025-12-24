@@ -1,19 +1,25 @@
 import { calculateSejour } from "../../../components/common/utilities";
 import Layout from "../../../components/layout";
 import { ProjectDescription } from "../../../components/project/ProjectDescription";
+import { buildMetadata, siteBaseUrl } from "../../../lib/metadata";
+
+export const metadata = buildMetadata({
+	title: "Working at Forma",
+	description: "My experience working as a full stack developer at Forma.ai",
+	path: "/project/forma",
+	images: [
+		{
+			url: `${siteBaseUrl}/assets/images/projects/forma/forma-logo.png`,
+			width: 1000,
+			height: 400,
+			alt: "Forma.ai logo",
+		},
+	],
+});
 
 export default function FormaPage() {
 	return (
-		<Layout
-			title="Working at Forma"
-			description="My experience working as a full stack developer at Forma.ai"
-			imageProps={{
-				url: "/assets/images/projects/forma/forma-logo.png",
-				width: 1000,
-				height: 400,
-				alt: "Forma.ai logo",
-			}}
-		>
+		<Layout>
 			<h1>Working at Forma.ai</h1>
 			<p>
 				Full-stack React, Django and SQL developer at Forma.ai for{" "}

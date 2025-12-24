@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectLayout } from "../../../components/project/ProjectLayout";
+import { buildMetadata } from "../../../lib/metadata";
 
 const mainImageProps = {
 	src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650223661/portfolio/hong-fa-granite/hong-fa-granite_zgtsd1.png",
@@ -12,6 +13,20 @@ const mainImageProps = {
 		"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88eX9fwAJowPcYNPZ7gAAAABJRU5ErkJggg==",
 };
 
+export const metadata = buildMetadata({
+	title: "Hong Fa Granite website",
+	description: "Projects I've been working on",
+	path: "/project/hong-fa-granite",
+	images: [
+		{
+			url: mainImageProps.src,
+			width: mainImageProps.width,
+			height: mainImageProps.height,
+			alt: mainImageProps.alt,
+		},
+	],
+});
+
 export default function HongFaGranitePage() {
 	const skills = [
 		{ icon: "gatsby.svg", label: "Gatsby" },
@@ -22,10 +37,8 @@ export default function HongFaGranitePage() {
 	return (
 		<ProjectLayout
 			title="Hong Fa Granite website"
-			description="Projects I've been working on"
 			demoUrl="https://www.hongfagranite.com"
 			skills={skills}
-			imageProps={mainImageProps}
 		>
 			<Image {...mainImageProps} placeholder="blur" />
 

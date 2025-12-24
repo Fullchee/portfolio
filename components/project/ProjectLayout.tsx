@@ -6,38 +6,20 @@ import { ProjectOverview } from "./ProjectOverview";
 interface Props {
 	children: React.ReactNode;
 	title: string;
-	description: string;
 	skills: Skill[];
 	demoUrl: string;
 	githubProject?: string;
-	imageProps: NextImageProps;
 }
-
-type NextImageProps = {
-	src: string;
-	alt: string;
-	width: number;
-	height: number;
-};
 
 export const ProjectLayout = ({
 	children,
 	title,
-	description,
 	skills,
 	demoUrl,
 	githubProject,
-	imageProps,
 }: Props) => {
 	return (
-		<Layout
-			title={title}
-			description={description}
-			imageProps={{
-				url: imageProps.src,
-				...imageProps,
-			}}
-		>
+		<Layout>
 			<h1>{title}</h1>
 			<ProjectOverview
 				demoUrl={demoUrl}
