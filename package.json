@@ -29,7 +29,6 @@
     "@typescript-eslint/parser": "^5.33.0",
     "autoprefixer": "^10.4.8",
     "cssnano": "^5.1.12",
-    "postcss": "^8.4.35",
     "postcss-preset-env": "^9.3.0",
     "sharp": "^0.33.2",
     "tailwindcss": "^4.1.13",
