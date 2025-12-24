@@ -17,6 +17,7 @@
 		"lefthook": "^2.0.12",
 		"sharp": "^0.33.2",
 		"tailwindcss": "^4.1.18",
+		"turbo": "^2.7.2",
 		"typescript": "^5.9.3"
 	},
 	"name": "portfolio",
