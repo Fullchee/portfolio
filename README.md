@@ -16,13 +16,17 @@ Inspired by
 1. `npm i`
 2. `npm run dev`
 
+## Routing
+
+The site now uses the Next.js App Router. Routes live under `app/` with server components by default and the shared layout in `app/layout.tsx`.
+
 ## Deploy
 
 `git push origin main`
 
 ## Trello
 
-https://trello.com/b/4QT3eZgJ/portfolio
+[Trello board](https://trello.com/b/4QT3eZgJ/portfolio)
 
 ## Previous Portfolios
 

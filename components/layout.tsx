@@ -1,6 +1,8 @@
+"use client";
+
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { NextSeo } from "next-seo";
 import Container from "./container";
 import Footer from "./footer";
@@ -28,7 +30,7 @@ const defaultImage = {
 };
 
 export const Layout = ({ title, description, imageProps, children }: Props) => {
-	const router = useRouter();
+	const pathname = usePathname();
 
 	return (
 		// firefox default background isn't white
@@ -41,7 +43,7 @@ export const Layout = ({ title, description, imageProps, children }: Props) => {
 					description: description,
 					images: imageProps ? [imageProps] : [defaultImage],
 					type: "website",
-					url: `https://fullchee.com${router.pathname}`,
+					url: `https://fullchee.com${pathname ?? "/"}`,
 				}}
 			/>
 			<Header />
