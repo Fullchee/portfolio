@@ -12,17 +12,17 @@
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "next": "^15.5.3",
+    "next": "16.1.1",
     "next-seo": "^4.17.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
     "@tailwindcss/typography": "^0.5.18",
     "@types/node": "^24.5.2",
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "autoprefixer": "^10.4.8",
@@ -35,5 +35,9 @@
     "stylelint-config-standard": "^36.0.0",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2"
+  },
+  "overrides": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3"
   }
 }
