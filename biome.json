@@ -5,13 +5,22 @@
 			"tailwindDirectives": true
 		}
 	},
-	"vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
-	"files": { "ignoreUnknown": false },
+	"files": {
+		"ignoreUnknown": false
+	},
+	"javascript": {
+		"formatter": {
+			"indentWidth": 2
+		},
+		"globals": ["require", "module", "process", "__dirname"]
+	},
+	"json": {
+		"formatter": {
+			"indentWidth": 2
+		}
+	},
 	"linter": {
 		"enabled": true,
-		"rules": {
-			"recommended": true
-		},
 		"includes": [
 			"!./.next/",
 			"!./.pnp",
@@ -30,9 +39,14 @@
 			"!**/*.pem",
 			"!**/npm-debug.log*",
 			"**"
-		]
+		],
+		"rules": {
+			"recommended": true
+		}
 	},
-	"javascript": {
-		"globals": ["require", "module", "process", "__dirname"]
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
 	}
 }
