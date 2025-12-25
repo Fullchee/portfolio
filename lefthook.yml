@@ -3,8 +3,8 @@ pre-commit:
   commands:
     biome-check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+      run: pnpm dlx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
       stage_fixed: true
     type-check:
-      glob: "{.storybook,app,components,lib}/*.{ts,tsx}"
-      run: npx tsc --noEmit {staged_files}
+      glob: "{.storybook,app,components,lib}/**/*.{ts,tsx}"
+      run: turbo run typecheck {staged_files}
