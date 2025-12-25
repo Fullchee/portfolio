@@ -25,6 +25,8 @@
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"pages-archive/projects/torontoWaterMonitor.mdx"
+		"pages-archive/projects/torontoWaterMonitor.mdx",
+		".next/types/**/*.ts",
+		".next/dev/types/**/*.ts"
 	]
 }
