@@ -45,7 +45,7 @@
 		"install-precommit": "./node_modules/.bin/lefthook install",
 		"lint": "./node_modules/.bin/biome .",
 		"start": "./node_modules/.bin/next start",
-		"typecheck": "./node_modules/.bin/tsc",
+		"typecheck": "./node_modules/.bin/tsc --noEmit",
 		"storybook": "storybook dev -p 6006",
 		"sb": "pnpm run storybook",
 		"build-storybook": "storybook build",
