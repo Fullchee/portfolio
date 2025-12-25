@@ -2,7 +2,6 @@
 
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Container from "./container";
 import Footer from "./footer";
 import Header from "./header";
 
@@ -12,7 +11,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 		<div className="bg-white">
 			<Header />
 			<div className="min-h-screen max-w-6xl mx-auto pt-8 px-6 md:px-24">
-				<Container>{children}</Container>
+				<main>{children}</main>
 			</div>
 			<Footer />
 			<SpeedInsights />
