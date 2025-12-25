@@ -1,24 +1,28 @@
 {
 	"compilerOptions": {
-		"target": "ES2017",
-		"module": "esnext",
-		"jsx": "react-jsx",
-		"strict": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
+		"allowJs": true, // allow .js to be imported
+		"esModuleInterop": true, // mend fences between CommonJS and ES Modules
 		"forceConsistentCasingInFileNames": true,
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"noEmit": true,
-		"moduleResolution": "bundler",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
 		"incremental": true,
+		"isolatedModules": true, // prevents a few TS features which are unsafe when treating modules as isolated files
+		"jsx": "react-jsx",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "esnext",
+		"moduleDetection": "force", // treat all files as modules, avoids 'cannot redeclare block-scoped variable' errors
+		"moduleResolution": "bundler",
+		"noEmit": true,
+		"noImplicitOverride": true, // Makes the override keyword actually useful in classes
+		"noUncheckedIndexedAccess": true, // Prevents you from accessing an array or object without first checking if it's defined
 		"plugins": [
 			{
 				"name": "next"
 			}
-		]
+		],
+		"resolveJsonModule": true, // allow .json to be imported
+		"skipLibCheck": true, // skip checking `.d.ts`, (skips all node_modules)
+		"strict": true,
+		"target": "es2022",
+		"verbatimModuleSyntax": true // forces import type and export type -> predictable behavior and fewer unnecessary imports
 	},
 	"exclude": ["node_modules", ".next"],
 	"include": [

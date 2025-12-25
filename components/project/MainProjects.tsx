@@ -1,4 +1,5 @@
-import { type ProjectInfo, ProjectList } from "./ProjectList";
+import type { ProjectInfo } from "#components/project/ProjectCard.js";
+import { ProjectList } from "./ProjectList";
 
 export const MainProjects = ({ skip }: { skip?: string }) => {
 	const projects: ProjectInfo[] = [
