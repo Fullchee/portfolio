@@ -13,8 +13,7 @@ Inspired by
 
 ## Install
 
-1. `npm i`
-2. `npm run dev`
+1. `./setup.sh`
 
 ## Routing
 
