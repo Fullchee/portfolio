@@ -33,6 +33,13 @@
 		"vite": "^7.3.0",
 		"vitest": "^4.0.16"
 	},
+	"imports": {
+		"#*": [
+			"./*",
+			"./*.ts",
+			"./*.tsx"
+		]
+	},
 	"name": "portfolio",
 	"overrides": {
 		"@types/react": "19.2.7",

@@ -1,15 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import preview from "#.storybook/preview";
 import Footer from "./footer";
 
-const meta = {
+const meta = preview.meta({
 	title: "Components/Footer",
 	component: Footer,
 	parameters: {
 		layout: "fullscreen",
 	},
-} satisfies Meta<typeof Footer>;
+});
+
+export const Primary = meta.story({});
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {};
