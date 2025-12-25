@@ -6,5 +6,5 @@ pre-commit:
       run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
       stage_fixed: true
     type-check:
-      glob: "{app,components}/*.{ts,tsx}"
+      glob: "{.storybook,app,components,lib}/*.{ts,tsx}"
       run: npx tsc --noEmit {staged_files}
