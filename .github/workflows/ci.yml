@@ -33,7 +33,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: turbo run build
+        run: pnpm build
 
       # - name: Test
       #   run: pnpm test
