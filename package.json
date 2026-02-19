@@ -23,7 +23,7 @@
 		"@vitest/browser-playwright": "^4.0.16",
 		"@vitest/coverage-v8": "^4.0.16",
 		"chromatic": "^13.3.4",
-		"lefthook": "^2.0.12",
+		"lefthook": "^2.0.13",
 		"playwright": "^1.57.0",
 		"sharp": "^0.33.2",
 		"storybook": "^10.1.10",
