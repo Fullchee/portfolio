@@ -23,6 +23,7 @@
 		"@vitest/browser-playwright": "^4.0.18",
 		"@vitest/coverage-v8": "^4.0.18",
 		"chromatic": "^13.3.4",
+		"fallow": "^3.17.0",
 		"lefthook": "^2.1.1",
 		"playwright": "^1.58.2",
 		"sharp": "^0.34.5",
@@ -45,7 +46,7 @@
 		"@types/react": "19.2.7",
 		"@types/react-dom": "19.2.3"
 	},
-	"packageManager": "pnpm@10.30.0+sha512.2b5753de015d480eeb88f5b5b61e0051f05b4301808a82ec8b840c9d2adf7748eb352c83f5c1593ca703ff1017295bc3fdd3119abb9686efc96b9fcb18200937",
+	"packageManager": "pnpm@11.23.0+sha512.f00082e5b283a199b74e079da28d155c008fe232f44c8a06ea7ddfa014ecf719fc362f790ecc67b28106ddac2afb24c49a9a079159da560b2ce7d1e98efd11af",
 	"scripts": {
 		"build": "./node_modules/.bin/next build",
 		"dev": "./node_modules/.bin/next",

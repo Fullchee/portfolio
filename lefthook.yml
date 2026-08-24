@@ -8,3 +8,5 @@ pre-commit:
     type-check:
       glob: "{.storybook,app,components,lib}/**/*.{ts,tsx}"
       run: turbo run typecheck
+    fallow-recommend:
+      run: npx fallow recommend
