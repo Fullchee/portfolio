@@ -3,10 +3,10 @@ import { definePreview } from "@storybook/nextjs-vite";
 import "../styles/globals.css";
 
 export default definePreview({
-	addons: [addonA11y()],
-	parameters: {
-		a11y: {
-			options: { xpath: true },
-		},
-	},
+  addons: [addonA11y()],
+  parameters: {
+    a11y: {
+      options: { xpath: true },
+    },
+  },
 });

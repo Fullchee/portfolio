@@ -1,12 +1,12 @@
 #   https://lefthook.dev/configuration/
 pre-commit:
   commands:
-    biome-check:
-      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: pnpm dlx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+    oxlint-fmt:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx}"
+      run: pnpm dlx oxfmt {staged_files} && pnpm dlx oxlint {staged_files}
       stage_fixed: true
     type-check:
       glob: "{.storybook,app,components,lib}/**/*.{ts,tsx}"
-      run: turbo run typecheck
+      run: pnpm run typecheck
     fallow-recommend:
       run: npx fallow recommend
