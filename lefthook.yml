@@ -10,3 +10,7 @@ pre-commit:
       run: pnpm run typecheck
     fallow-recommend:
       run: npx fallow recommend
+commit-msg:
+  commands:
+    commitlint:
+      run: npx commitlint --edit {1}
