@@ -1,36 +1,31 @@
 {
   "compilerOptions": {
-    "allowJs": true, // allow .js to be imported
-    "esModuleInterop": true, // mend fences between CommonJS and ES Modules
-    "forceConsistentCasingInFileNames": true,
+    // Next.js writes these back in on every build if absent, so they stay pinned here
+    "allowJs": true,
     "incremental": true,
-    "isolatedModules": true, // prevents a few TS features which are unsafe when treating modules as isolated files
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleDetection": "force", // treat all files as modules, avoids 'cannot redeclare block-scoped variable' errors
-    "moduleResolution": "bundler",
+    "module": "preserve", // because Next.js bundles with Turbopack
     "noEmit": true,
-    "noImplicitOverride": true, // Makes the override keyword actually useful in classes
-    "noUncheckedIndexedAccess": true, // Prevents you from accessing an array or object without first checking if it's defined
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "resolveJsonModule": true, // allow .json to be imported
+    "plugins": [{ "name": "next" }],
     "skipLibCheck": true, // skip checking `.d.ts`, (skips all node_modules)
     "strict": true,
     "target": "es2022",
+
+    // Beyond Next.js defaults
+    "moduleDetection": "force", // treat all files as modules, avoids 'cannot redeclare block-scoped variable' errors
+    "noFallthroughCasesInSwitch": true, // catch missing break statements in switch statements, off by default
+    "noImplicitOverride": true, // Makes the override keyword actually useful in classes
+    "noPropertyAccessFromIndexSignature": true, // forces obj["foo"] when foo isn't a declared key
+    "noUncheckedIndexedAccess": true, // Prevents you from accessing an array or object without first checking if it's defined
     "verbatimModuleSyntax": true // forces import type and export type -> predictable behavior and fewer unnecessary imports
   },
-  "exclude": ["node_modules", ".next"],
+  "exclude": ["node_modules"],
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "pages-archive/projects/torontoWaterMonitor.mdx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }
