@@ -10,7 +10,7 @@
     "plugins": [{ "name": "next" }],
     "skipLibCheck": true, // skip checking `.d.ts`, (skips all node_modules)
     "strict": true,
-    "target": "es2022",
+    "target": "ES2017",
 
     // Beyond Next.js defaults
     "moduleDetection": "force", // treat all files as modules, avoids 'cannot redeclare block-scoped variable' errors
