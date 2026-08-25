@@ -9,7 +9,7 @@ pre-commit:
       glob: "{.storybook,app,components,lib}/**/*.{ts,tsx}"
       run: pnpm run typecheck
     fallow-recommend:
-      run: npx fallow recommend
+      run: FALLOW_UPDATE_CHECK=off npx fallow audit --changed-since HEAD
 commit-msg:
   commands:
     commitlint:
