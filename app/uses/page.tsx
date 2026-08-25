@@ -1,5 +1,5 @@
-import Layout from "../../components/layout";
-import { buildMetadata } from "../../lib/metadata";
+import Layout from "#components/layout";
+import { buildMetadata } from "#lib/metadata";
 
 export const metadata = buildMetadata({
   title: "Uses",

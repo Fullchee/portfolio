@@ -1,7 +1,7 @@
-import { calculateSejour } from "../../../components/common/utilities";
-import Layout from "../../../components/layout";
-import { ProjectDescription } from "../../../components/project/ProjectDescription";
-import { buildMetadata } from "../../../lib/metadata";
+import { calculateSejour } from "#components/common/utilities";
+import Layout from "#components/layout";
+import { ProjectDescription } from "#components/project/ProjectDescription";
+import { buildMetadata } from "#lib/metadata";
 import { cardInfo } from "./card-info";
 
 export const metadata = buildMetadata({

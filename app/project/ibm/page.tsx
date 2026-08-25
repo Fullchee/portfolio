@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Layout from "../../../components/layout";
-import { ProjectDescription } from "../../../components/project/ProjectDescription";
-import { buildMetadata, siteBaseUrl } from "../../../lib/metadata";
+import Layout from "#components/layout";
+import { ProjectDescription } from "#components/project/ProjectDescription";
+import { buildMetadata, siteBaseUrl } from "#lib/metadata";
 import { cardInfo } from "./card-info";
 
 export const metadata = buildMetadata({

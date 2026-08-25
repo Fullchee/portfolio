@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { ProjectLayout } from "../../../components/project/ProjectLayout";
-import { buildMetadata } from "../../../lib/metadata";
+import { ProjectLayout } from "#components/project/ProjectLayout";
+import { buildMetadata } from "#lib/metadata";
 import { cardInfo } from "./card-info";
 
 const mainImageProps = {

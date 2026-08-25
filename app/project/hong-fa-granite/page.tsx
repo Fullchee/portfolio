@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectLayout } from "../../../components/project/ProjectLayout";
-import { buildMetadata } from "../../../lib/metadata";
+import { ProjectLayout } from "#components/project/ProjectLayout";
+import { buildMetadata } from "#lib/metadata";
 import { cardInfo } from "./card-info";
 
 const mainImageProps = {

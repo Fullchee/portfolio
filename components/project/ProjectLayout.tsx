@@ -1,5 +1,5 @@
-import type { Skill } from "../homePage/SkillList";
-import { Layout } from "../layout";
+import type { Skill } from "#components/homePage/SkillList";
+import { Layout } from "#components/layout";
 import { MainProjects } from "./MainProjects";
 import { ProjectOverview } from "./ProjectOverview";
 

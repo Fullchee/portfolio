@@ -1,9 +1,9 @@
-import AboutMe from "../components/homePage/aboutMe";
-import Intro from "../components/homePage/intro";
-import Skills from "../components/homePage/skills";
-import Layout from "../components/layout";
-import { MainProjects } from "../components/project/MainProjects";
-import { buildMetadata } from "../lib/metadata";
+import AboutMe from "#components/homePage/aboutMe";
+import Intro from "#components/homePage/intro";
+import Skills from "#components/homePage/skills";
+import Layout from "#components/layout";
+import { MainProjects } from "#components/project/MainProjects";
+import { buildMetadata } from "#lib/metadata";
 
 export const metadata = buildMetadata({
   title: "Fullstack Engineer | Fullchee Zhang",

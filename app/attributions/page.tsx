@@ -1,4 +1,4 @@
-import { buildMetadata } from "../../lib/metadata";
+import { buildMetadata } from "#lib/metadata";
 
 export const metadata = buildMetadata({
   title: "Attributions",

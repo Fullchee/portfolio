@@ -1,5 +1,5 @@
-import { Icon } from "../common/icons";
-import { type Skill, SkillList } from "../homePage/SkillList";
+import { Icon } from "#components/common/icons";
+import { type Skill, SkillList } from "#components/homePage/SkillList";
 
 interface Props {
   demoUrl: string;

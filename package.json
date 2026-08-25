@@ -5,7 +5,8 @@
     "#*": [
       "./*",
       "./*.ts",
-      "./*.tsx"
+      "./*.tsx",
+      "./*/index.tsx"
     ]
   },
   "scripts": {
@@ -13,7 +14,7 @@
     "dev": "./node_modules/.bin/next",
     "format": "./node_modules/.bin/oxfmt .",
     "install-precommit": "./node_modules/.bin/lefthook install",
-    "lint": "./node_modules/.bin/oxlint .",
+    "lint": "./node_modules/.bin/oxlint --import-plugin .",
     "start": "./node_modules/.bin/next start",
     "typecheck": "./node_modules/.bin/tsc --noEmit",
     "storybook": "storybook dev -p 6006",

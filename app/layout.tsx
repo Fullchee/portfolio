@@ -1,7 +1,7 @@
-import "../styles/globals.css";
+import "#styles/globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { siteBaseUrl } from "../lib/metadata";
+import { siteBaseUrl } from "#lib/metadata";
 
 export const metadata: Metadata = {
   title: {

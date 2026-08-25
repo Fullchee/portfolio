@@ -1,6 +1,6 @@
-import Layout from "../../components/layout";
-import { MainProjects } from "../../components/project/MainProjects";
-import { buildMetadata } from "../../lib/metadata";
+import Layout from "#components/layout";
+import { MainProjects } from "#components/project/MainProjects";
+import { buildMetadata } from "#lib/metadata";
 
 export const metadata = buildMetadata({
   title: "Projects",
