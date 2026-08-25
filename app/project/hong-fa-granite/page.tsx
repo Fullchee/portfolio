@@ -2,21 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProjectLayout } from "../../../components/project/ProjectLayout";
 import { buildMetadata } from "../../../lib/metadata";
+import { cardInfo } from "./card-info";
 
 const mainImageProps = {
-  src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650223661/portfolio/hong-fa-granite/hong-fa-granite_zgtsd1.png",
-  alt: "Hong fa granite.com home page",
-  width: 960,
-  height: 601,
+  src: cardInfo.image.path,
+  alt: cardInfo.image.alt,
+  width: Number(cardInfo.image.width),
+  height: Number(cardInfo.image.height),
   placeholder: "blur" as const,
-  blurDataURL:
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88eX9fwAJowPcYNPZ7gAAAABJRU5ErkJggg==",
+  blurDataURL: cardInfo.image.placeholder,
 };
 
 export const metadata = buildMetadata({
-  title: "Hong Fa Granite website",
-  description: "Projects I've been working on",
-  path: "/project/hong-fa-granite",
+  title: cardInfo.title,
+  description: cardInfo.description,
+  path: cardInfo.url,
   images: [
     {
       url: mainImageProps.src,
@@ -35,11 +35,7 @@ export default function HongFaGranitePage() {
     { icon: "sass", label: "SASS and Bulma" },
   ];
   return (
-    <ProjectLayout
-      title="Hong Fa Granite website"
-      demoUrl="https://www.hongfagranite.com"
-      skills={skills}
-    >
+    <ProjectLayout title={cardInfo.title} demoUrl="https://www.hongfagranite.com" skills={skills}>
       <Image {...mainImageProps} placeholder="blur" />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build

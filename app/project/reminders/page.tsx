@@ -1,21 +1,21 @@
 import Image from "next/image";
 import { ProjectLayout } from "../../../components/project/ProjectLayout";
 import { buildMetadata } from "../../../lib/metadata";
+import { cardInfo } from "./card-info";
 
 const mainImageProps = {
-  src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224525/portfolio/reminders/reminders_ayjw5d.png",
-  alt: "screenshot of the reminders project",
-  width: 960,
-  height: 596,
+  src: cardInfo.image.path,
+  alt: cardInfo.image.alt,
+  width: Number(cardInfo.image.width),
+  height: Number(cardInfo.image.height),
   placeholder: "blur" as const,
-  blurDataURL:
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+uz7fwAJfQPTibFsiQAAAABJRU5ErkJggg==",
+  blurDataURL: cardInfo.image.placeholder,
 };
 
 export const metadata = buildMetadata({
-  title: "Reminders",
-  description: "Project to remind myself of meaningful podcasts and YouTube videos",
-  path: "/project/reminders",
+  title: cardInfo.title,
+  description: cardInfo.description,
+  path: cardInfo.url,
   images: [
     {
       url: mainImageProps.src,
@@ -36,12 +36,12 @@ export default function RemindersPage() {
   ];
   return (
     <ProjectLayout
-      title="Reminders"
+      title={cardInfo.title}
       githubProject="reminders-frontend"
       demoUrl="https://fullchee-reminders.netlify.app/"
       skills={skills}
     >
-      <h1>Reminders</h1>
+      <h1>{cardInfo.title}</h1>
       <Image {...mainImageProps} placeholder="blur" />
       <h2>Why</h2>
       <Image

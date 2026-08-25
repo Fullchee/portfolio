@@ -1,21 +1,21 @@
 import Image from "next/image";
 import { ProjectLayout } from "../../../components/project/ProjectLayout";
 import { buildMetadata } from "../../../lib/metadata";
+import { cardInfo } from "./card-info";
 
 const mainImageProps = {
-  src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224576/portfolio/batch-calendar-events/batch-calendar-events_x1fjcv.png",
-  alt: "Screenshot of the batch calendar events project on a mobile and desktop",
-  width: 960,
-  height: 596,
+  src: cardInfo.image.path,
+  alt: cardInfo.image.alt,
+  width: Number(cardInfo.image.width),
+  height: Number(cardInfo.image.height),
   placeholder: "blur" as const,
-  blurDataURL:
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8+fznfwAJFAO6gSu5LgAAAABJRU5ErkJggg==",
+  blurDataURL: cardInfo.image.placeholder,
 };
 
 export const metadata = buildMetadata({
-  title: "Batch calendar events",
-  description: "Project to create batch calendar events in less than 30 seconds",
-  path: "/project/batch-calendar-events",
+  title: cardInfo.title,
+  description: cardInfo.description,
+  path: cardInfo.url,
   images: [
     {
       url: mainImageProps.src,
@@ -34,7 +34,7 @@ export default function BatchCalendarEventsPage() {
   ];
   return (
     <ProjectLayout
-      title="Batch calendar events"
+      title={cardInfo.title}
       demoUrl="https://calendar-shifts.netlify.app/"
       githubProject="calendar-shifts"
       skills={skills}

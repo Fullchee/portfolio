@@ -1,20 +1,13 @@
 import { calculateSejour } from "../../../components/common/utilities";
 import Layout from "../../../components/layout";
 import { ProjectDescription } from "../../../components/project/ProjectDescription";
-import { buildMetadata, siteBaseUrl } from "../../../lib/metadata";
+import { buildMetadata } from "../../../lib/metadata";
+import { cardInfo } from "./card-info";
 
 export const metadata = buildMetadata({
-  title: "Working at Forma",
-  description: "My experience working as a full stack developer at Forma.ai",
-  path: "/project/forma",
-  images: [
-    {
-      url: `${siteBaseUrl}/assets/images/projects/forma/forma-logo.png`,
-      width: 1000,
-      height: 400,
-      alt: "Forma.ai logo",
-    },
-  ],
+  title: cardInfo.title,
+  description: cardInfo.description,
+  path: cardInfo.url,
 });
 
 export default function FormaPage() {

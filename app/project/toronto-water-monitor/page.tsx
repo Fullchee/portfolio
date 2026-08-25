@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ProjectLayout } from "../../../components/project/ProjectLayout";
 import { buildMetadata } from "../../../lib/metadata";
+import { cardInfo } from "./card-info";
 
 const mainImageProps = {
   src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224467/portfolio/toronto-water-monitor/desktop_shadow_kn9zco.png",
@@ -13,10 +14,9 @@ const mainImageProps = {
 };
 
 export const metadata = buildMetadata({
-  title: "Toronto water monitor",
-  description:
-    "Project that checks your Toronto water usage and sends you an email if usage spikes",
-  path: "/project/toronto-water-monitor",
+  title: cardInfo.title,
+  description: cardInfo.description,
+  path: cardInfo.url,
   images: [
     {
       url: mainImageProps.src,
@@ -37,7 +37,7 @@ export default function TorontoWaterMonitorPage() {
   ];
   return (
     <ProjectLayout
-      title="Toronto water monitor"
+      title={cardInfo.title}
       skills={skills}
       githubProject="toronto-water-monitor-backend"
       demoUrl="https://toronto-water-monitor.netlify.app/"

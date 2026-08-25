@@ -2,11 +2,12 @@ import Link from "next/link";
 import Layout from "../../../components/layout";
 import { ProjectDescription } from "../../../components/project/ProjectDescription";
 import { buildMetadata, siteBaseUrl } from "../../../lib/metadata";
+import { cardInfo } from "./card-info";
 
 export const metadata = buildMetadata({
-  title: "Working at IBM",
-  description: "My experience working as a front-end developer at IBM Canada",
-  path: "/project/ibm",
+  title: cardInfo.title,
+  description: cardInfo.description,
+  path: cardInfo.url,
   images: [
     {
       url: `${siteBaseUrl}/assets/images/projects/ibm/ibm-logo.png`,

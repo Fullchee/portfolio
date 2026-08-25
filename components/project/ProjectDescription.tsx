@@ -17,7 +17,7 @@ type DescriptionProps = {
 export const ProjectDescription = ({ children, image }: DescriptionProps) => {
   return (
     <div className="grid sm:grid-cols-2 sm:grid-rows-1 items-center py-12">
-      <div className={`${image.onRight ? "order-1 justify-self-end" : ""}`}>
+      <div className={image.onRight ? "order-1 justify-self-end" : ""}>
         <NextImage
           src={image.src}
           width={image.width}
@@ -25,7 +25,7 @@ export const ProjectDescription = ({ children, image }: DescriptionProps) => {
           alt={image.alt}
         ></NextImage>
       </div>
-      <div className={`${image.onRight ? "" : ""}`}>{children}</div>
+      <div>{children}</div>
     </div>
   );
 };
