@@ -10,7 +10,7 @@ pre-commit:
       run: pnpm run typecheck
     fallow-recommend:
       run: FALLOW_UPDATE_CHECK=off npx fallow audit --changed-since HEAD
-commit-msg:
+conventional-commit-msg:
   commands:
     commitlint:
       run: npx commitlint --edit {1}
