@@ -1,9 +1,6 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "engines": {
-    "pnpm": ">=12.3.4"
-  },
   "imports": {
     "#*": [
       "./*",
@@ -26,9 +23,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.3.5",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "next": "16.3.2",
+    "next": "^16.3.2",
     "postcss": "^8.5.26",
     "react": "19.2.8",
     "react-dom": "19.2.8"
@@ -43,6 +43,7 @@
     "@storybook/nextjs-vite": "^10.5.10",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
+    "@types/mdx": "^2.0.14",
     "@types/node": "^26.2.0",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
@@ -59,6 +60,9 @@
     "typescript": "^7.0.2",
     "vite": "^8.2.2",
     "vitest": "^4.1.11"
+  },
+  "engines": {
+    "pnpm": ">=12.3.4"
   },
   "packageManager": "pnpm@12.4.2+sha512.08adc6613180275c7c9edada39dcf08c9c61ad4e7eaf330a4f3461f102b0f907423454d117f98e72d47fef0616070644d7bffc973a6a57f5090a6d7c368b07c9"
 }

@@ -1,5 +1,9 @@
-module.exports = {
+const createMDX = require("@next/mdx");
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   images: {
     remotePatterns: [
       {
@@ -11,3 +15,7 @@ module.exports = {
     ],
   },
 };
+
+const withMDX = createMDX({});
+
+module.exports = withMDX(nextConfig);
