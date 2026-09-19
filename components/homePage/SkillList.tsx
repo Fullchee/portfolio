@@ -2,8 +2,8 @@ import { Icon } from "#components/common/icons";
 
 const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
   return (
-    <li className="py-2">
-      <div className="w-8 h-8 mr-4 rounded-full bg-blue-50 inline-flex justify-center items-center">
+    <li className="py-2 flex items-start gap-4">
+      <div className="w-8 h-8 rounded-full bg-blue-50 inline-flex justify-center items-center flex-shrink-0 translate-y-[calc((1lh-2rem)/2)]">
         <Icon className="fill-current text-blue-400" icon={icon} />
       </div>
       {label}
