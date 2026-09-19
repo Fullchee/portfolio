@@ -10,6 +10,11 @@ import SvgNodeJs from "./node-js";
 import SvgReact from "./react";
 import SvgSass from "./sass";
 
+const svgIconSizes: Record<string, { width: number; height: number }> = {
+  "django.svg": { width: 16, height: 20 },
+  "storybook.svg": { width: 16, height: 20 },
+};
+
 export const Icon = ({ icon, className }: { icon: string; className: string }) => {
   switch (icon) {
     case "code-branch":
@@ -32,15 +37,17 @@ export const Icon = ({ icon, className }: { icon: string; className: string }) =
       return <SvgSass className={className} />;
     case "launch":
       return <SvgLaunch className={className} />;
-    default:
+    default: {
+      const { width, height } = svgIconSizes[icon] ?? { width: 16, height: 16 };
       return (
         <Image
           src={`/assets/images/icons/${icon}`}
           alt={`${icon} logo`}
           className={className}
-          width={16}
-          height={16}
+          width={width}
+          height={height}
         />
       );
+    }
   }
 };

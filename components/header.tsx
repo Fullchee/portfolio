@@ -19,7 +19,7 @@ export const Header = () => {
           <ul className="list-none flex max-w-7xl no-list-item">
             <li className="mr-auto pt-4 pl-0">
               <Link href="/">
-                <Image src="/fullchee.svg" alt="home page" width={50} height={50} />
+                <Image src="/fullchee.svg" alt="home page" width={50} height={40} />
               </Link>
             </li>
             <HeaderItem href="/project" label="projects" />
