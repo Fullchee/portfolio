@@ -25,7 +25,9 @@ const Button = ({
     >
       <div className={`flex ${className}`}>
         <p className="m-0 p-0 pr-1">{text}</p>
-        <Icon icon={icon} className="h-4 w-4 fill-current self-center" />
+        <span className="inline-flex h-4 w-4 items-center justify-center self-center">
+          <Icon icon={icon} />
+        </span>
       </div>
     </a>
   );

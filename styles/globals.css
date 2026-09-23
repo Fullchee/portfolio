@@ -20,6 +20,12 @@
   --font-display: Comfortaa;
   --font-mono-display: "Major Mono Display";
   --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #eff6ff;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
 }
 
 /* Write your own custom base styles here */
@@ -39,7 +45,7 @@
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 250ms ease-in;
-    background-color: #60a5fa;
+    background-color: var(--color-brand-400);
   }
 
   a:hover::after {
@@ -48,7 +54,7 @@
   }
 
   a:hover {
-    @apply text-blue-500;
+    @apply text-brand-500;
   }
 
   code {
@@ -144,11 +150,11 @@
 
 @layer components {
   .primary-button {
-    @apply bg-blue-600 px-6 py-3 rounded-md text-white text-center;
+    @apply bg-brand-600 px-6 py-3 rounded-md text-white text-center;
   }
 
   .secondary-button {
-    @apply border-blue-600 border text-blue-600 px-6 py-3 rounded-md text-center;
+    @apply border-brand-600 border text-brand-600 px-6 py-3 rounded-md text-center;
   }
 
   .ease-in > * {

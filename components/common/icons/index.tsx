@@ -15,7 +15,8 @@ const svgIconSizes: Record<string, { width: number; height: number }> = {
   "storybook.svg": { width: 16, height: 20 },
 };
 
-export const Icon = ({ icon, className }: { icon: string; className: string }) => {
+export const Icon = ({ icon }: { icon: string }) => {
+  const className = "fill-current";
   switch (icon) {
     case "code-branch":
       return <SvgCodeBranch className={className} />;
@@ -43,7 +44,6 @@ export const Icon = ({ icon, className }: { icon: string; className: string }) =
         <Image
           src={`/assets/images/icons/${icon}`}
           alt={`${icon} logo`}
-          className={className}
           width={width}
           height={height}
         />

@@ -2,7 +2,13 @@
   "plugins": ["import"],
   "jsPlugins": ["@shadcn/lint"],
   "rules": {
-    "import/no-relative-parent-imports": "error"
+    "import/no-relative-parent-imports": "error",
+    "shadcn/no-arbitrary-values": "error",
+    "shadcn/no-inline-styles": "error",
+    "shadcn/no-raw-colors": "error",
+    "shadcn/no-restyle": "error",
+    "shadcn/no-unknown-classes": "error",
+    "shadcn/require-static-classes": "error"
   },
   "settings": {
     "shadcn": {

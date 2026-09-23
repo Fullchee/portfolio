@@ -14,7 +14,7 @@ const HeaderItem = ({ href, label }: { href: string; label: string }) => {
 export const Header = () => {
   return (
     <>
-      <div className="sticky bg-white dark:border-blue-700 border-t-4 top-0 border-blue-500 z-10">
+      <div className="sticky bg-white dark:border-brand-700 border-t-4 top-0 border-brand-500 z-10">
         <nav className="max-w-6xl mx-auto pl-2 md:px-20">
           <ul className="list-none flex max-w-7xl no-list-item">
             <li className="mr-auto pt-4 pl-0">
