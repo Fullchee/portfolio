@@ -12,8 +12,8 @@ pre-commit:
       glob: "{.storybook,app,components,lib}/**/*.{ts,tsx}"
       run: pnpm run typecheck
     fallow-recommend:
-      run: FALLOW_UPDATE_CHECK=off npx fallow audit --changed-since HEAD
+      run: FALLOW_UPDATE_CHECK=off pnpm exec fallow audit --changed-since HEAD
 conventional-commit-msg:
   commands:
     commitlint:
-      run: npx commitlint --edit {1}
+      run: pnpm exec commitlint --edit {1}
