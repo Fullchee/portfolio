@@ -1,6 +1,12 @@
 {
   "plugins": ["import"],
+  "jsPlugins": ["@shadcn/lint"],
   "rules": {
     "import/no-relative-parent-imports": "error"
+  },
+  "settings": {
+    "shadcn": {
+      "componentImports": ["^#components(/|$)"]
+    }
   }
 }

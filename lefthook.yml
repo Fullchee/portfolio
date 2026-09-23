@@ -5,6 +5,9 @@ pre-commit:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx}"
       run: pnpm dlx oxfmt {staged_files} && pnpm dlx oxlint {staged_files}
       stage_fixed: true
+    shadcn-lint:
+      glob: "*.{js,jsx,ts,tsx}"
+      run: pnpm exec oxlint --import-plugin . {staged_files}
     type-check:
       glob: "{.storybook,app,components,lib}/**/*.{ts,tsx}"
       run: pnpm run typecheck
