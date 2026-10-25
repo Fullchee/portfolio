@@ -1,5 +1,3 @@
-npm install --global corepack@latest;
-corepack enable pnpm;
-corepack use pnpm@latest;
+npm install --global pnpm@latest;
 pnpm i;
 pnpm run install-precommit;
