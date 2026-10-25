@@ -1,5 +1,7 @@
 # portfolio
 
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://fullchee.com)
+
 Made with
 
 - Next.js (App Router)
