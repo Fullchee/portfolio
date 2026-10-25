@@ -1,30 +1,11 @@
 import Image from "next/image";
 import { ProjectLayout } from "#components/project/ProjectLayout";
-import { buildMetadata } from "#lib/metadata";
+import { buildProjectMetadata, projectImageProps } from "#lib/projectPage";
 import { cardInfo } from "./card-info";
 
-const mainImageProps = {
-  src: cardInfo.image.path,
-  alt: cardInfo.image.alt,
-  width: Number(cardInfo.image.width),
-  height: Number(cardInfo.image.height),
-  placeholder: "blur" as const,
-  blurDataURL: cardInfo.image.placeholder,
-};
+const mainImageProps = projectImageProps(cardInfo);
 
-export const metadata = buildMetadata({
-  title: cardInfo.title,
-  description: cardInfo.description,
-  path: cardInfo.url,
-  images: [
-    {
-      url: mainImageProps.src,
-      width: mainImageProps.width,
-      height: mainImageProps.height,
-      alt: mainImageProps.alt,
-    },
-  ],
-});
+export const metadata = buildProjectMetadata(cardInfo);
 
 export default function RemindersPage() {
   const skills = [
