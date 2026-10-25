@@ -1,0 +1,28 @@
+export const metadata = {
+  title: "MDX example",
+};
+
+# MDX example
+
+This page is plain Markdown with JSX mixed in. Copy it to start a new MDX page.
+
+## Markdown
+
+- **Bold**, _italic_ and `inline code`
+- [A link](https://mdxjs.com)
+
+```ts
+const greeting = "hello from a code block";
+```
+
+## JSX
+
+export const Callout = ({ children }) => (
+  <p style={{ borderLeft: "4px solid currentColor", paddingLeft: "1rem" }}>
+    {children}
+  </p>
+);
+
+<Callout>This callout is a React component defined in the MDX file.</Callout>
+
+2 + 2 = {2 + 2}
