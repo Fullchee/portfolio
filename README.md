@@ -1,6 +1,6 @@
 # portfolio
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://fullchee.com)
+[![Vercel deploy status](https://img.shields.io/github/deployments/Fullchee/portfolio/Production?label=vercel&logo=vercel)](https://fullchee.com)
 
 Made with
 
