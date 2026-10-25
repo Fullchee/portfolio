@@ -4,7 +4,14 @@ on:
   push:
     branches: ["main"]
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -13,10 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out last 2 commits to get diff
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 2
+      - uses: actions/checkout@v6
 
       - uses: pnpm/action-setup@v6
 
@@ -26,11 +30,7 @@ jobs:
           node-version-file: package.json
           cache: "pnpm"
 
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build
-        run: pnpm build
-
-      # - name: Test
-      #   run: pnpm test
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm build
