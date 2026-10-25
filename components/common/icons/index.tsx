@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { Database, ExternalLink, GitBranch } from "lucide-react";
 import { SvgCss } from "./css";
 import SvgGitHub from "./github";
@@ -13,39 +14,31 @@ const svgIconSizes: Record<string, { width: number; height: number }> = {
   "storybook.svg": { width: 16, height: 20 },
 };
 
+const fillClassName = "fill-current";
+
+const namedIcons: Record<string, () => ReactNode> = {
+  "code-branch": () => <GitBranch size="1em" />,
+  css: () => <SvgCss className={fillClassName} />,
+  database: () => <Database size="1em" />,
+  github: () => <SvgGitHub className={fillClassName} />,
+  html5: () => <SvgHtml5 className={fillClassName} />,
+  js: () => <SvgJs className={fillClassName} />,
+  "node-js": () => <SvgNodeJs className={fillClassName} />,
+  react: () => <SvgReact className={fillClassName} />,
+  sass: () => <SvgSass className={fillClassName} />,
+  launch: () => <ExternalLink size="1em" />,
+};
+
 export const Icon = ({ icon }: { icon: string }) => {
-  const className = "fill-current";
-  switch (icon) {
-    case "code-branch":
-      return <GitBranch size="1em" />;
-    case "css":
-      return <SvgCss className={className} />;
-    case "database":
-      return <Database size="1em" />;
-    case "github":
-      return <SvgGitHub className={className} />;
-    case "html5":
-      return <SvgHtml5 className={className} />;
-    case "js":
-      return <SvgJs className={className} />;
-    case "node-js":
-      return <SvgNodeJs className={className} />;
-    case "react":
-      return <SvgReact className={className} />;
-    case "sass":
-      return <SvgSass className={className} />;
-    case "launch":
-      return <ExternalLink size="1em" />;
-    default: {
-      const { width, height } = svgIconSizes[icon] ?? { width: 16, height: 16 };
-      return (
-        <Image
-          src={`/assets/images/icons/${icon}`}
-          alt={`${icon} logo`}
-          width={width}
-          height={height}
-        />
-      );
-    }
-  }
+  const named = namedIcons[icon];
+  if (named) return named();
+  const { width, height } = svgIconSizes[icon] ?? { width: 16, height: 16 };
+  return (
+    <Image
+      src={`/assets/images/icons/${icon}`}
+      alt={`${icon} logo`}
+      width={width}
+      height={height}
+    />
+  );
 };
