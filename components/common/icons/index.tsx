@@ -1,11 +1,9 @@
 import Image from "next/image";
-import SvgCodeBranch from "./code-branch";
+import { Database, ExternalLink, GitBranch } from "lucide-react";
 import { SvgCss } from "./css";
-import SvgDatabase from "./database";
 import SvgGitHub from "./github";
 import SvgHtml5 from "./html5";
 import SvgJs from "./js";
-import SvgLaunch from "./launch";
 import SvgNodeJs from "./node-js";
 import SvgReact from "./react";
 import SvgSass from "./sass";
@@ -19,11 +17,11 @@ export const Icon = ({ icon }: { icon: string }) => {
   const className = "fill-current";
   switch (icon) {
     case "code-branch":
-      return <SvgCodeBranch className={className} />;
+      return <GitBranch size="1em" />;
     case "css":
       return <SvgCss className={className} />;
     case "database":
-      return <SvgDatabase className={className} />;
+      return <Database size="1em" />;
     case "github":
       return <SvgGitHub className={className} />;
     case "html5":
@@ -37,7 +35,7 @@ export const Icon = ({ icon }: { icon: string }) => {
     case "sass":
       return <SvgSass className={className} />;
     case "launch":
-      return <SvgLaunch className={className} />;
+      return <ExternalLink size="1em" />;
     default: {
       const { width, height } = svgIconSizes[icon] ?? { width: 16, height: 16 };
       return (
