@@ -18,5 +18,3 @@ export const MainProjects = ({ skip }: { skip?: string }) => {
 
   return <ProjectList projects={projects} skip={skip} />;
 };
-
-export default MainProjects;

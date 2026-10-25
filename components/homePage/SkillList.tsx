@@ -33,5 +33,3 @@ export const SkillList = ({ title, skills }: SkillListProps) => {
     </section>
   );
 };
-
-export default SkillList;

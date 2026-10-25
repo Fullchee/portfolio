@@ -3,5 +3,7 @@
   "entry": ["src/index.{ts,tsx,js,jsx}", "src/main.{ts,tsx,js,jsx}"],
   "workspaces": {
     "patterns": ["."]
-  }
+  },
+  "ignoreDependencies": ["@next/mdx"],
+  "ignoreExports": [{ "file": "app/project/*/card-info.ts", "exports": ["cardInfo"] }]
 }
