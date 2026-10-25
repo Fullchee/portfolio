@@ -47,12 +47,12 @@ Routes live under `app/` (Next.js App Router) with server components by default.
 
 ## Deploy
 
-The site is hosted on Vercel (`vercel.json`). Push to `main` to deploy.
+The site is hosted on Vercel (`vercel.json`). Push to `main` to deploy (automatic).
 GitHub Actions (`.github/workflows/ci.yml`) builds every push to `main` and every PR.
 
-## Trello
+## Issues
 
-[Trello board](https://trello.com/b/4QT3eZgJ/portfolio)
+Tracked in [GitHub Issues](https://github.com/Fullchee/portfolio/issues).
 
 ## Previous Portfolios
 
