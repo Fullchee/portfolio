@@ -1,0 +1,63 @@
+export const metadata = {
+  title: "LLM code review",
+};
+
+
+
+## Plans
+
+- plannotator.ai
+  -
+
+## Diagrams
+
+- archify
+	- pretty cool
+	- JSON source of truth, which then generates the HTML
+	- playable (although that hasn't seem that useful)?
+	- lots of neat animations
+
+TODO: diagram design skills?
+
+## Browser
+
+Playwright
+
+- screenshots and record videos
+- `npx playwright codegen https://example.com`
+	- manualy generate
+
+TODO
+
+- Vercel's agent browser?
+- Ego browser? (lite.ego.app)
+- some headless panda browser built in rust or something that's super small?
+- wouldn't all these browsers have issues with rendering and loading sites properly if they're not Chromium?
+
+## GitHub
+
+- `gh extension install drogers0/gh-image`
+- Upload images and videos to PR comments
+
+### Problem: LLM creates PR comments that aren't associated to lines
+
+1. I installed Chrome Dev Tools MCP
+	1. `claude plugin install chrome-devtools-mcp`
+	2. `claude mcp add chrome-devtools npx chrome-devtools-mcp@latest`
+2. TODO: need to fix login, right now, I'm logging in manually
+	1. could set the manually
+3. `gh extension install drogers0/gh-image`
+	1. to
+
+```markdown
+Analyze the diff in the PR to identify all modified files containing UI components or CSS changes. For every visual code block altered:
+
+1. Identify the local URL/route where that component renders on http://localhost/target_reports/add_insight/
+2. Use Chrome DevTools MCP to navigate there and take a high-resolution element screenshot of that specific UI section.
+3. Save each screenshot locally (e.g., component-name.png).
+4. Post an individual inline review comment directly on the modified file and line(s) in the GitHub PR diff for each altered visual component. Each inline comment should contain:
+   - A short summary of the visual/UI change.
+   - The corresponding uploaded screenshot image.
+
+Ignore purely logic-based files (API routes, utility functions, state management) that do not directly render HTML/CSS.
+```

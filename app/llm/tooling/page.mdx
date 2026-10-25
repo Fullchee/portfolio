@@ -1,0 +1,134 @@
+export const metadata = {
+  title: "LLM Tooling",
+};
+
+
+## Principles
+
+- Don't add a tool/complexity unless I actually have the problem it solves
+- Prefer GUIs over TUIs
+- Token savings must be real
+
+## Models
+
+### Using
+
+- [Claude](https://claude.com/pricing): $20 USD/month, $200 USD/year
+- [OpenCode](https://opencode.ai) free models
+    - [OpenCode Go](https://opencode.ai/go): $10 USD/month
+
+### Dropped
+
+Felt slow compared to Claude and OpenCode free models
+
+- [freellmapi: Stack LLM free tiers](https://github.com/tashfeenahmed/freellmapi)
+- [turbo-fieldfare: Gemma 4 26B-A4B inference in ~2 GB of RAM on any M-series MacBook · GitHub](https://github.com/drumih/turbo-fieldfare)
+
+## Text to speech (TTS)
+
+Problem: I want to listen to Claude Code output. 2026 macOS built-in Siri voices are still too robotic.
+
+### Using
+
+- [ElevenLabs](https://elevenlabs.io/) API key (free tier) for listening to Claude output
+    - Mac OS Shortcuts: global
+- [Kokoro](https://github.com/remsky/Kokoro-FastAPI) for converting longer text files into audio
+
+### Dropped
+
+- [edge-tts](https://pypi.org/project/edge-tts/)
+    - API calls to Microsoft Edge TTS, frequently fails
+- 2026: [GitHub - KittenML/KittenTTS: State-of-the-art TTS model under 25MB 😻 · GitHub](https://github.com/KittenML/KittenTTS)
+    - pretty good but more robotic than built-in 2026 macOS Siri voices
+
+## Code quality
+
+### Using
+
+- Linters
+    - oxlint and oxfmt
+    - [anti-slop: Oxlint rules for rejecting low-evidence TS patterns](https://github.com/dmmulroy/anti-slop)
+- [fallow: codebase intelligence for TypeScript and JavaScript](https://docs.fallow.tools/)
+
+## Workflow / methodology skills
+
+### Using
+
+- Matt Pocock skills
+    - I like `/domain-modeling` and the CONTEXT.md to discover
+
+### Dropped
+
+- [superpowers](https://github.com/obra/superpowers)
+    - I believe it uses way more tokens?
+- [ponytail](https://github.com/dietrichgebert/ponytail)
+    - write less & more elegant code
+    - really good for fighting back against scope creep
+    - uses a lot of tokens and I rarely used it
+
+## Code navigation, discovery
+
+### Dropped
+
+- [codegraph](https://github.com/colbymchenry/codegraph)
+    - fewer grep calls
+    - Opus 5.5 and Sonnet 5.5 got cheaper and I don't want to add complexity if I don't need it
+- `graphify`: does too much (I don't need it to read PDFs)
+- GitNexus: modifies the `CLAUDE.md` (lists how many files are indexed, needs to tell Claude to update the index)
+
+## Token / context savers
+
+### Dropped
+
+All: unproven token savings. They also conflicted with `codegraph` (would `caveman grep` / `rtk grep` instead of using it), though that's moot now that I've dropped `codegraph`.
+
+- caveman
+    - fewer output tokens, but might not save tokens overall
+- [rtk](https://github.com/rtk-ai/rtk)
+    - filters and compresses command outputs before they reach your LLM context
+    - might not actually save tokens
+- [context-mode](https://www.youtube.com/watch?v=QUHrntlfPo4)
+
+## Code review
+
+### Using
+
+- IDE
+- playwright: create side by side annotated diffs
+
+### Dropped
+
+- [hunk](https://www.hunk.dev/): TUI, I prefer reviewing in an IDE
+    - 5 min video: [https://www.youtube.com/watch?v=FFfz81XM57k](https://www.youtube.com/watch?v=FFfz81XM57k)
+
+## Terminals
+
+### Using
+
+- [cmux](https://cmux.com/)
+    - built-in browser
+
+### Considered
+
+- [herdr](https://herdr.dev/): tmux for agents
+    - LLM can launch and reference other instances and panes
+    - when you close the terminal, you don't lose your work
+    - essential if you SSH to your Mac
+    - but doesn't make sense in a terminal like cmux or Warp, which already have left side panels
+
+### Dropped
+
+- [Warp](https://www.warp.dev/)
+    - didn't really need much of its nice UX (code diff/review, code editor, their agent stuff you have to pay for)
+
+## Agent orchestrators (to evaluate)
+
+What problems do these solve, and do I have those problems?
+
+- [https://soloterm.com/](https://soloterm.com/)
+- [https://www.conductor.build/](https://www.conductor.build/)
+- [https://www.onorca.dev/](https://www.onorca.dev/)
+
+## Reading list
+
+- [How coding agents read your code (and how to write for them) \| Modem Blog](https://modem.dev/blog/how-coding-agents-read-your-code)
