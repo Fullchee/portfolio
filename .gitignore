@@ -41,3 +41,6 @@ tsconfig.tsbuildinfo
 *storybook.log
 storybook-static
 .env
+
+# next.js generated types
+next-env.d.ts
