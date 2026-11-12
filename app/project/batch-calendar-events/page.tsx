@@ -1,28 +1,18 @@
 import Image from "next/image";
 import { ProjectLayout } from "#components/project/ProjectLayout";
-import { buildProjectMetadata, projectImageProps } from "#lib/projectPage";
-import { cardInfo } from "./card-info";
+import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
 
-const mainImageProps = projectImageProps(cardInfo);
+const project = getProject("batch-calendar-events");
+const mainImageProps = projectImageProps(project.image);
 
-export const metadata = buildProjectMetadata(cardInfo);
+export const metadata = projectMetadata(project);
 
 export default function BatchCalendarEventsPage() {
-  const skills = [
-    { icon: "react", label: "React" },
-    { icon: "js", label: "JavaScript" },
-    { icon: "css", label: "CSS" },
-  ];
   return (
-    <ProjectLayout
-      title={cardInfo.title}
-      demoUrl="https://calendar-shifts.netlify.app/"
-      githubProject="calendar-shifts"
-      skills={skills}
-    >
+    <ProjectLayout project={project}>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image {...mainImageProps} placeholder="blur" />
+      <Image {...mainImageProps} />
       <h2>Why</h2>
       <p>
         This project was inspired when my sister was working part-time at a supermarket and at a

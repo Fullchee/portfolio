@@ -1,8 +1,9 @@
 import { Icon } from "#components/common/icons";
-import { type Skill, SkillList } from "#components/homePage/SkillList";
+import { SkillList } from "#components/homePage/SkillList";
+import type { Skill } from "#lib/skills";
 
 interface Props {
-  demoUrl: string;
+  demoUrl?: string;
   skills: Skill[];
   githubProject?: string;
 }
@@ -37,7 +38,9 @@ export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
   return (
     <div className="grid max-w-2xl mb-8">
       <div className="flex flex-row items-center pt-4 space-x-4">
-        <Button href={demoUrl} icon="launch" text="Launch" className="primary-button" />
+        {demoUrl ? (
+          <Button href={demoUrl} icon="launch" text="Launch" className="primary-button" />
+        ) : null}
         {githubProject ? (
           <Button
             href={`https://www.github.com/Fullchee/${githubProject}`}

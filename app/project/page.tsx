@@ -1,5 +1,6 @@
-import { MainProjects } from "#components/project/MainProjects";
+import { ProjectList } from "#components/project/ProjectList";
 import { buildMetadata } from "#lib/metadata";
+import { projects } from "#lib/projects";
 
 export const metadata = buildMetadata({
   title: "Projects",
@@ -11,7 +12,7 @@ export default function ProjectIndexPage() {
   return (
     <>
       <h1>Projects</h1>
-      <MainProjects />
+      <ProjectList projects={projects} />
     </>
   );
 }

@@ -4,6 +4,5 @@
   "workspaces": {
     "patterns": ["."]
   },
-  "ignoreDependencies": ["@next/mdx"],
-  "ignoreExports": [{ "file": "app/project/*/card-info.ts", "exports": ["cardInfo"] }]
+  "ignoreDependencies": ["@next/mdx"]
 }

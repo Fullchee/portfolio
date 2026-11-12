@@ -1,21 +1,10 @@
 import Link from "next/link";
 import { ProjectDescription } from "#components/project/ProjectDescription";
-import { buildMetadata, siteBaseUrl } from "#lib/metadata";
-import { cardInfo } from "./card-info";
+import { getProject, projectMetadata } from "#lib/projects";
 
-export const metadata = buildMetadata({
-  title: cardInfo.title,
-  description: cardInfo.description,
-  path: cardInfo.url,
-  images: [
-    {
-      url: `${siteBaseUrl}/assets/images/projects/ibm/ibm-logo.png`,
-      width: 1000,
-      height: 400,
-      alt: "old 8 stripe IBM logo",
-    },
-  ],
-});
+const project = getProject("ibm");
+
+export const metadata = projectMetadata(project);
 
 export default function IBMPage() {
   return (

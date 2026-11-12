@@ -1,23 +1,24 @@
-import type { Skill } from "#components/homePage/SkillList";
-import { MainProjects } from "./MainProjects";
+import { projects, type Project } from "#lib/projects";
+import { ProjectList } from "./ProjectList";
 import { ProjectOverview } from "./ProjectOverview";
 
 interface Props {
   children: React.ReactNode;
-  title: string;
-  skills: Skill[];
-  demoUrl: string;
-  githubProject?: string;
+  project: Project;
 }
 
-export const ProjectLayout = ({ children, title, skills, demoUrl, githubProject }: Props) => {
+export const ProjectLayout = ({ children, project }: Props) => {
   return (
     <>
-      <h1>{title}</h1>
-      <ProjectOverview demoUrl={demoUrl} githubProject={githubProject} skills={skills} />
+      <h1>{project.title}</h1>
+      <ProjectOverview
+        demoUrl={project.demoUrl}
+        githubProject={project.githubProject}
+        skills={project.skills ?? []}
+      />
       {children}
       <h2 className="pt-12 pb-6">Other projects</h2>
-      <MainProjects skip={title} />
+      <ProjectList projects={projects} skipSlug={project.slug} />
     </>
   );
 };

@@ -1,23 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectLayout } from "#components/project/ProjectLayout";
-import { buildProjectMetadata, projectImageProps } from "#lib/projectPage";
-import { cardInfo } from "./card-info";
+import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
 
-const mainImageProps = projectImageProps(cardInfo);
+const project = getProject("hong-fa-granite");
+const mainImageProps = projectImageProps(project.image);
 
-export const metadata = buildProjectMetadata(cardInfo);
+export const metadata = projectMetadata(project);
 
 export default function HongFaGranitePage() {
-  const skills = [
-    { icon: "gatsby.svg", label: "Gatsby" },
-    { icon: "react", label: "React" },
-    { icon: "js", label: "JavaScript" },
-    { icon: "sass", label: "SASS and Bulma" },
-  ];
   return (
-    <ProjectLayout title={cardInfo.title} demoUrl="https://www.hongfagranite.com" skills={skills}>
-      <Image {...mainImageProps} placeholder="blur" />
+    <ProjectLayout project={project}>
+      <Image {...mainImageProps} />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}

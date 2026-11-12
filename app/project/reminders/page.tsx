@@ -1,29 +1,17 @@
 import Image from "next/image";
 import { ProjectLayout } from "#components/project/ProjectLayout";
-import { buildProjectMetadata, projectImageProps } from "#lib/projectPage";
-import { cardInfo } from "./card-info";
+import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
 
-const mainImageProps = projectImageProps(cardInfo);
+const project = getProject("reminders");
+const mainImageProps = projectImageProps(project.image);
 
-export const metadata = buildProjectMetadata(cardInfo);
+export const metadata = projectMetadata(project);
 
 export default function RemindersPage() {
-  const skills = [
-    { icon: "react", label: "React" },
-    { icon: "js", label: "JavaScript" },
-    { icon: "sass", label: "SASS" },
-    { icon: "node-js", label: "Node.js" },
-    { icon: "database", label: "SQL" },
-  ];
   return (
-    <ProjectLayout
-      title={cardInfo.title}
-      githubProject="reminders-frontend"
-      demoUrl="https://fullchee-reminders.netlify.app/"
-      skills={skills}
-    >
-      <h1>{cardInfo.title}</h1>
-      <Image {...mainImageProps} placeholder="blur" />
+    <ProjectLayout project={project}>
+      <h1>{project.title}</h1>
+      <Image {...mainImageProps} />
       <h2>Why</h2>
       <Image
         src="/assets/images/projects/reminders/forgetting-curve.svg"

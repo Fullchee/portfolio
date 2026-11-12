@@ -1,13 +1,10 @@
 import { calculateSejour } from "#components/common/utilities";
 import { ProjectDescription } from "#components/project/ProjectDescription";
-import { buildMetadata } from "#lib/metadata";
-import { cardInfo } from "./card-info";
+import { getProject, projectMetadata } from "#lib/projects";
 
-export const metadata = buildMetadata({
-  title: cardInfo.title,
-  description: cardInfo.description,
-  path: cardInfo.url,
-});
+const project = getProject("forma");
+
+export const metadata = projectMetadata(project);
 
 export default function FormaPage() {
   return (
