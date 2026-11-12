@@ -17,7 +17,7 @@ const Button = ({
   href: string;
   icon: string;
   text: string;
-  className?: string;
+  className: string;
 }) => {
   return (
     <a
