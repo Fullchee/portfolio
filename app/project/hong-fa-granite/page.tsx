@@ -1,24 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectLayout } from "#components/project/ProjectLayout";
-import { buildProjectMetadata, projectImageProps } from "#lib/projectPage";
-import { cardInfo } from "./card-info";
+import { ProjectPage } from "#components/project/ProjectPage";
+import { getProject, projectMetadata } from "#lib/projects";
 
-const mainImageProps = projectImageProps(cardInfo);
+const project = getProject("hong-fa-granite");
 
-export const metadata = buildProjectMetadata(cardInfo);
+export const metadata = projectMetadata(project);
 
 export default function HongFaGranitePage() {
-  const skills = [
-    { icon: "gatsby.svg", label: "Gatsby" },
-    { icon: "react", label: "React" },
-    { icon: "js", label: "JavaScript" },
-    { icon: "sass", label: "SASS and Bulma" },
-  ];
   return (
-    <ProjectLayout title={cardInfo.title} demoUrl="https://www.hongfagranite.com" skills={skills}>
-      <Image {...mainImageProps} placeholder="blur" />
-
+    <ProjectPage project={project}>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <h2>Why</h2>
@@ -163,6 +154,6 @@ you faced?  */}
         and least fun part of this project. Eventually, I switched to another domain provider and
         connected it with Netlify so that HongFaGranite.com was live!
       </p>
-    </ProjectLayout>
+    </ProjectPage>
   );
 }

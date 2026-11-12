@@ -1,4 +1,5 @@
 import { Icon } from "#components/common/icons";
+import type { Skill } from "#lib/skills";
 
 const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
   return (
@@ -9,11 +10,6 @@ const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
       {label}
     </li>
   );
-};
-
-export type Skill = {
-  icon: string;
-  label: string;
 };
 
 interface SkillListProps {

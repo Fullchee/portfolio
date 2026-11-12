@@ -1,28 +1,16 @@
 import Image from "next/image";
-import { ProjectLayout } from "#components/project/ProjectLayout";
-import { buildProjectMetadata, projectImageProps } from "#lib/projectPage";
-import { cardInfo } from "./card-info";
+import { ProjectPage } from "#components/project/ProjectPage";
+import { getProject, projectMetadata } from "#lib/projects";
 
-const mainImageProps = projectImageProps(cardInfo);
+const project = getProject("batch-calendar-events");
 
-export const metadata = buildProjectMetadata(cardInfo);
+export const metadata = projectMetadata(project);
 
 export default function BatchCalendarEventsPage() {
-  const skills = [
-    { icon: "react", label: "React" },
-    { icon: "js", label: "JavaScript" },
-    { icon: "css", label: "CSS" },
-  ];
   return (
-    <ProjectLayout
-      title={cardInfo.title}
-      demoUrl="https://calendar-shifts.netlify.app/"
-      githubProject="calendar-shifts"
-      skills={skills}
-    >
+    <ProjectPage project={project}>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image {...mainImageProps} placeholder="blur" />
       <h2>Why</h2>
       <p>
         This project was inspired when my sister was working part-time at a supermarket and at a
@@ -79,6 +67,6 @@ you faced?  */}
         It would be nice to help people. As a caveat though, I would have to learn more about Google
         Cloud pricing and how it works.
       </p>
-    </ProjectLayout>
+    </ProjectPage>
   );
 }

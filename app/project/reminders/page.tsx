@@ -1,29 +1,14 @@
 import Image from "next/image";
-import { ProjectLayout } from "#components/project/ProjectLayout";
-import { buildProjectMetadata, projectImageProps } from "#lib/projectPage";
-import { cardInfo } from "./card-info";
+import { ProjectPage } from "#components/project/ProjectPage";
+import { getProject, projectMetadata } from "#lib/projects";
 
-const mainImageProps = projectImageProps(cardInfo);
+const project = getProject("reminders");
 
-export const metadata = buildProjectMetadata(cardInfo);
+export const metadata = projectMetadata(project);
 
 export default function RemindersPage() {
-  const skills = [
-    { icon: "react", label: "React" },
-    { icon: "js", label: "JavaScript" },
-    { icon: "sass", label: "SASS" },
-    { icon: "node-js", label: "Node.js" },
-    { icon: "database", label: "SQL" },
-  ];
   return (
-    <ProjectLayout
-      title={cardInfo.title}
-      githubProject="reminders-frontend"
-      demoUrl="https://fullchee-reminders.netlify.app/"
-      skills={skills}
-    >
-      <h1>{cardInfo.title}</h1>
-      <Image {...mainImageProps} placeholder="blur" />
+    <ProjectPage project={project}>
       <h2>Why</h2>
       <Image
         src="/assets/images/projects/reminders/forgetting-curve.svg"
@@ -100,6 +85,6 @@ you faced?  */}
         around with new tech (as fun as it is). The end product is a lot simpler because there are
         only a handful of API calls and no need to implement and maintain a GraphQL layer.
       </p>
-    </ProjectLayout>
+    </ProjectPage>
   );
 }

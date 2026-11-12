@@ -1,50 +1,16 @@
 import Image from "next/image";
-import { ProjectLayout } from "#components/project/ProjectLayout";
-import { buildMetadata } from "#lib/metadata";
-import { cardInfo } from "./card-info";
+import { ProjectPage } from "#components/project/ProjectPage";
+import { getProject, projectMetadata } from "#lib/projects";
 
-const mainImageProps = {
-  src: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224467/portfolio/toronto-water-monitor/desktop_shadow_kn9zco.png",
-  width: 960,
-  height: 624,
-  alt: "Screenshot of toronto water monitor project on the Safari browser",
-  placeholder: "blur" as const,
-  blurDataURL:
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89vz3fwAJDAO5snBJQwAAAABJRU5ErkJggg==",
-};
+const project = getProject("toronto-water-monitor");
 
-export const metadata = buildMetadata({
-  title: cardInfo.title,
-  description: cardInfo.description,
-  path: cardInfo.url,
-  images: [
-    {
-      url: mainImageProps.src,
-      width: mainImageProps.width,
-      height: mainImageProps.height,
-      alt: mainImageProps.alt,
-    },
-  ],
-});
+export const metadata = projectMetadata(project);
 
 export default function TorontoWaterMonitorPage() {
-  const skills = [
-    { icon: "react", label: "React" },
-    { icon: "typescript-icon.svg", label: "TypeScript" },
-    { icon: "sass", label: "SASS" },
-    { icon: "node-js", label: "Node.js" },
-    { icon: "database", label: "SQL" },
-  ];
   return (
-    <ProjectLayout
-      title={cardInfo.title}
-      skills={skills}
-      githubProject="toronto-water-monitor-backend"
-      demoUrl="https://toronto-water-monitor.netlify.app/"
-    >
+    <ProjectPage project={project}>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image {...mainImageProps} placeholder="blur" />
       <h2>Why</h2>
       <p>
         My family got a high water bill from a leaking toilet. This project will prevent that from
@@ -148,6 +114,6 @@ you faced?  */}
         I'm also going to make a post on the{" "}
         <a href="https://www.reddit.com/r/toronto/">r/Toronto subreddit</a>.
       </p>
-    </ProjectLayout>
+    </ProjectPage>
   );
 }

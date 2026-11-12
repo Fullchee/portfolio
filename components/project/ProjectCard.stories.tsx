@@ -1,5 +1,5 @@
 import preview from "#.storybook/preview";
-import type { ProjectInfo } from "./ProjectCard";
+import type { Project } from "#lib/projects";
 import { ProjectCard } from "./ProjectCard";
 
 const meta = preview.meta({
@@ -10,14 +10,16 @@ const meta = preview.meta({
   },
 });
 
-const mockProject: ProjectInfo = {
+const mockProject: Project = {
+  slug: "sample-project",
   title: "Sample Project",
   description: "This is a sample project card description showcasing the component.",
   linkLabel: "View Project",
-  url: "",
   image: {
     alt: "Sample project image",
     path: "/assets/images/projects/ibm/IBM_logo.svg",
+    width: 500,
+    height: 300,
   },
 };
 

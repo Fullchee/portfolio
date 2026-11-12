@@ -1,27 +1,15 @@
 import Link from "next/link";
-import Layout from "#components/layout";
 import { ProjectDescription } from "#components/project/ProjectDescription";
-import { buildMetadata, siteBaseUrl } from "#lib/metadata";
-import { cardInfo } from "./card-info";
+import { ProjectPage } from "#components/project/ProjectPage";
+import { getProject, projectMetadata } from "#lib/projects";
 
-export const metadata = buildMetadata({
-  title: cardInfo.title,
-  description: cardInfo.description,
-  path: cardInfo.url,
-  images: [
-    {
-      url: `${siteBaseUrl}/assets/images/projects/ibm/ibm-logo.png`,
-      width: 1000,
-      height: 400,
-      alt: "old 8 stripe IBM logo",
-    },
-  ],
-});
+const project = getProject("ibm");
+
+export const metadata = projectMetadata(project);
 
 export default function IBMPage() {
   return (
-    <Layout>
-      <h1>Working at IBM</h1>
+    <ProjectPage project={project}>
       <p>I was a frontend developer (JavaScript and CSS) at IBM from 2019 to 2021.</p>
 
       <h2>Contributions</h2>
@@ -273,6 +261,6 @@ export default function IBMPage() {
         IBM Workplace is an app with a modern UI where business users can do their process, case and
         workstreams work.
       </p>
-    </Layout>
+    </ProjectPage>
   );
 }

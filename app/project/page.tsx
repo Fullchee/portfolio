@@ -1,6 +1,6 @@
-import Layout from "#components/layout";
-import { MainProjects } from "#components/project/MainProjects";
+import { ProjectList } from "#components/project/ProjectList";
 import { buildMetadata } from "#lib/metadata";
+import { projects } from "#lib/projects";
 
 export const metadata = buildMetadata({
   title: "Projects",
@@ -10,9 +10,9 @@ export const metadata = buildMetadata({
 
 export default function ProjectIndexPage() {
   return (
-    <Layout>
+    <>
       <h1>Projects</h1>
-      <MainProjects />
-    </Layout>
+      <ProjectList projects={projects} />
+    </>
   );
 }

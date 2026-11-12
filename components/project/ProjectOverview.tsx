@@ -1,9 +1,10 @@
 import { Icon } from "#components/common/icons";
-import { type Skill, SkillList } from "#components/homePage/SkillList";
+import { SkillList } from "#components/homePage/SkillList";
+import type { Skill } from "#lib/skills";
 
 interface Props {
-  demoUrl: string;
-  skills: Skill[];
+  demoUrl?: string;
+  skills?: Skill[];
   githubProject?: string;
 }
 
@@ -16,7 +17,7 @@ const Button = ({
   href: string;
   icon: string;
   text: string;
-  className?: string;
+  className: string;
 }) => {
   return (
     <a
@@ -33,24 +34,44 @@ const Button = ({
   );
 };
 
-export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
+const ProjectLinks = ({ demoUrl, githubProject }: { demoUrl?: string; githubProject?: string }) => {
+  if (!demoUrl && !githubProject) return null;
+
+  return (
+    <div className="flex flex-row items-center pt-4 space-x-4">
+      {demoUrl ? (
+        <Button href={demoUrl} icon="launch" text="Launch" className="primary-button" />
+      ) : null}
+      {githubProject ? (
+        <Button
+          href={`https://www.github.com/Fullchee/${githubProject}`}
+          icon="github"
+          text="GitHub"
+          className="secondary-button"
+        />
+      ) : null}
+    </div>
+  );
+};
+
+const ProjectSkills = ({ skills }: { skills: Skill[] }) => {
+  if (skills.length === 0) return null;
+
+  return (
+    <div>
+      <h2>Made with</h2>
+      <SkillList skills={skills} />
+    </div>
+  );
+};
+
+export const ProjectOverview = ({ skills = [], githubProject, demoUrl }: Props) => {
+  if (!demoUrl && !githubProject && skills.length === 0) return null;
+
   return (
     <div className="grid max-w-2xl mb-8">
-      <div className="flex flex-row items-center pt-4 space-x-4">
-        <Button href={demoUrl} icon="launch" text="Launch" className="primary-button" />
-        {githubProject ? (
-          <Button
-            href={`https://www.github.com/Fullchee/${githubProject}`}
-            icon="github"
-            text="GitHub"
-            className="secondary-button"
-          />
-        ) : null}
-      </div>
-      <div>
-        <h2>Made with</h2>
-        <SkillList skills={skills} />
-      </div>
+      <ProjectLinks demoUrl={demoUrl} githubProject={githubProject} />
+      <ProjectSkills skills={skills} />
     </div>
   );
 };
