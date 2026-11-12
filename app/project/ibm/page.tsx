@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Layout from "#components/layout";
 import { ProjectDescription } from "#components/project/ProjectDescription";
 import { buildMetadata, siteBaseUrl } from "#lib/metadata";
 import { cardInfo } from "./card-info";
@@ -20,7 +19,7 @@ export const metadata = buildMetadata({
 
 export default function IBMPage() {
   return (
-    <Layout>
+    <>
       <h1>Working at IBM</h1>
       <p>I was a frontend developer (JavaScript and CSS) at IBM from 2019 to 2021.</p>
 
@@ -273,6 +272,6 @@ export default function IBMPage() {
         IBM Workplace is an app with a modern UI where business users can do their process, case and
         workstreams work.
       </p>
-    </Layout>
+    </>
   );
 }

@@ -1,5 +1,4 @@
 import { calculateSejour } from "#components/common/utilities";
-import Layout from "#components/layout";
 import { ProjectDescription } from "#components/project/ProjectDescription";
 import { buildMetadata } from "#lib/metadata";
 import { cardInfo } from "./card-info";
@@ -12,7 +11,7 @@ export const metadata = buildMetadata({
 
 export default function FormaPage() {
   return (
-    <Layout>
+    <>
       <h1>Working at Forma.ai</h1>
       <p>
         Full-stack React, Django and SQL developer at Forma.ai for{" "}
@@ -97,6 +96,6 @@ export default function FormaPage() {
           developer experience nicer (eg: support for optional chaining)
         </p>
       </ProjectDescription>
-    </Layout>
+    </>
   );
 }

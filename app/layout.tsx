@@ -1,6 +1,10 @@
 import "#styles/globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "#components/footer";
+import Header from "#components/header";
 import { siteBaseUrl } from "#lib/metadata";
 
 export const metadata: Metadata = {
@@ -60,7 +64,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
       </head>
-      <body>{children}</body>
+      <body className="bg-white">
+        <Header />
+        <div className="min-h-screen max-w-6xl mx-auto pt-8 px-6 md:px-24">
+          <main>{children}</main>
+        </div>
+        <Footer />
+        <SpeedInsights />
+        <Analytics />
+      </body>
     </html>
   );
 }
