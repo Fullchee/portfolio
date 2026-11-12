@@ -2,7 +2,7 @@ import { defineMain } from "@storybook/nextjs-vite/node";
 
 export default defineMain({
   framework: "@storybook/nextjs-vite",
-  stories: ["../**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ["../{app,components,lib,stories}/**/*.stories.@(ts|tsx)"],
   addons: [
     "@storybook/addon-vitest",
     "@storybook/addon-a11y",
