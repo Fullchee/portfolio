@@ -1,18 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
+import { getProject, projectMetadata } from "#lib/projects";
 
 const project = getProject("hong-fa-granite");
-const mainImageProps = projectImageProps(project.image);
 
 export const metadata = projectMetadata(project);
 
 export default function HongFaGranitePage() {
   return (
     <ProjectPage project={project}>
-      <Image {...mainImageProps} />
-
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <h2>Why</h2>

@@ -1,17 +1,14 @@
 import Image from "next/image";
 import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
+import { getProject, projectMetadata } from "#lib/projects";
 
 const project = getProject("reminders");
-const mainImageProps = projectImageProps(project.image);
 
 export const metadata = projectMetadata(project);
 
 export default function RemindersPage() {
   return (
     <ProjectPage project={project}>
-      <h1>{project.title}</h1>
-      <Image {...mainImageProps} />
       <h2>Why</h2>
       <Image
         src="/assets/images/projects/reminders/forgetting-curve.svg"

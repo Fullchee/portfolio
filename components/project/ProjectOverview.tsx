@@ -4,7 +4,7 @@ import type { Skill } from "#lib/skills";
 
 interface Props {
   demoUrl?: string;
-  skills: Skill[];
+  skills?: Skill[];
   githubProject?: string;
 }
 
@@ -34,26 +34,33 @@ const Button = ({
   );
 };
 
-export const ProjectOverview = ({ skills, githubProject, demoUrl }: Props) => {
+export const ProjectOverview = ({ skills = [], githubProject, demoUrl }: Props) => {
+  const hasLinks = Boolean(demoUrl || githubProject);
+  if (!hasLinks && skills.length === 0) return null;
+
   return (
     <div className="grid max-w-2xl mb-8">
-      <div className="flex flex-row items-center pt-4 space-x-4">
-        {demoUrl ? (
-          <Button href={demoUrl} icon="launch" text="Launch" className="primary-button" />
-        ) : null}
-        {githubProject ? (
-          <Button
-            href={`https://www.github.com/Fullchee/${githubProject}`}
-            icon="github"
-            text="GitHub"
-            className="secondary-button"
-          />
-        ) : null}
-      </div>
-      <div>
-        <h2>Made with</h2>
-        <SkillList skills={skills} />
-      </div>
+      {hasLinks ? (
+        <div className="flex flex-row items-center pt-4 space-x-4">
+          {demoUrl ? (
+            <Button href={demoUrl} icon="launch" text="Launch" className="primary-button" />
+          ) : null}
+          {githubProject ? (
+            <Button
+              href={`https://www.github.com/Fullchee/${githubProject}`}
+              icon="github"
+              text="GitHub"
+              className="secondary-button"
+            />
+          ) : null}
+        </div>
+      ) : null}
+      {skills.length > 0 ? (
+        <div>
+          <h2>Made with</h2>
+          <SkillList skills={skills} />
+        </div>
+      ) : null}
     </div>
   );
 };

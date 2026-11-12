@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
+import { getProject, projectMetadata } from "#lib/projects";
 
 const project = getProject("toronto-water-monitor");
-const mainImageProps = projectImageProps(project.hero ?? project.image);
 
 export const metadata = projectMetadata(project);
 
@@ -12,7 +11,6 @@ export default function TorontoWaterMonitorPage() {
     <ProjectPage project={project}>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image {...mainImageProps} />
       <h2>Why</h2>
       <p>
         My family got a high water bill from a leaking toilet. This project will prevent that from

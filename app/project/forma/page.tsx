@@ -1,5 +1,6 @@
 import { calculateSejour } from "#components/common/utilities";
 import { ProjectDescription } from "#components/project/ProjectDescription";
+import { ProjectPage } from "#components/project/ProjectPage";
 import { getProject, projectMetadata } from "#lib/projects";
 
 const project = getProject("forma");
@@ -8,8 +9,7 @@ export const metadata = projectMetadata(project);
 
 export default function FormaPage() {
   return (
-    <>
-      <h1>Working at Forma.ai</h1>
+    <ProjectPage project={project}>
       <p>
         Full-stack React, Django and SQL developer at Forma.ai for{" "}
         {calculateSejour(new Date("2021-03-01"))} years (since March 2021).
@@ -93,6 +93,6 @@ export default function FormaPage() {
           developer experience nicer (eg: support for optional chaining)
         </p>
       </ProjectDescription>
-    </>
+    </ProjectPage>
   );
 }

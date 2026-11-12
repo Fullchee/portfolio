@@ -1,4 +1,5 @@
-import { projects, type Project } from "#lib/projects";
+import Image from "next/image";
+import { projectImageProps, projects, type Project } from "#lib/projects";
 import { ProjectList } from "./ProjectList";
 import { ProjectOverview } from "./ProjectOverview";
 
@@ -14,8 +15,9 @@ export const ProjectPage = ({ children, project }: Props) => {
       <ProjectOverview
         demoUrl={project.demoUrl}
         githubProject={project.githubProject}
-        skills={project.skills ?? []}
+        skills={project.skills}
       />
+      {project.hero ? <Image {...projectImageProps(project.hero)} /> : null}
       {children}
       <h2 className="pt-12 pb-6">Other projects</h2>
       <ProjectList projects={projects} skipSlug={project.slug} />

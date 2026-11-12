@@ -25,6 +25,33 @@ export type Project = {
 const defaultBlurDataURL =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89vz3fwAJDAO5snBJQwAAAABJRU5ErkJggg==";
 
+const hongFaGraniteImage: ProjectImage = {
+  alt: "Hong fa granite.com home page",
+  path: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650223661/portfolio/hong-fa-granite/hong-fa-granite_zgtsd1.png",
+  width: 960,
+  height: 601,
+  placeholder:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88eX9fwAJowPcYNPZ7gAAAABJRU5ErkJggg==",
+};
+
+const remindersImage: ProjectImage = {
+  alt: "screenshot of the reminders project",
+  path: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224525/portfolio/reminders/reminders_ayjw5d.png",
+  width: 960,
+  height: 596,
+  placeholder:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+uz7fwAJfQPTibFsiQAAAABJRU5ErkJggg==",
+};
+
+const batchCalendarEventsImage: ProjectImage = {
+  alt: "Screenshot of the batch calendar events project on a mobile and desktop",
+  path: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224576/portfolio/batch-calendar-events/batch-calendar-events_x1fjcv.png",
+  width: 960,
+  height: 596,
+  placeholder:
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8+fznfwAJFAO6gSu5LgAAAABJRU5ErkJggg==",
+};
+
 export const projects: Project[] = [
   {
     slug: "forma",
@@ -96,14 +123,8 @@ export const projects: Project[] = [
     title: "Hong Fa Granite website",
     description: "Static site for a local business in English and Chinese",
     linkLabel: "View project",
-    image: {
-      alt: "Hong fa granite.com home page",
-      path: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650223661/portfolio/hong-fa-granite/hong-fa-granite_zgtsd1.png",
-      width: 960,
-      height: 601,
-      placeholder:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88eX9fwAJowPcYNPZ7gAAAABJRU5ErkJggg==",
-    },
+    image: hongFaGraniteImage,
+    hero: hongFaGraniteImage,
     demoUrl: "https://www.hongfagranite.com",
     skills: [
       { icon: "gatsby.svg", label: "Gatsby" },
@@ -117,14 +138,8 @@ export const projects: Project[] = [
     title: "Reminders",
     description: "Save and play videos and podcasts with personal notes",
     linkLabel: "View project",
-    image: {
-      alt: "screenshot of the reminders project",
-      path: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224525/portfolio/reminders/reminders_ayjw5d.png",
-      width: 960,
-      height: 596,
-      placeholder:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+uz7fwAJfQPTibFsiQAAAABJRU5ErkJggg==",
-    },
+    image: remindersImage,
+    hero: remindersImage,
     demoUrl: "https://fullchee-reminders.netlify.app/",
     githubProject: "reminders-frontend",
     skills: [
@@ -140,14 +155,8 @@ export const projects: Project[] = [
     title: "Batch calendar events",
     description: "Project to create batch calendar events in less than 30 seconds",
     linkLabel: "View project",
-    image: {
-      alt: "Screenshot of the batch calendar events project on a mobile and desktop",
-      path: "https://res.cloudinary.com/dnboci3v7/image/upload/v1650224576/portfolio/batch-calendar-events/batch-calendar-events_x1fjcv.png",
-      width: 960,
-      height: 596,
-      placeholder:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8+fznfwAJFAO6gSu5LgAAAABJRU5ErkJggg==",
-    },
+    image: batchCalendarEventsImage,
+    hero: batchCalendarEventsImage,
     demoUrl: "https://calendar-shifts.netlify.app/",
     githubProject: "calendar-shifts",
     skills: [

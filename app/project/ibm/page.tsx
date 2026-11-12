@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ProjectDescription } from "#components/project/ProjectDescription";
+import { ProjectPage } from "#components/project/ProjectPage";
 import { getProject, projectMetadata } from "#lib/projects";
 
 const project = getProject("ibm");
@@ -8,8 +9,7 @@ export const metadata = projectMetadata(project);
 
 export default function IBMPage() {
   return (
-    <>
-      <h1>Working at IBM</h1>
+    <ProjectPage project={project}>
       <p>I was a frontend developer (JavaScript and CSS) at IBM from 2019 to 2021.</p>
 
       <h2>Contributions</h2>
@@ -261,6 +261,6 @@ export default function IBMPage() {
         IBM Workplace is an app with a modern UI where business users can do their process, case and
         workstreams work.
       </p>
-    </>
+    </ProjectPage>
   );
 }

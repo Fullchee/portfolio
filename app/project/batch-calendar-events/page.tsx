@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
+import { getProject, projectMetadata } from "#lib/projects";
 
 const project = getProject("batch-calendar-events");
-const mainImageProps = projectImageProps(project.image);
 
 export const metadata = projectMetadata(project);
 
@@ -12,7 +11,6 @@ export default function BatchCalendarEventsPage() {
     <ProjectPage project={project}>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
-      <Image {...mainImageProps} />
       <h2>Why</h2>
       <p>
         This project was inspired when my sister was working part-time at a supermarket and at a
