@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProjectLayout } from "#components/project/ProjectLayout";
+import { ProjectPage } from "#components/project/ProjectPage";
 import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
 
 const project = getProject("reminders");
@@ -9,7 +9,7 @@ export const metadata = projectMetadata(project);
 
 export default function RemindersPage() {
   return (
-    <ProjectLayout project={project}>
+    <ProjectPage project={project}>
       <h1>{project.title}</h1>
       <Image {...mainImageProps} />
       <h2>Why</h2>
@@ -88,6 +88,6 @@ you faced?  */}
         around with new tech (as fun as it is). The end product is a lot simpler because there are
         only a handful of API calls and no need to implement and maintain a GraphQL layer.
       </p>
-    </ProjectLayout>
+    </ProjectPage>
   );
 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProjectLayout } from "#components/project/ProjectLayout";
+import { ProjectPage } from "#components/project/ProjectPage";
 import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
 
 const project = getProject("batch-calendar-events");
@@ -9,7 +9,7 @@ export const metadata = projectMetadata(project);
 
 export default function BatchCalendarEventsPage() {
   return (
-    <ProjectLayout project={project}>
+    <ProjectPage project={project}>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <Image {...mainImageProps} />
@@ -69,6 +69,6 @@ you faced?  */}
         It would be nice to help people. As a caveat though, I would have to learn more about Google
         Cloud pricing and how it works.
       </p>
-    </ProjectLayout>
+    </ProjectPage>
   );
 }

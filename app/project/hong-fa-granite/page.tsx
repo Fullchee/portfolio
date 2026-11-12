@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectLayout } from "#components/project/ProjectLayout";
+import { ProjectPage } from "#components/project/ProjectPage";
 import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
 
 const project = getProject("hong-fa-granite");
@@ -10,7 +10,7 @@ export const metadata = projectMetadata(project);
 
 export default function HongFaGranitePage() {
   return (
-    <ProjectLayout project={project}>
+    <ProjectPage project={project}>
       <Image {...mainImageProps} />
 
       {/* Why is this project important to you? What inspired it? Why did you choose to build
@@ -157,6 +157,6 @@ you faced?  */}
         and least fun part of this project. Eventually, I switched to another domain provider and
         connected it with Netlify so that HongFaGranite.com was live!
       </p>
-    </ProjectLayout>
+    </ProjectPage>
   );
 }

@@ -7,7 +7,7 @@ interface Props {
   project: Project;
 }
 
-export const ProjectLayout = ({ children, project }: Props) => {
+export const ProjectPage = ({ children, project }: Props) => {
   return (
     <>
       <h1>{project.title}</h1>

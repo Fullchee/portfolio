@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProjectLayout } from "#components/project/ProjectLayout";
+import { ProjectPage } from "#components/project/ProjectPage";
 import { getProject, projectImageProps, projectMetadata } from "#lib/projects";
 
 const project = getProject("toronto-water-monitor");
@@ -9,7 +9,7 @@ export const metadata = projectMetadata(project);
 
 export default function TorontoWaterMonitorPage() {
   return (
-    <ProjectLayout project={project}>
+    <ProjectPage project={project}>
       {/* Why is this project important to you? What inspired it? Why did you choose to build
 this?  */}
       <Image {...mainImageProps} />
@@ -116,6 +116,6 @@ you faced?  */}
         I'm also going to make a post on the{" "}
         <a href="https://www.reddit.com/r/toronto/">r/Toronto subreddit</a>.
       </p>
-    </ProjectLayout>
+    </ProjectPage>
   );
 }
