@@ -3,7 +3,6 @@ import type { CaseStudy } from "#lib/caseStudy";
 import { projects, projectUrl } from "#lib/projects";
 import { roles, roleUrl } from "#lib/roles";
 
-// Format follows the llms.txt proposal: https://llmstxt.org/
 export const dynamic = "force-static";
 
 const caseStudyLinks = <T extends CaseStudy>(caseStudies: T[], url: (caseStudy: T) => string) =>
@@ -14,6 +13,7 @@ const caseStudyLinks = <T extends CaseStudy>(caseStudies: T[], url: (caseStudy: 
     )
     .join("\n");
 
+/** Lists the site's pages for language models, per https://llmstxt.org/. */
 export function GET() {
   const body = `# Fullchee Zhang
 

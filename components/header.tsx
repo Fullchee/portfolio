@@ -4,19 +4,19 @@ import Link from "next/link";
 const HeaderItem = ({ href, label }: { href: string; label: string }) => {
   return (
     <li className="px-4 py-8 text-xl">
-      <Link href={href} className="no-underline font-mono-display tracking-wider pb-1">
+      <Link href={href} className="pb-1 font-mono-display tracking-wider no-underline">
         {label}
       </Link>
     </li>
   );
 };
 
-const Header = () => {
+export const Header = () => {
   return (
     <>
-      <div className="sticky bg-page dark:border-brand-700 border-t-4 top-0 border-brand-500 z-10">
-        <nav className="max-w-6xl mx-auto pl-2 md:px-20">
-          <ul className="list-none flex max-w-7xl no-list-item">
+      <div className="sticky top-0 z-10 border-t-4 border-brand-500 bg-page dark:border-brand-700">
+        <nav className="mx-auto max-w-6xl pl-2 md:px-20">
+          <ul className="no-list-item flex max-w-7xl list-none">
             <li className="mr-auto pt-4 pl-0">
               <Link href="/">
                 <Image
@@ -33,10 +33,8 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <div className="fixed z-10 h-8 w-screen page-fade-top"></div>
-      <div className="fixed z-10 h-8 w-screen page-fade-bottom bottom-0"></div>
+      <div className="page-fade-top fixed z-10 h-8 w-screen"></div>
+      <div className="page-fade-bottom fixed bottom-0 z-10 h-8 w-screen"></div>
     </>
   );
 };
-
-export default Header;

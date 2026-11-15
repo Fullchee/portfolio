@@ -1,22 +1,23 @@
 @import "tailwindcss";
+
 @plugin "@tailwindcss/typography";
 
+/* stylelint-disable no-unknown-custom-properties -- next/font defines the font variables in app/layout.tsx */
 @theme {
   --font-display: var(--font-comfortaa), ui-rounded, sans-serif;
   --font-mono-display: var(--font-major-mono-display), ui-monospace, monospace;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-
+  /* stylelint-enable no-unknown-custom-properties */
   --color-brand-50: #eff6ff;
   --color-brand-400: #60a5fa;
   --color-brand-500: #3b82f6;
   --color-brand-600: #2563eb;
   --color-brand-700: #1d4ed8;
-
-  --color-page: #ffffff;
-  --color-ink: #000000;
+  --color-page: #fff;
+  --color-ink: #000;
   --color-muted: #6b7280;
   --color-surface: var(--color-brand-50);
-  --color-card: #ffffff;
+  --color-card: #fff;
   --color-link-hover: var(--color-brand-600);
 }
 
@@ -28,6 +29,7 @@
     --color-surface: #13203a;
     --color-card: #111a2e;
     --color-link-hover: var(--color-brand-400);
+
     color-scheme: dark;
   }
 }
@@ -43,12 +45,9 @@
     outline-offset: 3px;
   }
 
-  p {
-    text-wrap: pretty;
-  }
-
   a {
     @apply underline;
+
     position: relative;
   }
 
@@ -83,28 +82,31 @@
     padding: 2px 4px;
     font-size: 0.9em;
     line-height: 1;
-    background-color: var(--color-neutral-muted, rgba(175, 184, 193, 0.2));
+    background-color: var(--color-neutral-muted, rgb(175 184 193 / 20%));
     border-radius: 6px;
   }
 
   h1 {
-    @apply text-4xl pb-4 pt-6 font-display;
+    @apply pt-6 pb-4 font-display text-4xl;
   }
 
   h2 {
-    @apply text-2xl pb-4 pt-6;
+    @apply pt-6 pb-4 text-2xl;
   }
 
   .font-mono-display {
     @apply -ml-0.5;
+
+    /* monospace font looks weird in uppercase */
+    text-transform: lowercase;
   }
 
   h3 {
-    @apply text-xl pb-4 pt-6 font-bold;
+    @apply pt-6 pb-4 text-xl font-bold;
   }
 
   h4 {
-    @apply pb-0 pt-4 font-bold;
+    @apply pt-4 pb-0 font-bold;
   }
 
   li {
@@ -112,7 +114,7 @@
   }
 
   ol {
-    @apply list-decimal pl-4 py-2 ml-4;
+    @apply ml-4 list-decimal py-2 pl-4;
   }
 
   ol li {
@@ -130,6 +132,8 @@
 
   p {
     @apply max-w-3xl py-2 text-lg;
+
+    text-wrap: pretty;
   }
 
   strong {
@@ -137,7 +141,7 @@
   }
 
   ul {
-    @apply pl-4 py-2;
+    @apply py-2 pl-4;
   }
 
   ul li::before {
@@ -152,7 +156,7 @@
   }
 
   ul li {
-    @apply pl-4 py-1;
+    @apply py-1 pl-4;
   }
 
   ul ul {
@@ -162,20 +166,15 @@
   ul ul li {
     margin-left: 2rem;
   }
-
-  .font-mono-display {
-    /* monospace font looks weird in uppercase */
-    text-transform: lowercase;
-  }
 }
 
 @layer components {
   .primary-button {
-    @apply bg-brand-600 px-6 py-3 rounded-md text-white text-center;
+    @apply rounded-md bg-brand-600 px-6 py-3 text-center text-white;
   }
 
   .secondary-button {
-    @apply border-brand-600 border text-brand-600 px-6 py-3 rounded-md text-center;
+    @apply rounded-md border border-brand-600 px-6 py-3 text-center text-brand-600;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -185,7 +184,7 @@
   }
 
   .inset-box-shadow {
-    box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.2);
+    box-shadow: inset 0 0 5px hsl(0deg 0% 0% / 20%);
   }
 
   .nested-li {
@@ -210,13 +209,13 @@
 
   .responsive-skills {
     display: grid;
-    grid-gap: 20px;
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
 
   .responsive-footer {
     display: grid;
-    grid-gap: 20px;
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
 

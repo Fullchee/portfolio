@@ -122,4 +122,7 @@ export const getProject = (slug: string) => findCaseStudy(projects, slug);
 export const projectUrl = (project: Project) => `/project/${project.slug}`;
 
 export const projectMetadata = (project: Project) =>
-  caseStudyMetadata({ ...project, ogImage: project.ogImage ?? project.hero }, projectUrl(project));
+  caseStudyMetadata(
+    { ...project, ogImage: project.ogImage ?? project.hero ?? project.image },
+    projectUrl(project),
+  );

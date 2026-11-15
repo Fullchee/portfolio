@@ -1,9 +1,16 @@
-# CI secrets scan (.github/workflows/secrets.yml).
+# CI secrets scan (.github/workflows/secrets.yml). Pre-commit still runs detect-secrets.
 title = "portfolio"
 
 [extend]
 useDefault = true
 
+# One inline syntax for both scanners while pre-commit stays on detect-secrets.
 [[allowlists]]
-description = "Lockfile hashes"
-paths = ['''^bun\.lock$''']
+description = "Lines already audited for detect-secrets"
+regexTarget = "line"
+regexes = ['''pragma: allowlist secret''']
+
+# Mirrors should_exclude_file in .secrets.baseline; the baseline itself holds hashes, not secrets.
+[[allowlists]]
+description = "Lockfile hashes, vendored code and scanner state"
+paths = ['''^tools/oxlint/anti-slop/''', '''^bun\.lock$''', '''^\.secrets\.baseline$''']

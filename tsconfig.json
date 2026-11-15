@@ -18,9 +18,21 @@
     "noImplicitOverride": true, // Makes the override keyword actually useful in classes
     "noPropertyAccessFromIndexSignature": true, // forces obj["foo"] when foo isn't a declared key
     "noUncheckedIndexedAccess": true, // Prevents you from accessing an array or object without first checking if it's defined
-    "verbatimModuleSyntax": true // forces import type and export type -> predictable behavior and fewer unnecessary imports
+    "verbatimModuleSyntax": true, // forces import type and export type -> predictable behavior and fewer unnecessary imports
+
+    // Matches journal-native's tsconfig.strict.json
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "erasableSyntaxOnly": true, // Node strips types from scripts/*.ts without rewriting syntax
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUncheckedSideEffectImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
-  "exclude": ["node_modules"],
+  // tsconfig.node.json covers scripts; the vendored anti-slop plugin is upstream code.
+  "exclude": ["node_modules", "scripts", "stylelint.config.ts", "tools/oxlint/anti-slop"],
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",

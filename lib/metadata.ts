@@ -9,12 +9,12 @@ const defaultOgImage = {
   alt: "Fullchee favicon, full at the top, chee at the bottom",
 };
 
-type MetadataArgs = {
+interface MetadataArgs {
   title: string;
   description: string;
   path?: string;
   images?: NonNullable<Metadata["openGraph"]>["images"];
-};
+}
 
 export const buildMetadata = ({
   title,

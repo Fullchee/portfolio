@@ -1,22 +1,22 @@
 import Link from "next/link";
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer className="py-12 px-6 bg-surface border-t border-brand-500 mt-16">
-      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0">
-        <div className="flex flex-col md:flex-row justify-center items-center md:pl-4 md:w-1/2 space-y-4 md:space-y-0">
-          <a href={`https://github.com/fullchee`} className="no-underline mx-3 font-bold">
+    <footer className="mt-16 border-t border-brand-500 bg-surface px-6 py-12">
+      <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-4 md:w-1/2 md:flex-row md:space-y-0 md:pl-4">
+          <a href={`https://github.com/fullchee`} className="mx-3 font-bold no-underline">
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/fullchee" className="no-underline mx-3 font-bold">
+          <a href="https://www.linkedin.com/in/fullchee" className="mx-3 font-bold no-underline">
             LinkedIn
           </a>
-          <Link href="/assets/Fullchee-Resume.pdf" className="no-underline mx-3 font-bold">
+          <Link href="/assets/Fullchee-Resume.pdf" className="mx-3 font-bold no-underline">
             Resume
           </Link>
         </div>
 
-        <p className="text-xs text-center">
+        <p className="text-center text-xs">
           Made with{" "}
           <Link href="/attributions" className="text-center">
             Creative Commons Resources
@@ -28,5 +28,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

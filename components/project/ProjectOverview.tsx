@@ -3,9 +3,9 @@ import { SkillList } from "#components/homePage/SkillList";
 import type { Skill } from "#lib/skills";
 
 interface Props {
-  demoUrl?: string;
-  skills?: Skill[];
-  githubProject?: string;
+  demoUrl?: string | undefined;
+  skills?: Skill[] | undefined;
+  githubProject?: string | undefined;
 }
 
 const Button = ({
@@ -22,7 +22,7 @@ const Button = ({
   return (
     <a
       href={href}
-      className="pl-1 no-underline transform duration-300 motion-safe:hover:scale-105 motion-safe:focus:scale-105 no-link-underline"
+      className="no-link-underline transform pl-1 no-underline duration-300 motion-safe:hover:scale-105 motion-safe:focus:scale-105"
     >
       <div className={`flex ${className}`}>
         <p className="m-0 p-0 pr-1">{text}</p>
@@ -34,22 +34,22 @@ const Button = ({
   );
 };
 
-const ProjectLinks = ({ demoUrl, githubProject }: { demoUrl?: string; githubProject?: string }) => {
-  if (!demoUrl && !githubProject) return null;
+const ProjectLinks = ({ demoUrl, githubProject }: Omit<Props, "skills">) => {
+  if (demoUrl === undefined && githubProject === undefined) return null;
 
   return (
-    <div className="flex flex-row items-center pt-4 space-x-4">
-      {demoUrl ? (
+    <div className="flex flex-row items-center space-x-4 pt-4">
+      {demoUrl === undefined ? null : (
         <Button href={demoUrl} icon="launch" text="Launch" className="primary-button" />
-      ) : null}
-      {githubProject ? (
+      )}
+      {githubProject === undefined ? null : (
         <Button
           href={`https://www.github.com/Fullchee/${githubProject}`}
           icon="github"
           text="GitHub"
           className="secondary-button"
         />
-      ) : null}
+      )}
     </div>
   );
 };
@@ -66,10 +66,10 @@ const ProjectSkills = ({ skills }: { skills: Skill[] }) => {
 };
 
 export const ProjectOverview = ({ skills = [], githubProject, demoUrl }: Props) => {
-  if (!demoUrl && !githubProject && skills.length === 0) return null;
+  if (demoUrl === undefined && githubProject === undefined && skills.length === 0) return null;
 
   return (
-    <div className="grid max-w-2xl mb-8">
+    <div className="mb-8 grid max-w-2xl">
       <ProjectLinks demoUrl={demoUrl} githubProject={githubProject} />
       <ProjectSkills skills={skills} />
     </div>

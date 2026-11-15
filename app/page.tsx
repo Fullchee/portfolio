@@ -1,6 +1,6 @@
-import AboutMe from "#components/homePage/aboutMe";
-import Intro from "#components/homePage/intro";
-import Skills from "#components/homePage/skills";
+import { AboutMe } from "#components/homePage/aboutMe";
+import { Intro } from "#components/homePage/intro";
+import { Skills } from "#components/homePage/skills";
 import { ProjectList } from "#components/project/ProjectList";
 import { buildMetadata, siteBaseUrl } from "#lib/metadata";
 import { RoleList } from "#components/role/RoleList";
@@ -31,14 +31,17 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd).replace(/</g, "\\u003c") }}
+        // oxlint-disable-next-line eslint-react/dom-no-dangerously-set-innerhtml -- JSON-LD needs raw script text; escaping "<" stops it closing the tag
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(profileJsonLd).replaceAll("<", String.raw`\u003c`),
+        }}
       />
       <Intro />
       <AboutMe />
       <Skills />
-      <h2 className="font-mono-display tracking-wider pb-8 text-2xl">Experience</h2>
+      <h2 className="pb-8 font-mono-display text-2xl tracking-wider">Experience</h2>
       <RoleList />
-      <h2 className="font-mono-display tracking-wider py-8 text-2xl">Projects</h2>
+      <h2 className="py-8 font-mono-display text-2xl tracking-wider">Projects</h2>
       <ProjectList />
     </>
   );

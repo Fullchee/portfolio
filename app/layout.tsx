@@ -4,8 +4,8 @@ import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "#components/footer";
-import Header from "#components/header";
+import { Footer } from "#components/footer";
+import { Header } from "#components/header";
 import { siteBaseUrl } from "#lib/metadata";
 
 const inter = localFont({
@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className="bg-page text-ink">
         <Header />
-        <div className="min-h-screen max-w-6xl mx-auto pt-8 px-6 md:px-24">
+        <div className="mx-auto min-h-screen max-w-6xl px-6 pt-8 md:px-24">
           <main>{children}</main>
         </div>
         <Footer />

@@ -107,7 +107,7 @@ you faced?  */}
       </p>
       <h2>Next steps</h2>
       <p>
-        I am preparing to talk to people from <a href="http://civictech.ca/">Civic Tech Toronto</a>{" "}
+        I am preparing to talk to people from <a href="https://civictech.ca/">Civic Tech Toronto</a>{" "}
         and determine what improvements should be made.
       </p>
       <p>

@@ -46,9 +46,16 @@
       groupName: "next and react",
     },
     {
-      matchPackageNames: ["oxlint", "oxfmt"],
+      // @oxlint/plugins must match oxlint's version exactly; see tools/oxlint/anti-slop/UPSTREAM.md.
+      matchPackageNames: ["oxlint", "oxfmt", "@oxlint/plugins", "oxlint-tsgolint"],
       groupName: "oxc tooling",
     },
+    {
+      matchPackageNames: ["eslint-plugin-*", "@eslint-react/**", "stylelint", "stylelint-*"],
+      groupName: "lint plugins",
+    },
+    // `typescript` is the TS 6 alias the lint plugins need; @typescript/native supplies TS 7's tsc.
+    { matchPackageNames: ["typescript", "@typescript/native"], groupName: "typescript" },
     {
       matchPackageNames: ["tailwindcss", "@tailwindcss/**", "postcss"],
       groupName: "tailwind",

@@ -22,7 +22,10 @@ Merge finished work into `main` and push `main`. Never open a pull request.
 
 ## Checks
 
-- **Before pushing**: run `bun run lint` (oxfmt and Oxlint, warnings fail), `bun run typecheck` and `bun run fallow`. CI runs the same steps, then `bun run build`.
+- **Before pushing**: run `bun run check`. It runs CI's steps in order: `lint` (oxfmt, Oxlint, Stylelint, shellcheck and shfmt), `typecheck`, `test`, `fallow` and `build`.
+- **Oxlint** is the only linter, type-aware through `oxlint-tsgolint`. Its rules come from journal-native's `.oxlintrc.json`; port a rule change between the two repos. JS plugins get no type information, so leave out any plugin rule that needs it.
+- **TypeScript**: `tsc` is TS 7 from `@typescript/native`; the `typescript` package stays the TS 6 alias the lint plugins need (`scripts/repo-config.test.ts` guards it).
+- **Anti-slop**: `tools/oxlint/anti-slop/` is vendored; update it with `/install-anti-slop`, never by hand.
 - **Fallow** has no baseline: fix each finding. It runs only `dead-code` and `dupes`; health scores without coverage are estimates.
 - **Worktrees**: create them with `wt switch --create <branch>`. Its setup copies `CLAUDE.local.md` and `.env*`, then installs packages.
 - **Shared setup files**: `scripts/install-if-lock-changed.sh`, `scripts/prune-worktrees.sh` and `.claude/hooks/format-edited-file.sh` come from `~/personal-projects/journal-native`. Edit them there, then run its `scripts/sync-shared-setup.sh` with this repo's path.
