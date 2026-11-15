@@ -1,0 +1,3 @@
+[install]
+# Skip versions younger than 7 days: most malicious releases are caught and pulled within that window.
+minimumReleaseAge = 604800
