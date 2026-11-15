@@ -33,7 +33,9 @@ const Skills = () => {
           listening to the <a href="https://syntax.fm/">Syntax.FM podcast</a>
         </li>
         <li>
-          <a href="https://zerotomastery.io/blog/?tag=WDM#monthly">reading newsletters</a>
+          <a href="https://zerotomastery.io/blog/?tag=WDM#monthly">
+            reading Zero To Mastery's web dev newsletter
+          </a>
         </li>
         <li>
           working on <a href="https://github.com/Fullchee">side projects</a>

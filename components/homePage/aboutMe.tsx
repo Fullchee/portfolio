@@ -1,37 +1,59 @@
+import Link from "next/link";
+
+const Emoji = ({ children }: { children: string }) => <span aria-hidden="true">{children}</span>;
+
 const AboutMe = () => {
   return (
     <section className="ease-in">
       <h2 className="font-mono-display tracking-wider text-2xl">About me</h2>
       <article>
-        <h3>Learner 💡</h3>
+        <h3>
+          Docs writer <Emoji>📄 ✍️</Emoji>
+        </h3>
         <ul>
-          <li>Leading a monthly Dev Article Club at Forma</li>
           <li>
-            biggest contributer to slack channels like <code>#dev-til</code>, <code>#til-sql</code>,{" "}
-            <code>#life-sql</code>, <code>#development</code>
-          </li>
-        </ul>
-      </article>
-      <article>
-        <h3>Docs writer 📄 ✍️</h3>
-        <ul>
-          <li>Develop and document with Storybook</li>
-          <li>
-            Singlehandedly created our internal Docs as Code solution with MKDocs
+            Built Forma's internal docs-as-code site with MkDocs, on my own
             <ul>
-              <li>
-                See <a href="https://fullcheezhang.com">my Notes website</a> to get a sense of what
-                it looks like
-              </li>
               <li>30k+ words of docs</li>
+              <li>
+                <a href="https://fullcheezhang.com">My public notes</a> use the same setup
+              </li>
             </ul>
           </li>
+          <li>Develop and document components with Storybook</li>
         </ul>
       </article>
       <article>
-        <h3>Dragon boat paddler 🐉 🛶</h3>
+        <h3>
+          Teacher and learner <Emoji>💡</Emoji>
+        </h3>
         <ul>
-          <li>paddling, lifting, biking, running and meditating</li>
+          <li>Led a monthly Dev Article Club at Forma</li>
+          <li>
+            Top contributor to Slack channels like <code>#dev-til</code>, <code>#til-sql</code>,{" "}
+            <code>#life-sql</code> and <code>#development</code>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h3>
+          Tooling tinkerer <Emoji>🛠️</Emoji>
+        </h3>
+        <ul>
+          <li>
+            <Link href="/uses">The tools I use</Link>
+          </li>
+          <li>
+            <Link href="/llm/tooling">My LLM tooling</Link>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h3>
+          Dragon boat paddler <Emoji>🐉 🛶</Emoji>
+        </h3>
+        <ul>
+          <li>Paddling, lifting, biking, running and meditating</li>
         </ul>
         <p className="py-4"></p>
       </article>
