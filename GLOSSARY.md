@@ -1,9 +1,20 @@
 # Portfolio
 
-Personal portfolio site for Fullchee Zhang.
+Personal portfolio site for Fullchee Zhang. It presents the work he has built and the positions he has held.
 
-## Glossary
+## Language
 
-- **Project** — one case study, either a side project or a past employer. A Project has a stable `slug`, card copy, images, optional links and skills. Records live in `lib/projects.ts`.
-- **Case study** — the page at `/project/<slug>` that presents a Project. `ProjectPage` renders the heading, overview, hero and the list of other Projects.
-- **Skill** — a technology label and icon shown on the home page and on case studies. The `Skill` type lives in `lib/skills.ts`.
+**Project**:
+Something Fullchee built, such as a side project or a site built for a client.
+_Avoid_: Job, work
+
+**Role**:
+A position Fullchee held at an employer, such as front-end developer at IBM.
+_Avoid_: Project, job, experience
+
+**Case study**:
+A page that presents one Project or Role in depth.
+_Avoid_: Story, write-up
+
+**Skill**:
+A technology Fullchee works with, shown as a label and icon.
