@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ProjectDescription } from "#components/project/ProjectDescription";
+import { ProjectDescription } from "#components/caseStudy/CaseStudySection";
 import { ProjectPage } from "#components/project/ProjectPage";
 import { getProject, projectMetadata } from "#lib/projects";
 
