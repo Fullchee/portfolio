@@ -3,9 +3,9 @@ import { SkillList } from "#components/homePage/SkillList";
 import type { Skill } from "#lib/skills";
 
 interface Props {
-  demoUrl?: string;
-  skills?: Skill[];
-  githubProject?: string;
+  demoUrl?: string | undefined;
+  skills?: Skill[] | undefined;
+  githubProject?: string | undefined;
 }
 
 const Button = ({
@@ -34,22 +34,22 @@ const Button = ({
   );
 };
 
-const ProjectLinks = ({ demoUrl, githubProject }: { demoUrl?: string; githubProject?: string }) => {
-  if (!demoUrl && !githubProject) return null;
+const ProjectLinks = ({ demoUrl, githubProject }: Omit<Props, "skills">) => {
+  if (demoUrl === undefined && githubProject === undefined) return null;
 
   return (
     <div className="flex flex-row items-center pt-4 space-x-4">
-      {demoUrl ? (
+      {demoUrl === undefined ? null : (
         <Button href={demoUrl} icon="launch" text="Launch" className="primary-button" />
-      ) : null}
-      {githubProject ? (
+      )}
+      {githubProject === undefined ? null : (
         <Button
           href={`https://www.github.com/Fullchee/${githubProject}`}
           icon="github"
           text="GitHub"
           className="secondary-button"
         />
-      ) : null}
+      )}
     </div>
   );
 };
@@ -66,7 +66,7 @@ const ProjectSkills = ({ skills }: { skills: Skill[] }) => {
 };
 
 export const ProjectOverview = ({ skills = [], githubProject, demoUrl }: Props) => {
-  if (!demoUrl && !githubProject && skills.length === 0) return null;
+  if (demoUrl === undefined && githubProject === undefined && skills.length === 0) return null;
 
   return (
     <div className="grid max-w-2xl mb-8">

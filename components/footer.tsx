@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="py-12 bg-brand-50 border-t border-brand-500 mt-16">
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0">
@@ -28,5 +28,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

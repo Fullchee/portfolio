@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Emoji = ({ children }: { children: string }) => <span aria-hidden="true">{children}</span>;
 
-const AboutMe = () => {
+export const AboutMe = () => {
   return (
     <section className="ease-in">
       <h2 className="font-mono-display tracking-wider text-2xl">About me</h2>
@@ -60,5 +60,3 @@ const AboutMe = () => {
     </section>
   );
 };
-
-export default AboutMe;

@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { caseStudyImageProps, type CaseStudy } from "#lib/caseStudy";
 
-type CardProps = { caseStudy: CaseStudy; href: string; linkLabel: string };
+interface CardProps {
+  caseStudy: CaseStudy;
+  href: string;
+  linkLabel: string;
+}
 
 const CaseStudyCard = ({ caseStudy, href, linkLabel }: CardProps) => {
   return (
@@ -20,12 +24,12 @@ const CaseStudyCard = ({ caseStudy, href, linkLabel }: CardProps) => {
   );
 };
 
-type ListProps<T extends CaseStudy> = {
+interface ListProps<T extends CaseStudy> {
   caseStudies: T[];
   href: (caseStudy: T) => string;
   linkLabel: string;
-  skipSlug?: string;
-};
+  skipSlug?: string | undefined;
+}
 
 export const CaseStudyList = <T extends CaseStudy>({
   caseStudies,
@@ -34,6 +38,7 @@ export const CaseStudyList = <T extends CaseStudy>({
   skipSlug,
 }: ListProps<T>) => {
   const displayed = caseStudies.filter(({ slug }) => slug !== skipSlug);
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
       {displayed.map((caseStudy) => (

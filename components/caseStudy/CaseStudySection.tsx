@@ -1,23 +1,23 @@
 import NextImage from "next/image";
 import type { ReactNode } from "react";
 
-type Image = {
+interface Image {
   src: string;
   alt: string;
   width: number;
   height: number;
   onRight?: boolean;
-};
+}
 
-type DescriptionProps = {
+interface DescriptionProps {
   children?: ReactNode;
   image: Image;
-};
+}
 
 export const CaseStudySection = ({ children, image }: DescriptionProps) => {
   return (
     <div className="grid sm:grid-cols-2 sm:grid-rows-1 items-center py-12">
-      <div className={image.onRight ? "order-1 justify-self-end" : ""}>
+      <div className={image.onRight === true ? "order-1 justify-self-end" : ""}>
         <NextImage
           src={image.src}
           width={image.width}

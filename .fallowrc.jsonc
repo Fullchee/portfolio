@@ -1,7 +1,57 @@
 {
   "$schema": "./node_modules/fallow/schema.json",
+  // Vendored oxlint plugin; `install-anti-slop` owns it and replaces it on update.
+  "ignorePatterns": ["tools/oxlint/anti-slop/**"],
   "workspaces": {
-    "patterns": ["."]
+    "patterns": ["."],
   },
-  "ignoreDependencies": ["@next/mdx"]
+  // lint:sh runs the system shellcheck and shfmt (Homebrew locally; CI installs pinned releases).
+  "ignoreBinaries": ["shellcheck", "shfmt"],
+  "ignoreDependencies": [
+    "@next/mdx",
+    // Imported only by the vendored anti-slop plugin, which is ignored above
+    "@oxlint/plugins",
+  ],
+  // Strict: every warn-by-default rule fails, plus the opt-in checks.
+  "rules": {
+    "deprecated-exports-in-use": "error",
+    "unused-dev-dependencies": "error",
+    "unused-optional-dependencies": "error",
+    "unused-store-members": "error",
+    "unprovided-injects": "error",
+    "unrendered-components": "error",
+    "unused-component-props": "error",
+    "unused-component-emits": "error",
+    "unused-component-inputs": "error",
+    "unused-component-outputs": "error",
+    "unused-svelte-events": "error",
+    "unused-effect-layers": "error",
+    "unused-tagged-errors": "error",
+    "unproduced-catch-tags": "error",
+    "unused-server-actions": "error",
+    "unused-load-data-keys": "error",
+    "thin-wrapper": "error",
+    "css-token-drift": "error",
+    "css-duplicate-block": "error",
+    "css-selector-complexity": "error",
+    "css-dead-surface": "error",
+    "css-broken-reference": "error",
+    "type-only-dependencies": "error",
+    "test-only-dependencies": "error",
+    "dev-dependencies-in-production": "error",
+    "re-export-cycle": "error",
+    "package-cycle": "error",
+    "stale-suppressions": "error",
+    "require-suppression-reason": "error",
+    "unused-catalog-entries": "error",
+    "empty-catalog-groups": "error",
+    "unused-dependency-overrides": "error",
+    "policy-violation": "error",
+    "invalid-client-export": "error",
+    "mixed-client-server-barrel": "error",
+    "misplaced-directive": "error",
+    "weakened-tests": "error",
+    "added-suppression": "error",
+    "test-only-branch": "error",
+  },
 }

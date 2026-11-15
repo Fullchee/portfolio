@@ -19,7 +19,7 @@ const backendSkills = [
   { icon: "node-js", label: "Node.js" },
 ];
 
-const Skills = () => {
+export const Skills = () => {
   return (
     <section className="flex-col flex flex-wrap mb-8">
       <h2 id="skills" className="font-mono-display tracking-wider text-2xl pb-4">
@@ -44,5 +44,3 @@ const Skills = () => {
     </section>
   );
 };
-
-export default Skills;

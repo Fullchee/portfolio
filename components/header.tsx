@@ -11,7 +11,7 @@ const HeaderItem = ({ href, label }: { href: string; label: string }) => {
   );
 };
 
-const Header = () => {
+export const Header = () => {
   return (
     <>
       <div className="sticky bg-white dark:border-brand-700 border-t-4 top-0 border-brand-500 z-10">
@@ -32,5 +32,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;

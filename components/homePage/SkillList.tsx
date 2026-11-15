@@ -20,7 +20,7 @@ interface SkillListProps {
 export const SkillList = ({ title, skills }: SkillListProps) => {
   return (
     <section>
-      {title && <h3>{title}</h3>}
+      {title === undefined ? null : <h3>{title}</h3>}
       <ul className="flex flex-wrap skills no-list-item">
         {skills.map(({ icon, label }) => (
           <SkillItem key={icon} icon={icon} label={label} />

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Intro = () => {
+export const Intro = () => {
   return (
     <section className="flex justify-between">
       <div className="flex-col flex flex-wrap pb-8 ease-in">
@@ -28,5 +28,3 @@ const Intro = () => {
     </section>
   );
 };
-
-export default Intro;

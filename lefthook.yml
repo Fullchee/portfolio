@@ -13,9 +13,6 @@ pre-commit:
     shellcheck:
       glob: "*.sh"
       run: shellcheck {staged_files}
-    oxlint:
-      glob: "*.{js,cjs,mjs,jsx,ts,tsx}"
-      run: bunx oxlint {staged_files}
     typecheck:
       glob: "*.{ts,tsx}"
       run: bun run typecheck
@@ -25,9 +22,14 @@ commit-msg:
     commitlint:
       run: bunx commitlint --edit {1}
 
-# Fallow on the files changed since origin/main; CI runs it on the whole repo.
+# Lints only the pushed files for speed; CI lints the whole repo.
 pre-push:
   commands:
+    # Type-aware with JS plugins, so it runs here rather than on every commit.
+    oxlint:
+      glob: "*.{js,cjs,mjs,jsx,ts,tsx}"
+      run: bunx oxlint --deny-warnings {push_files}
+    # Fallow on the files changed since origin/main; CI runs it on the whole repo.
     fallow:
       glob: "*.{js,cjs,mjs,jsx,ts,tsx}"
       run: bunx fallow --quiet --fail-on-issues --changed-since origin/main --only dead-code,dupes

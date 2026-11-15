@@ -1,4 +1,4 @@
-export type Skill = {
+export interface Skill {
   icon: string;
   label: string;
-};
+}
