@@ -1,7 +1,9 @@
 {
-  "plugins": ["import"],
+  "plugins": ["import", "typescript", "unicorn", "oxc", "react", "nextjs", "jsx-a11y"],
   "jsPlugins": ["@shadcn/lint"],
   "rules": {
+    // Misfires when the label text comes from a JSX expression in a child element.
+    "jsx-a11y/control-has-associated-label": "off",
     "import/no-relative-parent-imports": "error",
     "shadcn/no-arbitrary-values": "error",
     "shadcn/no-inline-styles": "error",
