@@ -2,7 +2,7 @@ import AboutMe from "#components/homePage/aboutMe";
 import Intro from "#components/homePage/intro";
 import Skills from "#components/homePage/skills";
 import { ProjectList } from "#components/project/ProjectList";
-import { buildMetadata } from "#lib/metadata";
+import { buildMetadata, siteBaseUrl } from "#lib/metadata";
 import { projects } from "#lib/projects";
 
 export const metadata = buildMetadata({
@@ -12,9 +12,27 @@ export const metadata = buildMetadata({
   path: "/",
 });
 
+const profileJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity: {
+    "@type": "Person",
+    name: "Fullchee Zhang",
+    jobTitle: "Full-stack developer",
+    worksFor: { "@type": "Organization", name: "Citylitics", url: "https://www.citylitics.com" },
+    url: siteBaseUrl,
+    image: `${siteBaseUrl}/professional-face.jpg`,
+    sameAs: ["https://github.com/Fullchee", "https://www.linkedin.com/in/fullchee"],
+  },
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd).replace(/</g, "\\u003c") }}
+      />
       <Intro />
       <AboutMe />
       <Skills />

@@ -28,6 +28,7 @@ export const buildMetadata = ({
     title,
     description,
     url: `${siteBaseUrl}${path}`,
+    siteName: "Fullchee Zhang",
     type: "website",
     images: images ?? [defaultOgImage],
   },
