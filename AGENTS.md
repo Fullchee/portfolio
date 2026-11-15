@@ -16,6 +16,13 @@ Single-context — GLOSSARY.md + docs/adr/ at repo root. See `docs/agents/domain
 
 Commit messages must follow Conventional Commits.
 
+## Checks
+
+- **Before pushing**: run `bun run lint` (oxfmt and Oxlint, warnings fail), `bun run typecheck`, `bun run test` and `bun run fallow`. CI runs the same steps, then `bun run build`.
+- **Fallow** has no baseline: fix each finding. It runs only `dead-code` and `dupes`; health scores without coverage are estimates.
+- **Worktrees**: create them with `wt switch --create <branch>`. Its setup copies `CLAUDE.local.md` and `.env*`, then installs packages.
+- **Shared setup files**: `scripts/install-if-lock-changed.sh`, `scripts/prune-worktrees.sh` and `.claude/hooks/format-edited-file.sh` come from `~/personal-projects/journal-native`. Edit them there, then run its `scripts/sync-shared-setup.sh` with this repo's path.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
@@ -25,3 +32,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Failure log
+
+- Commitlint runs from lefthook's `commit-msg` hook; lefthook ignores unknown hook names, so a misnamed hook never runs.
+- `CLAUDE.md` is a symlink to `AGENTS.md`: edit `AGENTS.md`, and never write to `CLAUDE.md`, or it replaces `AGENTS.md`.
