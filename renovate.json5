@@ -1,0 +1,63 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:recommended"],
+
+  enabledManagers: ["bun", "github-actions"],
+
+  timezone: "America/Toronto",
+  schedule: ["before 9am on monday"],
+  prConcurrentLimit: 5,
+  labels: ["dependencies"],
+
+  // Matches `install.minimumReleaseAge = 604800` in bunfig.toml.
+  minimumReleaseAge: "7 days",
+  // Hide updates still inside the window instead of opening a pending PR.
+  internalChecksFilter: "strict",
+
+  // Free private repos get neither branch protection nor GitHub auto-merge, so Renovate merges once CI is green.
+  platformAutomerge: false,
+
+  packageRules: [
+    // Majors need a human read of the changelog.
+    {
+      matchUpdateTypes: ["minor", "patch", "pin", "digest"],
+      automerge: true,
+    },
+
+    // bun's version comes from devEngines and mise, not from Renovate.
+    { matchDepTypes: ["packageManager", "devEngines"], enabled: false },
+
+    // Groups that move together. Later rules win, so the named groups below pull their packages out of this one.
+    {
+      matchManagers: ["bun"],
+      matchDepTypes: ["devDependencies"],
+      matchUpdateTypes: ["minor", "patch"],
+      groupName: "dev dependencies",
+    },
+    {
+      matchPackageNames: ["next", "@next/**", "react", "react-dom", "@types/react", "@types/react-dom"],
+      groupName: "next and react",
+    },
+    {
+      matchPackageNames: ["storybook", "@storybook/**"],
+      groupName: "storybook",
+    },
+    {
+      matchPackageNames: ["vitest", "@vitest/**", "vite", "playwright"],
+      groupName: "vitest",
+    },
+    {
+      matchPackageNames: ["oxlint", "oxfmt"],
+      groupName: "oxc tooling",
+    },
+    {
+      matchPackageNames: ["tailwindcss", "@tailwindcss/**", "postcss"],
+      groupName: "tailwind",
+    },
+    {
+      matchPackageNames: ["@commitlint/**"],
+      groupName: "commitlint",
+    },
+    { matchManagers: ["github-actions"], groupName: "github actions" },
+  ],
+}
