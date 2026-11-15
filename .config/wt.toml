@@ -1,0 +1,6 @@
+# Blocking so agents get a worktree where lint, typecheck and tests pass.
+[pre-start]
+setup = "scripts/setup-worktree.sh"
+
+[aliases]
+cleanup = "scripts/prune-worktrees.sh {{ args }}"
