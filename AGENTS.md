@@ -36,4 +36,5 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Failure log
 
 - Commitlint runs from lefthook's `commit-msg` hook; lefthook ignores unknown hook names, so a misnamed hook never runs.
+- Title a merge commit with an allowed type such as `refactor:`; commitlint rejects `merge:`, though older history uses it.
 - `CLAUDE.md` is a symlink to `AGENTS.md`: edit `AGENTS.md`, and never write to `CLAUDE.md`, or it replaces `AGENTS.md`.
