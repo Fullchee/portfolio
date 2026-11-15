@@ -31,6 +31,8 @@ pre-push:
     # Type-aware with JS plugins, so it runs here rather than on every commit.
     oxlint:
       glob: "*.{js,cjs,mjs,jsx,ts,tsx}"
+      # Given a file list, tsgolint misses tsconfig.node.json and reports bogus no-unsafe-* errors on scripts; `bun run lint` covers them.
+      exclude: "scripts/**"
       run: bunx oxlint --deny-warnings {push_files}
     stylelint:
       glob: "*.css"
