@@ -1,11 +1,30 @@
 import "#styles/globals.css";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "#components/footer";
 import { Header } from "#components/header";
 import { siteBaseUrl } from "#lib/metadata";
+
+const inter = localFont({
+  src: "./fonts/Inter.woff2",
+  weight: "100 900",
+  variable: "--font-inter",
+});
+
+const comfortaa = localFont({
+  src: "./fonts/Comfortaa.woff2",
+  weight: "300 700",
+  variable: "--font-comfortaa",
+});
+
+const majorMonoDisplay = localFont({
+  src: "./fonts/MajorMonoDisplay.woff2",
+  weight: "400",
+  variable: "--font-major-mono-display",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +38,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${inter.variable} ${comfortaa.variable} ${majorMonoDisplay.variable}`}
+    >
       <head>
         <link
           rel="apple-touch-icon-precomposed"
@@ -65,7 +87,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
       </head>
-      <body className="bg-white">
+      <body className="bg-page text-ink">
         <Header />
         <div className="mx-auto min-h-screen max-w-6xl px-6 pt-8 md:px-24">
           <main>{children}</main>

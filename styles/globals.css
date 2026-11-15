@@ -2,34 +2,49 @@
 
 @plugin "@tailwindcss/typography";
 
-@font-face {
-  font-family: Comfortaa;
-  src: url("/fonts/Comfortaa-VariableFont_wght.ttf");
-}
-
-@font-face {
-  font-family: Inter;
-  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
-}
-
-@font-face {
-  font-family: "Major Mono Display";
-  src: url("/fonts/MajorMonoDisplay-Regular.ttf");
-}
-
+/* stylelint-disable no-unknown-custom-properties -- next/font defines the font variables in app/layout.tsx */
 @theme {
-  --font-display: Comfortaa;
-  --font-mono-display: "Major Mono Display";
-  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-comfortaa), ui-rounded, sans-serif;
+  --font-mono-display: var(--font-major-mono-display), ui-monospace, monospace;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* stylelint-enable no-unknown-custom-properties */
   --color-brand-50: #eff6ff;
   --color-brand-400: #60a5fa;
   --color-brand-500: #3b82f6;
   --color-brand-600: #2563eb;
   --color-brand-700: #1d4ed8;
+  --color-page: #fff;
+  --color-ink: #000;
+  --color-muted: #6b7280;
+  --color-surface: var(--color-brand-50);
+  --color-card: #fff;
+  --color-link-hover: var(--color-brand-600);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-page: #0b1120;
+    --color-ink: #e5e7eb;
+    --color-muted: #9ca3af;
+    --color-surface: #13203a;
+    --color-card: #111a2e;
+    --color-link-hover: var(--color-brand-400);
+
+    color-scheme: dark;
+  }
 }
 
 /* Write your own custom base styles here */
 @layer base {
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-brand-400) 35%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+  }
+
   a {
     @apply underline;
 
@@ -45,8 +60,13 @@
     height: 2px;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 250ms ease-in;
     background-color: var(--color-brand-400);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a::after {
+      transition: transform 250ms ease-in;
+    }
   }
 
   a:hover::after {
@@ -55,7 +75,7 @@
   }
 
   a:hover {
-    @apply text-brand-500;
+    @apply text-link-hover;
   }
 
   code {
@@ -102,8 +122,7 @@
   }
 
   ol li::marker {
-    /* grey-500 */
-    color: #6b7280;
+    color: var(--color-muted);
     padding-right: 4px;
   }
 
@@ -113,6 +132,8 @@
 
   p {
     @apply max-w-3xl py-2 text-lg;
+
+    text-wrap: pretty;
   }
 
   strong {
@@ -156,9 +177,10 @@
     @apply rounded-md border border-brand-600 px-6 py-3 text-center text-brand-600;
   }
 
-  .ease-in > * {
-    transition: opacity 1s ease-in;
-    animation: 0.5s ease-in 0s 1 forwards loading-down;
+  @media (prefers-reduced-motion: no-preference) {
+    .ease-in > * {
+      animation: 0.5s ease-in 0s 1 forwards loading-down;
+    }
   }
 
   .inset-box-shadow {
@@ -177,20 +199,12 @@
     content: none;
   }
 
-  .white-to-transparent {
-    background: linear-gradient(
-      to bottom,
-      rgb(255 255 255 / 100%) 0%,
-      rgb(255 255 255 / 0%) 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  .page-fade-top {
+    background: linear-gradient(to bottom, var(--color-page), transparent);
   }
 
-  .transparent-to-white {
-    background: linear-gradient(
-      to top,
-      rgb(255 255 255 / 100%) 0%,
-      rgb(255 255 255 / 0%) 100%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  .page-fade-bottom {
+    background: linear-gradient(to top, var(--color-page), transparent);
   }
 
   .responsive-skills {

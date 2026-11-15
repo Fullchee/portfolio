@@ -23,6 +23,7 @@ export const Intro = () => {
           width={150}
           height={150}
           alt="Headshot of Fullchee Zhang in a suit"
+          preload
         ></Image>
       </div>
     </section>

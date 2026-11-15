@@ -38,12 +38,5 @@ export const Icon = ({ icon }: { icon: string }) => {
 
   const { width, height } = svgIconSizes.get(icon) ?? { width: 16, height: 16 };
 
-  return (
-    <Image
-      src={`/assets/images/icons/${icon}`}
-      alt={`${icon} logo`}
-      width={width}
-      height={height}
-    />
-  );
+  return <Image src={`/assets/images/icons/${icon}`} alt="" width={width} height={height} />;
 };
