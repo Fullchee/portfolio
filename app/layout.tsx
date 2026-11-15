@@ -12,7 +12,8 @@ export const metadata: Metadata = {
     template: "%s | Fullchee Zhang",
     default: "Fullstack Developer | Fullchee Zhang",
   },
-  description: "Portfolio made with Next.js, Tailwind.css and love by Fullchee Zhang",
+  description:
+    "Fullchee Zhang is a full-stack developer who makes teams faster with docs, tooling and teaching.",
   metadataBase: new URL(siteBaseUrl),
 };
 

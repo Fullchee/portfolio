@@ -9,9 +9,9 @@ const Intro = () => {
           <wbr />
           chee
         </h1>
-        <h2 id="job-title" className="pt-2 text-2xl max-w-lg font-display">
+        <p id="job-title" className="pt-2 pb-4 text-2xl max-w-lg font-display">
           Full-stack developer at <a href="https://www.citylitics.com">Citylitics</a>
-        </h2>
+        </p>
         <p className="pt-4 text-xl max-w-lg">
           I make teams faster with docs, tooling and teaching.
         </p>
