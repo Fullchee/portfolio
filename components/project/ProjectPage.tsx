@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { projectImageProps, projects, type Project } from "#lib/projects";
-import { ProjectList } from "./ProjectList";
-import { ProjectOverview } from "./ProjectOverview";
+import { ProjectList } from "#components/project/ProjectList";
+import { ProjectOverview } from "#components/project/ProjectOverview";
+import { caseStudyImageProps } from "#lib/caseStudy";
+import type { Project } from "#lib/projects";
 
 interface Props {
   children: React.ReactNode;
@@ -17,10 +18,10 @@ export const ProjectPage = ({ children, project }: Props) => {
         githubProject={project.githubProject}
         skills={project.skills}
       />
-      {project.hero ? <Image {...projectImageProps(project.hero)} /> : null}
+      {project.hero ? <Image {...caseStudyImageProps(project.hero)} /> : null}
       {children}
       <h2 className="pt-12 pb-6">Other projects</h2>
-      <ProjectList projects={projects} skipSlug={project.slug} />
+      <ProjectList skipSlug={project.slug} />
     </>
   );
 };

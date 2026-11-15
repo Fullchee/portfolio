@@ -14,7 +14,7 @@ type DescriptionProps = {
   image: Image;
 };
 
-export const ProjectDescription = ({ children, image }: DescriptionProps) => {
+export const CaseStudySection = ({ children, image }: DescriptionProps) => {
   return (
     <div className="grid sm:grid-cols-2 sm:grid-rows-1 items-center py-12">
       <div className={image.onRight ? "order-1 justify-self-end" : ""}>
