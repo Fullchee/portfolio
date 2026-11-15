@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@next/mdx": "^16.4.6",
+    "@sentry/nextjs": "^11",
     "@tailwindcss/postcss": "^4.3.5",
     "@tailwindcss/typography": "^0.5.20",
     "@vercel/analytics": "^2.0.1",

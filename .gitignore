@@ -42,3 +42,6 @@ tsconfig.tsbuildinfo
 
 # next.js generated types
 next-env.d.ts
+
+# Sentry Config File
+.env.sentry-build-plugin
