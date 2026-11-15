@@ -23,7 +23,8 @@
     "start": "./node_modules/.bin/next start",
     "test": "node --test \"scripts/*.test.ts\"",
     "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.node.json",
-    "fallow": "fallow --quiet --fail-on-issues --only dead-code,dupes"
+    "fallow": "fallow --quiet --fail-on-issues --only dead-code,dupes",
+    "secrets:scan": "uv tool run --from detect-secrets==1.5.0 detect-secrets scan --baseline .secrets.baseline"
   },
   "dependencies": {
     "@next/mdx": "^16.4.6",

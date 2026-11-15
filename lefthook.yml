@@ -10,6 +10,9 @@ pre-commit:
       glob: "*.sh"
       run: shfmt --write {staged_files}
       stage_fixed: true
+    # `--no-verify` skips this, so .github/workflows/secrets.yml scans every push to main too.
+    detect-secrets:
+      run: uvx --from detect-secrets==1.5.0 detect-secrets-hook --baseline .secrets.baseline {staged_files} # pragma: allowlist secret
     shellcheck:
       glob: "*.sh"
       run: shellcheck {staged_files}
