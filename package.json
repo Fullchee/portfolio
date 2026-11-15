@@ -29,7 +29,7 @@
     "@tailwindcss/typography": "^0.5.20",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.1.0",
-    "lucide-react": "^1.71.0",
+    "lucide-react": "^1.72.0",
     "next": "^16.4.6",
     "postcss": "^8.5.32",
     "react": "19.3.1",
