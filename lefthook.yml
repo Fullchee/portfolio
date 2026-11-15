@@ -3,17 +3,17 @@ pre-commit:
   commands:
     oxlint-fmt:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx}"
-      run: pnpm dlx oxfmt {staged_files} && pnpm dlx oxlint {staged_files}
+      run: bunx oxfmt {staged_files} && bunx oxlint {staged_files}
       stage_fixed: true
     shadcn-lint:
       glob: "*.{js,jsx,ts,tsx}"
-      run: pnpm exec oxlint --import-plugin . {staged_files}
+      run: bunx oxlint --import-plugin . {staged_files}
     type-check:
       glob: "{.storybook,app,components,lib}/**/*.{ts,tsx}"
-      run: pnpm run typecheck
+      run: bun run typecheck
     fallow-recommend:
-      run: FALLOW_UPDATE_CHECK=off pnpm exec fallow audit --changed-since HEAD
+      run: FALLOW_UPDATE_CHECK=off bunx fallow audit --changed-since HEAD
 conventional-commit-msg:
   commands:
     commitlint:
-      run: pnpm exec commitlint --edit {1}
+      run: bunx commitlint --edit {1}

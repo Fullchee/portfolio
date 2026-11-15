@@ -17,21 +17,21 @@ Inspired by
 
 ## Setup
 
-Requires Node 26 and pnpm 12. Versions live in `devEngines` in `package.json`.
+Requires Node 26 and Bun 1.4. Versions live in `devEngines` in `package.json`.
 
-1. `./setup.sh` installs pnpm, installs dependencies and sets up the git hooks.
-2. `pnpm dev` starts the site at http://localhost:3000.
+1. `./setup.sh` installs Bun, installs dependencies and sets up the git hooks.
+2. `bun dev` starts the site at http://localhost:3000.
 
 ## Scripts
 
-| Command                          | What it does                       |
-| -------------------------------- | ---------------------------------- |
-| `pnpm dev`                       | Start the dev server               |
-| `pnpm build` / `pnpm start`      | Production build / serve it        |
-| `pnpm lint`                      | Run oxlint                         |
-| `pnpm format`                    | Run oxfmt                          |
-| `pnpm typecheck`                 | Run `tsc --noEmit`                 |
-| `pnpm storybook` (or `pnpm sb`)  | Storybook at http://localhost:6006 |
+| Command                       | What it does                       |
+| ----------------------------- | ---------------------------------- |
+| `bun dev`                     | Start the dev server               |
+| `bun run build` / `bun start` | Production build / serve it        |
+| `bun lint`                    | Run oxlint                         |
+| `bun format`                  | Run oxfmt                          |
+| `bun typecheck`               | Run `tsc --noEmit`                 |
+| `bun storybook` (or `bun sb`) | Storybook at http://localhost:6006 |
 
 ## Git hooks
 

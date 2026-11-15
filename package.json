@@ -20,7 +20,7 @@
     "test": "./node_modules/.bin/vitest run",
     "typecheck": "./node_modules/.bin/tsc --noEmit",
     "storybook": "storybook dev -p 6006",
-    "sb": "pnpm run storybook",
+    "sb": "bun run storybook",
     "build-storybook": "storybook build"
   },
   "dependencies": {
@@ -64,12 +64,17 @@
   },
   "devEngines": {
     "packageManager": {
-      "name": "pnpm",
-      "version": ">=12.3.4"
+      "name": "bun",
+      "version": ">=1.4.4"
     },
     "runtime": {
       "name": "node",
       "version": "26.x"
     }
-  }
+  },
+  "trustedDependencies": [
+    "esbuild",
+    "lefthook",
+    "sharp"
+  ]
 }
