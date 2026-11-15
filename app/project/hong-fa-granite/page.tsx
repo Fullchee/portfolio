@@ -143,8 +143,8 @@ you faced?  */}
         contact info uses the same component as in the footer with CSS Flexbox.
       </p>
       <p>
-        Google Maps integration was fairly straightforward because of existing npm packages and
-        because I had already some experience with Google APIs from my{" "}
+        Google Maps integration was fairly straightforward because of existing packages and because
+        I had already some experience with Google APIs from my{" "}
         <Link href="/project/batch-calendar-events">Batch calendar events project.</Link>
       </p>
       <h3>Deploying</h3>

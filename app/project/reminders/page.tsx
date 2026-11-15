@@ -55,7 +55,7 @@ export default function RemindersPage() {
       />
       <p>
         Next, I have the keywords to categorize and index when searching. I used a
-        react-dropdown-select npm module where which had the functionality of adding new items.
+        react-dropdown-select module, which had the functionality of adding new items.
       </p>
       <h3>Taking notes</h3>
       <p>

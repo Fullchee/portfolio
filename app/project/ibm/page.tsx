@@ -106,7 +106,7 @@ export default function IBMPage() {
         <h4>Solution</h4>
         <p>
           Puppeteer is a great tool for browser automation. It's more reliable than Selenium and
-          when you install it as an NPM package, it installs a version of Chromium that will work.
+          when you install it as a package, it installs a version of Chromium that will work.
         </p>
         <p>
           Anything that our team manually did frequently with WebPD was automated. For example, the
