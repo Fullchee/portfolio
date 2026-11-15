@@ -1,21 +1,21 @@
 import { calculateSejour } from "#components/common/utilities";
-import { ProjectDescription } from "#components/project/ProjectDescription";
-import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectMetadata } from "#lib/projects";
+import { CaseStudySection } from "#components/caseStudy/CaseStudySection";
+import { RolePage } from "#components/role/RolePage";
+import { getRole, roleMetadata } from "#lib/roles";
 
-const project = getProject("forma");
+const role = getRole("forma");
 
-export const metadata = projectMetadata(project);
+export const metadata = roleMetadata(role);
 
 export default function FormaPage() {
   return (
-    <ProjectPage project={project}>
+    <RolePage role={role}>
       <p>
         Full-stack React, Django and SQL developer at Forma.ai for{" "}
         {calculateSejour(new Date("2021-03-01"))} years (since March 2021).
       </p>
 
-      <ProjectDescription
+      <CaseStudySection
         image={{
           src: "/assets/images/projects/forma/react.png",
           width: 320,
@@ -52,9 +52,9 @@ export default function FormaPage() {
         <p>For styling, we use SASS</p>
 
         <p>I also started an article club and heavily contributed to TIL channels</p>
-      </ProjectDescription>
+      </CaseStudySection>
 
-      <ProjectDescription
+      <CaseStudySection
         image={{
           src: "/assets/images/projects/forma/storybook.png",
           width: 256,
@@ -74,9 +74,9 @@ export default function FormaPage() {
           We also wanted a way to work more closely with the design team. So I integrated Figma
           iframes into Storybook.
         </p>
-      </ProjectDescription>
+      </CaseStudySection>
 
-      <ProjectDescription
+      <CaseStudySection
         image={{
           src: "/assets/images/projects/ibm/eslint.svg",
           width: 240,
@@ -92,7 +92,7 @@ export default function FormaPage() {
           Spearheaded the push to update ESLint to support more modern features to make the
           developer experience nicer (eg: support for optional chaining)
         </p>
-      </ProjectDescription>
-    </ProjectPage>
+      </CaseStudySection>
+    </RolePage>
   );
 }

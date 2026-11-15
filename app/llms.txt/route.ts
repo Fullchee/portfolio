@@ -1,24 +1,31 @@
 import { siteBaseUrl } from "#lib/metadata";
-import { projects } from "#lib/projects";
+import type { CaseStudy } from "#lib/caseStudy";
+import { projects, projectUrl } from "#lib/projects";
+import { roles, roleUrl } from "#lib/roles";
 
 // Format follows the llms.txt proposal: https://llmstxt.org/
 export const dynamic = "force-static";
 
-export function GET() {
-  const projectLinks = projects
+const caseStudyLinks = <T extends CaseStudy>(caseStudies: T[], url: (caseStudy: T) => string) =>
+  caseStudies
     .map(
-      ({ slug, title, description }) =>
-        `- [${title}](${siteBaseUrl}/project/${slug}): ${description}`,
+      (caseStudy) =>
+        `- [${caseStudy.title}](${siteBaseUrl}${url(caseStudy)}): ${caseStudy.description}`,
     )
     .join("\n");
 
+export function GET() {
   const body = `# Fullchee Zhang
 
 > Full-stack developer at Citylitics who makes teams faster with docs, tooling and teaching.
 
+## Experience
+
+${caseStudyLinks(roles, roleUrl)}
+
 ## Projects
 
-${projectLinks}
+${caseStudyLinks(projects, projectUrl)}
 
 ## Writing
 

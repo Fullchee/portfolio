@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { ProjectDescription } from "#components/project/ProjectDescription";
-import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectMetadata } from "#lib/projects";
+import { CaseStudySection } from "#components/caseStudy/CaseStudySection";
+import { RolePage } from "#components/role/RolePage";
+import { getRole, roleMetadata } from "#lib/roles";
 
-const project = getProject("ibm");
+const role = getRole("ibm");
 
-export const metadata = projectMetadata(project);
+export const metadata = roleMetadata(role);
 
 export default function IBMPage() {
   return (
-    <ProjectPage project={project}>
+    <RolePage role={role}>
       <p>I was a frontend developer (JavaScript and CSS) at IBM from 2019 to 2021.</p>
 
       <h2>Contributions</h2>
@@ -30,7 +30,7 @@ export default function IBMPage() {
       </ul>
       <p>
         If you're curious, you can scroll down to read background info on what kind of{" "}
-        <Link href="/project/ibm#baw-background">Business Automation</Link> work our team does
+        <Link href="/role/ibm#baw-background">Business Automation</Link> work our team does
       </p>
 
       <h2>Making the developer experience better</h2>
@@ -39,7 +39,7 @@ export default function IBMPage() {
         problems and make the developer experience better.
       </p>
 
-      <ProjectDescription
+      <CaseStudySection
         image={{
           src: "/assets/images/projects/ibm/ubuntu-logo.svg",
           width: 256,
@@ -71,9 +71,9 @@ export default function IBMPage() {
           The challenge was not only making it possible but also making the switch easy and obvious.
           This involved writing easy to follow documentation and automating the setup in dot files.
         </p>
-      </ProjectDescription>
+      </CaseStudySection>
 
-      <ProjectDescription
+      <CaseStudySection
         image={{
           src: "/assets/images/projects/ibm/puppeteer.png",
           width: 290,
@@ -119,9 +119,9 @@ export default function IBMPage() {
           To ensure that it worked on both Linux and Windows, I just added the JS to the repository
           because installing directly from GitHub seemed to have issues installing dependencies.
         </p>
-      </ProjectDescription>
+      </CaseStudySection>
 
-      <ProjectDescription
+      <CaseStudySection
         image={{
           src: "/assets/images/projects/ibm/diff.jpg",
           width: 358,
@@ -160,9 +160,9 @@ export default function IBMPage() {
           The greatest obstacle was definitely learning how RTC worked and integrating the CLI as an
           external compare tool.
         </p>
-      </ProjectDescription>
+      </CaseStudySection>
 
-      <ProjectDescription
+      <CaseStudySection
         image={{
           src: "/assets/images/projects/ibm/eslint.svg",
           width: 240,
@@ -184,9 +184,9 @@ export default function IBMPage() {
           the .eslintrc to the code repository to make our code more consistent. This lead to
           increased productivity.
         </p>
-      </ProjectDescription>
+      </CaseStudySection>
 
-      <ProjectDescription
+      <CaseStudySection
         image={{
           src: "/assets/images/projects/ibm/write-the-docs.png",
           width: 200,
@@ -202,7 +202,7 @@ export default function IBMPage() {
           on-boarding experience and time.
         </p>
         <p>Many of the projects above were inspired to simplify the docs as well.</p>
-      </ProjectDescription>
+      </CaseStudySection>
 
       <h2 id="baw-background">Business Automation</h2>
       <p>
@@ -261,6 +261,6 @@ export default function IBMPage() {
         IBM Workplace is an app with a modern UI where business users can do their process, case and
         workstreams work.
       </p>
-    </ProjectPage>
+    </RolePage>
   );
 }
