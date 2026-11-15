@@ -4,7 +4,7 @@ const Emoji = ({ children }: { children: string }) => <span aria-hidden="true">{
 
 const AboutMe = () => {
   return (
-    <section className="ease-in">
+    <section className="ease-in pb-4">
       <h2 className="font-mono-display tracking-wider text-2xl">About me</h2>
       <article>
         <h3>
@@ -55,7 +55,6 @@ const AboutMe = () => {
         <ul>
           <li>Paddling, lifting, biking, running and meditating</li>
         </ul>
-        <p className="py-4"></p>
       </article>
     </section>
   );
