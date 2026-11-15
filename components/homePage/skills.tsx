@@ -21,8 +21,8 @@ const backendSkills = [
 
 export const Skills = () => {
   return (
-    <section className="flex-col flex flex-wrap mb-8">
-      <h2 id="skills" className="font-mono-display tracking-wider text-2xl pb-4">
+    <section className="mb-8 flex flex-col flex-wrap">
+      <h2 id="skills" className="pb-4 font-mono-display text-2xl tracking-wider">
         Skills
       </h2>
       <SkillList title="Frontend" skills={frontendSkills} />

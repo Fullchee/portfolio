@@ -1,4 +1,6 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "ignorePatterns": ["bun.lock", "*.mdx"]
+  "sortPackageJson": false,
+  "sortTailwindcss": { "stylesheet": "./styles/globals.css" },
+  "ignorePatterns": ["bun.lock", "*.mdx", "tools/oxlint/anti-slop/"]
 }

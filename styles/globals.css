@@ -67,11 +67,11 @@
   }
 
   h1 {
-    @apply text-4xl pb-4 pt-6 font-display;
+    @apply pt-6 pb-4 font-display text-4xl;
   }
 
   h2 {
-    @apply text-2xl pb-4 pt-6;
+    @apply pt-6 pb-4 text-2xl;
   }
 
   .font-mono-display {
@@ -82,11 +82,11 @@
   }
 
   h3 {
-    @apply text-xl pb-4 pt-6 font-bold;
+    @apply pt-6 pb-4 text-xl font-bold;
   }
 
   h4 {
-    @apply pb-0 pt-4 font-bold;
+    @apply pt-4 pb-0 font-bold;
   }
 
   li {
@@ -94,7 +94,7 @@
   }
 
   ol {
-    @apply list-decimal pl-4 py-2 ml-4;
+    @apply ml-4 list-decimal py-2 pl-4;
   }
 
   ol li {
@@ -120,7 +120,7 @@
   }
 
   ul {
-    @apply pl-4 py-2;
+    @apply py-2 pl-4;
   }
 
   ul li::before {
@@ -135,7 +135,7 @@
   }
 
   ul li {
-    @apply pl-4 py-1;
+    @apply py-1 pl-4;
   }
 
   ul ul {
@@ -149,11 +149,11 @@
 
 @layer components {
   .primary-button {
-    @apply bg-brand-600 px-6 py-3 rounded-md text-white text-center;
+    @apply rounded-md bg-brand-600 px-6 py-3 text-center text-white;
   }
 
   .secondary-button {
-    @apply border-brand-600 border text-brand-600 px-6 py-3 rounded-md text-center;
+    @apply rounded-md border border-brand-600 px-6 py-3 text-center text-brand-600;
   }
 
   .ease-in > * {

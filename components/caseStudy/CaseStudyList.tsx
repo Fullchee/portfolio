@@ -12,11 +12,11 @@ const CaseStudyCard = ({ caseStudy, href, linkLabel }: CardProps) => {
   return (
     <Link
       href={href}
-      className="group transform duration-300 shadow-md hover:shadow-xl hover:scale-105 focus:shadow-xl focus:scale-105 no-underline hover:text-current focus:text-current"
+      className="group transform no-underline shadow-md duration-300 hover:scale-105 hover:text-current hover:shadow-xl focus:scale-105 focus:text-current focus:shadow-xl"
     >
       <Image className="object-cover" {...caseStudyImageProps(caseStudy.image)} />
-      <div className="px-8 lg:px-12 pb-8">
-        <h3 className="text-xl pt-4 font-bold">{caseStudy.title}</h3>
+      <div className="px-8 pb-8 lg:px-12">
+        <h3 className="pt-4 text-xl font-bold">{caseStudy.title}</h3>
         <p className="py-4">{caseStudy.description}</p>
         <p className="underline group-hover:text-brand-500">{linkLabel}</p>
       </div>
@@ -40,7 +40,7 @@ export const CaseStudyList = <T extends CaseStudy>({
   const displayed = caseStudies.filter(({ slug }) => slug !== skipSlug);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+    <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
       {displayed.map((caseStudy) => (
         <CaseStudyCard
           key={caseStudy.slug}

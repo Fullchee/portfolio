@@ -39,9 +39,9 @@ export default function HomePage() {
       <Intro />
       <AboutMe />
       <Skills />
-      <h2 className="font-mono-display tracking-wider pb-8 text-2xl">Experience</h2>
+      <h2 className="pb-8 font-mono-display text-2xl tracking-wider">Experience</h2>
       <RoleList />
-      <h2 className="font-mono-display tracking-wider py-8 text-2xl">Projects</h2>
+      <h2 className="py-8 font-mono-display text-2xl tracking-wider">Projects</h2>
       <ProjectList />
     </>
   );
