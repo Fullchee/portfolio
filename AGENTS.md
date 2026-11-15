@@ -10,7 +10,7 @@ Default vocabulary: needs-triage, needs-info, ready-for-agent, ready-for-human, 
 
 ### Domain docs
 
-Single-context — CONTEXT.md + docs/adr/ at repo root. See `docs/agents/domain.md`.
+Single-context — GLOSSARY.md + docs/adr/ at repo root. See `docs/agents/domain.md`.
 
 ### Commits
 
