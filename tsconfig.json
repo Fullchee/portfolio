@@ -32,7 +32,7 @@
     "noUnusedParameters": true
   },
   // tsconfig.node.json covers scripts; the vendored anti-slop plugin is upstream code.
-  "exclude": ["node_modules", "scripts", "tools/oxlint/anti-slop"],
+  "exclude": ["node_modules", "scripts", "stylelint.config.ts", "tools/oxlint/anti-slop"],
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",

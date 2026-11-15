@@ -44,13 +44,26 @@ jobs:
           path: node_modules
           key: node-modules-${{ runner.os }}-node${{ steps.node.outputs.node-version }}-${{ hashFiles('bun.lock') }}
 
+      # `lint:sh` needs these; pinned to the versions Homebrew gives the owner, since the runner's shellcheck is older.
+      - name: Install shellcheck and shfmt
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          curl -fsSL https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.x86_64.tar.xz |
+            tar -xJ --strip-components=1 -C "$HOME/.local/bin" shellcheck-v0.11.0/shellcheck
+          curl -fsSL -o "$HOME/.local/bin/shfmt" https://github.com/mvdan/sh/releases/download/v3.13.1/shfmt_v3.13.1_linux_amd64
+          chmod +x "$HOME/.local/bin/shfmt"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
       - if: steps.node-modules.outputs.cache-hit != 'true'
         run: bun install --frozen-lockfile
 
+      # `bun run check` runs these same steps; separate steps keep each one's pass or fail visible in the Actions UI.
       # Each check runs even when an earlier one fails, so one run shows every failure.
       - run: bun run lint
         if: ${{ !cancelled() }}
       - run: bun run typecheck
+        if: ${{ !cancelled() }}
+      - run: bun run test
         if: ${{ !cancelled() }}
       - run: bun run fallow
         if: ${{ !cancelled() }}

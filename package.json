@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "type": "module",
   "imports": {
     "#*": [
       "./*",
@@ -10,14 +11,18 @@
     ]
   },
   "scripts": {
+    "check": "node scripts/check.ts",
     "build": "./node_modules/.bin/next build",
     "dev": "./node_modules/.bin/next",
     "format": "./node_modules/.bin/oxfmt .",
     "install-precommit": "./node_modules/.bin/lefthook install",
     "prepare": "lefthook install",
-    "lint": "./node_modules/.bin/oxfmt --check && ./node_modules/.bin/oxlint --deny-warnings",
+    "lint": "./node_modules/.bin/oxfmt --check && ./node_modules/.bin/oxlint --deny-warnings && bun run lint:css && bun run lint:sh",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:sh": "node scripts/lint-sh.ts",
     "start": "./node_modules/.bin/next start",
-    "typecheck": "tsc --noEmit",
+    "test": "node --test \"scripts/*.test.ts\"",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.node.json",
     "fallow": "fallow --quiet --fail-on-issues --only dead-code,dupes"
   },
   "dependencies": {

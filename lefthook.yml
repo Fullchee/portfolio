@@ -29,6 +29,9 @@ pre-push:
     oxlint:
       glob: "*.{js,cjs,mjs,jsx,ts,tsx}"
       run: bunx oxlint --deny-warnings {push_files}
+    stylelint:
+      glob: "*.css"
+      run: bunx stylelint --allow-empty-input {push_files}
     # Fallow on the files changed since origin/main; CI runs it on the whole repo.
     fallow:
       glob: "*.{js,cjs,mjs,jsx,ts,tsx}"
