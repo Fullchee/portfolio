@@ -18,7 +18,7 @@ Commit messages must follow Conventional Commits.
 
 ## Checks
 
-- **Before pushing**: run `bun run lint` (oxfmt and Oxlint, warnings fail), `bun run typecheck`, `bun run test` and `bun run fallow`. CI runs the same steps, then `bun run build`.
+- **Before pushing**: run `bun run lint` (oxfmt and Oxlint, warnings fail), `bun run typecheck` and `bun run fallow`. CI runs the same steps, then `bun run build`.
 - **Fallow** has no baseline: fix each finding. It runs only `dead-code` and `dupes`; health scores without coverage are estimates.
 - **Worktrees**: create them with `wt switch --create <branch>`. Its setup copies `CLAUDE.local.md` and `.env*`, then installs packages.
 - **Shared setup files**: `scripts/install-if-lock-changed.sh`, `scripts/prune-worktrees.sh` and `.claude/hooks/format-edited-file.sh` come from `~/personal-projects/journal-native`. Edit them there, then run its `scripts/sync-shared-setup.sh` with this repo's path.

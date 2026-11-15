@@ -47,20 +47,10 @@ jobs:
       - if: steps.node-modules.outputs.cache-hit != 'true'
         run: bun install --frozen-lockfile
 
-      # Storybook's Vitest project runs the stories in headless Chromium.
-      - name: Cache Playwright browsers
-        uses: actions/cache@v6
-        with:
-          path: ~/.cache/ms-playwright
-          key: playwright-${{ runner.os }}-${{ hashFiles('bun.lock') }}
-      - run: bunx playwright install --with-deps chromium
-
       # Each check runs even when an earlier one fails, so one run shows every failure.
       - run: bun run lint
         if: ${{ !cancelled() }}
       - run: bun run typecheck
-        if: ${{ !cancelled() }}
-      - run: bun run test
         if: ${{ !cancelled() }}
       - run: bun run fallow
         if: ${{ !cancelled() }}

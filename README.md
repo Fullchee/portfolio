@@ -8,7 +8,6 @@ Made with
 - Tailwind CSS 4
 - TypeScript
 - MDX
-- Storybook
 
 Inspired by
 
@@ -24,14 +23,13 @@ Requires Node 26 and Bun 1.4. Versions live in `devEngines` in `package.json`.
 
 ## Scripts
 
-| Command                       | What it does                       |
-| ----------------------------- | ---------------------------------- |
-| `bun dev`                     | Start the dev server               |
-| `bun run build` / `bun start` | Production build / serve it        |
-| `bun lint`                    | Run oxlint                         |
-| `bun format`                  | Run oxfmt                          |
-| `bun typecheck`               | Run `tsc --noEmit`                 |
-| `bun storybook` (or `bun sb`) | Storybook at http://localhost:6006 |
+| Command                       | What it does                |
+| ----------------------------- | --------------------------- |
+| `bun dev`                     | Start the dev server        |
+| `bun run build` / `bun start` | Production build / serve it |
+| `bun lint`                    | Run oxlint                  |
+| `bun format`                  | Run oxfmt                   |
+| `bun typecheck`               | Run `tsc --noEmit`          |
 
 ## Git hooks
 
@@ -88,5 +86,3 @@ Tracked in [GitHub Issues](https://github.com/Fullchee/portfolio/issues).
   - lint and format
 - lefthook, commitlint
   - git hooks and commit message checks
-- storybook, vitest, playwright
-  - component stories and browser tests

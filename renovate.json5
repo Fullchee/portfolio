@@ -35,16 +35,15 @@
       groupName: "dev dependencies",
     },
     {
-      matchPackageNames: ["next", "@next/**", "react", "react-dom", "@types/react", "@types/react-dom"],
+      matchPackageNames: [
+        "next",
+        "@next/**",
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom",
+      ],
       groupName: "next and react",
-    },
-    {
-      matchPackageNames: ["storybook", "@storybook/**"],
-      groupName: "storybook",
-    },
-    {
-      matchPackageNames: ["vitest", "@vitest/**", "vite", "playwright"],
-      groupName: "vitest",
     },
     {
       matchPackageNames: ["oxlint", "oxfmt"],

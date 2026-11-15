@@ -1,3 +1,0 @@
-## Storybook
-
-- use CSF Next

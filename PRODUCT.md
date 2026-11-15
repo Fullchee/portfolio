@@ -26,7 +26,7 @@ A team force multiplier: a full-stack developer who makes the whole team faster 
 
 ## Capabilities and Constraints
 
-- Next.js App Router, Tailwind CSS 4, TypeScript, MDX, Storybook; hosted on Vercel.
+- Next.js App Router, Tailwind CSS 4, TypeScript, MDX; hosted on Vercel.
 - Routes: `/` home, `/project` and `/project/<slug>` case studies, `/uses`, `/llm/*`, `/attributions`.
 - Project records live in `lib/projects.ts`; terms are defined in `CONTEXT.md` (Project, Case study, Skill).
 - Dark mode is required.

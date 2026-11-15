@@ -7,7 +7,6 @@
 
 # testing
 /coverage
-/.vitest
 
 # next.js
 /.next/
@@ -39,8 +38,6 @@ public/assets/Fullchee_Resume.pdf
 public/assets/fullchee_resume-full-stack.pdf
 tsconfig.tsbuildinfo
 
-*storybook.log
-storybook-static
 .env
 
 # next.js generated types
