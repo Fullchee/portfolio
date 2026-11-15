@@ -16,6 +16,10 @@ Single-context — GLOSSARY.md + docs/adr/ at repo root. See `docs/agents/domain
 
 Commit messages must follow Conventional Commits.
 
+### Merging
+
+Merge finished work into `main` and push `main`. Never open a pull request.
+
 ## Checks
 
 - **Before pushing**: run `bun run lint` (oxfmt and Oxlint, warnings fail), `bun run typecheck` and `bun run fallow`. CI runs the same steps, then `bun run build`.
