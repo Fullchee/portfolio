@@ -35,8 +35,6 @@ jobs:
           node-version-file: package.json
 
       - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version-file: package.json
 
       # Restoring node_modules whole skips resolving and linking every package.
       - name: Cache node_modules
