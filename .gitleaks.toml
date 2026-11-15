@@ -1,0 +1,9 @@
+# CI secrets scan (.github/workflows/secrets.yml).
+title = "portfolio"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Lockfile hashes"
+paths = ['''^bun\.lock$''']

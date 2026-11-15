@@ -15,13 +15,14 @@
     "format": "./node_modules/.bin/oxfmt .",
     "install-precommit": "./node_modules/.bin/lefthook install",
     "prepare": "lefthook install",
-    "lint": "./node_modules/.bin/oxlint --import-plugin .",
+    "lint": "./node_modules/.bin/oxfmt --check && ./node_modules/.bin/oxlint --deny-warnings",
     "start": "./node_modules/.bin/next start",
     "test": "./node_modules/.bin/vitest run",
     "typecheck": "./node_modules/.bin/tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "sb": "bun run storybook",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "fallow": "fallow --quiet --fail-on-issues --only dead-code,dupes"
   },
   "dependencies": {
     "@next/mdx": "^16.4.6",
