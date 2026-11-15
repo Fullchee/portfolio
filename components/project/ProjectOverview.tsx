@@ -22,7 +22,7 @@ const Button = ({
   return (
     <a
       href={href}
-      className="pl-1 no-underline transform duration-300 hover:scale-105 focus:scale-105 no-link-underline"
+      className="pl-1 no-underline transform duration-300 motion-safe:hover:scale-105 motion-safe:focus:scale-105 no-link-underline"
     >
       <div className={`flex ${className}`}>
         <p className="m-0 p-0 pr-1">{text}</p>

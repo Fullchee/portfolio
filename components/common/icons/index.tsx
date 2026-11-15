@@ -33,12 +33,5 @@ export const Icon = ({ icon }: { icon: string }) => {
   const named = namedIcons[icon];
   if (named) return named();
   const { width, height } = svgIconSizes[icon] ?? { width: 16, height: 16 };
-  return (
-    <Image
-      src={`/assets/images/icons/${icon}`}
-      alt={`${icon} logo`}
-      width={width}
-      height={height}
-    />
-  );
+  return <Image src={`/assets/images/icons/${icon}`} alt="" width={width} height={height} />;
 };

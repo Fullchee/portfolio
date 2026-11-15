@@ -14,12 +14,18 @@ const HeaderItem = ({ href, label }: { href: string; label: string }) => {
 const Header = () => {
   return (
     <>
-      <div className="sticky bg-white dark:border-brand-700 border-t-4 top-0 border-brand-500 z-10">
+      <div className="sticky bg-page dark:border-brand-700 border-t-4 top-0 border-brand-500 z-10">
         <nav className="max-w-6xl mx-auto pl-2 md:px-20">
           <ul className="list-none flex max-w-7xl no-list-item">
             <li className="mr-auto pt-4 pl-0">
               <Link href="/">
-                <Image src="/fullchee.svg" alt="home page" width={50} height={40} />
+                <Image
+                  src="/fullchee.svg"
+                  alt="home page"
+                  width={50}
+                  height={40}
+                  className="dark:invert"
+                />
               </Link>
             </li>
             <HeaderItem href="/project" label="projects" />
@@ -27,8 +33,8 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <div className="fixed z-10 h-8 w-screen white-to-transparent"></div>
-      <div className="fixed z-10 h-8 w-screen transparent-to-white bottom-0"></div>
+      <div className="fixed z-10 h-8 w-screen page-fade-top"></div>
+      <div className="fixed z-10 h-8 w-screen page-fade-bottom bottom-0"></div>
     </>
   );
 };

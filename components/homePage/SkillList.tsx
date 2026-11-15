@@ -4,7 +4,7 @@ import type { Skill } from "#lib/skills";
 const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
   return (
     <li className="py-2 flex items-center gap-4">
-      <div className="w-8 h-8 rounded-full bg-brand-50 text-brand-400 inline-flex justify-center items-center flex-shrink-0">
+      <div className="w-8 h-8 rounded-full bg-surface text-brand-400 inline-flex justify-center items-center flex-shrink-0">
         <Icon icon={icon} />
       </div>
       {label}
