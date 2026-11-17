@@ -5,7 +5,7 @@ import createMDX from "@next/mdx";
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-  // Forma and IBM are Roles, not Projects; keep their old links working.
+  // Forma and IBM were once served under /project; this lists past URLs, not current Roles.
   async redirects() {
     return ["forma", "ibm"].map((slug) => ({
       source: `/project/${slug}`,

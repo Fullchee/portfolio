@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectMetadata } from "#lib/projects";
+import { caseStudyMetadata, getCaseStudy } from "#lib/caseStudy";
 
-const project = getProject("batch-calendar-events");
+const project = getCaseStudy("project", "batch-calendar-events");
 
-export const metadata = projectMetadata(project);
+export const metadata = caseStudyMetadata(project);
 
 export default function BatchCalendarEventsPage() {
   return (

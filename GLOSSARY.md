@@ -14,6 +14,7 @@ _Avoid_: Project, job, experience
 
 **Case study**:
 A page that presents one Project or Role in depth.
+Its kind (`project` or `role`) sets its URL: `/project/<slug>` or `/role/<slug>`.
 _Avoid_: Story, write-up
 
 **Skill**:

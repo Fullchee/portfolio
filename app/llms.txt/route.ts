@@ -1,15 +1,13 @@
 import { siteBaseUrl } from "#lib/metadata";
-import type { CaseStudy } from "#lib/caseStudy";
-import { projects, projectUrl } from "#lib/projects";
-import { roles, roleUrl } from "#lib/roles";
+import { caseStudiesOf, caseStudyUrl, type CaseStudyKind } from "#lib/caseStudy";
 
 export const dynamic = "force-static";
 
-const caseStudyLinks = <T extends CaseStudy>(caseStudies: T[], url: (caseStudy: T) => string) =>
-  caseStudies
+const caseStudyLinks = (kind: CaseStudyKind) =>
+  caseStudiesOf(kind)
     .map(
       (caseStudy) =>
-        `- [${caseStudy.title}](${siteBaseUrl}${url(caseStudy)}): ${caseStudy.description}`,
+        `- [${caseStudy.title}](${siteBaseUrl}${caseStudyUrl(caseStudy)}): ${caseStudy.description}`,
     )
     .join("\n");
 
@@ -21,11 +19,11 @@ export function GET() {
 
 ## Experience
 
-${caseStudyLinks(roles, roleUrl)}
+${caseStudyLinks("role")}
 
 ## Projects
 
-${caseStudyLinks(projects, projectUrl)}
+${caseStudyLinks("project")}
 
 ## Writing
 

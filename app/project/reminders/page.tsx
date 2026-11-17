@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectMetadata } from "#lib/projects";
+import { caseStudyMetadata, getCaseStudy } from "#lib/caseStudy";
 
-const project = getProject("reminders");
+const project = getCaseStudy("project", "reminders");
 
-export const metadata = projectMetadata(project);
+export const metadata = caseStudyMetadata(project);
 
 export default function RemindersPage() {
   return (

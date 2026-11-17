@@ -1,15 +1,11 @@
 import type { MetadataRoute } from "next";
 import { siteBaseUrl } from "#lib/metadata";
-import { projects, projectUrl } from "#lib/projects";
-import { roles, roleUrl } from "#lib/roles";
+import { caseStudies, caseStudyUrl } from "#lib/caseStudy";
 
 const staticPaths = ["/", "/project", "/llm/tooling", "/llm/code-review", "/uses", "/attributions"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const caseStudyPaths = [
-    ...roles.map((role) => roleUrl(role)),
-    ...projects.map((project) => projectUrl(project)),
-  ];
+  const caseStudyPaths = caseStudies.map((caseStudy) => caseStudyUrl(caseStudy));
 
   return [...staticPaths, ...caseStudyPaths].map((path) => ({ url: `${siteBaseUrl}${path}` }));
 }

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { CaseStudySection } from "#components/caseStudy/CaseStudySection";
 import { RolePage } from "#components/role/RolePage";
-import { getRole, roleMetadata } from "#lib/roles";
+import { caseStudyMetadata, getCaseStudy } from "#lib/caseStudy";
 
-const role = getRole("ibm");
+const role = getCaseStudy("role", "ibm");
 
-export const metadata = roleMetadata(role);
+export const metadata = caseStudyMetadata(role);
 
 export default function IBMPage() {
   return (

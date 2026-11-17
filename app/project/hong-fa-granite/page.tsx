@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectPage } from "#components/project/ProjectPage";
-import { getProject, projectMetadata } from "#lib/projects";
+import { caseStudyMetadata, getCaseStudy } from "#lib/caseStudy";
 
-const project = getProject("hong-fa-granite");
+const project = getCaseStudy("project", "hong-fa-granite");
 
-export const metadata = projectMetadata(project);
+export const metadata = caseStudyMetadata(project);
 
 export default function HongFaGranitePage() {
   return (

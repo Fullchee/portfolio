@@ -1,12 +1,8 @@
-import {
-  caseStudyMetadata,
-  findCaseStudy,
-  type CaseStudy,
-  type CaseStudyImage,
-} from "#lib/caseStudy";
+import type { CaseStudyFields, CaseStudyImage } from "#lib/caseStudy";
 import type { Skill } from "#lib/skills";
 
-export type Project = CaseStudy & {
+export type Project = CaseStudyFields & {
+  kind: "project";
   hero?: CaseStudyImage;
   demoUrl?: string;
   githubProject?: string;
@@ -42,6 +38,7 @@ const batchCalendarEventsImage: CaseStudyImage = {
 
 export const projects: Project[] = [
   {
+    kind: "project",
     slug: "toronto-water-monitor",
     title: "Toronto water monitor",
     description: "Check your Toronto water usage and send an email if usage spikes",
@@ -72,6 +69,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    kind: "project",
     slug: "hong-fa-granite",
     title: "Hong Fa Granite website",
     description: "Static site for a local business in English and Chinese",
@@ -86,6 +84,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    kind: "project",
     slug: "reminders",
     title: "Reminders",
     description: "Save and play videos and podcasts with personal notes",
@@ -102,6 +101,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    kind: "project",
     slug: "batch-calendar-events",
     title: "Batch calendar events",
     description: "Project to create batch calendar events in less than 30 seconds",
@@ -116,13 +116,3 @@ export const projects: Project[] = [
     ],
   },
 ];
-
-export const getProject = (slug: string) => findCaseStudy(projects, slug);
-
-export const projectUrl = (project: Project) => `/project/${project.slug}`;
-
-export const projectMetadata = (project: Project) =>
-  caseStudyMetadata(
-    { ...project, ogImage: project.ogImage ?? project.hero ?? project.image },
-    projectUrl(project),
-  );

@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
-import { ProjectList } from "#components/project/ProjectList";
-import { RoleList } from "#components/role/RoleList";
+import { CaseStudyList } from "#components/caseStudy/CaseStudyList";
 import type { Role } from "#lib/roles";
 
 export const RolePage = ({ children, role }: { children: ReactNode; role: Role }) => {
@@ -9,9 +8,9 @@ export const RolePage = ({ children, role }: { children: ReactNode; role: Role }
       <h1>{role.title}</h1>
       {children}
       <h2 className="pt-12 pb-6">Other roles</h2>
-      <RoleList skipSlug={role.slug} />
+      <CaseStudyList kind="role" skipSlug={role.slug} />
       <h2 className="pt-12 pb-6">Projects</h2>
-      <ProjectList />
+      <CaseStudyList kind="project" />
     </>
   );
 };

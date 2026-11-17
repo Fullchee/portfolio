@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProjectList } from "#components/project/ProjectList";
+import { CaseStudyList } from "#components/caseStudy/CaseStudyList";
 import { ProjectOverview } from "#components/project/ProjectOverview";
 import { caseStudyImageProps } from "#lib/caseStudy";
 import type { Project } from "#lib/projects";
@@ -21,7 +21,7 @@ export const ProjectPage = ({ children, project }: Props) => {
       {project.hero ? <Image {...caseStudyImageProps(project.hero)} /> : null}
       {children}
       <h2 className="pt-12 pb-6">Other projects</h2>
-      <ProjectList skipSlug={project.slug} />
+      <CaseStudyList kind="project" skipSlug={project.slug} />
     </>
   );
 };

@@ -1,9 +1,8 @@
 import { AboutMe } from "#components/homePage/aboutMe";
 import { Intro } from "#components/homePage/intro";
 import { Skills } from "#components/homePage/skills";
-import { ProjectList } from "#components/project/ProjectList";
 import { buildMetadata, siteBaseUrl } from "#lib/metadata";
-import { RoleList } from "#components/role/RoleList";
+import { CaseStudyList } from "#components/caseStudy/CaseStudyList";
 
 export const metadata = buildMetadata({
   title: "Full-stack developer | Fullchee Zhang",
@@ -40,9 +39,9 @@ export default function HomePage() {
       <AboutMe />
       <Skills />
       <h2 className="pb-8 font-mono-display text-2xl tracking-wider">Experience</h2>
-      <RoleList />
+      <CaseStudyList kind="role" />
       <h2 className="py-8 font-mono-display text-2xl tracking-wider">Projects</h2>
-      <ProjectList />
+      <CaseStudyList kind="project" />
     </>
   );
 }

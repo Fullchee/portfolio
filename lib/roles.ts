@@ -1,9 +1,10 @@
-import { caseStudyMetadata, findCaseStudy, type CaseStudy } from "#lib/caseStudy";
+import type { CaseStudyFields } from "#lib/caseStudy";
 
-export type Role = CaseStudy;
+export type Role = CaseStudyFields & { kind: "role" };
 
 export const roles: Role[] = [
   {
+    kind: "role",
     slug: "forma",
     title: "Working at Forma",
     description: "My time as a full-stack developer at Forma.ai",
@@ -17,6 +18,7 @@ export const roles: Role[] = [
     },
   },
   {
+    kind: "role",
     slug: "ibm",
     title: "Working at IBM",
     description: "My time as a front-end developer at IBM Canada",
@@ -36,9 +38,3 @@ export const roles: Role[] = [
     },
   },
 ];
-
-export const getRole = (slug: string) => findCaseStudy(roles, slug);
-
-export const roleUrl = (role: Role) => `/role/${role.slug}`;
-
-export const roleMetadata = (role: Role) => caseStudyMetadata(role, roleUrl(role));

@@ -1,11 +1,11 @@
 import { calculateSejour } from "#components/common/utilities";
 import { CaseStudySection } from "#components/caseStudy/CaseStudySection";
 import { RolePage } from "#components/role/RolePage";
-import { getRole, roleMetadata } from "#lib/roles";
+import { caseStudyMetadata, getCaseStudy } from "#lib/caseStudy";
 
-const role = getRole("forma");
+const role = getCaseStudy("role", "forma");
 
-export const metadata = roleMetadata(role);
+export const metadata = caseStudyMetadata(role);
 
 export default function FormaPage() {
   return (
