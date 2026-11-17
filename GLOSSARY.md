@@ -19,3 +19,4 @@ _Avoid_: Story, write-up
 
 **Skill**:
 A technology Fullchee works with, shown as a label and icon.
+Each Skill has exactly one label; Projects and the home page refer to it by id.

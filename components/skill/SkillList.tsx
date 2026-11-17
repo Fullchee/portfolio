@@ -1,7 +1,9 @@
 import { Icon } from "#components/common/icons";
-import type { Skill } from "#lib/skills";
+import { skills as skillCatalog, type SkillId } from "#lib/skills";
 
-const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
+const SkillItem = ({ id }: { id: SkillId }) => {
+  const { label, icon } = skillCatalog[id];
+
   return (
     <li className="flex items-center gap-4 py-2">
       <div className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-surface text-brand-400">
@@ -14,7 +16,7 @@ const SkillItem = ({ label, icon }: { label: string; icon: string }) => {
 
 interface SkillListProps {
   title?: string;
-  skills: Skill[];
+  skills: SkillId[];
 }
 
 export const SkillList = ({ title, skills }: SkillListProps) => {
@@ -22,8 +24,8 @@ export const SkillList = ({ title, skills }: SkillListProps) => {
     <section>
       {title === undefined ? null : <h3>{title}</h3>}
       <ul className="skills no-list-item flex flex-wrap">
-        {skills.map(({ icon, label }) => (
-          <SkillItem key={icon} icon={icon} label={label} />
+        {skills.map((id) => (
+          <SkillItem key={id} id={id} />
         ))}
       </ul>
     </section>

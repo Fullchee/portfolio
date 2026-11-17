@@ -1,16 +1,31 @@
+import { iconCredits, type IconCredit } from "#components/common/icons";
 import { buildMetadata } from "#lib/metadata";
 
 export const metadata = buildMetadata({
   title: "Attributions",
-  description: "Font Awesome icon attributions used on fullchee.com",
+  description: "Icon attributions used on fullchee.com",
   path: "/attributions",
 });
 
-const Attribution = ({ name }: { name: string }) => {
+const libraries: Record<IconCredit["library"], { url: (name: string) => string; licence: string }> =
+  {
+    "Font Awesome": {
+      url: (name) => `https://fontawesome.com/icons/${name}?style=brands`,
+      licence: "by Font Awesome (fab) is licensed under CC Attribution 4.0",
+    },
+    Lucide: {
+      url: (name) => `https://lucide.dev/icons/${name}`,
+      licence: "by Lucide is licensed under ISC",
+    },
+  };
+
+const Attribution = ({ credit: { library, name } }: { credit: IconCredit }) => {
+  const { url, licence } = libraries[library];
+
   return (
     <li>
-      <a href={`https://fontawesome.com/icons/${name}?style=brands`}>
-        "{name}" by Brands Style (fab) is licensed under CC Attribution 4.0
+      <a href={url(name)}>
+        "{name}" {licence}
       </a>
     </li>
   );
@@ -19,15 +34,9 @@ const Attribution = ({ name }: { name: string }) => {
 export default function AttributionsPage() {
   return (
     <ul className="p-10">
-      <Attribution name="js-square" />
-      <Attribution name="html5" />
-      <Attribution name="github" />
-      <Attribution name="code-branch" />
-      <Attribution name="database" />
-      <Attribution name="node-js" />
-      <Attribution name="sass" />
-      <Attribution name="react" />
-      <Attribution name="css3-alt" />
+      {iconCredits.map((credit) => (
+        <Attribution key={credit.name} credit={credit} />
+      ))}
     </ul>
   );
 }

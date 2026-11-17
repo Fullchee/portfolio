@@ -1,12 +1,12 @@
 import type { CaseStudyFields, CaseStudyImage } from "#lib/caseStudy";
-import type { Skill } from "#lib/skills";
+import type { SkillId } from "#lib/skills";
 
 export type Project = CaseStudyFields & {
   kind: "project";
   hero?: CaseStudyImage;
   demoUrl?: string;
   githubProject?: string;
-  skills?: Skill[];
+  skills?: SkillId[];
 };
 
 const hongFaGraniteImage: CaseStudyImage = {
@@ -60,13 +60,7 @@ export const projects: Project[] = [
     },
     demoUrl: "https://toronto-water-monitor.netlify.app/",
     githubProject: "toronto-water-monitor-backend",
-    skills: [
-      { icon: "react", label: "React" },
-      { icon: "typescript-icon.svg", label: "TypeScript" },
-      { icon: "sass", label: "SASS" },
-      { icon: "node-js", label: "Node.js" },
-      { icon: "database", label: "SQL" },
-    ],
+    skills: ["react", "typescript", "sass", "node", "sql"],
   },
   {
     kind: "project",
@@ -76,12 +70,7 @@ export const projects: Project[] = [
     image: hongFaGraniteImage,
     hero: hongFaGraniteImage,
     demoUrl: "https://www.hongfagranite.com",
-    skills: [
-      { icon: "gatsby.svg", label: "Gatsby" },
-      { icon: "react", label: "React" },
-      { icon: "js", label: "JavaScript" },
-      { icon: "sass", label: "SASS and Bulma" },
-    ],
+    skills: ["gatsby", "react", "javascript", "sass"],
   },
   {
     kind: "project",
@@ -92,13 +81,7 @@ export const projects: Project[] = [
     hero: remindersImage,
     demoUrl: "https://fullchee-reminders.netlify.app/",
     githubProject: "reminders-frontend",
-    skills: [
-      { icon: "react", label: "React" },
-      { icon: "js", label: "JavaScript" },
-      { icon: "sass", label: "SASS" },
-      { icon: "node-js", label: "Node.js" },
-      { icon: "database", label: "SQL" },
-    ],
+    skills: ["react", "javascript", "sass", "node", "sql"],
   },
   {
     kind: "project",
@@ -109,10 +92,6 @@ export const projects: Project[] = [
     hero: batchCalendarEventsImage,
     demoUrl: "https://calendar-shifts.netlify.app/",
     githubProject: "calendar-shifts",
-    skills: [
-      { icon: "react", label: "React" },
-      { icon: "js", label: "JavaScript" },
-      { icon: "css", label: "CSS" },
-    ],
+    skills: ["react", "javascript", "css"],
   },
 ];

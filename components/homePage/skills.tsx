@@ -1,23 +1,18 @@
 import { SkillList } from "#components/skill/SkillList";
+import type { SkillId } from "#lib/skills";
 
 // TODO: clicking on the skill will filter the projects with that skill
 
-const frontendSkills = [
-  { icon: "react", label: "React" },
-  { icon: "typescript-icon.svg", label: "TypeScript" },
-  { icon: "js", label: "JavaScript" },
-  { icon: "html5", label: "HTML & CSS" },
-  { icon: "storybook.svg", label: "Storybook" },
-  { icon: "sass", label: "LESS and SASS" },
+const frontendSkills: SkillId[] = [
+  "react",
+  "typescript",
+  "javascript",
+  "html",
+  "storybook",
+  "sass",
 ];
 
-const backendSkills = [
-  { icon: "django.svg", label: "Django" },
-  { icon: "python.svg", label: "Python" },
-  { icon: "database", label: "SQL" },
-  { icon: "postgresql.svg", label: "Postgres" },
-  { icon: "node-js", label: "Node.js" },
-];
+const backendSkills: SkillId[] = ["django", "python", "sql", "postgres", "node"];
 
 export const Skills = () => {
   return (

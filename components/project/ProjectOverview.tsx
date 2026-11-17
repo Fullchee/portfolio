@@ -1,10 +1,10 @@
-import { Icon } from "#components/common/icons";
+import { Icon, type IconName } from "#components/common/icons";
 import { SkillList } from "#components/skill/SkillList";
-import type { Skill } from "#lib/skills";
+import type { SkillId } from "#lib/skills";
 
 interface Props {
   demoUrl?: string | undefined;
-  skills?: Skill[] | undefined;
+  skills?: SkillId[] | undefined;
   githubProject?: string | undefined;
 }
 
@@ -15,7 +15,7 @@ const Button = ({
   className,
 }: {
   href: string;
-  icon: string;
+  icon: IconName;
   text: string;
   className: string;
 }) => {
@@ -54,7 +54,7 @@ const ProjectLinks = ({ demoUrl, githubProject }: Omit<Props, "skills">) => {
   );
 };
 
-const ProjectSkills = ({ skills }: { skills: Skill[] }) => {
+const ProjectSkills = ({ skills }: { skills: SkillId[] }) => {
   if (skills.length === 0) return null;
 
   return (
