@@ -14,18 +14,22 @@
   // Hide updates still inside the window instead of opening a pending PR.
   internalChecksFilter: "strict",
 
-  // Free private repos get neither branch protection nor GitHub auto-merge, so Renovate merges once CI is green.
+  // Renovate merges once CI passes; the repo merges to main without human-reviewed PRs.
   platformAutomerge: false,
 
   packageRules: [
-    // Majors need a human read of the changelog.
+    // TS 7 runs `tsc`, while the lint plugins need TS 6's API: both are aliases (AGENTS.md). depName is the package.json key, packageName the alias target.
     {
-      matchUpdateTypes: ["minor", "patch", "pin", "digest"],
-      automerge: true,
+      matchDepNames: ["typescript", "@typescript/native"],
+      enabled: false,
+    },
+    {
+      matchPackageNames: ["typescript", "@typescript/typescript6"],
+      enabled: false,
     },
 
-    // bun's version comes from devEngines and mise, not from Renovate.
-    { matchDepTypes: ["packageManager", "devEngines"], enabled: false },
+    // devEngines ranges are minimums for bun and node; mise pins the local versions.
+    { matchManagers: ["bun"], matchDepNames: ["bun", "node"], enabled: false },
 
     // Groups that move together. Later rules win, so the named groups below pull their packages out of this one.
     {
@@ -33,6 +37,12 @@
       matchDepTypes: ["devDependencies"],
       matchUpdateTypes: ["minor", "patch"],
       groupName: "dev dependencies",
+      automerge: true,
+    },
+    {
+      matchPackageNames: ["oxlint", "oxlint-tsgolint", "@oxlint/plugins", "oxfmt"],
+      groupName: "oxc tooling",
+      automerge: true,
     },
     {
       matchPackageNames: [
@@ -46,23 +56,8 @@
       groupName: "next and react",
     },
     {
-      // @oxlint/plugins must match oxlint's version exactly; see tools/oxlint/anti-slop/UPSTREAM.md.
-      matchPackageNames: ["oxlint", "oxfmt", "@oxlint/plugins", "oxlint-tsgolint"],
-      groupName: "oxc tooling",
-    },
-    {
-      matchPackageNames: ["eslint-plugin-*", "@eslint-react/**", "stylelint", "stylelint-*"],
-      groupName: "lint plugins",
-    },
-    // `typescript` is the TS 6 alias the lint plugins need; @typescript/native supplies TS 7's tsc.
-    { matchPackageNames: ["typescript", "@typescript/native"], groupName: "typescript" },
-    {
-      matchPackageNames: ["tailwindcss", "@tailwindcss/**", "postcss"],
+      matchPackageNames: ["tailwindcss", "@tailwindcss/**"],
       groupName: "tailwind",
-    },
-    {
-      matchPackageNames: ["@commitlint/**"],
-      groupName: "commitlint",
     },
     { matchManagers: ["github-actions"], groupName: "github actions" },
   ],
