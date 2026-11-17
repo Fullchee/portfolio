@@ -1,4 +1,4 @@
-import { SkillList } from "./SkillList";
+import { SkillList } from "#components/skill/SkillList";
 
 // TODO: clicking on the skill will filter the projects with that skill
 

@@ -1,5 +1,5 @@
 import { Icon } from "#components/common/icons";
-import { SkillList } from "#components/homePage/SkillList";
+import { SkillList } from "#components/skill/SkillList";
 import type { Skill } from "#lib/skills";
 
 interface Props {
