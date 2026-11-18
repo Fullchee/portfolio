@@ -8,6 +8,8 @@
   schedule: ["before 9am on monday"],
   prConcurrentLimit: 5,
   labels: ["dependencies"],
+  // Triage skips labelled issues; the dashboard is a status page, not work.
+  dependencyDashboardLabels: ["dependencies"],
 
   // Matches `install.minimumReleaseAge = 432000` in bunfig.toml.
   minimumReleaseAge: "5 days",
