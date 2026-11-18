@@ -9,8 +9,8 @@
   prConcurrentLimit: 5,
   labels: ["dependencies"],
 
-  // Matches `install.minimumReleaseAge = 604800` in bunfig.toml.
-  minimumReleaseAge: "7 days",
+  // Matches `install.minimumReleaseAge = 432000` in bunfig.toml.
+  minimumReleaseAge: "5 days",
   // Hide updates still inside the window instead of opening a pending PR.
   internalChecksFilter: "strict",
 
